@@ -1,8 +1,94 @@
-body {
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Raleway:wght@200;300;400;600;700&display=swap');
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
 }
 
-#logo {
-    max-width: 100%;
-    height: auto;
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin-top: 5.5rem;
+    /* Adjust margin-top to accommodate fixed header */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: lightgoldenrodyellow;
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Improved box shadow */
+}
+
+header .logo {
+    color: black;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+header .logo i {
+    color: orange;
+}
+
+header .navbar a {
+    font-size: 1.8rem;
+    /* Slightly reduced font size for better visual balance */
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    color: gray;
+}
+
+header .navbar a.active,
+header .navbar a:hover {
+    color: white;
+    background: orange;
+}
+
+header .placeholder_icons i {
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    color: black;
+    border-radius: 50%;
+    background: lightgray;
+}
+
+header .placeholder_icons i:hover {
+color: white;
+    background: orange;
+    font-size: 2rem;
+    /* Increase font size on hover */
+    transform: scale(1.05);
+    /* Increase the size with a scale transformation */
+    ox-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Add a larger shadow on hover */
+}
+    
+}
+
+header .icons #bar {
+    display: none;
 }
