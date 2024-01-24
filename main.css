@@ -19,9 +19,38 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
+/* body {
     margin-top: 5.5rem;
-    /* Adjust margin-top to accommodate fixed header */
+
+} */
+
+section {
+    padding: 2rem 9%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+            /* Adjust line height */
+}
+
+section:nth-child(even){
+    background: #eee;
+
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-blocks;
+    font-size: 1.7rem;
+    color: white;
+    background: black;
+    border-radius: .5rem;   
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+
+.btn:hover{
+    background: red;
+    letter-spacing: .1rem;
 }
 
 header {
@@ -29,7 +58,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background: lightgoldenrodyellow;
+    background: white;
     padding: 1rem 7%;
     display: flex;
     align-items: center;
@@ -46,7 +75,7 @@ header .logo {
 }
 
 header .logo i {
-    color: orange;
+    color: red;
 }
 
 header .navbar a {
@@ -54,41 +83,149 @@ header .navbar a {
     /* Slightly reduced font size for better visual balance */
     border-radius: 0.5rem;
     padding: 0.5rem 1.5rem;
-    color: gray;
+    color: black;
 }
 
 header .navbar a.active,
 header .navbar a:hover {
     color: white;
-    background: orange;
+    background: red;
 }
 
-header .placeholder_icons i {
-    font-size: 1.7rem;
+header .apply_btn .btn {
+    background: red;
+    /* Set the background color for the button */
+    padding: 0.5rem 1rem;
+    /* Add padding for better spacing */
+    color: white;
+    border-radius: 0.5rem;
+    font-size: 1.8rem;
+    transition: all 0.2s linear;
+}
+
+header button a{
+    color: white;
+}
+
+header .apply_btn .btn:hover {
+    font-size: 1.9rem;
+    /* Increase font size slightly on hover */
+}
+    
+
+
+header #bar {
     cursor: pointer;
-    margin-left: 0.5rem;
+    font-size: 2rem;
+    margin-left: 2rem;
+    /* Adjust the margin-right value for spacing */
     height: 4.5rem;
     line-height: 4.5rem;
     width: 4.5rem;
     text-align: center;
     color: black;
     border-radius: 50%;
-    background: lightgray;
+    background: #eee;
 }
 
-header .placeholder_icons i:hover {
-color: white;
-    background: orange;
-    font-size: 2rem;
-    /* Increase font size on hover */
-    transform: scale(1.05);
-    /* Increase the size with a scale transformation */
-    ox-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2);
-    /* Add a larger shadow on hover */
+header #bar:hover {
+    background-color: red;
+    color: white;
+    transform: rotate(360deg);
 }
+
+header #bar{
+    display:none;
+}
+
+.home .home-slider .slide{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 9rem;
+}
+
+.home .home-slider .slide .content{
+    flex: 1 1 45rem;
     
 }
+.home .home-slider .slide .image{
+    flex: 1 1 45rem;
+}
 
-header .icons #bar {
-    display: none;
+.home .home-slider .slide .image img{
+    width: 100%;
+}
+
+.home .home-slider .slide .content span{
+    color: red;
+    font-size: 2.5rem;
+}
+.home .home-slider .slide .content h3{
+    color: black;
+    font-size: 6.5rem;
+    
+}
+.home .home-slider .slide .content p{
+    color: black;
+    font-size: 2.2rem;
+    padding: .5rem 0;
+    line-height: 1.5rem;
+}
+
+
+@media (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header #bar {
+        display: inline-block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        border-bottom: .1rem solid rgba(0, 0, 0, .2);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: #eee;
+        color: black;
+        /* Set default color for navbar links */
+    }
+
+    header .navbar a.active {
+        background: red;
+        color: white;
+        /* Set color for the active link */
+    }
+}
+
+
+@media (max-width: 991px) {
+    html {
+        font-size: 50%;
+    }
 }
