@@ -38,7 +38,7 @@
         <h2>-</h2>
         <h2>-</h2>
         <h2>Position 2 Application</h2>
-        <form id="position2Form" action="thankyou.html" method="post" onsubmit="return validateForm('position2Form')">
+        <form id="position1Form" action="thankyou.html" method="post" onsubmit="return validateForm('position1Form')">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" required>
     
@@ -56,26 +56,24 @@
                 <input type="text" id="state" name="state" required placeholder="State">
                 <input type="text" id="zip" name="zip" required placeholder="ZIP Code">
             </div>
-
+    
             <label for="education">Highest Level of Education</label>
-        <select id="education" name="education" required>
-            <option value="" disabled selected>Select your highest level of education</option>
-            <option value="high_school">High School</option>
-            <option value="associate">Associate's Degree</option>
-            <option value="bachelor">Bachelor's Degree</option>
-            <option value="master">Master's Degree</option>
-            <option value="doctorate">Doctorate</option>
-        </select>
-
-            
+            <select id="education" name="education" required>
+                <option value="" disabled selected>Select your highest level of education</option>
+                <option value="high_school">High School</option>
+                <option value="associate">Associate's Degree</option>
+                <option value="bachelor">Bachelor's Degree</option>
+                <option value="master">Master's Degree</option>
+                <option value="doctorate">Doctorate</option>
+            </select>
+    
             <label for="resume">Upload Resume</label>
             <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
     
             <label for="coverLetter">Cover Letter</label>
             <textarea id="coverLetter" name="coverLetter" rows="4" required></textarea>
     
-            <button type="submit"><a href="thankyou.html" class="submit_btn">Submit Application</a></button>
-
+            <button type="submit">Submit Application</button>
         </form>
     </section>
     
