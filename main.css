@@ -390,6 +390,22 @@ body {
     transition: all 0.2s linear;
 }
 
+h1,h2,h3, p {
+    text-transform: none; /* This will reset the text transformation */
+  }
+
+.section-title {
+    font-size: 24px;
+}
+
+.about-title {
+    font-size: 24px;
+}
+
+.about-title2 {
+    font-size:20px;
+}
+
 .benefit-item p {
     font-size: 1rem;
     line-height: 1.4;
