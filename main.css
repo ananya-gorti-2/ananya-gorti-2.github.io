@@ -163,24 +163,83 @@ header .apply_btn{
     margin-top: 10px;
 }
 
-.apply1, .apply2, .apply3 {
-    background-color: white;
-    color: black;
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid white; /* Optional: Add a border for a better visual */
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+.button-row {
+    margin-bottom: 10px; /* Adjust spacing between rows */
 }
 
-.apply1:hover, .apply2:hover, .apply3:hover {
+.button-row button {
+    background-color: white; /* Initial background color */
+    color: black; /* Initial text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.button-row button:hover {
+    background-color: red; /* Hover background color */
+    color: white; /* Hover text color */
+}
+
+/* Remove default link styles */
+.button-row a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
     background-color: red;
     color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+button[type="submit"]:hover {
+    background-color: red;
+}
+
+
+
+
+
 /* off limits yaswanth */
-.apply_btn .btn,
-.apply1 {
+.apply_btn{
     color: white;
 }
 

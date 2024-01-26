@@ -17,55 +17,50 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-function validateForm() {
-  var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
+document.addEventListener('DOMContentLoaded', function() {
+  var form = document.getElementById('jobApplicationForm');
 
-  if (name.trim() === "" || email.trim() === "") {
-    alert("Please fill in all required fields.");
-    return false;
+  form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      if (validateForm()) {
+          window.location.href = 'thankyou.html'; // Redirect to thankyou.html upon successful submission
+      }
+  });
+
+  function validateForm() {
+      var fullName = document.getElementById('fullName').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var dob = document.getElementById('dob').value.trim();
+      var address = document.getElementById('address').value.trim();
+      // Add validation for other fields
+
+      if (fullName === '') {
+          alert('Please enter your full name.');
+          return false;
+      }
+
+      if (email === '' || !isValidEmail(email)) {
+          alert('Please enter a valid email address.');
+          return false;
+      }
+
+      var dobDate = new Date(dob);
+      var eighteenYearsAgo = new Date();
+      eighteenYearsAgo.setFullYear(eighteenYearsAgo.getFullYear() - 18);
+      if (dobDate > eighteenYearsAgo) {
+          alert('You must be at least 18 years old.');
+          return false;
+      }
+
+      return true; // Form is valid
   }
 
-  return true;
-}
-
-function validateForm(formId) {
-  var form = document.getElementById(formId);
-  var name = form.elements["name"].value;
-  var email = form.elements["email"].value;
-  var dob = form.elements["dob"].value;
-
-  if (name.trim() === "" || email.trim() === "") {
-      alert("Please fill in all required fields.");
-      return false;
+  function isValidEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
+});
 
-  if (!validateDOB(dob)) {
-      alert("You must be at least 18 years old to apply.");
-      return false;
-  }
-
-  return true;
-}
-
-function validateForm(formId) {
-  var form = document.getElementById(formId);
-  var name = form.elements["name"].value;
-  var email = form.elements["email"].value;
-  var dob = form.elements["dob"].value;
-
-  if (name.trim() === "" || email.trim() === "") {
-      alert("Please fill in all required fields.");
-      return false;
-  }
-
-  if (!validateDOB(dob)) {
-      alert("You must be at least 18 years old to apply.");
-      return false;
-  }
-
-  return true;
-}
 
 var swiper = new Swiper(".home-slider", {
   spaceBetween: 30,
