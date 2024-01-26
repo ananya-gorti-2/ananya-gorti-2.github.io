@@ -445,11 +445,11 @@ h1,h2,h3, p {
     text-align: center;
 }
 
-.benefit-item img {
+/* .benefit-item img {
     width: 80px;
     height: 80px;
     margin-bottom: 1rem;
-}
+} */
 
 .benefit-item h3 {
     font-size: 1.4rem;
