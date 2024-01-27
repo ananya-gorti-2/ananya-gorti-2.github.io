@@ -733,8 +733,13 @@ p {
 }
 
 .work{
-  float:left;
-  
+  margin-left:0px;
+  margin-right:auto;
+}
+
+.staff{
+  margin-left:auto;
+  margin-right:0px;
 }
 
 .work_p{
