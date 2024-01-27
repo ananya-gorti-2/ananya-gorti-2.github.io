@@ -42,9 +42,8 @@
     <h2>&nbsp;</h2>
     <h2>&nbsp;</h2>
     <h1>General Manager Application Form</h1>
-    <form id="General Manager Application Form" action="thankyou.html" action="https://formsubmit.co/your@email.com" method="POST">
+    <form id="General Manager Application Form" action="thankyou.html" onsubmit="sendEmail(); reset(); return false" >
 
-    >
       <label for="fullName">Full Name:</label>
       <input type="text" id="fullName" name="fullName" required />
 
@@ -80,6 +79,7 @@
           placeholder="ZIP Code"
         />
       </div>
+      <!--
       <label for="education">Highest Level of Education:</label>
       <select id="education" name="education" required>
         <option value="">Select</option>
@@ -146,7 +146,9 @@
         name="motivationsAtWork"
         required
       ></textarea>
+    -->
       <script>
+      
         document.querySelectorAll("textarea").forEach(function(textarea) {
             textarea.style.resize = 'none';
         });
@@ -155,12 +157,23 @@
       <a href="thankyou.html" class="application1"
         ><button type="submit">Submit Application</button></a
       >
+      
     </form>
 
-    
-    
-    
-  
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                SecureToken : "5fa14da7-fa75-4b98-b8f8-032d3a412fe9",
+                To : 'yaswanth.collegeboard@gmail.com',
+                From : 'yaswanthaditya.kandra@gmail.com',
+                Subject : "This is the subject",
+                Body : "And this is the body"
+            }).then(
+              message => alert(message)
+            );
+        }
+    </script>
 
     <footer>
       <nav>

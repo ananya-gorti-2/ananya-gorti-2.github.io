@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
       var email = document.getElementById('email').value.trim();
       var dob = document.getElementById('dob').value.trim();
       var address = document.getElementById('address').value.trim();
-      // Add validation for other fields
 
       if (fullName === '') {
           alert('Please enter your full name.');
@@ -60,6 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 });
+
+
 
 
 var swiper = new Swiper(".home-slider", {
