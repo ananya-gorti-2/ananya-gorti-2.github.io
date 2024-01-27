@@ -75,3 +75,23 @@ var swiper = new Swiper(".home-slider", {
   },
   loop: true,
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    let btnScrollToTop = document.getElementById("btnScrollToTop");
+
+    btnScrollToTop.addEventListener("click", function () {
+        scrollToTop();
+    });
+
+    function scrollToTop() {
+        // Scroll to the top of the page
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        });
+    }
+});
+
+
+
