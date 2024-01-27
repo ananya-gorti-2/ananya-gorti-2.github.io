@@ -66,7 +66,7 @@ var swiper = new Swiper(".home-slider", {
   spaceBetween: 30,
   centeredSlides: true,
   autoplay: {
-    delay: 7500,
+    delay: 4500,
     disableOnInteraction: false,
   },
   pagination: {
@@ -74,6 +74,31 @@ var swiper = new Swiper(".home-slider", {
     clickable: true,
   },
   loop: true,
+});
+
+var swiper = new Swiper(".review-slider", {
+  spaceBetween: 20,
+  centeredSlides: true,
+  autoplay: {
+    delay: 0,  // Set delay to 0 for continuous movement
+    disableOnInteraction: false,
+  },
+  loop: true,
+  speed: 7000,
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    640: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
 });
 
 document.addEventListener("DOMContentLoaded", function () {

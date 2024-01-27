@@ -1,16 +1,26 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apply</title>
-        <!-- font awesome link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application Cashier</title>
+    <!-- font awesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css" />
     <script src="main.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
+      <a href="#" class="logo">
+        <img src="CulHar_Logo-removebg.png" width="30px" />
+        <div class="log_text">Culinary Harbor</div>
+      </a>
 
         <a href="#" class="logo">
             <img src="CulHar_Logo-removebg.png" width="30px" />
@@ -32,87 +42,137 @@
                 <i class="fa-solid fa-bars" id="bar"></i>
         </div>
 
+      <div class="apply_btn">
+        <button class="btn"><a href="apply.html">Apply Now</a></button>
+        <i class="fa-solid fa-bars" id="bar"></i>
+      </div>
     </header>
 
     <h2>&nbsp;</h2>
     <h2>&nbsp;</h2>
     <h2>&nbsp;</h2>
-    <h1>Pos 2 Application Form</h1>
-    <form id="Pos 2 Application Form" action="thankyou.html" method="post" enctype="multipart/form-data">
-        <label for="fullName">Full Name:</label>
-        <input type="text" id="fullName" name="fullName" required>
+    <h1>Cashier Application Form</h1>
+    <form id="Cashier Application Form" action="thankyou.html">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required />
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
 
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob" required>
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required />
 
-        <label for="address">Address</label>
-            <input type="text" id="address" name="address" required placeholder="Street Address">
-    
-            <div class="address-fields">
-                <input type="text" id="city" name="city" required placeholder="City">
-                <input type="text" id="state" name="state" required placeholder="State">
-                <input type="text" id="zip" name="zip" required placeholder="ZIP Code">
-            </div>
+      <label for="address">Address</label>
+      <input
+        type="text"
+        id="address"
+        name="address"
+        required
+        placeholder="Street Address"
+      />
 
-        <label for="education">Highest Level of Education:</label>
-        <select id="education" name="education" required>
-            <option value="">Select</option>
-            <option value="High School">High School</option>
-            <option value="Associate's Degree">Associate's Degree</option>
-            <option value="Bachelor's Degree">Bachelor's Degree</option>
-            <option value="Master's Degree">Master's Degree</option>
-            <option value="Doctorate">Doctorate</option>
-        </select>
+      <div class="address-fields">
+        <input type="text" id="city" name="city" required placeholder="City" />
+        <input
+          type="text"
+          id="state"
+          name="state"
+          required
+          placeholder="State"
+        />
+        <input
+          type="text"
+          id="zip"
+          name="zip"
+          required
+          placeholder="ZIP Code"
+        />
+      </div>
 
-        <label for="resume">Resume Letter:</label>
-        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+      <label for="education">Highest Level of Education:</label>
+      <select id="education" name="education" required>
+        <option value="">Select</option>
+        <option value="High School">High School</option>
+        <option value="Associate's Degree">Associate's Degree</option>
+        <option value="Bachelor's Degree">Bachelor's Degree</option>
+        <option value="Master's Degree">Master's Degree</option>
+        <option value="Doctorate">Doctorate</option>
+      </select>
 
-        <label for="coverLetter">Cover Letter:</label>
-        <textarea id="coverLetter" name="coverLetter" required></textarea>
+      <label for="resume">Resume Letter:</label>
+      <input
+        type="file"
+        id="resume"
+        name="resume"
+        accept=".pdf,.doc,.docx"
+        required
+      />
 
-        <label for="employmentHistory">Employment History:</label>
-        <textarea id="employmentHistory" name="employmentHistory" required></textarea>
+      <label for="coverLetter">Cover Letter:</label>
+      <textarea id="coverLetter" name="coverLetter" required></textarea>
 
-        <label for="skillsCertifications">Skills and Certifications:</label>
-        <input type="file" id="skillsCertifications" name="skillsCertifications" accept=".pdf,.doc,.docx" required>
-        <textarea id="skillsCertificationsText" name="skillsCertificationsText" required></textarea>
+      <label for="employmentHistory">Employment History:</label>
+      <textarea
+        id="employmentHistory"
+        name="employmentHistory"
+        required
+      ></textarea>
 
-        <label for="whyWorkHere">Why do you want to work here?</label>
-        <textarea id="whyWorkHere" name="whyWorkHere" required></textarea>
+      <label for="skillsCertifications">Skills and Certifications:</label>
+      <input
+        type="file"
+        id="skillsCertifications"
+        name="skillsCertifications"
+        accept=".pdf,.doc,.docx"
+        required
+      />
+      <textarea
+        id="skillsCertificationsText"
+        name="skillsCertificationsText"
+        required
+      ></textarea>
 
-        <label for="expectedSalary">Expected Salary:</label>
-        <input type="number" id="expectedSalary" name="expectedSalary" required>
+      <label for="whyWorkHere">Why do you want to work here?</label>
+      <textarea id="whyWorkHere" name="whyWorkHere" required></textarea>
 
-        <label for="bestCandidateSkills">What skills make you the best candidate for this position?</label>
-        <textarea id="bestCandidateSkills" name="bestCandidateSkills" required></textarea>
+      <label for="expectedSalary">Expected Salary:</label>
+      <input type="number" id="expectedSalary" name="expectedSalary" required />
 
-        <label for="motivationsAtWork">What motivations inspire you at work?</label>
-        <textarea id="motivationsAtWork" name="motivationsAtWork" required></textarea>
+      <label for="bestCandidateSkills"
+        >What skills make you the best candidate for this position?</label
+      >
+      <textarea
+        id="bestCandidateSkills"
+        name="bestCandidateSkills"
+        required
+      ></textarea>
 
-        <button type="submit">Submit Application</button>
+      <label for="motivationsAtWork"
+        >What motivations inspire you at work?</label
+      >
+      <textarea
+        id="motivationsAtWork"
+        name="motivationsAtWork"
+        required
+      ></textarea>
+      <a href="thankyou.html" class="application1"
+        ><button type="submit">Submit Application</button></a
+      >
     </form>
 
     <script src="form_validation.js"></script>
-    
-    
-    
-        
 
     <footer>
-        <nav>
-            <a href="main.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="about.html">About Us</a>
-            <a href="careers.html">Careers</a>
-            <a href="why_us.html">Why Us</a>
-            <a href="faq.html">FAQ</a>
-            <a href="apply.html">Apply Now</a>
-        </nav>
-        &copy; 2024 Culinary Harbor. All rights reserved.<br>
+      <nav>
+        <a href="main.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About Us</a>
+        <a href="careers.html">Careers</a>
+        <a href="why_us.html">Why Us</a>
+        <a href="faq.html">FAQ</a>
+        <a href="apply.html">Apply Now</a>
+      </nav>
+      &copy; 2024 Culinary Harbor. All rights reserved.<br />
     </footer>
-
-</body>
+  </body>
 </html>
