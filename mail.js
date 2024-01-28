@@ -45,20 +45,20 @@ const saveMessages = (name, email, dob, address, state, zip, education, coverlet
   var newGMapplication = GMapplicationDB.push();
 
   newGMapplication.set({
-    name: fullName,
+    name: name, // corrected variable name
     email: email,
     dob: dob,
     address: address,
     state: state,
     zip: zip,
     education: education,
-    coverletter: coverLetter,
-    employmenthistory: employmentHistory,
-    skillscertifications: skillsCertifications,
-    whyworkhere: whyWorkHere,
-    expectedsalary: expectedSalary,
-    bestcandidateskills: bestCandidateSkills,
-    motivationsatwork: motivationsAtWork,
+    coverletter: coverletter,
+    employmenthistory: employmenthistory,
+    skillscertifications: skillscertifications,
+    whyworkhere: whyworkhere,
+    expectedsalary: expectedsalary,
+    bestcandidateskills: bestcandidateskills,
+    motivationsatwork: motivationsatwork,
   });
 }
 
