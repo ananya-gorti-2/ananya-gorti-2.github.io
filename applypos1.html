@@ -90,14 +90,7 @@
         <option value="Doctorate">Doctorate</option>
       </select>
 
-      <label for="resume">Resume Letter:</label>
-      <input
-        type="file"
-        id="resume"
-        name="resume"
-        accept=".pdf,.doc,.docx"
-        required
-      />
+    
 
       <label for="coverLetter">Cover Letter:</label>
       <textarea id="coverLetter" name="coverLetter" required></textarea>
@@ -110,13 +103,6 @@
       ></textarea>
 
       <label for="skillsCertifications">Skills and Certifications:</label>
-      <input
-        type="file"
-        id="skillsCertifications"
-        name="skillsCertifications"
-        accept=".pdf,.doc,.docx"
-        required
-      />
       <textarea
         id="skillsCertificationsText"
         name="skillsCertificationsText"
@@ -147,6 +133,7 @@
         required
       ></textarea>
     
+    
       <script>
       
         document.querySelectorAll("textarea").forEach(function(textarea) {
@@ -159,6 +146,9 @@
       >
       
     </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./mail.js"></script>
 
   
 

@@ -295,20 +295,6 @@ button:hover {
   letter-spacing: 0.1rem;
 }
 
-header #bar {
-  cursor: pointer;
-  font-size: 2rem;
-  margin-left: 2rem;
-  /* Adjust the margin-right value for spacing */
-  height: 4.5rem;
-  line-height: 4.5rem;
-  width: 4.5rem;
-  text-align: center;
-  color: black;
-  border-radius: 50%;
-  background: #eee;
-}
-
 header #bar:hover {
   background-color: red;
   color: white;
@@ -442,12 +428,51 @@ main #btnScrollToTop:hover {
   letter-spacing: 0.1rem;
 }
 
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  color: darkgray;
+.services{
+  margin: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
+
+.services .box{
+  border: 0.5px solid lightgray;
+  padding: 3rem; /* Increased padding */
+  margin: 1rem;
+  border-radius: 2rem;
+  background-color: white;
+  flex: 1 0 30rem; /* Increased minimum width */
+  box-sizing: border-box;
+}
+
+.services .box img{
+  height: 15rem; /* Increased image height */
+  margin: auto;
+  display: block;
+}
+
+.h-primary, .h-secondary{
+  padding: 1rem;
+}
+
+.h-primary{
+  font-size: 3rem; /* Increased font size */
+}
+
+.h-secondary{
+  font-size: 2rem; /* Increased font size */
+}
+
+.center{
+  text-align: center;
+}
+
+
+
+
+
+
 
 body {
   font-family: "Nunito", sans-serif;
@@ -455,6 +480,19 @@ body {
   color: black;
   margin: 0;
   padding: 0;
+}
+.review{
+  padding: 2rem;
+  padding-top: -10rem;
+  margin-top: 1rem;
+}
+
+.sub-header {
+  text-align: center;
+  color: red;
+  font-size: 2.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .review .slide{
@@ -651,12 +689,24 @@ p {
 }
 
 
-
-
 .footer .box-container .box h3{
   padding: .5rem 0;
   font-size: 2.5rem;
   color: red;
+}
+
+.footer .box-container .box h4{
+  /* padding: .5rem 0; */
+  padding-top: 1.5rem;
+  font-size: 1.7rem;
+  color: red;
+}
+
+.footer .box-container .box .email-footer{
+  padding-top: 2rem;
+}
+.footer .box-container .box .email-link{
+  text-transform: lowercase;
 }
 
 .footer .box-container .box a{
@@ -685,9 +735,147 @@ p {
   color: red;
 }
 
-body, html {
+.footer {
+  width: 100%;
+  /* rest of your .footer styles */
+}
+
+/* body, html {
   margin: 0;
   padding: 0;
+} */
+
+.work{
+  margin-left:0px;
+  margin-right:auto;
+}
+
+.staff{
+  margin-left:auto;
+  margin-right:0px;
+}
+
+.work_p{
+  font-size: 21px;
+  font-family:sands-s;
+}
+.team_img{
+  float:left;
+}
+
+.career_img{
+  float:left;
+}
+
+.wrapper_faq{
+  text-align:center;
+}
+
+.foot{
+  text-align: center;
+  padding:20px;
+}
+
+.faq{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+.accordion {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  margin-bottom: 1rem;
+}
+
+.accordion-header {
+  cursor: pointer;
+}
+
+.accordion-collapse {
+  padding: 0.5rem 1rem;
+} 
+
+.faq{
+  background-color: #f5f5f5;
+  color:black;  
+  overflow-y: scroll;
+}
+
+.section_faq{
+  margin-top: 3rem;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.section_faq h1 {
+  font-size:3rem;
+}
+
+.section_faq ul {
+  margin: 3rem auto;
+  width: 75%;
+  max-width: 900px;
+}
+
+.section_faq ul li {
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.section_faq .question {
+  margin-bottom: 1px;
+  padding: 20px;
+  width:100%;
+  background-color: rgb(199, 200, 201);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.section_faq .icon {
+  margin-left: 1rem;
+  font-size: 3rem;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section_faq .answer {
+  max-height: 0;
+  background-color: rgb(199, 200, 201);
+  overflow:hidden;
+  font-size: 20px;
+  transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+}
+
+.section_faq .answer span {
+  display: inline-block;
+  padding: 1.2rem;
+}
+
+.section_faq .question:hover{
+  color:white;
+  background-color: red;
+  transition: background-color 0.2s ease;
+}
+
+
+
+.section_faq .question.open + .answer {
+  max-height: 1200px;
+}
+
+.section_faq .question.open > .icon{
+  transform: rotate(45 deg);
 }
 
 @media (max-width: 991px) {
@@ -784,24 +972,3 @@ body, html {
   }
 }
 
-.work{
-  margin-left:0px;
-  margin-right:auto;
-}
-
-.staff{
-  margin-left:auto;
-  margin-right:0px;
-}
-
-.work_p{
-  font-size: 21px;
-  font-family:sands-s;
-}
-.team_img{
-  float:left;
-}
-
-.career_img{
-  float:left;
-}

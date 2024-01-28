@@ -17,46 +17,46 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   var form = document.getElementById('jobApplicationForm');
 
-  form.addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent form submission
+  form.addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent form submission
 
-      if (validateForm()) {
-          window.location.href = 'thankyou.html'; // Redirect to thankyou.html upon successful submission
-      }
+    if (validateForm()) {
+      window.location.href = 'thankyou.html'; // Redirect to thankyou.html upon successful submission
+    }
   });
 
   function validateForm() {
-      var fullName = document.getElementById('fullName').value.trim();
-      var email = document.getElementById('email').value.trim();
-      var dob = document.getElementById('dob').value.trim();
-      var address = document.getElementById('address').value.trim();
+    var fullName = document.getElementById('fullName').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var dob = document.getElementById('dob').value.trim();
+    var address = document.getElementById('address').value.trim();
 
-      if (fullName === '') {
-          alert('Please enter your full name.');
-          return false;
-      }
+    if (fullName === '') {
+      alert('Please enter your full name.');
+      return false;
+    }
 
-      if (email === '' || !isValidEmail(email)) {
-          alert('Please enter a valid email address.');
-          return false;
-      }
+    if (email === '' || !isValidEmail(email)) {
+      alert('Please enter a valid email address.');
+      return false;
+    }
 
-      var dobDate = new Date(dob);
-      var eighteenYearsAgo = new Date();
-      eighteenYearsAgo.setFullYear(eighteenYearsAgo.getFullYear() - 18);
-      if (dobDate > eighteenYearsAgo) {
-          alert('You must be at least 18 years old.');
-          return false;
-      }
+    var dobDate = new Date(dob);
+    var eighteenYearsAgo = new Date();
+    eighteenYearsAgo.setFullYear(eighteenYearsAgo.getFullYear() - 18);
+    if (dobDate > eighteenYearsAgo) {
+      alert('You must be at least 18 years old.');
+      return false;
+    }
 
-      return true; // Form is valid
+    return true; // Form is valid
   }
 
   function isValidEmail(email) {
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 });
 
@@ -103,20 +103,20 @@ var swiper = new Swiper(".review-slider", {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    let btnScrollToTop = document.getElementById("btnScrollToTop");
+  let btnScrollToTop = document.getElementById("btnScrollToTop");
 
-    btnScrollToTop.addEventListener("click", function () {
-        scrollToTop();
+  btnScrollToTop.addEventListener("click", function () {
+    scrollToTop();
+  });
+
+  function scrollToTop() {
+    // Scroll to the top of the page
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
     });
-
-    function scrollToTop() {
-        // Scroll to the top of the page
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth"
-        });
-    }
+  }
 });
 
 

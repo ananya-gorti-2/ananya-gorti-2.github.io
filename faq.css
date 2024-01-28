@@ -1,73 +1,264 @@
-body {
-    font-family: 'Arial', sans-serif;
+
+* {
+    font-family: "Nunito", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: white;
-}
-
-header {
-    background-color: red; /* Red color */
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header a {
-    color: white;
+    box-sizing: border-box;
     text-decoration: none;
-    margin-right: 15px;
-    font-weight: bold;
-}
-
-header a:hover {
-    text-decoration: underline;
-}
-
-main {
-    padding: 20px;
-}
-
-details {
-    border: 1px solid white;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: white;
-}
-
-details summary {
-    font-weight: bold;
-    cursor: pointer;
-    color: red;
-}
-
-details p {
-    margin: 10px 0;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: red;
-    color: white;
-}
-
-footer nav a {
-    color: white;
-    text-decoration: none;
-    margin-right: 15px;
-}
-
-footer nav a:hover {
-    text-decoration: underline;
-}
-
-hr {
+    outline: none;
     border: none;
-    height: 1px;
-    background-color: white;
-    margin: 20px 0;
-}
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+  }
+  
+  images {
+    width: 2000px;
+    height: 2000px;
+    margin-bottom: 1rem;
+  }
+  
+  html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: "Nunito", sans-serif;
+    margin-top: 5.5rem;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  
+  section {
+    padding: 2rem 9%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    /* Adjust line height */
+  }
+  
+  section:nth-child(even) {
+    background: #eee;
+  }
 
+  .btn {
+    display: inline-block;
+    font-size: 1.7rem;
+    color: white;
+    background: black;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    padding: 0.8rem 3rem;
+    transition: all 0.2s linear;
+    margin-top: -0.8rem;
+    align-items: center;
+  }
+
+  .log_text {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .btn:hover {
+    background: red;
+    letter-spacing: 0.1rem;
+    transition: all 0.2s linear;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+  }
+  
+  header .logo img {
+    margin-right: 10px;
+  }
+  
+  header .log_text {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  header .logo i {
+    color: red;
+  }
+  
+  /* header .log_text{
+      display: flex;
+      margin-left: 42px;
+      align-items: top;
+  } */
+  
+  header .navbar a {
+    font-size: 1.8rem;
+    /* Slightly reduced font size for better visual balance */
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    color: black;
+    transition: background-color 0.3s ease;
+  }
+  
+  header .navbar a.active,
+  header .navbar a:hover {
+    color: white;
+    background: red;
+    letter-spacing: 0.1rem;
+    transition: all 0.2s linear;
+  }
+  
+  header .apply_btn .btn {
+    background: red;
+    /* Set the background color for the button */
+    padding: 0.5rem 1rem;
+    /* Add padding for better spacing */
+    color: white;
+    border-radius: 0.5rem;
+    font-size: 1.8rem;
+    transition: all 0.1s linear;
+    margin-left: 10px;
+  }
+  
+  header .apply_btn {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .button-row {
+    margin-bottom: 10px; /* Adjust spacing between rows */
+  }
+  
+  .button-row button {
+    background-color: white; /* Initial background color */
+    color: black; /* Initial text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  }
+  
+  .button-row button:hover {
+    background-color: red; /* Hover background color */
+    color: white; /* Hover text color */
+  }
+  
+  /* Remove default link styles */
+  .button-row a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  
+@media (max-width: 991px) {
+    html {
+      font-size: 55%;
+    }
+  
+    header {
+      padding: 1rem 2rem;
+    }
+    section {
+      padding: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    header #bar {
+      display: inline-block;
+    }
+  
+    header .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+      border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+      padding: 1rem;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+  
+    header .navbar.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+  
+    header .navbar a {
+      display: block;
+      padding: 1.5rem;
+      margin: 1rem;
+      font-size: 2rem;
+      background: white;
+      color: black;
+      /* Set default color for navbar links */
+    }
+  
+    header .navbar a.active {
+      background: red;
+      color: white;
+      /* Set color for the active link */
+    }
+  
+    .slide .content h3 {
+      font-size: 5rem;
+    }
+  }
+
+  @media (max-width: 991px) {
+  
+    .dishes .box-container .box {
+      height: auto;
+      padding: 1.5rem;
+    }
+  
+    .dishes .box-container .box img {
+      height: auto;
+      width: 100%;
+      margin: 1rem 0;
+    }
+  
+    .dishes .box-container .box h3 {
+      font-size: 1.8rem;
+      margin-top: 1rem;
+    }
+  
+    .dishes .box-container .box .stars {
+      padding: 0.3rem 0;
+    }
+  
+    .dishes .box-container .box .stars i {
+      font-size: 1.2rem;
+    }
+  
+    .dishes .box-container .box p {
+      font-size: 1rem;
+      padding-bottom: 1rem;
+    }
+  
+    .dishes .box-container .box .btn span {
+      font-size: 1.2rem;
+    }
+  }
