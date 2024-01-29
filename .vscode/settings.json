@@ -8,5 +8,6 @@
     "liveshare.guestApprovalRequired": true,
     "liveshare.languages.allowGuestCommandControl": true,
     "liveshare.notebooks.allowGuestExecuteCells": true,
-    "liveshare.publishWorkspaceInfo": true
+    "liveshare.publishWorkspaceInfo": true,
+    "liveServer.settings.port": 5501
 }
