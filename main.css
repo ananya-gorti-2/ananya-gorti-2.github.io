@@ -160,7 +160,7 @@ header .apply_btn .btn {
 header .apply_btn {
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .button-row {
@@ -235,9 +235,9 @@ button[type="submit"]:hover {
 }
 
 /* off limits yaswanth */
-.apply_btn {
+/* .apply_btn {
   color: white;
-}
+} */
 
 header button a {
   color: white;
@@ -296,8 +296,8 @@ button:hover {
 }
 
 header #bar:hover {
-  background-color: red;
-  color: white;
+  /* background-color: red; */
+  color: red;
   transform: rotate(360deg);
 }
 
@@ -453,7 +453,11 @@ main #btnScrollToTop:hover {
 }
 
 .h-primary, .h-secondary{
-  padding: 1rem;
+  padding: 0.5rem;
+}
+
+.h-primary{
+  margin-bottom: -22px
 }
 
 .h-primary{
@@ -464,11 +468,81 @@ main #btnScrollToTop:hover {
   font-size: 2rem; /* Increased font size */
 }
 
+.h-primary span{
+  color: red;
+}
+
+.h-text{
+  font-size: 1.5rem;
+}
+
 .center{
   text-align: center;
 }
 
+.gallery h1{
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
 
+.gallery h1 span{
+  color: red;
+}
+
+.gallery .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.gallery .box-container .box{
+  height: 25rem;
+  flex: 1 1 30rem;
+  border: 1rem solid #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: .5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery .box-container .box img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.gallery .box-container .box .content {
+  position: absolute;
+  top: 100%; /* Move content below the box initially */
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  padding-top: 5rem;
+  text-align: center;
+  transition: top 0.3s ease; /* Smooth transition on hover */
+}
+
+.gallery .box-container .box .content h3{
+  margin-top: -40px;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.gallery .box-container .box .content p{
+  font-size: 1.5rem;
+  color: #666;
+  padding: 1rem 0;
+}
+
+.gallery .box-container .box:hover .content{
+  top: 0;
+}
+
+.gallery .box-container .box .btn{
+  margin-top: 1rem;
+}
 
 
 
@@ -485,14 +559,19 @@ body {
   padding: 2rem;
   padding-top: -10rem;
   margin-top: 1rem;
+  padding-bottom: 6rem;
 }
 
 .sub-header {
   text-align: center;
-  color: red;
-  font-size: 2.5rem;
+  color: black;
+  font-size: 3rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.sub-header span{
+  color: red;
 }
 
 .review .slide{
@@ -541,6 +620,32 @@ body {
   color: black;
 
 }
+
+.about{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+  gap: 4rem;
+}
+
+.about-img img{
+  width: 100%;
+  height: auto;
+}
+
+.about-text h2{
+  font-size: 3rem;
+  line-height: 2.9rem;
+  margin-bottom: 2rem;;
+}
+
+.about-text p{
+  color: black;
+  font-size: 1.5rem;
+  line-height: 30px;
+  margin-bottom: 3rem;
+}
+
 
 .whyUs {
   /* font-family: "Nunito", sans-serif; */
@@ -894,7 +999,10 @@ p {
 @media (max-width: 768px) {
   header #bar {
     display: inline-block;
+    font-size: 2rem;
+    margin-left: 10px;
   }
+
 
   header .navbar {
     position: absolute;
@@ -931,6 +1039,7 @@ p {
   .home .home-slider .slide .content h3 {
     font-size: 5rem;
   }
+
 }
 
 @media (max-width: 991px) {
