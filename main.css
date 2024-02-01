@@ -349,6 +349,12 @@ main #btnScrollToTop:hover {
   background: red !important;
 }
 
+
+.swiper-pagination-bullet {
+  margin-top: 100rem;
+  /* Adjust the horizontal spacing between bullets */
+}
+
 .dishes .box-container {
   display: grid;
   padding-top: 2rem;
@@ -415,12 +421,21 @@ img {
   letter-spacing: 0.25rem;
 }
 
+.home .home-slider {
+  height: 550px;
+  /* Set a fixed height for your slider container */
+  overflow: hidden;
+  /* Hide any overflow to maintain fixed height */
+}
+
 .home .home-slider .slide {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
   padding-top: 9rem;
+  height: 100%;
+  /* Make each slide take up the full height of the slider */
 }
 
 .home .home-slider .slide .content {
@@ -429,10 +444,15 @@ img {
 
 .home .home-slider .slide .image {
   flex: 1 1 45rem;
+  height: 100%;
+  /* Make the image take up the full height of the slide */
 }
 
 .home .home-slider .slide .image img {
-  width: 60rem;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 100%;
 }
 
 .home .home-slider .slide .content span {
@@ -929,6 +949,38 @@ p {
   float: left;
 }
 
+/* Add this CSS to your main.css file */
+
+.careers .navbar.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  /* Change the background color to match your design */
+  position: absolute;
+  top: 70px;
+  /* Adjust the top position as needed */
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.careers .navbar.active a {
+  padding: 15px 20px;
+  color: #333;
+  /* Change the text color to match your design */
+}
+
+.careers .navbar.active a:hover {
+  background-color: #f0f0f0;
+  /* Change the background color on hover to match your design */
+}
+
+.careers .apply_btn {
+  display: flex;
+  align-items: center;
+}
+
 .wrapper_faq {
   text-align: center;
 }
@@ -1145,6 +1197,13 @@ p {
     font-size: 2rem;
     margin-left: 10px;
   }
+
+        .home .home-slider .slide .image img {
+          height: auto;
+          object-fit: contain;
+          /* You can use 'contain' or 'cover' based on your preference */
+          width: 100%;
+        }
 
 
   header .navbar {
