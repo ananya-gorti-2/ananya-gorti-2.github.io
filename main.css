@@ -32,6 +32,7 @@ body {
   line-height: 1.6;
 }
 
+
 section {
   padding: 2rem 9%;
   word-wrap: break-word;
@@ -350,12 +351,13 @@ main #btnScrollToTop:hover {
 
 .dishes .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+  padding-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   gap: 4.5rem;
 }
 
 .dishes .box-container .box {
-  height: 41rem;
+  height: 45rem;
   padding: 2.5 rem;
   background: white;
   border-radius: 2rem;
@@ -369,12 +371,23 @@ main #btnScrollToTop:hover {
 .dishes .box-container .box img {
   height: 16rem;
   margin: 1rem 0;
+  margin-top: 27px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+img {
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .dishes .box-container .box p {
   font-size: 1.5rem;
   text-align: center;
   padding-bottom: 2.5rem;
+  margin-left: 20px;
+  /* Adjust the left margin as needed */
+  margin-right: 20px;
 }
 
 .dishes .box-container .box h3 {
@@ -419,7 +432,7 @@ main #btnScrollToTop:hover {
 }
 
 .home .home-slider .slide .image img {
-  width: 100%;
+  width: 60rem;
 }
 
 .home .home-slider .slide .content span {
@@ -439,6 +452,12 @@ main #btnScrollToTop:hover {
   padding: 0.5rem 0;
   line-height: 2.8rem;
   letter-spacing: 0.1rem;
+}
+
+.biriyani {
+  width: auto;
+  /* Set the maximum width to 100% of its container */
+  height: auto;
 }
 
 .services {
@@ -589,6 +608,14 @@ body {
   color: black;
   font-size: 3rem;
   padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.dishes .sub-header {
+  text-align: center;
+  color: red;
+  font-size: 3rem;
+  padding-top: 6rem;
   padding-bottom: 1rem;
 }
 
@@ -1003,14 +1030,99 @@ p {
   transition: background-color 0.2s ease;
 }
 
-
-
 .section_faq .question.open+.answer {
   max-height: 1200px;
 }
 
 .section_faq .question.open>.icon {
   transform: rotate(45 deg);
+}
+
+.jobs-list-container {
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: "Rubik", sans-serif;
+}
+
+.jobs-list-container h2 {
+  font-size: 30px;
+  border-left: 4px solid #023047;
+  color: red;
+  padding-left: 20px;
+}
+
+.jobs-list-container .jobs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.jobs-list-container .jobs img {
+  width: 60px;
+}
+
+.jobs-list-container .job {
+  box-shadow: 0 4px 24px -8px rgba(2, 48, 71, 0.2);
+  padding: 24px;
+  border-radius: 16px;
+  position: relative;
+  transition: all 400ms ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.jobs-list-container .job:hover {
+  transform: scale(1.03);
+}
+
+.jobs-list-container .open-positions {
+  position: absolute;
+  top: 40px;
+  right: 24px;
+  color: #e63946;
+}
+
+.jobs-list-container .job-title {
+  font-size: 20px;
+  padding: 10px 0;
+  margin: 0;
+  color: #023047;
+}
+
+.jobs-list-container .details {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.8;
+  flex: 1;
+}
+
+.jobs-list-container .details-btn {
+  text-decoration: none;
+  border: 1px solid #023047;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.jobs-list-container .details-btn:hover {
+  background-color: #023047;
+  color: #fff;
+}
+
+@media (max-width: 940px) {
+  .jobs-list-container .jobs {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .jobs-list-container .jobs {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 991px) {
