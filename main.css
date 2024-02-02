@@ -18,6 +18,11 @@ images {
   margin-bottom: 1rem;
 }
 
+img {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -351,7 +356,7 @@ main #btnScrollToTop:hover {
 
 
 .swiper-pagination-bullet {
-  margin-top: 100rem;
+  margin-top: 1000px;
   /* Adjust the horizontal spacing between bullets */
 }
 
@@ -382,10 +387,7 @@ main #btnScrollToTop:hover {
   overflow: hidden;
 }
 
-img {
-  border-radius: 10px;
-  overflow: hidden;
-}
+
 
 .dishes .box-container .box p {
   font-size: 1.5rem;
@@ -422,7 +424,7 @@ img {
 }
 
 .home .home-slider {
-  height: 550px;
+  height: 650px;
   /* Set a fixed height for your slider container */
   overflow: hidden;
   /* Hide any overflow to maintain fixed height */
@@ -450,9 +452,20 @@ img {
 
 .home .home-slider .slide .image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
+  object-position: center center;
   max-height: 100%;
+  max-width: 100%;
+}
+
+
+.home .home-slider .slide .image img {
+  border-radius: 10px;
+  overflow: hidden;
+  max-height: 10px;
+  /* Set a maximum height for the image */
+  width: 10px;
 }
 
 .home .home-slider .slide .content span {
@@ -474,10 +487,13 @@ img {
   letter-spacing: 0.1rem;
 }
 
-.biriyani {
-  width: auto;
-  /* Set the maximum width to 100% of its container */
-  height: auto;
+.home .home-slider .slide .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .services {
@@ -1069,7 +1085,9 @@ p {
   overflow: hidden;
   font-size: 20px;
   transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+
 }
+
 
 .section_faq .answer span {
   display: inline-block;
@@ -1093,7 +1111,8 @@ p {
 .jobs-list-container {
   max-width: 900px;
   margin: 20px auto;
-  font-family: "Rubik", sans-serif;
+  margin-top: 7rem;
+  /* font-family: "Rubik", sans-serif; */
 }
 
 .jobs-list-container h2 {
@@ -1151,16 +1170,39 @@ p {
 
 .jobs-list-container .details-btn {
   text-decoration: none;
-  border: 1px solid #023047;
+  border: 1px solid red;
   color: #000;
   padding: 8px 16px;
   border-radius: 8px;
   margin-top: 20px;
+  font-size: 12px;
 }
 
 .jobs-list-container .details-btn:hover {
-  background-color: #023047;
+  background-color: red;
   color: #fff;
+}
+
+.loader-container{
+  position: fixed;
+  top: 0; left: 0;
+  height:100%;
+  width: 100%;
+  z-index: 10000;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.loader-container img{
+  width: 35rem;
+}
+
+.loader-container.fade-out{
+  top: 110%;
+  opacity: 0;
 }
 
 @media (max-width: 940px) {
@@ -1198,12 +1240,37 @@ p {
     margin-left: 10px;
   }
 
-        .home .home-slider .slide .image img {
-          height: auto;
-          object-fit: contain;
-          /* You can use 'contain' or 'cover' based on your preference */
-          width: 100%;
-        }
+  .home .home-slider .slide .image img {
+    height: auto;
+    object-fit: contain;
+    /* You can use 'contain' or 'cover' based on your preference */
+    width: 100%;
+  }
+
+    #about .container {
+      text-align: center;
+    }
+  
+    #about .about-image,
+    #about .about-content {
+      width: 100%;
+    }
+  
+    #about .about-image {
+      order: -1;
+      /* This places the image above the text in the stacked layout */
+      margin-bottom: 1.5rem;
+      /* Adjust as needed for spacing */
+    }
+  
+    #about h2 {
+      font-size: 2rem;
+    }
+  
+    #about p {
+      font-size: 1.4rem;
+      line-height: 2rem;
+    }
 
 
   header .navbar {
@@ -1282,3 +1349,136 @@ p {
     font-size: 1.2rem;
   }
 }
+
+
+
+.heading{
+  width:90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin:20px auto;
+}
+
+.heading h1{
+  font-size: 50px;
+  color:#000;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.heading h1::after{
+  content:"";
+  position: absolute;
+  width:100%;
+  height: 4px;
+  display: block;
+  margin:0 auto;
+  background-color: red;
+}
+
+.heading p{
+  font-size: 18px;
+  color:#666;
+  margin-bottom: 35px;
+}
+
+.container1{
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.about1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-image1{
+  flex:1;
+  margin-right: 40px;
+  overflow: hidden;
+
+}
+
+.about-image1 img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: 0.5s ease;
+
+}
+
+.about-image1:hover img{
+  transform: scale(1.2);
+}
+
+.about-content1{
+  flex:1;
+}
+
+.about-content1 h2{
+  font-size: 23px;
+  margin-bottom: 15px;
+  color:#333;
+}
+
+.about-content1 p{
+  font-size: 18px;
+  line-height: 1.5;
+  color:#666;
+}
+
+.about-content1 .read-more{
+  display: inline-block;
+  padding:10px 20px;
+  color:white;
+  background-color: red;
+  font-size: 19px;
+  text-decoration: none;
+  border-radius: 25px;
+  margin-top: 15px;
+  transition: 0.3s ease;
+}
+
+.about-content1 .read-more:hover{
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px){
+  .heading{
+    padding:0px 20px;
+  }
+
+  .heading h1{
+    font-size: 36px;
+  }
+
+  .heading p{
+    font-size: 17px;
+    margin-bottom: 0px;
+  }
+
+  .container1{
+    padding: 0px;
+  }
+
+  .about1{
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .about-image1{
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+
+  .about-content1 .read-more{
+    font-size: 16px;
+  }
+}
+
