@@ -169,6 +169,7 @@ header .apply_btn {
   margin-top: 5px;
 }
 
+
 .button-row {
   margin-bottom: 10px;
   /* Adjust spacing between rows */
@@ -1486,11 +1487,14 @@ p {
 
   .about-content1 .read-more{
     font-size: 16px;
+    /* ma */
   }
 }
 
+
+
 .heading1{
-  width:90%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
