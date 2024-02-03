@@ -1544,7 +1544,7 @@ p {
   height: auto;
   display: block;
   transition: 0.5s ease;
-  margin-top: 10px;
+  margin-top: -100px;
 
 }
 
@@ -1621,6 +1621,28 @@ p {
   .about-content2 {
     font-size: 16px;
   }
+}
+
+
+/* CSS for social links */
+.social-links {
+  margin-top: 20px; /* Adjust spacing as needed */
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px; /* Adjust spacing between icons */
+}
+
+.social-links a img {
+  width: 40px; /* Adjust icon size */
+  height: 40px; /* Adjust icon size */
+  border-radius: 50%; /* Makes the icons circular */
+  transition: transform 0.3s ease; /* Add smooth transition on hover */
+}
+
+.social-links a img:hover {
+  transform: scale(1.2); /* Increase size on hover */
 }
 
 /* about 3*/
@@ -1754,6 +1776,28 @@ p {
   .about-content3 {
     font-size: 16px;
   }
+}
+
+
+/* CSS for social links */
+.social-links {
+  margin-top: 20px; /* Adjust spacing as needed */
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px; /* Adjust spacing between icons */
+}
+
+.social-links a img {
+  width: 40px; /* Adjust icon size */
+  height: 40px; /* Adjust icon size */
+  border-radius: 50%; /* Makes the icons circular */
+  transition: transform 0.3s ease; /* Add smooth transition on hover */
+}
+
+.social-links a img:hover {
+  transform: scale(1.2); /* Increase size on hover */
 }
 
 /* about4*/
