@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +11,8 @@
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="main.css" />
-  <script src="main.js" defer></script>
 </head>
+
 <body>
   <header>
     <a href="#" class="logo">
@@ -34,104 +35,69 @@
   <h1>$nbsp</h1>
   <h1>$nbsp</h1>
   <h1>General Manager Application Form</h1>
-  <form id="GeneralManagerApplicationForm" action="thankyou.html">
+  <form id="GeneralManagerApplicationForm">
     <label for="fullName">Full Name:</label>
-      <input type="text" id="fullName" name="fullName" required />
+    <input type="text" id="fullName" name="fullName" required />
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
 
-      <label for="dob">Date of Birth:</label>
-      <input type="date" id="dob" name="dob" required />
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required />
 
-      <label for="address">Address</label>
-      <input
-        type="text"
-        id="address"
-        name="address"
-        required
-        placeholder="Street Address"
-      />
+    <label for="address">Address</label>
+    <input type="text" id="address" name="address" required placeholder="Street Address" />
 
-      <div class="address-fields">
-        <input type="text" id="city" name="city" required placeholder="City" />
-        <input
-          type="text"
-          id="state"
-          name="state"
-          required
-          placeholder="State"
-        />
-        <input
-          type="text"
-          id="zip"
-          name="zip"
-          required
-          placeholder="ZIP Code"
-        />
-      </div>
-      
-      <label for="education">Highest Level of Education:</label>
-      <select id="education" name="education" required>
-        <option value="">Select</option>
-        <option value="High School">High School</option>
-        <option value="Associate's Degree">Associate's Degree</option>
-        <option value="Bachelor's Degree">Bachelor's Degree</option>
-        <option value="Master's Degree">Master's Degree</option>
-        <option value="Doctorate">Doctorate</option>
-      </select>
+    <div class="address-fields">
+      <input type="text" id="city" name="city" required placeholder="City" />
+      <input type="text" id="state" name="state" required placeholder="State" />
+      <input type="text" id="zip" name="zip" required placeholder="ZIP Code" />
+    </div>
 
-    
+    <label for="education">Highest Level of Education:</label>
+    <select id="education" name="education" required>
+      <option value="">Select</option>
+      <option value="High School">High School</option>
+      <option value="Associate's Degree">Associate's Degree</option>
+      <option value="Bachelor's Degree">Bachelor's Degree</option>
+      <option value="Master's Degree">Master's Degree</option>
+      <option value="Doctorate">Doctorate</option>
+    </select>
 
-      <label for="coverLetter">Cover Letter:</label>
-      <textarea id="coverLetter" name="coverLetter" required></textarea>
 
-      <label for="employmentHistory">Employment History:</label>
-      <textarea
-        id="employmentHistory"
-        name="employmentHistory"
-        required
-      ></textarea>
 
-      <label for="skillsCertifications">Skills and Certifications:</label>
-      <textarea
-        id="skillsCertificationsText"
-        name="skillsCertificationsText"
-        required
-      ></textarea>
+    <label for="coverLetter">Cover Letter:</label>
+    <textarea id="coverLetter" name="coverLetter" required></textarea>
 
-      <label for="whyWorkHere">Why do you want to work here?</label>
-      <textarea id="whyWorkHere" name="whyWorkHere" required></textarea>
+    <label for="employmentHistory">Employment History:</label>
+    <textarea id="employmentHistory" name="employmentHistory" required></textarea>
 
-      <label for="expectedSalary">Expected Salary:</label>
-      <input type="number" id="expectedSalary" name="expectedSalary" required />
+    <label for="skillsCertifications">Skills and Certifications:</label>
+    <textarea id="skillsCertificationsText" name="skillsCertificationsText" required></textarea>
 
-      <label for="bestCandidateSkills"
-        >What skills make you the best candidate for this position?</label
-      >
-      <textarea
-        id="bestCandidateSkills"
-        name="bestCandidateSkills"
-        required
-      ></textarea>
+    <label for="whyWorkHere">Why do you want to work here?</label>
+    <textarea id="whyWorkHere" name="whyWorkHere" required></textarea>
 
-      <label for="motivationsAtWork"
-        >What motivations inspire you at work?</label
-      >
-      <textarea
-        id="motivationsAtWork"
-        name="motivationsAtWork"
-        required
-      ></textarea>
-    
-    
-      <script>
-        document.querySelectorAll("textarea").forEach(function(textarea) {
-            textarea.style.resize = 'none';
-        });
-      </script>
-    <button id="submit" type="submit">Submit Application</button>
+    <label for="expectedSalary">Expected Salary:</label>
+    <input type="number" id="expectedSalary" name="expectedSalary" required />
+
+    <label for="bestCandidateSkills">What skills make you the best candidate for this position?</label>
+    <textarea id="bestCandidateSkills" name="bestCandidateSkills" required></textarea>
+
+    <label for="motivationsAtWork">What motivations inspire you at work?</label>
+    <textarea id="motivationsAtWork" name="motivationsAtWork" required></textarea>
+
+
+    <script>
+      document.querySelectorAll("textarea").forEach(function (textarea) {
+        textarea.style.resize = 'none';
+      });
+    </script>
+    <button id="submit" type="submit" value="submit">Submit Application</button>
+
   </form>
+
+
 
   <footer>
     <nav>
@@ -145,11 +111,43 @@
     </nav>
     &copy; 2024 Culinary Harbor. All rights reserved.<br />
   </footer>
+
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAO9zhttsR2jhYQPBpsNiAzBPPMD8ZJtno",
+      authDomain: "fbla-restaurant-db.firebaseapp.com",
+      projectId: "fbla-restaurant-db",
+      storageBucket: "fbla-restaurant-db.appspot.com",
+      messagingSenderId: "1032671063739",
+      appId: "1:1032671063739:web:93e3567aade232b2db839e"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    const db = getDatabase(app);
+
+    document.getElementById("submit").addEventListener("click", function (e) {
+      e.preventDefault();
+
+      set(ref(db, "fullName/" + document.getElementById("fullName").value),
+        {
+          fullName: document.getElementById("fullName").value,
+          email: document.getElementById("email").value,
+          dob: document.getElementById("dob").value
+
+        });
+      alert("Application Received!")
+
+    })
+  </script>
+
 </body>
+
 </html>
-
-
-
-
-
-

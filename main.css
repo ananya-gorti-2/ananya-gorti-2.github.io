@@ -1183,6 +1183,10 @@ p {
   color: #fff;
 }
 
+.jobs-list-container h2{
+  margin-bottom: 12px;
+}
+
 .loader-container{
   position: fixed;
   top: 0; left: 0;
@@ -1204,6 +1208,8 @@ p {
   top: 110%;
   opacity: 0;
 }
+
+
 
 @media (max-width: 940px) {
   .jobs-list-container .jobs {
