@@ -468,7 +468,31 @@ main #btnScrollToTop:hover {
   max-width: 100%;
 }
 
+.benefits-page{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
 
+.benefits-container{
+  width: 80%;
+  margin:50px auto;
+  padding: 20px;
+}
+
+.title{
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 70px;
+}
+
+.benefits-content{
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
 
 
@@ -771,63 +795,6 @@ p {
   font-size: 20px;
 }
 
-.benefit-item p {
-  font-size: 1rem;
-  line-height: 1.4;
-  color: black;
-  text-align: left;
-}
-
-.why-us {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  text-align: left;
-}
-
-.why-us h2 {
-  font-size: 2.5rem;
-  color: black;
-  margin-bottom: 1.5rem;
-}
-
-.why-us p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: black;
-  margin-bottom: 1.5rem;
-}
-
-.benefits {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1.5rem;
-}
-
-.benefit-item {
-  flex: 1;
-  text-align: center;
-}
-
-/* .benefit-item img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 1rem;
-} */
-
-.benefit-item h3 {
-  font-size: 1.4rem;
-  color: black;
-  margin-bottom: 0.5rem;
-}
-
-.benefit-item p {
-  font-size: 1rem;
-  line-height: 1.4;
-  color: black;
-}
-
 .btn {
   display: inline-block;
   font-size: 1.6rem;
@@ -837,36 +804,6 @@ p {
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s;
-}
-
-.benefit-item {
-  flex: 0 1 calc(33.333% - 1.5rem);
-  text-align: center;
-}
-
-.benefit-item h3 {
-  color: black;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.benefit-item p {
-  color: black;
-  font-size: 1.4rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
-
-.benefit-item img {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 1rem;
-}
-
-.benefits {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1.5rem;
 }
 
 .btn:hover {
