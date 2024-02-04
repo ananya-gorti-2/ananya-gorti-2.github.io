@@ -494,7 +494,49 @@ main #btnScrollToTop:hover {
   align-items: center;
 }
 
+.benefits-image1{
+  flex:1;
+  margin-right: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+}
 
+.benefits-image1 img{
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.benefits-image1:hover img{
+  transform: scale(1.1);
+}
+
+.why-us-content{
+  flex: 1;
+  margin-left: 20px;
+}
+
+.why-us-content p{
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.learn-more{
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid red;
+  color: #000;
+  transition: 0.3s ease;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+
+.learn-more:hover{
+  background-color: red;
+}
 
 .home .home-slider .slide .content span {
   color: red;
@@ -1182,12 +1224,8 @@ p {
   }
 }
 
-@media (max-width: 768px) {
-  header #bar {
-    display: inline-block;
-    font-size: 2rem;
-    margin-left: 10px;
-  }
+@media screen and (max-width: 768px) {
+
 
   .home .home-slider .slide .image img {
     height: auto;
@@ -1258,6 +1296,17 @@ p {
     font-size: 5rem;
   }
 
+  .benefits-content{
+    flex-direction: column;
+  }
+  .benefits-image1,.why-us-content{
+    margin:0;
+    margin-bottom:20px;
+  }
+  .title{
+    font-size:38px;
+    margin-bottom:50px;
+  }
 }
 
 @media (max-width: 991px) {
