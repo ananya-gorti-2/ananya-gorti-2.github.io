@@ -67,7 +67,7 @@ var swiper = new Swiper(".home-slider", {
   spaceBetween: 30,
   centeredSlides: true,
   autoplay: {
-    delay: 4500,
+    delay: 3500,
     disableOnInteraction: false,
   },
   pagination: {
@@ -110,6 +110,23 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function scrollToTop() {
+    // Scroll to the top of the page
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  let btnScrollToTop2 = document.getElementById("up-icon");
+
+  btnScrollToTop2.addEventListener("click2", function () {
+    scrollToTop2();
+  });
+
+  function scrollToTop2() {
     // Scroll to the top of the page
     window.scrollTo({
       top: 0,
