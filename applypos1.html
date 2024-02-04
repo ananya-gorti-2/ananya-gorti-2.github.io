@@ -132,6 +132,7 @@
 
           // Data submission to Firebase
           set(ref(db, "fullName/" + document.getElementById("fullName").value), {
+            applicationForm: "General Manager Application Form",
             fullName: document.getElementById("fullName").value,
             email: document.getElementById("email").value,
             dob: document.getElementById("dob").value,
