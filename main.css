@@ -324,6 +324,10 @@ header #bar {
   margin-left: 10px;
 }
 
+.quote{
+  margin-top: 2rem;
+}
+
 main #btnScrollToTop {
   position: fixed;
   font-size: 1.5rem;
@@ -1069,6 +1073,7 @@ p {
   font-size: 24px;
   font-weight: 400;
   cursor: pointer;
+  text-transform: none;
 }
 
 .section_faq .icon {
@@ -1085,6 +1090,8 @@ p {
   overflow: hidden;
   font-size: 20px;
   transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+  text-transform: none;
+  
 
 }
 
@@ -1092,20 +1099,24 @@ p {
 .section_faq .answer span {
   display: inline-block;
   padding: 1.2rem;
+  text-transform: none;
 }
 
 .section_faq .question:hover {
   color: white;
   background-color: red;
   transition: background-color 0.2s ease;
+  text-transform: none;
 }
 
 .section_faq .question.open+.answer {
   max-height: 1200px;
+  text-transform: none;
 }
 
 .section_faq .question.open>.icon {
   transform: rotate(45 deg);
+  text-transform: none;
 }
 
 .jobs-list-container {
@@ -1196,6 +1207,7 @@ footer {
   color: #333;
   line-height: 1.8;
   flex: 1;
+  text-transform: none;
 }
 
 .jobs-list-container .details-btn {
