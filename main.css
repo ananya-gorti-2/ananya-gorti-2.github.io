@@ -1,6 +1,6 @@
 
  @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Raleway:wght@200;300;400;600;700&display=swap");
-
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 * {
   font-family: "Nunito", sans-serif;
   margin: 0;
@@ -473,11 +473,14 @@ main #btnScrollToTop:hover {
   padding: 0px;
   box-sizing: border-box;
   font-family: sans-serif;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .benefits-container{
   width: 80%;
-  margin:50px auto;
+  display: block;
+  margin: auto;
   padding: 20px;
 }
 
@@ -492,6 +495,10 @@ main #btnScrollToTop:hover {
   display:flex;
   flex-wrap: wrap;
   align-items: center;
+  margin:0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 .benefits-image1{
@@ -510,10 +517,15 @@ main #btnScrollToTop:hover {
   transform: scale(1.1);
 }
 
+
+
+
+
 .why-us-content{
   flex: 1;
   margin-left: 20px;
 }
+
 
 .why-us-content p{
   font-size: 17px;
@@ -537,6 +549,7 @@ main #btnScrollToTop:hover {
 .learn-more:hover{
   background-color: red;
 }
+
 
 .home .home-slider .slide .content span {
   color: red;
