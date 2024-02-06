@@ -1,6 +1,7 @@
+/*Yaswanth Kandra, Jaisharan Ashok, Vishesh Jain */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Raleway:wght@200;300;400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
- @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Raleway:wght@200;300;400;600;700&display=swap");
- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 * {
   font-family: "Nunito", sans-serif;
   margin: 0;
@@ -324,7 +325,7 @@ header #bar {
   margin-left: 10px;
 }
 
-.quote{
+.quote {
   margin-top: 2rem;
 }
 
@@ -336,14 +337,14 @@ main #btnScrollToTop {
   width: 50px;
   height: 50px;
   /* Set both width and height to the same value for a circle */
-  border-radius: 50%; 
-   background: red; 
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); 
-   color: #fff; 
-   border: none; 
-   outline: none; 
-   cursor: pointer; 
-   transition: font-size 0.1s ease, width 0.3s ease, height 0.3s ease;
+  border-radius: 50%;
+  background: red;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: font-size 0.1s ease, width 0.3s ease, height 0.3s ease;
 }
 
 #btnScrollToTop a {
@@ -475,7 +476,7 @@ main #btnScrollToTop:hover {
   max-width: 100%;
 }
 
-.benefits-page{
+.benefits-page {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -484,58 +485,58 @@ main #btnScrollToTop:hover {
   min-height: 100vh;
 }
 
-.benefits-container{
+.benefits-container {
   width: 80%;
   display: block;
   margin: auto;
   padding: 20px;
 }
 
-.title{
+.title {
   text-align: center;
   font-size: 45px;
   font-weight: bold;
   margin-bottom: 70px;
 }
 
-.benefits-content{
-  display:flex;
+.benefits-content {
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin:0px;
+  margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
 
-.benefits-image1{
-  flex:1;
+.benefits-image1 {
+  flex: 1;
   margin-right: 20px;
   overflow: hidden;
   border-radius: 10px;
 }
 
-.benefits-image1 img{
+.benefits-image1 img {
   width: 100%;
   transition: transform 0.3s ease;
 }
 
-.benefits-image1:hover img{
+.benefits-image1:hover img {
   transform: scale(1.1);
 }
 
-.why-us-content{
+.why-us-content {
   flex: 1;
   margin-left: 20px;
 }
 
 
-.why-us-content p{
+.why-us-content p {
   font-size: 17px;
   line-height: 1.6;
 }
 
-.learn-more{
+.learn-more {
   margin-top: 20px;
   display: inline-block;
   padding: 10px 20px;
@@ -549,7 +550,7 @@ main #btnScrollToTop:hover {
 }
 
 
-.learn-more:hover{
+.learn-more:hover {
   background-color: red;
 }
 
@@ -1087,7 +1088,7 @@ p {
   font-size: 20px;
   transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
   text-transform: none;
-  
+
 
 }
 
@@ -1141,8 +1142,8 @@ p {
 }
 
 
-.apply .jobs-list-container .jobs .job{
-    display: flex;
+.apply .jobs-list-container .jobs .job {
+  display: flex;
 }
 
 .apply .jobs-list-container .jobs img {
@@ -1207,7 +1208,7 @@ main {
 footer {
   flex-shrink: 0;
   /* Prevents the footer from shrinking */
-} 
+}
 
 .jobs-list-container .details {
   margin-top: 6px;
@@ -1293,8 +1294,9 @@ footer {
 @media screen and (max-width: 768px) {
 
   header #bar {
-      display: inline-block;
-    }
+    display: inline-block;
+  }
+
   .home .home-slider .slide .image img {
     height: auto;
     object-fit: contain;
@@ -1364,16 +1366,19 @@ footer {
     font-size: 5rem;
   }
 
-  .benefits-content{
+  .benefits-content {
     flex-direction: column;
   }
-  .benefits-image1,.why-us-content{
-    margin:0;
-    margin-bottom:20px;
+
+  .benefits-image1,
+  .why-us-content {
+    margin: 0;
+    margin-bottom: 20px;
   }
-  .title{
-    font-size:38px;
-    margin-bottom:50px;
+
+  .title {
+    font-size: 38px;
+    margin-bottom: 50px;
   }
 }
 
@@ -1596,26 +1601,10 @@ footer {
 }
 
 .about2 {
-  flex: 1;
-  margin-left: 20px;
-}
-
-.benefits-image2{
-  flex:1;
-  margin-right: 20px;
-  overflow: hidden;
-  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  width:auto 400px;
-}
-
-.benefits-image2 img{
-  width: 100%;
-  transition: transform 0.3s ease;
-}
-
-.benefits-image2:hover img{
-  transform: scale(1.1);
+  flex-wrap: wrap;
 }
 
 .about-image2 {
@@ -1630,6 +1619,7 @@ footer {
   height: auto;
   display: block;
   transition: 0.5s ease;
+  margin-top: 10px;
 
 }
 
@@ -1686,9 +1676,6 @@ footer {
     font-size: 36px;
   }
 
-  #bar{
-    display:block;
-  }
 
 
   .container2 {
@@ -1716,12 +1703,21 @@ footer {
 .social-links {
   margin-top: 20px;
   /* Adjust spacing as needed */
+  display: flex;
+  justify-content: center;
+  /* Center the items horizontally */
 }
 
 .social-links a {
   display: inline-block;
   margin-right: 10px;
-  /* Adjust spacing between icons */
+  margin-bottom: 10px;
+  /* Add margin bottom */
+}
+
+.social-links a:last-child {
+  margin-right: 0;
+  /* Remove margin right from the last item to prevent extra spacing */
 }
 
 .social-links a img {
@@ -1740,7 +1736,7 @@ footer {
   /* Increase size on hover */
 }
 
-/* about 3*/
+/* about3*/
 .heading2 {
   width: 90%;
   display: flex;
@@ -1816,6 +1812,7 @@ footer {
   border-radius: 25px;
   margin-top: 15px;
   transition: 0.3s ease;
+  font-weight: normal;
 }
 
 .about-content3 .read-more1:hover {
@@ -1827,6 +1824,7 @@ footer {
   font-size: 18px;
   line-height: 1.5;
   color: #666;
+  font-weight: normal;
 }
 
 .about-content3 {
@@ -1871,42 +1869,6 @@ footer {
   .about-content3 {
     font-size: 16px;
   }
-}
-
-
-/* CSS for social links */
-.social-links {
-  margin-top: 20px;
-  /* Adjust spacing as needed */
-  display: flex;
-  justify-content: center;
-  /* Center the items horizontally */
-}
-
-.social-links a {
-  display: inline-block;
-  margin-right: 10px;
-  margin-bottom: 10px; /* Add margin bottom */
-}
-
-.social-links a:last-child {
-  margin-right: 0; /* Remove margin right from the last item to prevent extra spacing */
-}
-
-.social-links a img {
-  width: 40px;
-  /* Adjust icon size */
-  height: 40px;
-  /* Adjust icon size */
-  border-radius: 50%;
-  /* Makes the icons circular */
-  transition: transform 0.3s ease;
-  /* Add smooth transition on hover */
-}
-
-.social-links a img:hover {
-  transform: scale(1.2);
-  /* Increase size on hover */
 }
 
 
@@ -2044,4 +2006,4 @@ footer {
   .about-content4 {
     font-size: 16px;
   }
-} 
+}

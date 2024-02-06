@@ -1,3 +1,5 @@
+/*Yaswanth Kandra, Jaisharan Ashok, Vishesh Jain */
+
 document.addEventListener("DOMContentLoaded", function () {
   let menu = document.querySelector("#bar");
   let nav = document.querySelector(".navbar");

@@ -1,0 +1,66 @@
+/*Yaswanth Kandra*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    /* Changed body background color to white */
+}
+
+#thankyou {
+    text-align: center;
+    margin-top: 100px;
+}
+
+h2 {
+    color: black;
+}
+
+p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.thankyou-message {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.thankyou-divider {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+/* Colorful Styles */
+#thankyou {
+    color: #fff;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.thankyou-message {
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(255, 126, 95, 0.4);
+    margin-bottom: 100px;
+}
+
+.thankyou-divider {
+    border-top-color: rgba(255, 255, 255, 0.4);
+}
+
