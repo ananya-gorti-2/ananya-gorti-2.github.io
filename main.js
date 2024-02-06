@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let navLinks = document.querySelectorAll(".navbar a");
   navLinks.forEach((link) => {
     let linkPage = link.getAttribute("href").split("/").pop();
-    if (linkPage === currentPage && linkPage !== "main.html") {
+    if (linkPage === currentPage && linkPage !== "index.html") {
       link.classList.add("active");
     }
   });

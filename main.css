@@ -251,6 +251,7 @@ button[type="submit"]:hover {
 }
 
 /* off limits yaswanth */
+
 /* .apply_btn {
   color: white;
 } */
@@ -319,6 +320,12 @@ header #bar:hover {
 
 header #bar {
   display: none;
+  font-size: 2.7rem;
+  margin-left: 10px;
+}
+
+.quote{
+  margin-top: 2rem;
 }
 
 main #btnScrollToTop {
@@ -985,7 +992,7 @@ p {
   /* Change the background color on hover to match your design */
 }
 
-.careers .apply_btn {
+.careers .apply_btn .btn {
   display: flex;
   align-items: center;
 }
@@ -1062,6 +1069,7 @@ p {
   font-size: 24px;
   font-weight: 400;
   cursor: pointer;
+  text-transform: none;
 }
 
 .section_faq .icon {
@@ -1078,6 +1086,8 @@ p {
   overflow: hidden;
   font-size: 20px;
   transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+  text-transform: none;
+  
 
 }
 
@@ -1085,26 +1095,31 @@ p {
 .section_faq .answer span {
   display: inline-block;
   padding: 1.2rem;
+  text-transform: none;
 }
 
 .section_faq .question:hover {
   color: white;
   background-color: red;
   transition: background-color 0.2s ease;
+  text-transform: none;
 }
 
 .section_faq .question.open+.answer {
   max-height: 1200px;
+  text-transform: none;
 }
 
 .section_faq .question.open>.icon {
   transform: rotate(45 deg);
+  text-transform: none;
 }
 
 .jobs-list-container {
   max-width: 900px;
   margin: 20px auto;
   margin-top: 7rem;
+  margin-bottom: 5rem;
   /* font-family: "Rubik", sans-serif; */
 }
 
@@ -1153,12 +1168,42 @@ p {
   color: #023047;
 }
 
+.apply .jobs-list-container .job-title {
+  font-size: 20px;
+  padding: 1px 0;
+  margin: 0;
+  color: #023047;
+  text-align: center;
+}
+
+.apply .jobs-list-container .jobs img {
+  width: 100px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* This ensures the container takes at least the full height of the viewport */
+}
+
+main {
+  flex: 1;
+  /* This makes the main content take the remaining space */
+}
+
+footer {
+  flex-shrink: 0;
+  /* Prevents the footer from shrinking */
+} 
+
 .jobs-list-container .details {
   margin-top: 6px;
   font-size: 14px;
   color: #333;
   line-height: 1.8;
   flex: 1;
+  text-transform: none;
 }
 
 .jobs-list-container .details-btn {
@@ -1235,7 +1280,9 @@ p {
 
 @media screen and (max-width: 768px) {
 
-
+  header #bar {
+      display: inline-block;
+    }
   .home .home-slider .slide .image img {
     height: auto;
     object-fit: contain;
@@ -1627,6 +1674,9 @@ p {
     font-size: 36px;
   }
 
+  #bar{
+    display:block;
+  }
 
 
   .container2 {
