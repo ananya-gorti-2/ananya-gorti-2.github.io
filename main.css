@@ -1144,6 +1144,16 @@ p {
   width: 60px;
 }
 
+
+.apply .jobs-list-container .jobs .job{
+    display: flex;
+}
+
+.apply .jobs-list-container .jobs img {
+  /* justify-content: center; */
+  align-items: center;
+}
+
 .jobs-list-container .job {
   box-shadow: 0 4px 24px -8px rgba(2, 48, 71, 0.2);
   padding: 24px;
@@ -1182,6 +1192,8 @@ p {
 
 .apply .jobs-list-container .jobs img {
   width: 100px;
+  align-self: center;
+  margin-right: 10px;
 }
 
 body {
