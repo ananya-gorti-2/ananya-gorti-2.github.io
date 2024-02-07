@@ -1,5 +1,4 @@
 <!-- Yaswanth Kandra-->
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -54,7 +53,7 @@
   <h1>Cashier Application Form</h1>
   <br>
   <!-- Form -->
-  <form id="CashierApplicationForm">
+  <form id="Cashier Application Form">
     <!-- Form Fields -->
     <label for="fullName">Full Name:</label>
     <input type="text" id="fullName" name="fullName" required />
@@ -81,6 +80,10 @@
 
     <label for="employmentHistory">Employment History:</label>
     <textarea id="employmentHistory" name="employmentHistory" required></textarea>
+
+    <label for="multitask">How do you handle multitasking and prioritize tasks during busy periods?</label>
+    <textarea id="multitask" name="multitask" required></textarea>
+
 
     <label for="whyWorkHere">Why do you want to work here?</label>
     <textarea id="whyWorkHere" name="whyWorkHere" required></textarea>
@@ -135,6 +138,7 @@
             zip: document.getElementById("zip").value,
             coverletter: document.getElementById("coverLetter").value,
             employmenthistory: document.getElementById("employmentHistory").value,
+            multitask: document.getElementById("multitask").value,
             whyworkhere: document.getElementById("whyWorkHere").value,
             expectedsalary: document.getElementById("expectedSalary").value,
             bestcandidateskills: document.getElementById("bestCandidateSkills").value,

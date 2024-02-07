@@ -1755,6 +1755,7 @@ footer {
  width: 90%;
  margin: 0 auto;
  padding: 10px 20px;
+ 
 }
 
 .about3 {
@@ -1907,6 +1908,7 @@ footer {
 .heading3 h1 {
   font-size: 50px;
   color: #000;
+  margin-top: 2rem;
   margin-bottom: 10px;
   position: relative;
 }
