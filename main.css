@@ -1,134 +1,134 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Raleway:wght@200;300;400;600;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
-
 * {
-  font-family: "Nunito", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  outline: none;
-  border: none;
-  text-transform: capitalize;
-  transition: all 0.2s linear;
+ font-family: "Nunito", sans-serif;
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ text-decoration: none;
+ outline: none;
+ border: none;
+ text-transform: capitalize;
+ transition: all 0.2s linear;
 }
 
 /*check discord */
 
 images {
-  width: 2000px;
-  height: 2000px;
-  margin-bottom: 1rem;
+ width: 2000px;
+ height: 2000px;
+ margin-bottom: 1rem;
 }
 
 img {
-  border-radius: 10px;
-  /* overflow: hidden; */
+ border-radius: 10px;
+ /* overflow: hidden; */
 }
 
 html {
-  font-size: 62.5%;
-  overflow-x: hidden;
-  scroll-padding-top: 5.5rem;
-  scroll-behavior: smooth;
+ font-size: 62.5%;
+ overflow-x: hidden;
+ scroll-padding-top: 5.5rem;
+ scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Nunito", sans-serif;
-  margin-top: 5.5rem;
-  font-weight: 400;
-  line-height: 1.6;
+ font-family: "Nunito", sans-serif;
+ margin-top: 5.5rem;
+ font-weight: 400;
+ line-height: 1.6;
 }
 
 
 section {
-  padding: 2rem 9%;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  line-height: 1.5;
-  /* Adjust line height */
+ padding: 2rem 9%;
+ word-wrap: break-word;
+ overflow-wrap: break-word;
+ line-height: 1.5;
+ /* Adjust line height */
 }
 
 section:nth-child(even) {
-  background: #eee;
+ background: #eee;
 }
 
 .sub-header {
-  text-align: center;
-  color: red;
-  font-size: 2rem;
-  padding-top: 6rem;
+ text-align: center;
+ color: red;
+ font-size: 2rem;
+ padding-top: 6rem;
 }
 
 .cuisine {
-  text-align: center;
-  color: black;
-  font-size: 3rem;
-  padding-top: 1rem;
-  text-transform: uppercase;
+ text-align: center;
+ color: black;
+ font-size: 3rem;
+ padding-top: 1rem;
+ text-transform: uppercase;
 }
 
 .btn {
-  display: inline-block;
-  font-size: 1.7rem;
-  color: white;
-  background: black;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  padding: 0.8rem 3rem;
-  transition: all 0.2s linear;
-  margin-top: -0.8rem;
-  align-items: center;
+ display: inline-block;
+ font-size: 1.7rem;
+ color: white;
+ background: black;
+ border-radius: 0.5rem;
+ cursor: pointer;
+ padding: 0.8rem 3rem;
+ transition: all 0.2s linear;
+ margin-top: -0.8rem;
+ align-items: center;
 }
 
 .log_text {
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
+ display: flex;
+ align-items: center;
+ margin-right: 10px;
 }
 
 .btn:hover {
-  background: red;
-  letter-spacing: 0.1rem;
-  transition: all 0.2s linear;
+ background: red;
+ letter-spacing: 0.1rem;
+ transition: all 0.2s linear;
 }
 
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: white;
-  padding: 1rem 7%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ background: white;
+ padding: 1rem 7%;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ z-index: 1000;
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header .logo {
-  display: flex;
-  align-items: center;
-  font-size: 2rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: black;
+ display: flex;
+ align-items: center;
+ font-size: 2rem;
+ font-weight: bold;
+ text-decoration: none;
+ color: black;
 }
 
 header .logo img {
-  margin-right: 10px;
+ margin-right: 10px;
 }
 
 header .log_text {
-  color: black;
-  font-size: 2rem;
-  font-weight: bold;
+ color: black;
+ font-size: 2rem;
+ font-weight: bold;
 }
 
 header .logo i {
-  color: red;
+ color: red;
 }
 
 /* header .log_text{
@@ -138,91 +138,91 @@ header .logo i {
 } */
 
 header .navbar a {
-  font-size: 1.8rem;
-  /* Slightly reduced font size for better visual balance */
-  border-radius: 0.5rem;
-  padding: 0.5rem 1.5rem;
-  color: black;
-  transition: background-color 0.3s ease;
+ font-size: 1.8rem;
+ /* Slightly reduced font size for better visual balance */
+ border-radius: 0.5rem;
+ padding: 0.5rem 1.5rem;
+ color: black;
+ transition: background-color 0.3s ease;
 }
 
 header .navbar a.active,
 header .navbar a:hover {
-  color: white;
-  background: red;
-  letter-spacing: 0.1rem;
-  transition: all 0.2s linear;
+ color: white;
+ background: red;
+ letter-spacing: 0.1rem;
+ transition: all 0.2s linear;
 }
 
 header .apply_btn .btn {
-  background: red;
-  /* Set the background color for the button */
-  padding: 0.5rem 1rem;
-  /* Add padding for better spacing */
-  color: white;
-  border-radius: 0.5rem;
-  font-size: 1.8rem;
-  transition: all 0.1s linear;
-  margin-left: 10px;
+ background: red;
+ /* Set the background color for the button */
+ padding: 0.5rem 1rem;
+ /* Add padding for better spacing */
+ color: white;
+ border-radius: 0.5rem;
+ font-size: 1.8rem;
+ transition: all 0.1s linear;
+ margin-left: 10px;
 }
 
 header .apply_btn {
-  display: flex;
-  align-items: center;
-  margin-top: 5px;
+ display: flex;
+ align-items: center;
+ margin-top: 5px;
 }
 
 
 .button-row {
-  margin-bottom: 10px;
-  /* Adjust spacing between rows */
+ margin-bottom: 10px;
+ /* Adjust spacing between rows */
 }
 
 .button-row button {
-  background-color: white;
-  /* Initial background color */
-  color: black;
-  /* Initial text color */
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  /* Smooth transition */
+ background-color: white;
+ /* Initial background color */
+ color: black;
+ /* Initial text color */
+ border: none;
+ padding: 10px 20px;
+ border-radius: 5px;
+ cursor: pointer;
+ transition: background-color 0.3s, color 0.3s;
+ /* Smooth transition */
 }
 
 .button-row button:hover {
-  background-color: red;
-  /* Hover background color */
-  color: white;
-  /* Hover text color */
+ background-color: red;
+ /* Hover background color */
+ color: white;
+ /* Hover text color */
 }
 
 /* Remove default link styles */
 .button-row a {
-  text-decoration: none;
-  color: inherit;
+ text-decoration: none;
+ color: inherit;
 }
 
 body {
-  font-family: Arial, sans-serif;
+ font-family: Arial, sans-serif;
 }
 
 h1 {
-  text-align: center;
+ text-align: center;
 }
 
 form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+ max-width: 600px;
+ margin: 0 auto;
+ padding: 20px;
+ border: 1px solid #ccc;
+ border-radius: 5px;
 }
 
 label {
-  display: block;
-  margin-bottom: 5px;
+ display: block;
+ margin-bottom: 5px;
 }
 
 input[type="text"],
@@ -230,24 +230,24 @@ input[type="email"],
 input[type="date"],
 select,
 textarea {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+ width: 100%;
+ padding: 8px;
+ margin-bottom: 10px;
+ border: 1px solid #ccc;
+ border-radius: 5px;
 }
 
 button[type="submit"] {
-  background-color: red;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+ background-color: red;
+ color: white;
+ padding: 10px 20px;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
 }
 
 button[type="submit"]:hover {
-  background-color: red;
+ background-color: red;
 }
 
 /* off limits yaswanth */
@@ -257,320 +257,320 @@ button[type="submit"]:hover {
 } */
 
 header button a {
-  color: white;
+ color: white;
 }
 
 header .apply_btn .btn:hover {
-  letter-spacing: 0.1rem;
-  font-size: 1.9rem;
+ letter-spacing: 0.1rem;
+ font-size: 1.9rem;
 }
 
 form {
-  max-width: 600px;
-  margin: auto;
-  background-color: #fff;
-  padding: 2em;
-  border-radius: 8px;
+ max-width: 600px;
+ margin: auto;
+ background-color: #fff;
+ padding: 2em;
+ border-radius: 8px;
 }
 
 label {
-  display: block;
-  margin-bottom: 0.5em;
-  color: #333;
+ display: block;
+ margin-bottom: 0.5em;
+ color: #333;
 }
 
 input,
 select,
 textarea {
-  width: 100%;
-  padding: 0.5em;
-  margin-bottom: 1em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+ width: 100%;
+ padding: 0.5em;
+ margin-bottom: 1em;
+ border: 1px solid #ccc;
+ border-radius: 4px;
 }
 
 input,
 textarea {
-  width: 100%;
-  padding: 0.5em;
-  margin-bottom: 1em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+ width: 100%;
+ padding: 0.5em;
+ margin-bottom: 1em;
+ border: 1px solid #ccc;
+ border-radius: 4px;
 }
 
 button {
-  background-color: red;
-  color: #fff;
-  padding: 0.7em 1em;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+ background-color: red;
+ color: #fff;
+ padding: 0.7em 1em;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
 }
 
 button:hover {
-  background-color: red;
-  letter-spacing: 0.1rem;
+ background-color: red;
+ letter-spacing: 0.1rem;
 }
 
 header #bar:hover {
-  /* background-color: red; */
-  color: red;
-  transform: rotate(360deg);
+ /* background-color: red; */
+ color: red;
+ transform: rotate(360deg);
 }
 
 header #bar {
-  display: none;
-  font-size: 2.7rem;
-  margin-left: 10px;
+ display: none;
+ font-size: 2.7rem;
+ margin-left: 10px;
 }
 
-.quote {
-  margin-top: 2rem;
+.quote{
+ margin-top: 2rem;
 }
 
 main #btnScrollToTop {
-  position: fixed;
-  font-size: 1.5rem;
-  right: 10px;
-  bottom: 10px;
-  width: 50px;
-  height: 50px;
-  /* Set both width and height to the same value for a circle */
-  border-radius: 50%;
-  background: red;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  color: #fff;
-  border: none;
-  outline: none;
-  cursor: pointer;
+ position: fixed;
+ font-size: 1.5rem;
+ right: 10px;
+ bottom: 10px;
+ width: 50px;
+ height: 50px;
+ /* Set both width and height to the same value for a circle */
+ border-radius: 50%; 
+  background: red; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); 
+  color: #fff; 
+  border: none; 
+  outline: none; 
+  cursor: pointer; 
   transition: font-size 0.1s ease, width 0.3s ease, height 0.3s ease;
 }
 
 #btnScrollToTop a {
-  color: white;
-  font-size: 2rem;
+ color: white;
+ font-size: 2rem;
 }
 
 .up-icon {
-  margin-top: 1000px;
-  color: red;
+ margin-top: 1000px;
+ color: red;
 }
 
 main #btnScrollToTop:hover {
-  font-size: 1.6rem;
-  width: 55px;
-  height: 55px;
+ font-size: 1.6rem;
+ width: 55px;
+ height: 55px;
 }
 
 .submit_btn {
-  color: white;
+ color: white;
 }
 
 .swiper-pagination-bullet-active {
-  background: red !important;
+ background: red !important;
 }
 
 
 .swiper-pagination-bullet {
-  margin-top: 1000px;
-  /* Adjust the horizontal spacing between bullets */
+ margin-top: 1000px;
+ /* Adjust the horizontal spacing between bullets */
 }
 
 .dishes .box-container {
-  display: grid;
-  padding-top: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-  gap: 4.5rem;
+ display: grid;
+ padding-top: 2rem;
+ grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+ gap: 4.5rem;
 }
 
 .dishes .box-container .box {
-  height: 45rem;
-  padding: 2.5 rem;
-  background: white;
-  border-radius: 2rem;
-  border: 0.1rem solid rgba(0, 0, 0, 0.2);
-  box-shadow: black;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
+ height: 45rem;
+ padding: 2.5 rem;
+ background: white;
+ border-radius: 2rem;
+ border: 0.1rem solid rgba(0, 0, 0, 0.2);
+ box-shadow: black;
+ position: relative;
+ overflow: hidden;
+ text-align: center;
 }
 
 .dishes .box-container .box img {
-  height: 16rem;
-  margin: 1rem 0;
-  margin-top: 27px;
-  border-radius: 10px;
-  overflow: hidden;
+ height: 16rem;
+ margin: 1rem 0;
+ margin-top: 27px;
+ border-radius: 10px;
+ overflow: hidden;
 }
 
 
 
 .dishes .box-container .box p {
-  font-size: 1.5rem;
-  text-align: center;
-  padding-bottom: 2.5rem;
-  margin-left: 20px;
-  /* Adjust the left margin as needed */
-  margin-right: 20px;
+ font-size: 1.5rem;
+ text-align: center;
+ padding-bottom: 2.5rem;
+ margin-left: 20px;
+ /* Adjust the left margin as needed */
+ margin-right: 20px;
 }
 
 .dishes .box-container .box h3 {
-  color: black;
-  font-size: 2.5rem;
+ color: black;
+ font-size: 2.5rem;
 }
 
 .dishes .box-container .box .stars {
-  padding: 1rem 0;
+ padding: 1rem 0;
 }
 
 .dishes .box-container .box .stars i {
-  font-size: 1.7rem;
-  color: red;
+ font-size: 1.7rem;
+ color: red;
 }
 
 .dishes .box-container .box a .span {
-  color: red;
-  font-weight: bolder;
-  margin-right: 1rem;
-  font-size: 2.5rem;
+ color: red;
+ font-weight: bolder;
+ margin-right: 1rem;
+ font-size: 2.5rem;
 }
 
 .dishes .box-container .box a:hover {
-  letter-spacing: 0.25rem;
+ letter-spacing: 0.25rem;
 }
 
 .home .home-slider {
-  height: 650px;
-  /* Set a fixed height for your slider container */
-  overflow: hidden;
-  /* Hide any overflow to maintain fixed height */
+ height: 650px;
+ /* Set a fixed height for your slider container */
+ overflow: hidden;
+ /* Hide any overflow to maintain fixed height */
 }
 
 .home .home-slider .slide {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding-top: 9rem;
-  height: 100%;
-  /* Make each slide take up the full height of the slider */
+ display: flex;
+ align-items: center;
+ flex-wrap: wrap;
+ gap: 2rem;
+ padding-top: 9rem;
+ height: 100%;
+ /* Make each slide take up the full height of the slider */
 }
 
 .home .home-slider .slide .content {
-  flex: 1 1 45rem;
+ flex: 1 1 45rem;
 }
 
 .home .home-slider .slide .image {
-  flex: 1 1 45rem;
-  height: 100%;
-  /* Make the image take up the full height of the slide */
+ flex: 1 1 45rem;
+ height: 100%;
+ /* Make the image take up the full height of the slide */
 }
 
 .home .home-slider .slide .image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-  max-height: 100%;
-  max-width: 100%;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ object-position: center center;
+ max-height: 100%;
+ max-width: 100%;
 }
 
-.benefits-page {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  font-family: sans-serif;
-  width: 100%;
-  min-height: 100vh;
+.benefits-page{
+ margin: 0px;
+ padding: 0px;
+ box-sizing: border-box;
+ font-family: sans-serif;
+ width: 100%;
+ min-height: 100vh;
 }
 
-.benefits-container {
-  width: 80%;
-  display: block;
-  margin: auto;
-  padding: 20px;
+.benefits-container{
+ width: 80%;
+ display: block;
+ margin: auto;
+ padding: 20px;
 }
 
-.title {
-  text-align: center;
-  font-size: 45px;
-  font-weight: bold;
-  margin-bottom: 70px;
+.title{
+ text-align: center;
+ font-size: 45px;
+ font-weight: bold;
+ margin-bottom: 70px;
 }
 
-.benefits-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+.benefits-content{
+ display:flex;
+ flex-wrap: wrap;
+ align-items: center;
+ margin:0px;
+ padding: 0px;
+ box-sizing: border-box;
+ font-family: 'Poppins', sans-serif;
 }
 
-.benefits-image1 {
-  flex: 1;
-  margin-right: 20px;
-  overflow: hidden;
-  border-radius: 10px;
+.benefits-image1{
+ flex:1;
+ margin-right: 20px;
+ overflow: hidden;
+ border-radius: 10px;
 }
 
-.benefits-image1 img {
-  width: 100%;
-  transition: transform 0.3s ease;
+.benefits-image1 img{
+ width: 100%;
+ transition: transform 0.3s ease;
 }
 
-.benefits-image1:hover img {
-  transform: scale(1.1);
+.benefits-image1:hover img{
+ transform: scale(1.1);
 }
 
-.why-us-content {
-  flex: 1;
-  margin-left: 20px;
-}
-
-
-.why-us-content p {
-  font-size: 17px;
-  line-height: 1.6;
-}
-
-.learn-more {
-  margin-top: 20px;
-  display: inline-block;
-  padding: 10px 20px;
-  border: 1px solid red;
-  color: #000;
-  transition: 0.3s ease;
-  font-size: 17px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 10px;
+.why-us-content{
+ flex: 1;
+ margin-left: 20px;
 }
 
 
-.learn-more:hover {
-  background-color: red;
+.why-us-content p{
+ font-size: 17px;
+ line-height: 1.6;
+}
+
+.learn-more{
+ margin-top: 20px;
+ display: inline-block;
+ padding: 10px 20px;
+ border: 1px solid red;
+ color: #000;
+ transition: 0.3s ease;
+ font-size: 17px;
+ text-decoration: none;
+ font-weight: bold;
+ border-radius: 10px;
+}
+
+
+.learn-more:hover{
+ background-color: red;
 }
 
 
 .home .home-slider .slide .content span {
-  color: red;
-  font-size: 2.5rem;
-  line-height: 0.8rem;
+ color: red;
+ font-size: 2.5rem;
+ line-height: 0.8rem;
 }
 
 .home .home-slider .slide .content h3 {
-  color: black;
-  font-size: 6.5rem;
+ color: black;
+ font-size: 6.5rem;
 }
 
 .home .home-slider .slide .content p {
-  color: black;
-  font-size: 1.9rem;
-  padding: 0.5rem 0;
-  line-height: 2.8rem;
-  letter-spacing: 0.1rem;
+ color: black;
+ font-size: 1.9rem;
+ padding: 0.5rem 0;
+ line-height: 2.8rem;
+ letter-spacing: 0.1rem;
 }
 
 /* .home .home-slider .slide .image img {
@@ -583,127 +583,127 @@ main #btnScrollToTop:hover {
 } */
 
 .services {
-  margin: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+ margin: 3rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-wrap: wrap;
 }
 
 .services .box {
-  border: 0.5px solid lightgray;
-  padding: 3rem;
-  /* Increased padding */
-  margin: 1rem;
-  border-radius: 2rem;
-  background-color: white;
-  flex: 1 0 30rem;
-  /* Increased minimum width */
-  box-sizing: border-box;
+ border: 0.5px solid lightgray;
+ padding: 3rem;
+ /* Increased padding */
+ margin: 1rem;
+ border-radius: 2rem;
+ background-color: white;
+ flex: 1 0 30rem;
+ /* Increased minimum width */
+ box-sizing: border-box;
 }
 
 .services .box img {
-  height: 15rem;
-  /* Increased image height */
-  margin: auto;
-  display: block;
+ height: 15rem;
+ /* Increased image height */
+ margin: auto;
+ display: block;
 }
 
 .h-primary,
 .h-secondary {
-  padding: 0.5rem;
+ padding: 0.5rem;
 }
 
 .h-primary {
-  margin-bottom: -22px
+ margin-bottom: -22px
 }
 
 .h-primary {
-  font-size: 3rem;
-  /* Increased font size */
+ font-size: 3rem;
+ /* Increased font size */
 }
 
 .h-secondary {
-  font-size: 2rem;
-  /* Increased font size */
+ font-size: 2rem;
+ /* Increased font size */
 }
 
 .h-primary span {
-  color: red;
+ color: red;
 }
 
 .h-text {
-  font-size: 1.5rem;
+ font-size: 1.5rem;
 }
 
 .center {
-  text-align: center;
+ text-align: center;
 }
 
 .gallery h1 {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
+ font-size: 3rem;
+ margin-bottom: 1.5rem;
 }
 
 .gallery h1 span {
-  color: red;
+ color: red;
 }
 
 .gallery .box-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+ display: flex;
+ flex-wrap: wrap;
+ gap: 1.5rem;
 }
 
 .gallery .box-container .box {
-  height: 25rem;
-  flex: 1 1 30rem;
-  border: 1rem solid #fff;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  border-radius: .5rem;
-  position: relative;
-  overflow: hidden;
+ height: 25rem;
+ flex: 1 1 30rem;
+ border: 1rem solid #fff;
+ box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+ border-radius: .5rem;
+ position: relative;
+ overflow: hidden;
 }
 
 .gallery .box-container .box img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+ height: 100%;
+ width: 100%;
+ object-fit: cover;
 }
 
 .gallery .box-container .box .content {
-  position: absolute;
-  top: 100%;
-  /* Move content below the box initially */
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 2rem;
-  padding-top: 5rem;
-  text-align: center;
-  transition: top 0.3s ease;
-  /* Smooth transition on hover */
+ position: absolute;
+ top: 100%;
+ /* Move content below the box initially */
+ left: 0;
+ height: 100%;
+ width: 100%;
+ background: rgba(255, 255, 255, 0.9);
+ padding: 2rem;
+ padding-top: 5rem;
+ text-align: center;
+ transition: top 0.3s ease;
+ /* Smooth transition on hover */
 }
 
 .gallery .box-container .box .content h3 {
-  margin-top: -40px;
-  font-size: 2.5rem;
-  color: #333;
+ margin-top: -40px;
+ font-size: 2.5rem;
+ color: #333;
 }
 
 .gallery .box-container .box .content p {
-  font-size: 1.5rem;
-  color: #666;
-  padding: 1rem 0;
+ font-size: 1.5rem;
+ color: #666;
+ padding: 1rem 0;
 }
 
 .gallery .box-container .box:hover .content {
-  top: 0;
+ top: 0;
 }
 
 .gallery .box-container .box .btn {
-  margin-top: 1rem;
+ margin-top: 1rem;
 }
 
 
@@ -711,230 +711,230 @@ main #btnScrollToTop:hover {
 
 
 body {
-  font-family: "Nunito", sans-serif;
-  background-color: white;
-  color: black;
-  margin: 0;
-  padding: 0;
+ font-family: "Nunito", sans-serif;
+ background-color: white;
+ color: black;
+ margin: 0;
+ padding: 0;
 }
 
 .review {
-  padding: 2rem;
-  padding-top: -10rem;
-  margin-top: 1rem;
-  padding-bottom: 6rem;
+ padding: 2rem;
+ padding-top: -10rem;
+ margin-top: 1rem;
+ padding-bottom: 6rem;
 }
 
 .sub-header {
-  text-align: center;
-  color: black;
-  font-size: 3rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+ text-align: center;
+ color: black;
+ font-size: 3rem;
+ padding-top: 1rem;
+ padding-bottom: 1rem;
 }
 
 .dishes .sub-header {
-  text-align: center;
-  color: red;
-  font-size: 3rem;
-  padding-top: 6rem;
-  padding-bottom: 1rem;
+ text-align: center;
+ color: red;
+ font-size: 3rem;
+ padding-top: 6rem;
+ padding-bottom: 1rem;
 }
 
 .sub-header span {
-  color: red;
+ color: red;
 }
 
 .review .slide {
-  padding: 2rem;
-  box-shadow: black;
-  border: .1rem solid rgba(0, 0, 0, 0.2);
-  border-radius: .5rem;
-  position: relative;
+ padding: 2rem;
+ box-shadow: black;
+ border: .1rem solid rgba(0, 0, 0, 0.2);
+ border-radius: .5rem;
+ position: relative;
 }
 
 .review .slide .fa-quote-left {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  font-size: 6rem;
-  color: #ccc;
+ position: absolute;
+ top: 2rem;
+ right: 2rem;
+ font-size: 6rem;
+ color: #ccc;
 }
 
 .review .slide .user {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-  padding-bottom: 1.5rem;
+ display: flex;
+ gap: 1.5rem;
+ align-items: center;
+ padding-bottom: 1.5rem;
 }
 
 .review .slide .user img {
-  height: 7rem;
-  width: 7rem;
-  border-radius: 50%;
-  object-fit: cover
+ height: 7rem;
+ width: 7rem;
+ border-radius: 50%;
+ object-fit: cover
 }
 
 .review .slide .user h3 {
-  color: black;
-  font-size: 2rem;
-  padding-bottom: .5rem;
+ color: black;
+ font-size: 2rem;
+ padding-bottom: .5rem;
 }
 
 .review .slide .user i {
-  font-size: 1.3rem;
-  color: red;
+ font-size: 1.3rem;
+ color: red;
 }
 
 .review .slide p {
-  font-size: 1.5rem;
-  line-height: 1.8;
-  color: black;
+ font-size: 1.5rem;
+ line-height: 1.8;
+ color: black;
 
 }
 
 .about {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  gap: 4rem;
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ align-items: center;
+ gap: 4rem;
 }
 
 .about-img img {
-  width: 100%;
-  height: auto;
+ width: 100%;
+ height: auto;
 }
 
 .about-text h2 {
-  font-size: 3rem;
-  line-height: 2.9rem;
-  margin-bottom: 2rem;
-  ;
+ font-size: 3rem;
+ line-height: 2.9rem;
+ margin-bottom: 2rem;
+ ;
 }
 
 .about-text p {
-  color: black;
-  font-size: 1.5rem;
-  line-height: 30px;
-  margin-bottom: 3rem;
+ color: black;
+ font-size: 1.5rem;
+ line-height: 30px;
+ margin-bottom: 3rem;
 }
 
 
 
 .whyUs {
-  /* font-family: "Nunito", sans-serif; */
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  outline: none;
-  border: none;
-  text-transform: capitalize;
-  transition: all 0.2s linear;
+ /* font-family: "Nunito", sans-serif; */
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ text-decoration: none;
+ outline: none;
+ border: none;
+ text-transform: capitalize;
+ transition: all 0.2s linear;
 }
 
 h1,
 h2,
 h3,
 p {
-  text-transform: none;
-  /* This will reset the text transformation */
+ text-transform: none;
+ /* This will reset the text transformation */
 }
 
 .section-title {
-  font-size: 24px;
+ font-size: 24px;
 }
 
 .about-title {
-  font-size: 24px;
+ font-size: 24px;
 }
 
 .about-title2 {
-  font-size: 20px;
+ font-size: 20px;
 }
 
 .btn {
-  display: inline-block;
-  font-size: 1.6rem;
-  color: white;
-  background-color: red;
-  padding: 0.8rem 2rem;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s;
+ display: inline-block;
+ font-size: 1.6rem;
+ color: white;
+ background-color: red;
+ padding: 0.8rem 2rem;
+ border-radius: 5px;
+ text-decoration: none;
+ transition: background-color 0.3s;
 }
 
 .btn:hover {
-  background-color: red;
-  letter-spacing: 0.1rem;
+ background-color: red;
+ letter-spacing: 0.1rem;
 }
 
 .footer {
-  background-color: #333;
-  /* Dark gray/black background color */
-  color: white;
-  /* White text color */
+ background-color: #333;
+ /* Dark gray/black background color */
+ color: white;
+ /* White text color */
 }
 
 .footer .box-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-  gap: 1.5rem;
-  justify-content: center;
-  /* Center the grid horizontally */
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+ gap: 1.5rem;
+ justify-content: center;
+ /* Center the grid horizontally */
 }
 
 
 .footer .box-container .box h3 {
-  padding: .5rem 0;
-  font-size: 2.5rem;
-  color: red;
+ padding: .5rem 0;
+ font-size: 2.5rem;
+ color: red;
 }
 
 .footer .box-container .box h4 {
-  /* padding: .5rem 0; */
-  padding-top: 1.5rem;
-  font-size: 1.7rem;
-  color: red;
+ /* padding: .5rem 0; */
+ padding-top: 1.5rem;
+ font-size: 1.7rem;
+ color: red;
 }
 
 .footer .box-container .box .email-footer {
-  padding-top: 2rem;
+ padding-top: 2rem;
 }
 
 .footer .box-container .box .email-link {
-  text-transform: lowercase;
+ text-transform: lowercase;
 }
 
 .footer .box-container .box a {
-  display: block;
-  padding: .5rem 0;
-  font-size: 1.5rem;
-  color: white;
+ display: block;
+ padding: .5rem 0;
+ font-size: 1.5rem;
+ color: white;
 }
 
 .footer .box-container .box a:hover {
-  color: red;
-  text-decoration: underline;
+ color: red;
+ text-decoration: underline;
 }
 
 .footer .credit {
-  text-align: center;
-  border-top: .1rem solid rgba(255, 255, 255, 0.1);
-  font-size: 2rem;
-  color: white;
-  padding: .5rem;
-  padding-top: 1.5rem;
-  margin-top: 0.5rem;
+ text-align: center;
+ border-top: .1rem solid rgba(255, 255, 255, 0.1);
+ font-size: 2rem;
+ color: white;
+ padding: .5rem;
+ padding-top: 1.5rem;
+ margin-top: 0.5rem;
 }
 
 .footer .credit .span {
-  color: red;
+ color: red;
 }
 
 .footer {
-  width: 100%;
-  /* rest of your .footer styles */
+ width: 100%;
+ /* rest of your .footer styles */
 }
 
 /* body, html {
@@ -943,624 +943,620 @@ p {
 } */
 
 .work {
-  margin-left: 0px;
-  margin-right: auto;
+ margin-left: 0px;
+ margin-right: auto;
 }
 
 .staff {
-  margin-left: auto;
-  margin-right: 0px;
+ margin-left: auto;
+ margin-right: 0px;
 }
 
 .work_p {
-  font-size: 21px;
-  font-family: sands-s;
+ font-size: 21px;
+ font-family: sands-s;
 }
 
 .team_img {
-  float: left;
+ float: left;
 }
 
 .career_img {
-  float: left;
+ float: left;
 }
 
 /* Add this CSS to your main.css file */
 
 .careers .navbar.active {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fff;
-  /* Change the background color to match your design */
-  position: absolute;
-  top: 70px;
-  /* Adjust the top position as needed */
-  left: 0;
-  right: 0;
-  z-index: 1000;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ background-color: #fff;
+ /* Change the background color to match your design */
+ position: absolute;
+ top: 70px;
+ /* Adjust the top position as needed */
+ left: 0;
+ right: 0;
+ z-index: 1000;
 }
 
 .careers .navbar.active a {
-  padding: 15px 20px;
-  color: #333;
-  /* Change the text color to match your design */
+ padding: 15px 20px;
+ color: #333;
+ /* Change the text color to match your design */
 }
 
 .careers .navbar.active a:hover {
-  background-color: #f0f0f0;
-  /* Change the background color on hover to match your design */
+ background-color: #f0f0f0;
+ /* Change the background color on hover to match your design */
 }
 
 .careers .apply_btn .btn {
-  display: flex;
-  align-items: center;
+ display: flex;
+ align-items: center;
 }
 
 .wrapper_faq {
-  text-align: center;
+ text-align: center;
 }
 
 .foot {
-  text-align: center;
-  padding: 20px;
+ text-align: center;
+ padding: 20px;
 }
 
 .faq {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: Helvetica, sans-serif;
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+ font-family: Helvetica, sans-serif;
 }
 
 .accordion {
-  width: 100%;
-  margin: 0 auto;
+ width: 100%;
+ margin: 0 auto;
 }
 
 .accordion-item {
-  margin-bottom: 1rem;
+ margin-bottom: 1rem;
 }
 
 .accordion-header {
-  cursor: pointer;
+ cursor: pointer;
 }
 
 .accordion-collapse {
-  padding: 0.5rem 1rem;
+ padding: 0.5rem 1rem;
 }
 
 .faq {
-  background-color: #f5f5f5;
-  color: black;
-  overflow-y: scroll;
+ background-color: #f5f5f5;
+ color: black;
+ overflow-y: scroll;
 }
 
 .section_faq {
-  margin-top: 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+ margin-top: 3rem;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
 }
 
 .section_faq h1 {
-  font-size: 3rem;
+ font-size: 3rem;
 }
 
 .section_faq ul {
-  margin: 3rem auto;
-  width: 75%;
-  max-width: 900px;
+ margin: 3rem auto;
+ width: 75%;
+ max-width: 900px;
 }
 
 .section_faq ul li {
-  list-style: none;
-  margin-bottom: 8px;
+ list-style: none;
+ margin-bottom: 8px;
 }
 
 .section_faq .question {
-  margin-bottom: 1px;
-  padding: 20px;
-  width: 100%;
-  background-color: rgb(199, 200, 201);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 24px;
-  font-weight: 400;
-  cursor: pointer;
-  text-transform: none;
+ margin-bottom: 1px;
+ padding: 20px;
+ width: 100%;
+ background-color: rgb(199, 200, 201);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ font-size: 24px;
+ font-weight: 400;
+ cursor: pointer;
+ text-transform: none;
 }
 
 .section_faq .icon {
-  margin-left: 1rem;
-  font-size: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+ margin-left: 1rem;
+ font-size: 3rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 
 .section_faq .answer {
-  max-height: 0;
-  background-color: rgb(199, 200, 201);
-  overflow: hidden;
-  font-size: 20px;
-  transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
-  text-transform: none;
-
+ max-height: 0;
+ background-color: rgb(199, 200, 201);
+ overflow: hidden;
+ font-size: 20px;
+ transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+ text-transform: none;
+ 
 
 }
 
 
 .section_faq .answer span {
-  display: inline-block;
-  padding: 1.2rem;
-  text-transform: none;
+ display: inline-block;
+ padding: 1.2rem;
+ text-transform: none;
 }
 
 .section_faq .question:hover {
-  color: white;
-  background-color: red;
-  transition: background-color 0.2s ease;
-  text-transform: none;
+ color: white;
+ background-color: red;
+ transition: background-color 0.2s ease;
+ text-transform: none;
 }
 
 .section_faq .question.open+.answer {
-  max-height: 1200px;
-  text-transform: none;
+ max-height: 1200px;
+ text-transform: none;
 }
 
 .section_faq .question.open>.icon {
-  transform: rotate(45 deg);
-  text-transform: none;
+ transform: rotate(45 deg);
+ text-transform: none;
 }
 
 .jobs-list-container {
-  max-width: 900px;
-  margin: 20px auto;
-  margin-top: 7rem;
-  margin-bottom: 5rem;
-  /* font-family: "Rubik", sans-serif; */
+ max-width: 900px;
+ margin: 20px auto;
+ margin-top: 7rem;
+ margin-bottom: 5rem;
+ /* font-family: "Rubik", sans-serif; */
 }
 
 .jobs-list-container h2 {
-  font-size: 30px;
-  border-left: 4px solid #023047;
-  color: red;
-  padding-left: 20px;
+ font-size: 30px;
+ border-left: 4px solid #023047;
+ color: red;
+ padding-left: 20px;
 }
 
 .jobs-list-container .jobs {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 24px;
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ gap: 24px;
 }
 
 .jobs-list-container .jobs img {
-  width: 60px;
+ width: 60px;
 }
 
 
-.apply .jobs-list-container .jobs .job {
-  display: flex;
+.apply .jobs-list-container .jobs .job{
+   display: flex;
 }
 
 .apply .jobs-list-container .jobs img {
-  /* justify-content: center; */
-  align-items: center;
+ /* justify-content: center; */
+ align-items: center;
 }
 
 .jobs-list-container .job {
-  box-shadow: 0 4px 24px -8px rgba(2, 48, 71, 0.2);
-  padding: 24px;
-  border-radius: 16px;
-  position: relative;
-  transition: all 400ms ease;
-  display: flex;
-  flex-direction: column;
+ box-shadow: 0 4px 24px -8px rgba(2, 48, 71, 0.2);
+ padding: 24px;
+ border-radius: 16px;
+ position: relative;
+ transition: all 400ms ease;
+ display: flex;
+ flex-direction: column;
 }
 
 .jobs-list-container .job:hover {
-  transform: scale(1.03);
+ transform: scale(1.03);
 }
 
 .jobs-list-container .open-positions {
-  position: absolute;
-  top: 40px;
-  right: 24px;
-  color: #e63946;
+ position: absolute;
+ top: 40px;
+ right: 24px;
+ color: #e63946;
 }
 
 .jobs-list-container .job-title {
-  font-size: 20px;
-  padding: 10px 0;
-  margin: 0;
-  color: #023047;
+ font-size: 20px;
+ padding: 10px 0;
+ margin: 0;
+ color: #023047;
 }
 
 .apply .jobs-list-container .job-title {
-  font-size: 20px;
-  padding: 1px 0;
-  margin: 0;
-  color: #023047;
-  text-align: center;
+ font-size: 20px;
+ padding: 1px 0;
+ margin: 0;
+ color: #023047;
+ text-align: center;
 }
 
 .apply .jobs-list-container .jobs img {
-  width: 100px;
-  align-self: center;
-  margin-right: 10px;
+ width: 100px;
+ align-self: center;
+ margin-right: 10px;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  /* This ensures the container takes at least the full height of the viewport */
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+ /* This ensures the container takes at least the full height of the viewport */
 }
 
 main {
-  flex: 1;
-  /* This makes the main content take the remaining space */
+ flex: 1;
+ /* This makes the main content take the remaining space */
 }
 
 footer {
-  flex-shrink: 0;
-  /* Prevents the footer from shrinking */
-}
+ flex-shrink: 0;
+ /* Prevents the footer from shrinking */
+} 
 
 .jobs-list-container .details {
-  margin-top: 6px;
-  font-size: 14px;
-  color: #333;
-  line-height: 1.8;
-  flex: 1;
-  text-transform: none;
+ margin-top: 6px;
+ font-size: 14px;
+ color: #333;
+ line-height: 1.8;
+ flex: 1;
+ text-transform: none;
 }
 
 .jobs-list-container .details-btn {
-  text-decoration: none;
-  border: 1px solid red;
-  color: #000;
-  padding: 8px 16px;
-  border-radius: 8px;
-  margin-top: 20px;
-  font-size: 12px;
+ text-decoration: none;
+ border: 1px solid red;
+ color: #000;
+ padding: 8px 16px;
+ border-radius: 8px;
+ margin-top: 20px;
+ font-size: 12px;
 }
 
 .jobs-list-container .details-btn:hover {
-  background-color: red;
-  color: #fff;
+ background-color: red;
+ color: #fff;
 }
 
 .jobs-list-container h2 {
-  margin-bottom: 12px;
+ margin-bottom: 12px;
 }
 
 .loader-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 10000;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+ position: fixed;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ z-index: 10000;
+ background: #fff;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ overflow: hidden;
 }
 
 .loader-container img {
-  width: 35rem;
+ width: 35rem;
 }
 
 .loader-container.fade-out {
-  top: 110%;
-  opacity: 0;
+ top: 110%;
+ opacity: 0;
 }
 
 
 
 @media (max-width: 940px) {
-  .jobs-list-container .jobs {
-    grid-template-columns: 1fr 1fr;
-  }
+ .jobs-list-container .jobs {
+   grid-template-columns: 1fr 1fr;
+ }
 }
 
 @media (max-width: 640px) {
-  .jobs-list-container .jobs {
-    grid-template-columns: 1fr;
-    max-width: 400px;
-    margin: 0 auto;
-  }
+ .jobs-list-container .jobs {
+   grid-template-columns: 1fr;
+   max-width: 400px;
+   margin: 0 auto;
+ }
 }
 
 @media (max-width: 991px) {
-  html {
-    font-size: 55%;
-  }
+ html {
+   font-size: 55%;
+ }
 
-  header {
-    padding: 1rem 2rem;
-  }
+ header {
+   padding: 1rem 2rem;
+ }
 
-  section {
-    padding: 2rem;
-  }
+ section {
+   padding: 2rem;
+ }
 }
 
 @media screen and (max-width: 768px) {
 
-  header #bar {
-    display: inline-block;
-  }
+ header #bar {
+     display: inline-block;
+   }
+ .home .home-slider .slide .image img {
+   height: auto;
+   object-fit: contain;
+   /* You can use 'contain' or 'cover' based on your preference */
+   width: 100%;
+ }
 
-  .home .home-slider .slide .image img {
-    height: auto;
-    object-fit: contain;
-    /* You can use 'contain' or 'cover' based on your preference */
-    width: 100%;
-  }
+ #about .container {
+   text-align: center;
+ }
 
-  #about .container {
-    text-align: center;
-  }
+ #about .about-image,
+ #about .about-content {
+   width: 100%;
+ }
 
-  #about .about-image,
-  #about .about-content {
-    width: 100%;
-  }
+ #about .about-image {
+   order: -1;
+   /* This places the image above the text in the stacked layout */
+   margin-bottom: 1.5rem;
+   /* Adjust as needed for spacing */
+ }
 
-  #about .about-image {
-    order: -1;
-    /* This places the image above the text in the stacked layout */
-    margin-bottom: 1.5rem;
-    /* Adjust as needed for spacing */
-  }
+ #about h2 {
+   font-size: 2rem;
+ }
 
-  #about h2 {
-    font-size: 2rem;
-  }
-
-  #about p {
-    font-size: 1.4rem;
-    line-height: 2rem;
-  }
+ #about p {
+   font-size: 1.4rem;
+   line-height: 2rem;
+ }
 
 
-  header .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: white;
-    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
-    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
-    padding: 1rem;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  }
+ header .navbar {
+   position: absolute;
+   top: 100%;
+   left: 0;
+   right: 0;
+   background: white;
+   border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+   padding: 1rem;
+   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+ }
 
-  header .navbar.active {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  }
+ header .navbar.active {
+   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+ }
 
-  header .navbar a {
-    display: block;
-    padding: 1.5rem;
-    margin: 1rem;
-    font-size: 2rem;
-    background: white;
-    color: black;
-    /* Set default color for navbar links */
-  }
+ header .navbar a {
+   display: block;
+   padding: 1.5rem;
+   margin: 1rem;
+   font-size: 2rem;
+   background: white;
+   color: black;
+   /* Set default color for navbar links */
+ }
 
-  header .navbar a.active {
-    background: red;
-    color: white;
-    /* Set color for the active link */
-  }
+ header .navbar a.active {
+   background: red;
+   color: white;
+   /* Set color for the active link */
+ }
 
-  .home .home-slider .slide .content h3 {
-    font-size: 5rem;
-  }
+ .home .home-slider .slide .content h3 {
+   font-size: 5rem;
+ }
 
-  .benefits-content {
-    flex-direction: column;
-  }
-
-  .benefits-image1,
-  .why-us-content {
-    margin: 0;
-    margin-bottom: 20px;
-  }
-
-  .title {
-    font-size: 38px;
-    margin-bottom: 50px;
-  }
+ .benefits-content{
+   flex-direction: column;
+ }
+ .benefits-image1,.why-us-content{
+   margin:0;
+   margin-bottom:20px;
+ }
+ .title{
+   font-size:38px;
+   margin-bottom:50px;
+ }
 }
 
 @media (max-width: 991px) {
-  html {
-    font-size: 50%;
-  }
+ html {
+   font-size: 50%;
+ }
 
-  .dishes .box-container .box {
-    height: auto;
-    padding: 1.5rem;
-  }
+ .dishes .box-container .box {
+   height: auto;
+   padding: 1.5rem;
+ }
 
-  .dishes .box-container .box img {
-    height: auto;
-    width: 100%;
-    margin: 1rem 0;
-  }
+ .dishes .box-container .box img {
+   height: auto;
+   width: 100%;
+   margin: 1rem 0;
+ }
 
-  .dishes .box-container .box h3 {
-    font-size: 1.8rem;
-    margin-top: 1rem;
-  }
+ .dishes .box-container .box h3 {
+   font-size: 1.8rem;
+   margin-top: 1rem;
+ }
 
-  .dishes .box-container .box .stars {
-    padding: 0.3rem 0;
-  }
+ .dishes .box-container .box .stars {
+   padding: 0.3rem 0;
+ }
 
-  .dishes .box-container .box .stars i {
-    font-size: 1.2rem;
-  }
+ .dishes .box-container .box .stars i {
+   font-size: 1.2rem;
+ }
 
-  .dishes .box-container .box p {
-    font-size: 1rem;
-    padding-bottom: 1rem;
-  }
+ .dishes .box-container .box p {
+   font-size: 1rem;
+   padding-bottom: 1rem;
+ }
 
-  .dishes .box-container .box .btn span {
-    font-size: 1.2rem;
-  }
+ .dishes .box-container .box .btn span {
+   font-size: 1.2rem;
+ }
 }
 
 
 /* about 1 */
 .heading {
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  margin: 20px auto;
+ width: 90%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ text-align: center;
+ margin: 20px auto;
 }
 
 .heading h1 {
-  font-size: 50px;
-  color: #000;
-  margin-bottom: 10px;
-  position: relative;
+ font-size: 50px;
+ color: #000;
+ margin-bottom: 10px;
+ position: relative;
 }
 
 .heading h1::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  display: block;
-  margin: 0 auto;
-  background-color: red;
+ content: "";
+ position: absolute;
+ width: 100%;
+ height: 4px;
+ display: block;
+ margin: 0 auto;
+ background-color: red;
 }
 
 .heading p {
-  font-size: 20px;
-  color: #000;
-  margin-bottom: 0px;
-  position: relative;
+ font-size: 20px;
+ color: #000;
+ margin-bottom: 0px;
+ position: relative;
 }
 
 
 .container1 {
-  width: 90%;
-  margin: 0 auto;
-  padding: 10px 20px;
+ width: 90%;
+ margin: 0 auto;
+ padding: 10px 20px;
 }
 
 .about1 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
 }
 
 .about-image1 {
-  flex: 1;
-  margin-right: 40px;
-  overflow: hidden;
+ flex: 1;
+ margin-right: 40px;
+ overflow: hidden;
 
 }
 
 .about-image1 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  transition: 0.5s ease;
-  margin-top: 0px;
+ max-width: 100%;
+ height: auto;
+ display: block;
+ transition: 0.5s ease;
+ margin-top: 0px;
 
 }
 
 .about-image1:hover img {
-  transform: scale(1.2);
+ transform: scale(1.2);
 }
 
 .about-content1 {
-  flex: 1;
+ flex: 1;
 }
 
 .about-content1 {
-  display: inline-block;
-  padding: 10px 20px;
-  color: black;
+ display: inline-block;
+ padding: 10px 20px;
+ color: black;
 
-  font-size: 19px;
-  text-decoration: none;
-  border-radius: 25px;
-  margin-top: 15px;
-  transition: 0.3s ease;
-  font-weight: normal;
+ font-size: 19px;
+ text-decoration: none;
+ border-radius: 25px;
+ margin-top: 15px;
+ transition: 0.3s ease;
+ font-weight: normal;
 }
 
 .about-content1 {
-  transform: scale(1.1);
+ transform: scale(1.1);
 }
 
 
 .about-content1 p {
-  font-size: 18px;
-  line-height: 1.5;
-  color: #666;
-  font-weight: normal;
+ font-size: 18px;
+ line-height: 1.5;
+ color: #666;
+ font-weight: normal;
 }
 
 .about-content1 {
-  display: inline-block;
-  padding: 10px 20px;
-  color: black;
-  background-color: white;
-  font-size: 19px;
-  text-decoration: none;
-  border-radius: 25px;
-  margin-top: 0px;
-  transition: 0.3s ease;
+ display: inline-block;
+ padding: 10px 20px;
+ color: black;
+ background-color: white;
+ font-size: 19px;
+ text-decoration: none;
+ border-radius: 25px;
+ margin-top: 0px;
+ transition: 0.3s ease;
 }
 
 
 @media screen and (max-width: 768px) {
-  .heading {
-    padding: 0px 20px;
-  }
+ .heading {
+   padding: 0px 20px;
+ }
 
-  .heading h1 {
-    font-size: 36px;
-  }
+ .heading h1 {
+   font-size: 36px;
+ }
 
 
 
-  .container1 {
-    padding: 0px;
-  }
+ .container1 {
+   padding: 0px;
+ }
 
-  .about1 {
-    padding: 20px;
-    flex-direction: column;
-  }
+ .about1 {
+   padding: 20px;
+   flex-direction: column;
+ }
 
-  .about-image1 {
-    margin-right: 0px;
-    margin-bottom: 20px;
-    /* Adjust this value to move the element up */
-  }
+ .about-image1 {
+   margin-right: 0px;
+   margin-bottom: 20px;
+   /* Adjust this value to move the element up */
+ }
 
-  .about-content1 {
-    font-size: 16px;
-  }
+ .about-content1 {
+   font-size: 16px;
+ }
 }
 
 
@@ -1697,241 +1693,201 @@ footer {
   }
 }
 
-
 /* CSS for social links */
 .social-links {
-  margin-top: 20px;
-  /* Adjust spacing as needed */
-  display: flex;
-  justify-content: center;
-  /* Center the items horizontally */
+ margin-top: 20px;
+ /* Adjust spacing as needed */
 }
 
 .social-links a {
-  display: inline-block;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  /* Add margin bottom */
-}
-
-.social-links a:last-child {
-  margin-right: 0;
-  /* Remove margin right from the last item to prevent extra spacing */
+ display: inline-block;
+ margin-right: 10px;
+ /* Adjust spacing between icons */
 }
 
 .social-links a img {
-  width: 40px;
-  /* Adjust icon size */
-  height: 40px;
-  /* Adjust icon size */
-  border-radius: 50%;
-  /* Makes the icons circular */
-  transition: transform 0.3s ease;
-  /* Add smooth transition on hover */
+ width: 40px;
+ /* Adjust icon size */
+ height: 40px;
+ /* Adjust icon size */
+ border-radius: 50%;
+ /* Makes the icons circular */
+ transition: transform 0.3s ease;
+ /* Add smooth transition on hover */
 }
 
 .social-links a img:hover {
-  transform: scale(1.2);
-  /* Increase size on hover */
-}
-
-/* CSS for social links */
-.social-links {
-  margin-top: 20px;
-  /* Adjust spacing as needed */
-}
-
-.social-links a {
-  display: inline-block;
-  margin-right: 10px;
-  /* Adjust spacing between icons */
-}
-
-.social-links a img {
-  width: 40px;
-  /* Adjust icon size */
-  height: 40px;
-  /* Adjust icon size */
-  border-radius: 50%;
-  /* Makes the icons circular */
-  transition: transform 0.3s ease;
-  /* Add smooth transition on hover */
-}
-
-.social-links a img:hover {
-  transform: scale(1.2);
-  /* Increase size on hover */
+ transform: scale(1.2);
+ /* Increase size on hover */
 }
 
 /* about 3*/
 .heading2 {
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  margin: 20px auto;
+ width: 90%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ text-align: center;
+ margin: 20px auto;
 }
 
 .heading2 h1 {
-  font-size: 50px;
-  color: #000;
-  margin-bottom: 10px;
-  position: relative;
+ font-size: 50px;
+ color: #000;
+ margin-bottom: 10px;
+ position: relative;
 }
 
 .heading2 h1::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  display: block;
-  margin: 0 auto;
-  background-color: red;
+ content: "";
+ position: absolute;
+ width: 100%;
+ height: 4px;
+ display: block;
+ margin: 0 auto;
+ background-color: red;
 }
 
 
 .container3 {
-  width: 90%;
-  margin: 0 auto;
-  padding: 10px 20px;
+ width: 90%;
+ margin: 0 auto;
+ padding: 10px 20px;
 }
 
 .about3 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
 }
 
 .about-image3 {
-  flex: 1;
-  margin-right: 40px;
-  overflow: hidden;
+ flex: 1;
+ margin-right: 40px;
+ overflow: hidden;
 
 }
 
 .about-image3 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  transition: 0.5s ease;
-  margin-top: 10px;
+ max-width: 100%;
+ height: auto;
+ display: block;
+ transition: 0.5s ease;
+ margin-top: 10px;
 
 }
 
 .about-image3:hover img {
-  transform: scale(1.2);
+ transform: scale(1.2);
 }
 
 .about-content3 {
-  flex: 1;
+ flex: 1;
 }
 
 .about-content3 .read-more1 {
-  display: inline-block;
-  padding: 10px 20px;
-  color: white;
-  background-color: red;
-  font-size: 19px;
-  text-decoration: none;
-  border-radius: 25px;
-  margin-top: 15px;
-  transition: 0.3s ease;
+ display: inline-block;
+ padding: 10px 20px;
+ color: white;
+ background-color: red;
+ font-size: 19px;
+ text-decoration: none;
+ border-radius: 25px;
+ margin-top: 15px;
+ transition: 0.3s ease;
 }
 
 .about-content3 .read-more1:hover {
-  transform: scale(1.1);
+ transform: scale(1.1);
 }
 
 
 .about-content3 p {
-  font-size: 18px;
-  line-height: 1.5;
-  color: #666;
+ font-size: 18px;
+ line-height: 1.5;
+ color: #666;
 }
 
 .about-content3 {
-  display: inline-block;
-  padding: 10px 20px;
-  color: black;
-  background-color: white;
-  font-size: 19px;
-  text-decoration: none;
-  border-radius: 25px;
-  margin-top: 0px;
-  transition: 0.3s ease;
+ display: inline-block;
+ padding: 10px 20px;
+ color: black;
+ background-color: white;
+ font-size: 19px;
+ text-decoration: none;
+ border-radius: 25px;
+ margin-top: 0px;
+ transition: 0.3s ease;
 }
 
 
 @media screen and (max-width: 768px) {
-  .heading2 {
-    padding: 0px 20px;
-  }
+ .heading2 {
+   padding: 0px 20px;
+ }
 
-  .heading2 h1 {
-    font-size: 36px;
-  }
+ .heading2 h1 {
+   font-size: 36px;
+ }
 
 
 
-  .container3 {
-    padding: 0px;
-  }
+ .container3 {
+   padding: 0px;
+ }
 
-  .about3 {
-    padding: 20px;
-    flex-direction: column;
-  }
+ .about3 {
+   padding: 20px;
+   flex-direction: column;
+ }
 
-  .about-image3 {
-    margin-right: 0px;
-    margin-bottom: 20px;
-    /* Adjust this value to move the element up */
-  }
+ .about-image3 {
+   margin-right: 0px;
+   margin-bottom: 20px;
+   /* Adjust this value to move the element up */
+ }
 
-  .about-content3 {
-    font-size: 16px;
-  }
+ .about-content3 {
+   font-size: 16px;
+ }
 }
 
 
 /* CSS for social links */
 .social-links {
-  margin-top: 20px;
-  /* Adjust spacing as needed */
-  display: flex;
-  justify-content: center;
-  /* Center the items horizontally */
+ margin-top: 20px;
+ /* Adjust spacing as needed */
+ display: flex;
+ justify-content: center;
+ /* Center the items horizontally */
 }
 
 .social-links a {
-  display: inline-block;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  /* Add margin bottom */
+ display: inline-block;
+ margin-right: 10px;
+ margin-bottom: 10px; /* Add margin bottom */
 }
 
 .social-links a:last-child {
-  margin-right: 0;
-  /* Remove margin right from the last item to prevent extra spacing */
+ margin-right: 0; /* Remove margin right from the last item to prevent extra spacing */
 }
 
 .social-links a img {
-  width: 40px;
-  /* Adjust icon size */
-  height: 40px;
-  /* Adjust icon size */
-  border-radius: 50%;
-  /* Makes the icons circular */
-  transition: transform 0.3s ease;
-  /* Add smooth transition on hover */
+ width: 40px;
+ /* Adjust icon size */
+ height: 40px;
+ /* Adjust icon size */
+ border-radius: 50%;
+ /* Makes the icons circular */
+ transition: transform 0.3s ease;
+ /* Add smooth transition on hover */
 }
 
 .social-links a img:hover {
-  transform: scale(1.2);
-  /* Increase size on hover */
+ transform: scale(1.2);
+ /* Increase size on hover */
 }
 
 
