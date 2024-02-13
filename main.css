@@ -41,6 +41,8 @@ body {
 }
 
 
+
+
 section {
   padding: 2rem 9%;
   word-wrap: break-word;
@@ -218,6 +220,30 @@ form {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+#GeneralManagerApplicationForm input,
+#GeneralManagerApplicationForm textarea {
+  text-transform: none;
+  /* Prevent text transformation */
+}
+
+.cashier_app input,
+.cashier_app textarea {
+  text-transform: none;
+  /* Prevent text transformation */
+}
+
+.waiter-app input,
+.waiter-app textarea {
+  text-transform: none;
+  /* Prevent text transformation */
+}
+
+.chef-app input,
+.chef-app textarea {
+  text-transform: none;
+  /* Prevent text transformation */
 }
 
 label {
@@ -2089,6 +2115,5 @@ footer {
     font-size: 1.8rem;
     /* Change p font size */
   }
-
-
 }
+
