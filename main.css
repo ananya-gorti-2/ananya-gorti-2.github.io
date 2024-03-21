@@ -13,7 +13,7 @@
   transition: all 0.2s linear;
 }
 
-/*check discord */
+
 
 images {
   width: 2000px;
@@ -23,7 +23,6 @@ images {
 
 img {
   border-radius: 10px;
-  /* overflow: hidden; */
 }
 
 html {
@@ -40,15 +39,11 @@ body {
   line-height: 1.6;
 }
 
-
-
-
 section {
   padding: 2rem 9%;
   word-wrap: break-word;
   overflow-wrap: break-word;
   line-height: 1.5;
-  /* Adjust line height */
 }
 
 section:nth-child(even) {
@@ -133,15 +128,10 @@ header .logo i {
   color: red;
 }
 
-/* header .log_text{
-   display: flex;
-   margin-left: 42px;
-   align-items: top;
-} */
+
 
 header .navbar a {
   font-size: 1.8rem;
-  /* Slightly reduced font size for better visual balance */
   border-radius: 0.5rem;
   padding: 0.5rem 1.5rem;
   color: black;
@@ -158,9 +148,7 @@ header .navbar a:hover {
 
 header .apply_btn .btn {
   background: red;
-  /* Set the background color for the button */
   padding: 0.5rem 1rem;
-  /* Add padding for better spacing */
   color: white;
   border-radius: 0.5rem;
   font-size: 1.8rem;
@@ -177,30 +165,24 @@ header .apply_btn {
 
 .button-row {
   margin-bottom: 10px;
-  /* Adjust spacing between rows */
 }
 
 .button-row button {
   background-color: white;
-  /* Initial background color */
   color: black;
-  /* Initial text color */
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
-  /* Smooth transition */
 }
 
 .button-row button:hover {
   background-color: red;
-  /* Hover background color */
   color: white;
-  /* Hover text color */
 }
 
-/* Remove default link styles */
+
 .button-row a {
   text-decoration: none;
   color: inherit;
@@ -213,7 +195,6 @@ body {
 .menu-body {
   background: #e8e5e3;
 }
-
 
 h1 {
   text-align: center;
@@ -230,25 +211,21 @@ form {
 #GeneralManagerApplicationForm input,
 #GeneralManagerApplicationForm textarea {
   text-transform: none;
-  /* Prevent text transformation */
 }
 
 .cashier_app input,
 .cashier_app textarea {
   text-transform: none;
-  /* Prevent text transformation */
 }
 
 .waiter-app input,
 .waiter-app textarea {
   text-transform: none;
-  /* Prevent text transformation */
 }
 
 .chef-app input,
 .chef-app textarea {
   text-transform: none;
-  /* Prevent text transformation */
 }
 
 label {
@@ -281,11 +258,6 @@ button[type="submit"]:hover {
   background-color: red;
 }
 
-/* off limits yaswanth */
-
-/* .apply_btn {
- color: white;
-} */
 
 header button a {
   color: white;
@@ -344,7 +316,6 @@ button:hover {
 }
 
 header #bar:hover {
-  /* background-color: red; */
   color: red;
   transform: rotate(360deg);
 }
@@ -366,7 +337,6 @@ main #btnScrollToTop {
   bottom: 10px;
   width: 50px;
   height: 50px;
-  /* Set both width and height to the same value for a circle */
   border-radius: 50%;
   background: red;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
@@ -404,7 +374,6 @@ main #btnScrollToTop:hover {
 
 .swiper-pagination-bullet {
   margin-top: 1000px;
-  /* Adjust the horizontal spacing between bullets */
 }
 
 .dishes .box-container {
@@ -434,14 +403,11 @@ main #btnScrollToTop:hover {
   overflow: hidden;
 }
 
-
-
 .dishes .box-container .box p {
   font-size: 1.5rem;
   text-align: center;
   padding-bottom: 2.5rem;
   margin-left: 20px;
-  /* Adjust the left margin as needed */
   margin-right: 20px;
 }
 
@@ -472,9 +438,7 @@ main #btnScrollToTop:hover {
 
 .home .home-slider {
   height: 650px;
-  /* Set a fixed height for your slider container */
   overflow: hidden;
-  /* Hide any overflow to maintain fixed height */
 }
 
 .home .home-slider .slide {
@@ -484,7 +448,6 @@ main #btnScrollToTop:hover {
   gap: 2rem;
   padding-top: 9rem;
   height: 100%;
-  /* Make each slide take up the full height of the slider */
 }
 
 .home .home-slider .slide .content {
@@ -494,7 +457,6 @@ main #btnScrollToTop:hover {
 .home .home-slider .slide .image {
   flex: 1 1 45rem;
   height: 100%;
-  /* Make the image take up the full height of the slide */
 }
 
 .home .home-slider .slide .image img {
@@ -605,15 +567,6 @@ main #btnScrollToTop:hover {
   letter-spacing: 0.1rem;
 }
 
-/* .home .home-slider .slide .image img {
- width: 100%;
- height: 100%;
- object-fit: cover;
- object-position: center center;
- max-height: 100%;
- max-width: 100%;
-} */
-
 .services {
   margin: 3rem;
   display: flex;
@@ -625,18 +578,15 @@ main #btnScrollToTop:hover {
 .services .box {
   border: 0.5px solid lightgray;
   padding: 3rem;
-  /* Increased padding */
   margin: 1rem;
   border-radius: 2rem;
   background-color: white;
   flex: 1 0 30rem;
-  /* Increased minimum width */
   box-sizing: border-box;
 }
 
 .services .box img {
   height: 15rem;
-  /* Increased image height */
   margin: auto;
   display: block;
 }
@@ -652,12 +602,10 @@ main #btnScrollToTop:hover {
 
 .h-primary {
   font-size: 3rem;
-  /* Increased font size */
 }
 
 .h-secondary {
   font-size: 2rem;
-  /* Increased font size */
 }
 
 .h-primary span {
@@ -706,7 +654,6 @@ main #btnScrollToTop:hover {
 .gallery .box-container .box .content {
   position: absolute;
   top: 100%;
-  /* Move content below the box initially */
   left: 0;
   height: 100%;
   width: 100%;
@@ -715,7 +662,6 @@ main #btnScrollToTop:hover {
   padding-top: 5rem;
   text-align: center;
   transition: top 0.3s ease;
-  /* Smooth transition on hover */
 }
 
 .gallery .box-container .box .content h3 {
@@ -737,10 +683,6 @@ main #btnScrollToTop:hover {
 .gallery .box-container .box .btn {
   margin-top: 1rem;
 }
-
-
-
-
 
 body {
   font-family: "Nunito", sans-serif;
@@ -851,10 +793,7 @@ body {
   margin-bottom: 3rem;
 }
 
-
-
 .whyUs {
-  /* font-family: "Nunito", sans-serif; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -870,7 +809,7 @@ h2,
 h3,
 p {
   text-transform: none;
-  /* This will reset the text transformation */
+
 }
 
 .section-title {
@@ -903,9 +842,7 @@ p {
 
 .footer {
   background-color: #333;
-  /* Dark gray/black background color */
   color: white;
-  /* White text color */
 }
 
 .footer .box-container {
@@ -913,7 +850,6 @@ p {
   grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   gap: 1.5rem;
   justify-content: center;
-  /* Center the grid horizontally */
 }
 
 
@@ -924,7 +860,6 @@ p {
 }
 
 .footer .box-container .box h4 {
-  /* padding: .5rem 0; */
   padding-top: 1.5rem;
   font-size: 1.7rem;
   color: red;
@@ -966,13 +901,7 @@ p {
 
 .footer {
   width: 100%;
-  /* rest of your .footer styles */
 }
-
-/* body, html {
- margin: 0;
- padding: 0;
-} */
 
 .work {
   margin-left: 0px;
@@ -997,17 +926,13 @@ p {
   float: left;
 }
 
-/* Add this CSS to your main.css file */
-
 .careers .navbar.active {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #fff;
-  /* Change the background color to match your design */
   position: absolute;
   top: 70px;
-  /* Adjust the top position as needed */
   left: 0;
   right: 0;
   z-index: 1000;
@@ -1016,12 +941,10 @@ p {
 .careers .navbar.active a {
   padding: 15px 20px;
   color: #333;
-  /* Change the text color to match your design */
 }
 
 .careers .navbar.active a:hover {
   background-color: #f0f0f0;
-  /* Change the background color on hover to match your design */
 }
 
 .careers .apply_btn .btn {
@@ -1152,7 +1075,6 @@ p {
   margin: 20px auto;
   margin-top: 7rem;
   margin-bottom: 5rem;
-  /* font-family: "Rubik", sans-serif; */
 }
 
 .jobs-list-container h2 {
@@ -1178,7 +1100,6 @@ p {
 }
 
 .apply .jobs-list-container .jobs img {
-  /* justify-content: center; */
   align-items: center;
 }
 
@@ -1228,17 +1149,14 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* This ensures the container takes at least the full height of the viewport */
 }
 
 main {
   flex: 1;
-  /* This makes the main content take the remaining space */
 }
 
 footer {
   flex-shrink: 0;
-  /* Prevents the footer from shrinking */
 }
 
 .jobs-list-container .details {
@@ -1381,13 +1299,11 @@ footer {
     font-size: 2rem;
     background: white;
     color: black;
-    /* Set default color for navbar links */
   }
 
   header .navbar a.active {
     background: red;
     color: white;
-    /* Set color for the active link */
   }
 
   .home .home-slider .slide .content h3 {
@@ -1584,7 +1500,6 @@ footer {
   .about-image1 {
     margin-right: 0px;
     margin-bottom: 20px;
-    /* Adjust this value to move the element up */
   }
 
   .about-content1 {
@@ -1729,29 +1644,22 @@ footer {
 /* CSS for social links */
 .social-links {
   margin-top: 20px;
-  /* Adjust spacing as needed */
 }
 
 .social-links a {
   display: inline-block;
   margin-right: 10px;
-  /* Adjust spacing between icons */
 }
 
 .social-links a img {
   width: 40px;
-  /* Adjust icon size */
   height: 40px;
-  /* Adjust icon size */
   border-radius: 50%;
-  /* Makes the icons circular */
   transition: transform 0.3s ease;
-  /* Add smooth transition on hover */
 }
 
 .social-links a img:hover {
   transform: scale(1.2);
-  /* Increase size on hover */
 }
 
 /* about 3*/
@@ -1866,8 +1774,6 @@ footer {
     font-size: 36px;
   }
 
-
-
   .container3 {
     padding: 0px;
   }
@@ -1880,7 +1786,6 @@ footer {
   .about-image3 {
     margin-right: 0px;
     margin-bottom: 20px;
-    /* Adjust this value to move the element up */
   }
 
   .about-content3 {
@@ -1892,38 +1797,29 @@ footer {
 /* CSS for social links */
 .social-links {
   margin-top: 20px;
-  /* Adjust spacing as needed */
   display: flex;
   justify-content: center;
-  /* Center the items horizontally */
 }
 
 .social-links a {
   display: inline-block;
   margin-right: 10px;
   margin-bottom: 10px;
-  /* Add margin bottom */
 }
 
 .social-links a:last-child {
   margin-right: 0;
-  /* Remove margin right from the last item to prevent extra spacing */
 }
 
 .social-links a img {
   width: 40px;
-  /* Adjust icon size */
   height: 40px;
-  /* Adjust icon size */
   border-radius: 50%;
-  /* Makes the icons circular */
   transition: transform 0.3s ease;
-  /* Add smooth transition on hover */
 }
 
 .social-links a img:hover {
   transform: scale(1.2);
-  /* Increase size on hover */
 }
 
 
@@ -2042,9 +1938,6 @@ footer {
     font-size: 36px;
   }
 
-
-
-
   .container4 {
     padding: 0px;
   }
@@ -2057,7 +1950,6 @@ footer {
   .about-image4 {
     margin-right: 0px;
     margin-bottom: 20px;
-    /* Adjust this value to move the element up */
   }
 
   .about-content4 {
@@ -2068,7 +1960,6 @@ footer {
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* Two equal-width columns */
   align-items: center;
   gap: 4rem;
 }
@@ -2080,7 +1971,6 @@ footer {
 
 .about-text {
   grid-column: 2 / 3;
-  /* Text starts from the second column and spans one column */
 }
 
 .about-text h2 {
@@ -2100,22 +1990,17 @@ footer {
 @media (max-width: 768px) {
   .about {
     grid-template-columns: 1fr;
-    /* Change to a single column layout */
   }
 
   .about-text {
     grid-column: auto;
-    /* Reset text to occupy full width */
   }
 
   .about-text h2 {
     font-size: 2.5rem;
-    /* Change h2 font size */
   }
 
   .about-text p {
     font-size: 1.8rem;
-    /* Change p font size */
   }
 }
-
