@@ -1,3 +1,4 @@
+// Array containing job objects with details
 const jobs = [
     {
         title: "General Manager",
@@ -54,8 +55,10 @@ const jobs = [
     }
 ];
 
+// Displaying the number of jobs
 const jobsHeading = document.querySelector(".jobs-list-container h2");
 
+// Checking the number of jobs and updating the heading accordingly
 if(jobs.length == 1){
     jobsHeading.innerHTML = `${jobs.length} Job`;
 }else{

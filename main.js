@@ -1,15 +1,21 @@
 /*Yaswanth Kandra, Jaisharan Ashok, Vishesh Jain */
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Selecting the menu icon and the navigation bar
     let menu = document.querySelector("#bar");
     let nav = document.querySelector(".navbar");
+
+    // gettign the file by pathname
     let currentPage = window.location.pathname.split("/").pop();
   
+    // Toggle the menu icon and navigation bar active class on click
     menu.onclick = () => {
       menu.classList.toggle("fa-times");
       nav.classList.toggle("active");
     };
   
+    // navigation bar
+    // for highlighting the button when its clicked
     let navLinks = document.querySelectorAll(".navbar a");
     navLinks.forEach((link) => {
       let linkPage = link.getAttribute("href").split("/").pop();
@@ -19,17 +25,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
+  // Checks for application
   document.addEventListener('DOMContentLoaded', function () {
     var form = document.getElementById('jobApplicationForm');
   
+    // Prevent form submission
     form.addEventListener('submit', function (event) {
-      event.preventDefault(); // Prevent form submission
+      event.preventDefault(); 
   
       if (validateForm()) {
-        window.location.href = 'thankyou.html'; // Redirect to thankyou.html upon successful submission
+        // Redirect to thankyou.html upon successful submission
+        window.location.href = 'thankyou.html'; 
       }
     });
   
+    // Checks age and syntax
     function validateForm() {
       var fullName = document.getElementById('fullName').value.trim();
       var email = document.getElementById('email').value.trim();
@@ -45,7 +55,8 @@ document.addEventListener("DOMContentLoaded", function () {
         alert('Please enter a valid email address.');
         return false;
       }
-  
+      
+      //check DOB
       var dobDate = new Date(dob);
       var eighteenYearsAgo = new Date();
       eighteenYearsAgo.setFullYear(eighteenYearsAgo.getFullYear() - 18);
@@ -57,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return true; // Form is valid
     }
   
+    // return if the email is valid or not
     function isValidEmail(email) {
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
@@ -64,7 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
   
   
   
-  
+  // js for swiper
+  // automate the slideshow
   var swiper = new Swiper(".home-slider", {
     spaceBetween: 30,
     centeredSlides: true,
@@ -79,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loop: true,
   });
   
+  // automate the review slider
   var swiper = new Swiper(".review-slider", {
     spaceBetween: 20,
     centeredSlides: true,
@@ -104,6 +118,8 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
   
+
+  // Scroll to top function
   document.addEventListener("DOMContentLoaded", function () {
     let btnScrollToTop = document.getElementById("btnScrollToTop");
   
@@ -138,6 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
   
+  // loading screen in the home page
   function loader(){
     document.querySelector(".loader-container").classList.add("fade-out");
   }
@@ -150,4 +167,3 @@ document.addEventListener("DOMContentLoaded", function () {
   window.onload = fadeOut();
   
   
-    // Import the functions you need from the SDKs you need

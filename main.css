@@ -1331,7 +1331,6 @@ footer {
   .home .home-slider .slide .image img {
     height: auto;
     object-fit: contain;
-    /* You can use 'contain' or 'cover' based on your preference */
     width: 100%;
   }
 
@@ -1346,9 +1345,7 @@ footer {
 
   #about .about-image {
     order: -1;
-    /* This places the image above the text in the stacked layout */
     margin-bottom: 1.5rem;
-    /* Adjust as needed for spacing */
   }
 
   #about h2 {

@@ -1,4 +1,3 @@
-<!-- Yaswanth Kandra-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -106,7 +105,7 @@
     <label for="motivationsAtWork">What motivations inspire you at work?</label>
     <textarea id="motivationsAtWork" name="motivationsAtWork" required></textarea>
 
-    <!-- Script to disable textarea resize -->
+    <!-- JS subscript to disable textarea resize -->
     <script>
       document.querySelectorAll("textarea").forEach(function (textarea) {
         textarea.style.resize = 'none';
@@ -119,7 +118,7 @@
 
 
 
-
+<!--JS to connect to database-->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
     import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
@@ -205,25 +204,10 @@
       }
     });
   </script>
+
+  <!--link to common JS-->
   <script src="main.js"></script>
 
 </body>
 
 </html>
-
-<!--
-  fullName: document.getElementById("fullName").value,
-            email: document.getElementById("email").value,
-            dob: document.getElementById("dob").value,
-            address: document.getElementById("address").value,
-            state: document.getElementById("state").value,
-            zip: document.getElementById("zip").value,
-            education: document.getElementById("education").value,
-            coverletter: document.getElementById("coverLetter").value,
-            employmenthistory: document.getElementById("employmentHistory").value,
-            skillsandcertifications: document.getElementById("skillsCertificationsText").value,
-            whyworkhere: document.getElementById("whyWorkHere").value,
-            expectedsalary: document.getElementById("expectedSalary").value,
-            bestcandidateskills: document.getElementById("bestCandidateSkills").value,
-            motivationsatwork: document.getElementById("motivationsAtWork").value
--->
