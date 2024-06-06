@@ -1,4 +1,22 @@
 // Array containing job objects with details
+document.addEventListener('DOMContentLoaded', () => {
+    const customCursor = document.querySelector('.custom-cursor');
+
+    document.addEventListener('mousemove', (e) => {
+        customCursor.style.top = `${e.clientY}px`;
+        customCursor.style.left = `${e.clientX}px`;
+    });
+
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            customCursor.classList.add('hover');
+        });
+        link.addEventListener('mouseleave', () => {
+            customCursor.classList.remove('hover');
+        });
+    });
+});
+
 const jobs = [
     {
         title: "General Manager",
