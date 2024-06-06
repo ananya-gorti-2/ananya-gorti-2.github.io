@@ -1,4 +1,21 @@
 /*Yaswanth Kandra, Jaisharan Ashok, Vishesh Jain */
+document.addEventListener('DOMContentLoaded', () => {
+  const customCursor = document.querySelector('.custom-cursor');
+
+  document.addEventListener('mousemove', (e) => {
+      customCursor.style.top = `${e.clientY}px`;
+      customCursor.style.left = `${e.clientX}px`;
+  });
+
+  document.querySelectorAll('a').forEach(link => {
+      link.addEventListener('mouseenter', () => {
+          customCursor.classList.add('hover');
+      });
+      link.addEventListener('mouseleave', () => {
+          customCursor.classList.remove('hover');
+      });
+  });
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   // Selecting the menu icon and the navigation bar

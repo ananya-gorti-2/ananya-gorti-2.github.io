@@ -13,6 +13,31 @@
   transition: all 0.2s linear;
 }
 
+body {
+  cursor: none; /* Hide the default cursor */
+}
+
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+}
+
+.content a {
+  display: block;
+  margin: 10px 0;
+}
+
+.custom-cursor.hover {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
 
 
 images {
