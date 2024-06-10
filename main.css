@@ -2011,8 +2011,8 @@ footer {
 }
 
 
- .card {
-  background-image: url('images/menu images/American Cuisine/fish tacos.jpg');
+ .tester {
+  background-image: url(WebDevFBLA/images/menu images/American Cuisine/fish tacos, $7.99.jpg);
   width: 350px; 
   height: 350px; 
  }
