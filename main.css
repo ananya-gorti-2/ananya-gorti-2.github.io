@@ -583,6 +583,11 @@ main #btnScrollToTop:hover {
   background-color: white;
   flex: 1 0 30rem;
   box-sizing: border-box;
+
+}
+
+.services .box:hover {
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
 }
 
 .services .box img {
