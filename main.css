@@ -2009,3 +2009,10 @@ footer {
     font-size: 1.8rem;
   }
 }
+
+
+ .card {
+  background-image: url('images/menu images/American Cuisine/fish tacos.jpg');
+  width: 350px; 
+  height: 350px; 
+ }
