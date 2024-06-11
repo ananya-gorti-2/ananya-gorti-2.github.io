@@ -434,6 +434,9 @@ main #btnScrollToTop:hover {
 box-shadow: inset -5rem -5rem #ffff; 
 }
 
+#fish-tacos {
+  background-image: url('images/menu images/American Cuisine/fish tacos, $7.99.jpg'); 
+}
 .food-title h3{
   color:red; 
 }
