@@ -395,6 +395,69 @@ main #btnScrollToTop:hover {
   text-align: center;
 }
 
+
+
+
+.dishes .box-container .food-card {
+  height: 45rem;
+  background-size: 45rem;
+  border-radius: 2rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: black;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.dishes .box-container .food-card .food-content {
+  position:relative; 
+  height: 30rem; 
+  padding: 1rem; 
+  background-color: rgba(255, 255, 255, 0.8); 
+  border-top-left-radius: 2rem;
+  cursor:pointer; 
+  transform: translateY(33rem); 
+  transition: transform 0.3s; 
+}
+
+.dishes .box-container .food-card:hover .food-content {
+  transform: translateY(50%); /* Adjust the value as needed */
+}
+
+.dishes .box-container .food-card .food-content::before {
+  content: ''; 
+  position: absolute; 
+  top: -2rem; 
+  right: -2rem;  
+  display: block; 
+  border-radius: 50%; 
+box-shadow: inset -5rem -5rem #ffff; 
+}
+
+.food-title h3{
+  color:red; 
+}
+
+.food-sub {
+  padding-bottom: 2rem;
+
+}
+
+.dishes .box-container .food-card .food-content:hover {
+  transform: translateY(50%); 
+}
+
+
+.dishes .box-container .food-content .stars {
+  padding: 1rem 0;
+}
+
+.dishes .box-container .food-content .stars i {
+  font-size: 1.7rem;
+  color: red;
+}
+
+
 .dishes .box-container .box img {
   height: 16rem;
   margin: 1rem 0;
@@ -2010,9 +2073,3 @@ footer {
   }
 }
 
-
- .tester {
-  background-image: url(WebDevFBLA/images/menu images/American Cuisine/fish tacos, $7.99.jpg);
-  width: 350px; 
-  height: 350px; 
- }
