@@ -397,8 +397,7 @@ main #btnScrollToTop:hover {
 
 .dishes .box-container .food-card {
   height: 45rem;
-  background-image: url("images/menu images/American Cuisine/fish tacos, $7.99.jpg"); 
-  background-size: 45rem;
+  background-size: 55rem;
   border-radius: 2rem;
   border: 0.1rem solid rgba(0, 0, 0, 0.2);
   box-shadow: black;
@@ -411,7 +410,7 @@ main #btnScrollToTop:hover {
   position:relative; 
   height: 30rem; 
   padding: 1rem; 
-  background-color: #ffff; 
+  background-color: rgba(255, 255, 255, 0.9); 
   border-top-left-radius: 2rem;
   cursor:pointer; 
   transform: translateY(33rem); 
@@ -427,7 +426,41 @@ main #btnScrollToTop:hover {
   border-radius: 50%; 
 box-shadow: inset -5rem -5rem #ffff; 
 }
+@media (pointer: fine) {
+  .non-touch {
+    display:block; 
+  }
+  .touch {
+    display:none; 
+  }
+}
 
+@media (pointer: coarse) {
+  .touch {
+    display: block; 
+  }
+  .non-touch {
+    display: none; 
+  }
+}
+
+.dishes .box-container .food-card .food-content:hover {
+  transform: translateY(50%); 
+}
+
+
+.dishes .box-container .food-content .stars {
+  padding: 1rem 0;
+}
+
+.dishes .box-container .food-content .stars i {
+  font-size: 1.7rem;
+  color: red;
+}
+
+#fish-tacos {
+  background-image: url("images/menu images/American Cuisine/fish tacos, $7.99.jpg"); 
+}
 .food-title h3{
   color:red; 
 }
@@ -437,9 +470,6 @@ box-shadow: inset -5rem -5rem #ffff;
 
 }
 
-.dishes .box-container .food-card .food-content:hover {
-  transform: translateY(50%); 
-}
 .dishes .box-container .box img {
   height: 16rem;
   margin: 1rem 0;
@@ -461,14 +491,6 @@ box-shadow: inset -5rem -5rem #ffff;
   font-size: 2.5rem;
 }
 
-.dishes .box-container .food-content .stars {
-  padding: 1rem 0;
-}
-
-.dishes .box-container .food-content .stars i {
-  font-size: 1.7rem;
-  color: red;
-}
 
 .dishes .box-container .box a .span {
   color: red;
