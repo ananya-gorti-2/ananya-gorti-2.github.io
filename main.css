@@ -444,6 +444,20 @@ box-shadow: inset -5rem -5rem #ffff;
   }
 }
 
+.touch {
+  display: none;
+}
+
+/* Default state - show non-touch elements */
+.non-touch {
+  display: block;
+}
+
+.dishes .box-container .food-card:hover .food-content {
+  transform: translateY(50%); /* Adjust the value as needed */
+}
+
+
 .dishes .box-container .food-card .food-content:hover {
   transform: translateY(50%); 
 }
