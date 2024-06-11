@@ -428,19 +428,19 @@ box-shadow: inset -5rem -5rem #ffff;
 }
 @media (pointer: fine) {
   .non-touch {
-    display:block; 
+    display: block;
   }
   .touch {
-    display:none; 
+    display: none;
   }
 }
 
 @media (pointer: coarse) {
   .touch {
-    display: block; 
+    display: block;
   }
   .non-touch {
-    display: none; 
+    display: none;
   }
 }
 
