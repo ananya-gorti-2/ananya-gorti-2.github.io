@@ -411,7 +411,7 @@ main #btnScrollToTop:hover {
   height: 30rem; 
   padding: 1rem; 
   background-color: rgba(255, 255, 255, 0.9); 
-  border-top-left-radius: 2rem;
+  border-radius: 2rem;
   cursor:pointer; 
   transform: translateY(33rem); 
   transition: transform 0.3s; 
