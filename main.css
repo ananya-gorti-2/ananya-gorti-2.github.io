@@ -9,7 +9,7 @@
   text-decoration: none;
   outline: none;
   border: none;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   transition: all 0.2s linear;
 }
 
@@ -463,6 +463,15 @@ box-shadow: inset -5rem -5rem #ffff;
   color: red;
 }
 
+.dishes .box-container .box .stars {
+  padding: 1rem 0;
+}
+
+.dishes .box-container .box .stars i {
+  font-size: 1.7rem;
+  color: red;
+}
+
 #fish-tacos {
   background-image: url("images/menu images/American Cuisine/fish tacos, $7.99.jpg"); 
 }
@@ -471,9 +480,10 @@ box-shadow: inset -5rem -5rem #ffff;
 }
 
 .food-sub {
+  padding-top: -2rem;
   padding-bottom: 2rem;
-
 }
+
 
 .dishes .box-container .box img {
   height: 16rem;
@@ -910,6 +920,7 @@ p {
 .btn:hover {
   background-color: red;
   letter-spacing: 0.1rem;
+  transition: all 0.2s linear;
 }
 
 .footer {
@@ -2075,4 +2086,72 @@ footer {
   .about-text p {
     font-size: 1.8rem;
   }
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "title"
+    "main1"
+    "main2"
+    "footer";
+  gap: 20px;
+  padding: 20px;
+}
+
+.grid-item {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+}
+
+.main {
+  overflow: hidden;
+}
+
+
+.main {
+  overflow: hidden;
+}
+
+.main:nth-of-type(1) {
+  grid-area: main1;
+}
+
+.main:nth-of-type(2) {
+  grid-area: main2;
+}
+
+.items {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  padding: 10px;
+  gap: 10px;
+}
+/* Custom scrollbar styling */
+.items::-webkit-scrollbar {
+  height: 12px;
+}
+
+.items::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
+
+.items::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 10px;
+  border: 2px solid #f4f4f4;
+}
+
+.items::-webkit-scrollbar-thumb:hover {
+  background-color: #0056b3;
+}
+
+.item {
+  background-color: rgba(255, 255, 255, 0.0);
+  border-radius: 5px;
+  flex-shrink: 0;
 }
