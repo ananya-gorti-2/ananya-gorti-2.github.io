@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Define favicon -->
+
+    <!--Animation on Scroll library-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="icon" type="x-icon" href="images/CulHar_Logo-removebg.png" />
     <title>FAQ</title>
     <!-- Include Font Awesome library for icons -->
@@ -51,12 +55,12 @@
       <!-- FAQ section -->
       <section id="section_faq" class="section_faq">
         <!-- FAQ heading -->
-        <h1 style="color:red;">Frequently Asked Questions</h1>
+        <h1 data-aos="fade-left" style="color:red;">Frequently Asked Questions</h1>
         <!-- List of questions and answers -->
-        <ul>
+        <ul data-aos="fade-up">
 
           <!-- First FAQ item -->
-          <li>
+          <li >
             <!-- Question -->
             <div class="question">
               <span>What type of cuisine does Culinary Harbor specialize in?</span>
@@ -312,6 +316,13 @@
       </div>
     </section>
   </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 750, // Increase the duration
+      easing: 'ease-in-out', // Adjust the easing
+    });
+  </script>
 </body>
 
 </html>

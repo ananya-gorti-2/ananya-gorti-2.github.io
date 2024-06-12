@@ -6,6 +6,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Favicon link -->
+
+    <!--Animation on Scroll library-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="icon" type="x-icon" href="images/CulHar_Logo-removebg.png" />
     <!-- Title of the webpage -->
     <title>About</title>
@@ -52,13 +56,13 @@
 
     <!-- Introduction section -->
     <div class="heading">
-      <h1>Our Journey</h1>
+      <h1 >Our Journey</h1>
       <!-- Quotation -->
-      <p class="quote"><em>"One cannot think well, love well, sleep well, if one has not dined well."</em> - Virginia Woolf </p>
+      <p data-aos="fade-left" class="quote"><em>"One cannot think well, love well, sleep well, if one has not dined well."</em> - Virginia Woolf </p>
     </div>
 
     <!-- First content section -->
-    <div class="container1">
+    <div data-aos="fade-up" class="container1">
       <section class="about1">
         <!-- Image -->
         <div class="about-image1">
@@ -79,10 +83,10 @@
 
     <!-- Second content section -->
     <div class="heading1">
-      <h1>Purpose</h1>
+      <h1 data-aos="fade-right">Purpose</h1>
     </div>
 
-    <div class="container2">
+    <div data-aos="fade-up" class="container2">
       <section class="about2">
         <!-- Image -->
         <div class="about-image2">
@@ -107,9 +111,9 @@
 
     <!-- Third content section -->
     <div class="heading3">
-      <h1>Jobs</h1>
+      <h1 data-aos="fade-right">Jobs</h1>
     </div>
-    <div class="container4">
+    <div data-aos="fade-up" class="container4">
       <section class="about4">
         <!-- Image -->
         <div class="about-image4">
@@ -130,9 +134,9 @@
 
     <!-- Fourth content section -->
     <div class="heading2">
-      <h1>Offerings</h1>
+      <h1 data-aos="fade-right">Offerings</h1>
     </div>
-    <div class="container3">
+    <div data-aos="fade-up" class="container3">
       <section class="about3">
         <!-- Image -->
         <div class="about-image3">
@@ -233,6 +237,13 @@
         </div>
       </section>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 750, // Increase the duration
+        easing: 'ease-in-out', // Adjust the easing
+      });
+    </script>
   </body>
   
 </html>
