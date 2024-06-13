@@ -8,6 +8,11 @@
   <!-- Favicon -->
   <link rel="icon" type="x-icon" href="images/CulHar_Logo-removebg.png" />
   <!-- Title -->
+
+  
+    <!--Animation on Scroll library-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <title>Apply</title>
   <!-- Font Awesome CSS link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -52,11 +57,11 @@
       <!-- Jobs list container -->
       <div class="jobs-list-container">
         <!-- Number of available jobs -->
-        <h2>4 Jobs Available</h2>
+        <h2 data-aos="fade-left" >4 Jobs Available</h2>
         <!-- Jobs -->
         <div class="jobs">
           <!-- Job 1: General Manager -->
-          <div class="job">
+          <div data-aos="fade-up" class="job">
             <!--Image for job-->
             <img class="general-manager" src="images/careers imgs/General_Manager.jpg">
             <!--Job title-->
@@ -68,7 +73,7 @@
           </div>
 
           <!-- Job 2: Cashier -->
-          <div class="job">
+          <div data-aos="fade-up" class="job">
             <!--Image for job-->
             <img class="cashier" src="images/careers imgs/Cashier.jpg">
             <!--Job title-->
@@ -80,7 +85,7 @@
           </div>
 
           <!-- Job 3: Waiter/Waitress -->
-          <div class="job">
+          <div data-aos="fade-up" class="job">
             <!--Image for job-->
             <img class="waiter" src="images/careers imgs/waiter.jpg">
             <!--Job title-->
@@ -92,7 +97,7 @@
           </div>
           
           <!-- Job 4: Sous Chef -->
-          <div class="job">
+          <div data-aos="fade-up" class="job">
             <!--Image for job-->
             <img class="sous-chef" src="images/careers imgs/sous_chef.png">
             <!--Job title-->
@@ -106,6 +111,7 @@
       </div>
     </section>
   </main>
+  <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxc9dvg30h3yohbcjxw0zzrz"></script>
 
   <!-- Footer section -->
   <footer>
@@ -148,6 +154,7 @@
           <a href="why_us.html">Benefits</a>
           <a href="faq.html">FAQ</a>
           <a href="apply.html">Apply Now</a>
+          <a href="https://yaswanth0618.github.io/Webdevadmin/index.html">Admin</a>
         </div>
 
         <div class="box">
@@ -178,6 +185,16 @@
       </div>
     </section>
   </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({
+        duration: 750, // Increase the duration
+        easing: 'ease-in-out', // Adjust the easing
+        once: true // Ensure the animation occurs only once
+      });
+    });
+    </script>
 </body>
 
 </html>

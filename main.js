@@ -1,3 +1,4 @@
+
 /*Yaswanth Kandra, Jaisharan Ashok, Vishesh Jain */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -169,6 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("DOMContentLoaded",() => {
     const ctl = new CollapsibleTimeline("#timeline");
   });
+  
   
   class CollapsibleTimeline {
     constructor(el) {

@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Raleway:wght@200;300;400;600;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
@@ -2089,7 +2090,7 @@ footer {
 }
 
 
-<<<<<<< HEAD
+
 
 .sideways {
   display: flex;
@@ -2183,7 +2184,7 @@ a {
 }
 .timeline__arrow:focus-visible,
 .timeline__arrow:hover {
-	background-color: hsl(var(--hue),10%,50%,0.4);
+	background-color: red;
 }
 .timeline__arrow-icon {
 	display: block;
@@ -2279,7 +2280,3 @@ a {
 	}
 }
 
-button {
-	color: var(--fg);
-	font: 1em/1.5 "IBM Plex Sans", sans-serif;
-}
