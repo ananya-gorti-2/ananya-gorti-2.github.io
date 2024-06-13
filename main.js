@@ -353,4 +353,31 @@ function fadeOut() {
 
 window.onload = fadeOut();
 
- 
+document.addEventListener("DOMContentLoaded", function() {
+  const image = document.getElementById("spinning-image");
+  const setRotation = gsap.quickSetter(image, "rotation", "deg");
+
+  // Scaling factor to adjust spinning speed
+  const speedFactor = 0.5;  // Adjust this value to make spinning slower or faster
+
+  // Function to update the rotation based on scroll position
+  function updateRotation() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      setRotation(scrollTop * speedFactor);
+  }
+
+  // Debounced scroll event handler to limit the rate of function execution
+  function debounce(func, wait) {
+      let timeout;
+      return function() {
+          const context = this, args = arguments;
+          clearTimeout(timeout);
+          timeout = setTimeout(() => func.apply(context, args), wait);
+      };
+  }
+
+  const handleScroll = debounce(updateRotation, 10);
+
+  // Attach the debounced scroll event handler
+  window.addEventListener("scroll", handleScroll);
+});
