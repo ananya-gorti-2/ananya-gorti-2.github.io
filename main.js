@@ -1,3 +1,4 @@
+
 /*Yaswanth Kandra, Jaisharan Ashok, Vishesh Jain */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -171,10 +172,6 @@ function fadeOut(){
 
   
   window.onload = fadeOut();
-
-
-  /*
-  
 
 document.addEventListener("DOMContentLoaded", function () {
   let menu = document.querySelector("#bar");
@@ -356,7 +353,4 @@ function fadeOut() {
 
 window.onload = fadeOut();
 
-  */
-  
-  
-  
+ 
