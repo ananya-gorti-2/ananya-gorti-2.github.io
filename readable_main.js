@@ -346,11 +346,15 @@ function loader() {
   document.querySelector(".loader-container").classList.add("fade-out");
 }
 
-function fadeOut() {
-  document.addEventListener("DOMContentLoaded", function () {
-    loader();
-  });
-}
+// function fadeOut() {
+//   document.addEventListener("DOMContentLoaded", function () {
+//     loader();
+//   });
+// }
+
+  function fadeOut(){
+    setInterval(loader, 3000);
+  }
 
 window.onload = fadeOut();
 
