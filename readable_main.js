@@ -352,9 +352,9 @@ function loader() {
 //   });
 // }
 
-  function fadeOut(){
-    setInterval(loader, 3000);
-  }
+function fadeOut(){
+  setInterval(loader, 3000);
+}
 
 window.onload = fadeOut();
 
