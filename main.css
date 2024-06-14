@@ -2331,7 +2331,7 @@ transform: scale(1.2);
   height:auto;
   margin:0;
 }
-.question {
+.question1 {
 float: left;
 height: auto;
 width: 90%;
@@ -2339,4 +2339,11 @@ line-height: 20px;
 padding-left: 20px;
 margin-bottom: 25px;
 font-style: italic;
+}
+
+.res p {
+  color: black;
+  font-size: 1.5rem;
+  line-height: 30px;
+  margin-bottom: 3rem;
 }
