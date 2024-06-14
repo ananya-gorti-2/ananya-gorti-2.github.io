@@ -6,24 +6,23 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="x-icon" href="images/CulHar_Logo-removebg.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Jaisharan Ashok Kumar, Yashwanth Kandra, Vishesh Jain, and Ananya Gorti">
+  <meta name="author" content="Jaisharan Ashok Kumar, Yaswanth Kandra, and Vishesh Jain">
   <meta name="description" content="An aesthetically professionaly website for the company Culinary Harbor.">
   <title>Culinary Harbor</title>
 
-  <!--Animation on Scroll library-->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+  <!-- Swiper CSS library -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <!-- Font Awesome CSS library -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="main.css" />
 
   <!-- Swiper JS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" defer>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <!-- Custom JavaScript -->
 </head>
@@ -33,7 +32,7 @@
   <header>
     <!-- Culinary Harbor logo and text -->
     <a href="#" class="logo">
-      <img src="images/CulHar_Logo-removebg.png" width="35px" />
+      <img src="images/CulHar_Logo-removebg.png" width="35px" loading="eager" />
       <div class="log_text">Culinary Harbor</div>
     </a>
 
@@ -80,7 +79,7 @@
             <!--Image of Food-->
             <div class="image">
               <img src="images/menu images/American Cuisine/Lobster Mac and Cheese, $9.99.jpg"
-                alt="Picture of Lobster Mac and Cheese" />
+                alt="Picture of Lobster Mac and Cheese" loading="eager" />
             </div>
           </div>
 
@@ -102,7 +101,8 @@
             </div>
             <div class="image">
               <!--Image of Food-->
-              <img src="images/menu images/African Cuisine/Bobotie, $11.99.jpg" alt="Picture of Bobotie" />
+              <img src="images/menu images/African Cuisine/Bobotie, $11.99.jpg" alt="Picture of Bobotie"
+                loading="eager" />
             </div>
           </div>
 
@@ -125,7 +125,7 @@
             <div class="image biriyani">
               <!--Image of Food-->
               <img src="images/menu images/Indian Cuisine/Hyderabadi chicken Biryani, $12.99.jpg"
-                alt="Picture of Hyderabadi chicken Biryani" />
+                alt="Picture of Hyderabadi chicken Biryani" loading="eager" />
             </div>
           </div>
 
@@ -146,8 +146,8 @@
             </div>
             <div class="image">
               <!--Image of Food-->
-              <img src="images/menu images/Chinese Cuisine/Stirfry Noodles, $9.99.jpg"
-                alt="Picture of Stirfry noodles" />
+              <img src="images/menu images/Chinese Cuisine/Stirfry Noodles, $9.99.jpg" alt="Picture of Stirfry noodles"
+                loading="eager" />
             </div>
           </div>
 
@@ -170,7 +170,8 @@
             </div>
             <div class="image">
               <!--Image of Food-->
-              <img src="images/menu images/French Cuisine/Bouillabaisse, $12.99.jpg" alt="Picture of Bouillabaisse" />
+              <img src="images/menu images/French Cuisine/Bouillabaisse, $12.99.jpg" alt="Picture of Bouillabaisse"
+                loading="eager" />
             </div>
           </div>
 
@@ -191,7 +192,8 @@
             </div>
             <div class="image">
               <!--Image of Food-->
-              <img src="images/menu images/Japanese Cuisine/Yakitori, 10.99.jpg" alt="Picture of Yakitori" />
+              <img src="images/menu images/Japanese Cuisine/Yakitori, 10.99.jpg" alt="Picture of Yakitori"
+                loading="eager" />
             </div>
           </div>
 
@@ -214,7 +216,7 @@
             <div class="image">
               <!--Image of Food-->
               <img src="images/menu images/Thai Cuisine/Spicy Green Papaya Salad, $9.99.jpg"
-                alt="Picture of Spicy Green Papaya Salad" />
+                alt="Picture of Spicy Green Papaya Salad" loading="eager" />
             </div>
           </div>
         </div>
@@ -225,7 +227,7 @@
     <section class="about home-menu" id="about">
       <!--Image of food-->
       <div class="about-img home-menu">
-        <img src="images/food platter images/food-platter.jpg" alt="pic of food platter" loading="lazy">
+        <img src="images/food platter images/food-platter.jpg" alt="pic of food platter" loading="eager">
       </div>
 
       <!--Segway Text-->
@@ -250,29 +252,30 @@
     </section>
 
 
-    
     <!--services section-->
     <section class="services-container">
-      <h1  class="h-primary center">Our <span>Services</span></h1>
+      <h1 class="h-primary center">Our <span>Services</span></h1>
       <div class="services">
 
         <!--Service 1-->
         <div class="box">
           <!--Image of serivce-->
-          <img src="images/services imgs/food-order.webp" alt="pic of cartton depicting food ordering" width="200px"
-            height="350px">
+          <img src="images/services imgs/food-order.webp" alt="pic of cartton depicting food ordering" loading="eager">
           <h2 class="h-secondary center">Food Ordering</h2>
           <!-- Description -->
-          <p class="center h-text">Convenience at your fingertips! Discover culinary delights on our diverse menu and
-            enjoy the ease of online food
-            ordering. Indulge in rich flavors from the comfort of your home with just a few clicks.
+          <p class="center h-text">Convenience at your fingertips! Discover the culinary delights waiting for you on our
+            diverse menu and relish the ease
+            of online food ordering. Indulge in the rich flavors and tantalizing tastes from the cozy confines of your
+            home, all
+            with just a few effortless clicks.
           </p>
         </div>
 
         <!--Service 2-->
         <div class="box">
           <!--Image of serivce-->
-          <img src="images/services imgs/food-catering.webp" alt="pic of cartton depicting food catering">
+          <img src="images/services imgs/food-catering.webp" alt="pic of cartton depicting food catering"
+            loading="eager">
           <h2 class="h-secondary center">Catering Services</h2>
           <!-- Description -->
           <p class="center h-text">Elevate your events with our exquisite food catering services. From intimate
@@ -286,7 +289,8 @@
         <!--Service 2-->
         <div class="box">
           <!--Image of serivce-->
-          <img src="images/services imgs/food_delivery.webp" alt="pic of cartton depicting food delivery">
+          <img src="images/services imgs/food_delivery.webp" alt="pic of cartton depicting food delivery"
+            loading="eager">
           <h2 class="h-secondary center">Food Delivery</h2>
           <!-- Description -->
           <p class="center h-text">Indulge in the convenience of gourmet dining at your doorstep with our food delivery
@@ -297,19 +301,19 @@
       </div>
     </section>
 
+
+
     <!--Segway to about section-->
     <section class="about" id="about">
       <!--Segway Image-->
       <div class="about-img">
-        <img src="images/food platter images/food-platter2.jpg" alt="pic of food platter"
-          loading="lazy">
+        <img src="images/food platter images/food-platter2.jpg" alt="pic of food platter" loading="eager">
       </div>
 
       <!--Segway text-->
       <div class="about-text">
-        <h2 >Living well begins <br> with eating well.</h2>
-        <p >Discover the essence of well-being through our philosophy that 'Living well begins with
-          eating well.' At
+        <h2>Living well begins <br> with eating well.</h2>
+        <p>Discover the essence of well-being through our philosophy that 'Living well begins with eating well.' At
           Culinary Harbor, we believe in the transformative power of food to nourish not just the body, but also the
           soul. Our
           commitment goes beyond crafting delicious meals; it extends to promoting a lifestyle where every bite is a
@@ -323,112 +327,115 @@
     </section>
 
     <!--Food Gallery Section-->
-        <section class="gallery" id="gallery">
-          <h1 class="gallery-heading">Our <span>Food Gallery</span></h1>
-        
-          <div class="box-container">
-            <div class="box">
-              <!--Image of Food-->
-              <img src="images/gallery-pics/food-gal-1.jpg" alt="picture of food" loading="eager">
-              <div class="content">
-                <h3>Tasty Food</h3>
-                <!-- Description when hovered over-->
-                <p>Stay tuned for exciting new dishes! Your taste buds are in for a treat - food coming soon! Explore our
-                  current offerings
-                  in the meantime.</p>
-                <!--Button to menu-->
-                <a href="menu.html" class="btn">View Menu</a>
-              </div>
-            </div>
-        
-            <div class="box">
-              <!--Image of Food-->
-              <img src="images/gallery-pics/food-gal-2.jpg" alt="picture of food" loading="eager">
-              <div class="content">
-                <h3>Tasty Food</h3>
-                <!-- Description when hovered over-->
-                <p>Stay tuned for exciting new dishes! Your taste buds are in for a treat - food coming soon! Explore our
-                  current offerings
-                  in the meantime.</p>
-                <!--Button to menu-->
-                <a href="menu.html" class="btn">View Menu</a>
-              </div>
-            </div>
-        
-            <div class="box">
-              <!--Image of Food-->
-              <img src="images/gallery-pics/food-gal-3.jpg" alt="picture of food" loading="eager">
-              <div class="content">
-                <h3>Tasty Food</h3>
-                <!-- Description when hovered over-->
-                <p>Stay tuned for exciting new dishes! Your taste buds are in for a treat - food coming soon! Explore our
-                  current offerings
-                  in the meantime.</p>
-                <!--Button to menu-->
-                <a href="menu.html" class="btn">View Menu</a>
-              </div>
-            </div>
-        
-            <div class="box">
-              <!--Image of Food-->
-              <img src="images/gallery-pics/food-gal-4.jpg" alt="picture of food" loading="eager">
-              <div class="content">
-                <h3>Tasty Food</h3>
-                <!-- Description when hovered over-->
-                <p>Stay tuned for exciting new dishes! Your taste buds are in for a treat - food coming soon! Explore our
-                  current offerings
-                  in the meantime.</p>
-                <!--Button to menu-->
-                <a href="menu.html" class="btn">View Menu</a>
-              </div>
-            </div>
-        
-            <div class="box">
-              <!--Image of Food-->
-              <img src="images/gallery-pics/food-gal-5.jpg" alt="picture of food" loading="eager">
-              <div class="content">
-                <h3>Tasty Food</h3>
-                <!-- Description when hovered over-->
-                <p>Stay tuned for exciting new dishes! Your taste buds are in for a treat - food coming soon! Explore our
-                  current offerings
-                  in the meantime.</p>
-                <!--Button to menu-->
-                <a href="menu.html" class="btn">View Menu</a>
-              </div>
-            </div>
-        
-            <div class="box">
-              <!--Image of Food-->
-              <img src="images/gallery-pics/food-gal-6.jpg" alt="picture of food" loading="eager">
-              <div class="content">
-                <h3>Tasty Food</h3>
-                <!-- Description when hovered over-->
-                <p>Stay tuned for exciting new dishes! Your taste buds are in for a treat - food coming soon! Explore our
-                  current offerings
-                  in the meantime.</p>
-                <!--Button to menu-->
-                <a href="menu.html" class="btn">View Menu</a>
-              </div>
-            </div>
+    <section class="gallery" id="gallery">
+      <h1 class="gallery-heading">Our <span>Food Gallery</span></h1>
+
+      <div class="box-container">
+        <div class="box">
+          <!--Image of Food-->
+          <img src="images/gallery-pics/food-gal-1.jpg" alt="picture of food" loading="eager">
+          <div class="content">
+            <h3>Tasty Food</h3>
+            <!-- Description when hovered over-->
+            <p>Stay tuned for exciting new dishes! Your taste buds are in for a treat - food coming soon! Explore our
+              current offerings
+              in the meantime.</p>
+            <!--Button to menu-->
+            <a href="menu.html" class="btn">View Menu</a>
           </div>
-        </section>
+        </div>
+
+        <div class="box">
+          <!--Image of Food-->
+          <img src="images/gallery-pics/food-gal-2.jpg" alt="picture of food" loading="eager">
+          <div class="content">
+            <h3>Tasty Food</h3>
+            <!-- Description when hovered over-->
+            <p>Stay tuned for exciting new dishes! Your taste buds are in for a treat - food coming soon! Explore our
+              current offerings
+              in the meantime.</p>
+            <!--Button to menu-->
+            <a href="menu.html" class="btn">View Menu</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <!--Image of Food-->
+          <img src="images/gallery-pics/food-gal-3.jpg" alt="picture of food" loading="eager">
+          <div class="content">
+            <h3>Tasty Food</h3>
+            <!-- Description when hovered over-->
+            <p>Stay tuned for exciting new dishes! Your taste buds are in for a treat - food coming soon! Explore our
+              current offerings
+              in the meantime.</p>
+            <!--Button to menu-->
+            <a href="menu.html" class="btn">View Menu</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <!--Image of Food-->
+          <img src="images/gallery-pics/food-gal-4.jpg" alt="picture of food" loading="eager">
+          <div class="content">
+            <h3>Tasty Food</h3>
+            <!-- Description when hovered over-->
+            <p>Stay tuned for exciting new dishes! Your taste buds are in for a treat - food coming soon! Explore our
+              current offerings
+              in the meantime.</p>
+            <!--Button to menu-->
+            <a href="menu.html" class="btn">View Menu</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <!--Image of Food-->
+          <img src="images/gallery-pics/food-gal-5.jpg" alt="picture of food" loading="eager">
+          <div class="content">
+            <h3>Tasty Food</h3>
+            <!-- Description when hovered over-->
+            <p>Stay tuned for exciting new dishes! Your taste buds are in for a treat - food coming soon! Explore our
+              current offerings
+              in the meantime.</p>
+            <!--Button to menu-->
+            <a href="menu.html" class="btn">View Menu</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <!--Image of Food-->
+          <img src="images/gallery-pics/food-gal-6.jpg" alt="picture of food" loading="eager">
+          <div class="content">
+            <h3>Tasty Food</h3>
+            <!-- Description when hovered over-->
+            <p>Stay tuned for exciting new dishes! Your taste buds are in for a treat - food coming soon! Explore our
+              current offerings
+              in the meantime.</p>
+            <!--Button to menu-->
+            <a href="menu.html" class="btn">View Menu</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
 
 
-    <!-- review slider with swiper JS -->
+    <!--review slider with swiper JS-->
     <section class="review" id="review">
       <h3 class="sub-header">Our <span>Reviews</span></h3>
       <div class="swiper review-slider">
         <div class="swiper-wrapper">
-    
+
           <!--Reviewer 1 container-->
           <div class="swiper-slide slide">
             <i class="fas fa-quote-left"></i>
             <div class="user">
-              <img src="images/review-pics/man-1.webp" alt="picture of male reviewer">
+              <img src="images/review-pics/man-1.jpg" alt="picture of male reviewer">
               <div class="user-info">
+
                 <!--Reviewer Name-->
                 <h3>Jaisharan</h3>
+
                 <!--Reviewer Ratings-->
                 <div class="stars">
                   <i class="fas fa-star"></i>
@@ -439,21 +446,24 @@
                 </div>
               </div>
             </div>
+
             <!--Review-->
             <p>A culinary journey like no other! From the crispy Fish Tacos to the aromatic Indian Hyderabadi Chicken
               Biryani, every
               dish tells a unique story. The diverse menu, attentive service, and vibrant ambiance make dining at
               Culinary Harbor an experience worth savoring.</p>
           </div>
-    
+
           <!--Reviewer 2 container-->
           <div class="swiper-slide slide">
             <i class="fas fa-quote-left"></i>
             <div class="user">
-              <img src="images/review-pics/man-2.webp" alt="picture of male reviewer">
+              <img src="images/review-pics/man-2.png" alt="picture of male reviewer">
               <div class="user-info">
+
                 <!--Reviewer Name-->
                 <h3>Vishesh</h3>
+
                 <!--Reviewer Ratings-->
                 <div class="stars">
                   <i class="fas fa-star"></i>
@@ -464,7 +474,7 @@
                 </div>
               </div>
             </div>
-    
+
             <!--Review-->
             <p>Indulging in the French Onion Soup was like a warm hug for my taste buds, and the Sushi and Sashimi
               platter transported
@@ -472,15 +482,17 @@
               apart.
               An absolute delight</p>
           </div>
-    
+
           <!--Reviewer 3 container-->
           <div class="swiper-slide slide">
             <i class="fas fa-quote-left"></i>
             <div class="user">
-              <img src="images/review-pics/man-6.webp" alt="picture of male reviewer">
+              <img src="images/review-pics/man-3.png" alt="picture of male reviewer">
               <div class="user-info">
+
                 <!--Reviewer Name-->
-                <h3>Yash Kandra</h3>
+                <h3>Yaswanth</h3>
+
                 <!--Reviewer Ratings-->
                 <div class="stars">
                   <i class="fas fa-star"></i>
@@ -491,7 +503,7 @@
                 </div>
               </div>
             </div>
-    
+
             <!--Review-->
             <p>Living well truly begins with eating well at Culinary Harbor. The menu's commitment to diverse and
               wholesome
@@ -499,15 +511,17 @@
               restaurant is a
               commitment to both flavor and well-being.</p>
           </div>
-    
+
           <!--Reviewer 4 container-->
           <div class="swiper-slide slide">
             <i class="fas fa-quote-left"></i>
             <div class="user">
-              <img src="images/review-pics/man-4.webp" alt="picture of male reviewer">
+              <img src="images/review-pics/man-4.png" alt="picture of male reviewer">
               <div class="user-info">
+
                 <!--Reviewer Name-->
                 <h3>HRK</h3>
+
                 <!--Reviewer Ratings-->
                 <div class="stars">
                   <i class="fas fa-star"></i>
@@ -518,6 +532,7 @@
                 </div>
               </div>
             </div>
+
             <!--Review-->
             <p>Whether it's the comforting taste of Chicken Fried Rice from the Chinese Cuisine or the bold flavors of
               the Green Curry
@@ -525,15 +540,17 @@
               adventure
               that leaves you craving more!</p>
           </div>
-    
+
           <!--Reviewer 5 container-->
           <div class="swiper-slide slide">
             <i class="fas fa-quote-left"></i>
             <div class="user">
-              <img src="images/review-pics/girl-1.webp" alt="picture of female reviewer">
+              <img src="images/review-pics/girl-1.png" alt="picture of female reviewer">
               <div class="user-info">
+
                 <!--Reviewer Name-->
                 <h3>Ananya Gorti</h3>
+
                 <!--Reviewer Ratings-->
                 <div class="stars">
                   <i class="fas fa-star"></i>
@@ -544,19 +561,20 @@
                 </div>
               </div>
             </div>
+
             <!--Review-->
             <p>From the crunchy goodness of Fried Green Tomatoes to the delicate perfection of the Tandoori Roti,
               Culinary Harbor delivers an exquisite array of flavors. The dedication to culinary excellence and diverse
               offerings makes it a gem
               in the dining scene. A true culinary masterpiece!</p>
           </div>
-    
-          
+
         </div>
       </div>
     </section>
-  </main>
 
+
+  </main>
   <!-- Footer section -->
   <footer>
     <!-- Footer section -->
@@ -634,21 +652,10 @@
     <!-- Loader image -->
     <img src="images/restaurant-loader-2.gif" alt="restaurant website loader">
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" async></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <script src="main.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      AOS.init({
-        duration: 750, // Increase the duration
-        easing: 'ease-in-out', // Adjust the easing
-        once: true // Ensure the animation occurs only once
-      });
-    });
-  </script>
-  <script src="https://app.fastbots.ai/embed.js" data-bot-id="clxc9dvg30h3yohbcjxw0zzrz" defer></script>
-
+  <script src="readable_main.js"></script>
+  <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxc9dvg30h3yohbcjxw0zzrz"></script>
 </body>
 
 </html>
