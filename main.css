@@ -1181,6 +1181,7 @@ p {
 
 .apply .jobs-list-container .jobs .job {
   display: flex;
+  height: auto; 
 }
 
 .apply .jobs-list-container .jobs img {
@@ -2194,7 +2195,7 @@ a {
 }
 .timeline__dot {
 	background-color: currentColor;
-	border-radius: 50%;
+	border-radius: 70%;
 	display: inline-block;
 	flex-shrink: 0;
 	margin: 0.625em 0;
