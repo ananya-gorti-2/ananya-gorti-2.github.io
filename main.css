@@ -1336,21 +1336,22 @@ footer {
     width: 100%;
   }
 
-  #about .container {
+  #spinning-image .container {
     text-align: center;
   }
 
-  #about .about-image,
-  #about .about-content {
+  #spinning-image .about-image,
+  #spinning-image .about-content {
     width: 100%;
+    width: 1.5rem; 
   }
 
-  #about .about-image {
+  #spinning-image .about-image {
     order: -1;
     margin-bottom: 1.5rem;
   }
 
-  #about h2 {
+  #spinning-image h2 {
     font-size: 2rem;
   }
 
@@ -2126,30 +2127,25 @@ footer {
   background-color: #ffedcf;
 }
 
-* {
-	border: 0;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
+
+
+
 a {
 	color: var(--primary);
 	transition: color var(--trans-dur);
 }
-
-
-.bn {
+.btn {
 	background-color: var(--fg);
 	border-radius: 0.25em;
 	color: var(--bg);
-	cursor: pointer;
+	cursor: default;
 	padding: 0.375em 0.75em;
 	transition:
 		background-color calc(var(--trans-dur) / 2) linear,
 		color var(--trans-dur);
 	-webkit-tap-highlight-color: transparent;
 }
-.bn:hover {
+.btn:hover {
 	background-color: hsl(var(--hue),10%,50%);
 }
 .btn-group {
@@ -2157,19 +2153,17 @@ a {
 	gap: 0.375em;
 	margin-bottom: 1.5em;
 }
-
 .timeline {
 	margin: auto;
 	padding: 0 1.5em;
 	width: 100%;
 	max-width: 36em;
-  font-size: calc(16px + (24 - 16) * (100vw - 320px) / (2560 - 320));
+	font-size: calc(16px + (24 - 16) * (100vw - 320px) / (2560 - 320));
 }
-
 .timeline__arrow {
 	background-color: transparent;
 	border-radius: 0.25em;
-	cursor: pointer;
+	cursor: default;
 	flex-shrink: 0;
 	margin-inline-end: 0.25em;
 	outline: transparent;
@@ -2184,7 +2178,7 @@ a {
 }
 .timeline__arrow:focus-visible,
 .timeline__arrow:hover {
-	background-color: red;
+	background-color: hsl(var(--hue),10%,50%,0.4);
 }
 .timeline__arrow-icon {
 	display: block;
@@ -2280,3 +2274,76 @@ a {
 	}
 }
 
+
+/* source: http://www.ehow.com/how_12214447_make-collapsing-lists-java.html */
+
+.FAQ { 
+  vertical-align: top; 
+  height:auto !important; 
+}
+.list {
+  display:none; 
+  height:auto;
+  margin:0;
+  float: left;
+}
+.show {
+  display: none; 
+}
+.hide:target + .show {
+  display: inline; 
+}
+.hide:target {
+  display: none; 
+}
+.hide:target ~ .list {
+  display:inline; 
+}
+
+/*style the (+) and (-) */
+.hide, .show {
+width: 30px;
+height: 30px;
+border-radius: 30px;
+font-size: 20px;
+color: white;
+text-align: center;
+text-decoration: none;
+background: transparent;
+opacity: .95;
+margin-right: 0;
+background-color: red; 
+float: left;
+margin-bottom: 25px;
+}
+
+.hide:hover, .show:hover {
+  /*
+color: white;
+text-decoration: none;
+opacity: 1;
+margin-bottom: 25px;*/
+background-color: red; 
+transform: scale(1.2);
+}
+
+.list p{
+  height:auto;
+  margin:0;
+}
+.question1 {
+float: left;
+height: auto;
+width: 90%;
+line-height: 20px;
+padding-left: 20px;
+margin-bottom: 25px;
+font-style: italic;
+}
+
+.res p {
+  color: black;
+  font-size: 1.5rem;
+  line-height: 30px;
+  margin-bottom: 3rem;
+}
