@@ -24,6 +24,9 @@
   <!-- Swiper JS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+  <!-- Animation on Scroll-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <!-- Custom JavaScript -->
 </head>
 
@@ -226,39 +229,106 @@
     <!--Segway to menu-->
     <section class="about home-menu" id="about">
       <!--Image of food-->
-      <div class="about-img home-menu">
+      <div data-aos="fade-right" class="about-img home-menu">
         <img src="images/food platter images/food-platter.jpg" alt="pic of food platter" loading="eager">
       </div>
 
       <!--Segway Text-->
       <div class="about-text home-menu">
-        <h2>Explore our Menu</h2>
-        <p>Explore global food on our extensive menu. We provide distinctive flavors including Fish Tacos,
-          Deep Dish Pizza, Fried Catfish, and Lobster Mac & Cheese.
-
-          experiences. Taste South African Bobotie, North African Couscous, and West African Fufu and Soup.
-          Chicken Fried Rice, Noodles with Meatballs, Spicy Citrus Noodles, Stir Fry Noodles, and Vegetable Dim Sum Soup
-          bring Chinese harmony. Enjoy French elegance with Bisque, Bouillabaisse, Croque Monsieur, and Onion Soup.
-          Savour Indian Butter Chicken, Dosa, Hyderabadi Chicken Biryani, Samosas, and Tandoori Roti. Explore Japanese
-          art through Onigiri, Sushi, Takoyaki, Tempura, and Yakitori. Finally, try Green Curry, Pad Thai, Panang Curry,
-          Spicy Green Papaya Salad, and Tom Yum soup. Our varied assortment of international delicacies pleases all
-          tastes.
-
-
+        <h2 data-aos="fade-left">Explore our Menu</h2>
+        <p data-aos="fade-up">Indulge in a world of flavors at our restaurant. Our menu offers a passport to global
+          cuisine, from Fish
+          Tacos and Deep
+          Dish Pizza to South African Bobotie and West African Fufu. Savor Chinese delights like Chicken Fried Rice and
+          Vegetable
+          Dim Sum Soup, or French classics like Bouillabaisse and Onion Soup. Enjoy Indian Butter Chicken, Japanese
+          Sushi, and
+          Thai Green Curry. Our diverse selection ensures there's something for every palate. Visit our website to
+          explore our
+          full menu and embark on a culinary journey like no other.
         </p>
         <!--Button to menu-->
         <a href="menu.html" class="btn">Find something to eat</a>
       </div>
     </section>
 
+    <!--Partners section-->
+    <section class="partners-container">
+      <br>
+      <h1 class="h-primary center">Our <span>Partners</span></h1>
+      <br><br><br>
+      <div class="slider">
+        <div class="slide-track">
+          <!-- Original set of logos -->
+          <div class="frame">
+            <div class="logo-container"><img src="images/partners images/Alphabet.png" alt="pic of alphabet logo" />
+            </div>
+          </div>
+          <div class="frame">
+            <div class="logo-container"><img src="images/partners images/apple.png" alt="pic of apple logo" /></div>
+          </div>
+
+          <div class="frame">
+            <div class="logo-container"><img src="images/partners images/Amazon_logo.png" alt="pic of amazon logo" />
+            </div>
+          </div>
+          <div class="frame">
+            <div class="logo-container"><img src="images/partners images/Nvidia.png" alt="pic of nvidia logo" /></div>
+          </div>
+          <div class="frame">
+            <div class="logo-container"><img src="images/partners images/visa.png" alt="pic of visa logo" /></div>
+          </div>
+          <div class="frame">
+            <div class="logo-container"><img src="images/partners images/tesla.png" alt="pic of tesla logo" /></div>
+          </div>
+          <div class="frame">
+            <div class="logo-container"><img src="images/partners images/Walmart_logo.png" alt="pic of walmart logo" />
+            </div>
+          </div>
+          <div class="frame">
+            <div class="logo-container"><img src="images/partners images/google.png" alt="pic of google logo" /></div>
+          </div>
+
+          <!-- Duplicate set of logos for seamless looping -->
+          <div class="frame">
+            <div class="logo-container"><img src="images/partners images/Alphabet.png" alt="pic of alphabet logo" />
+            </div>
+          </div>
+          <div class="frame">
+            <div class="logo-container"><img src="images/partners images/apple.png" alt="pic of apple logo" /></div>
+          </div>
+
+          <div class="frame">
+            <div class="logo-container"><img src="images/partners images/Amazon_logo.png" alt="pic of amazon logo" />
+            </div>
+          </div>
+          <div class="frame">
+            <div class="logo-container"><img src="images/partners images/Nvidia.png" alt="pic of nvidia logo" /></div>
+          </div>
+          <div class="frame">
+            <div class="logo-container"><img src="images/partners images/visa.png" alt="pic of visa logo" /></div>
+          </div>
+          <div class="frame">
+            <div class="logo-container"><img src="images/partners images/tesla.png" alt="pic of tesla logo" /></div>
+          </div>
+          <div class="frame">
+            <div class="logo-container"><img src="images/partners images/Walmart_logo.png" alt="pic of walmart logo" />
+            </div>
+          </div>
+          <div class="frame">
+            <div class="logo-container"><img src="images/partners images/google.png" alt="pic of google logo" /></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!--services section-->
     <section class="services-container">
-      <h1 class="h-primary center">Our <span>Services</span></h1>
+      <h1 data-aos="fade-left" class="h-primary center">Our <span>Services</span></h1>
       <div class="services">
 
         <!--Service 1-->
-        <div class="box">
+        <div data-aos="fade-up" class="box">
           <!--Image of serivce-->
           <img src="images/services imgs/food-order.webp" alt="pic of cartton depicting food ordering" loading="eager">
           <h2 class="h-secondary center">Food Ordering</h2>
@@ -272,7 +342,7 @@
         </div>
 
         <!--Service 2-->
-        <div class="box">
+        <div data-aos="fade-up" class="box">
           <!--Image of serivce-->
           <img src="images/services imgs/food-catering.webp" alt="pic of cartton depicting food catering"
             loading="eager">
@@ -287,7 +357,7 @@
         </div>
 
         <!--Service 2-->
-        <div class="box">
+        <div data-aos="fade-up" class="box">
           <!--Image of serivce-->
           <img src="images/services imgs/food_delivery.webp" alt="pic of cartton depicting food delivery"
             loading="eager">
@@ -306,14 +376,15 @@
     <!--Segway to about section-->
     <section class="about" id="about">
       <!--Segway Image-->
-      <div class="about-img">
+      <div data-aos="fade-right" class="about-img">
         <img src="images/food platter images/food-platter2.jpg" alt="pic of food platter" loading="eager">
       </div>
 
       <!--Segway text-->
       <div class="about-text">
-        <h2>Living well begins <br> with eating well.</h2>
-        <p>Discover the essence of well-being through our philosophy that 'Living well begins with eating well.' At
+        <h2 data-aos="fade-left">Living well begins <br> with eating well.</h2>
+        <p data-aos="fade-up">Discover the essence of well-being through our philosophy that 'Living well begins with
+          eating well.' At
           Culinary Harbor, we believe in the transformative power of food to nourish not just the body, but also the
           soul. Our
           commitment goes beyond crafting delicious meals; it extends to promoting a lifestyle where every bite is a
@@ -331,7 +402,7 @@
       <h1 class="gallery-heading">Our <span>Food Gallery</span></h1>
 
       <div class="box-container">
-        <div class="box">
+        <div data-aos="fade-up" class="box">
           <!--Image of Food-->
           <img src="images/gallery-pics/food-gal-1.jpg" alt="picture of food" loading="eager">
           <div class="content">
@@ -345,7 +416,7 @@
           </div>
         </div>
 
-        <div class="box">
+        <div data-aos="fade-up" class="box">
           <!--Image of Food-->
           <img src="images/gallery-pics/food-gal-2.jpg" alt="picture of food" loading="eager">
           <div class="content">
@@ -359,7 +430,7 @@
           </div>
         </div>
 
-        <div class="box">
+        <div data-aos="fade-up" class="box">
           <!--Image of Food-->
           <img src="images/gallery-pics/food-gal-3.jpg" alt="picture of food" loading="eager">
           <div class="content">
@@ -373,7 +444,7 @@
           </div>
         </div>
 
-        <div class="box">
+        <div data-aos="fade-up" class="box">
           <!--Image of Food-->
           <img src="images/gallery-pics/food-gal-4.jpg" alt="picture of food" loading="eager">
           <div class="content">
@@ -387,7 +458,7 @@
           </div>
         </div>
 
-        <div class="box">
+        <div data-aos="fade-up" class="box">
           <!--Image of Food-->
           <img src="images/gallery-pics/food-gal-5.jpg" alt="picture of food" loading="eager">
           <div class="content">
@@ -401,7 +472,7 @@
           </div>
         </div>
 
-        <div class="box">
+        <div data-aos="fade-up" class="box">
           <!--Image of Food-->
           <img src="images/gallery-pics/food-gal-6.jpg" alt="picture of food" loading="eager">
           <div class="content">
@@ -656,6 +727,18 @@
 
   <script src="readable_main.js"></script>
   <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxc9dvg30h3yohbcjxw0zzrz"></script>
+
+
+  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      AOS.init({
+        duration: 750, // Increase the duration
+        easing: 'ease-in-out', // Adjust the easing
+        once: true // Ensure the animation occurs only once
+      });
+    });
+  </script>
 </body>
 
 </html>
