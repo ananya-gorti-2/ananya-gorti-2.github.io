@@ -70,7 +70,7 @@ section:nth-child(even) {
   display: inline-block;
   font-size: 1.7rem;
   color: white;
-  background: black;
+  background: red;
   border-radius: 0.5rem;
   cursor: pointer;
   padding: 0.8rem 3rem;
