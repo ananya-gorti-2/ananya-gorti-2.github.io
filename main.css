@@ -2138,7 +2138,7 @@ a {
 	background-color: var(--fg);
 	border-radius: 0.25em;
 	color: var(--bg);
-	cursor: pointer;
+	cursor: default;
 	padding: 0.375em 0.75em;
 	transition:
 		background-color calc(var(--trans-dur) / 2) linear,
@@ -2163,7 +2163,7 @@ a {
 .timeline__arrow {
 	background-color: transparent;
 	border-radius: 0.25em;
-	cursor: pointer;
+	cursor: default;
 	flex-shrink: 0;
 	margin-inline-end: 0.25em;
 	outline: transparent;
