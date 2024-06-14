@@ -1175,6 +1175,8 @@ p {
   text-transform: none;
 }
 
+
+
 .jobs-list-container {
   max-width: 900px;
   margin: 20px auto;
@@ -1292,6 +1294,10 @@ footer {
 .jobs-list-container h2 {
   margin-bottom: 12px;
 }
+
+
+
+
 
 .loader-container {
   position: fixed;
