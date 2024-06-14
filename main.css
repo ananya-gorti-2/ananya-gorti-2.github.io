@@ -907,6 +907,23 @@ p {
   font-size: 20px;
 }
 
+.slider-btn {
+  display: inline-block;
+  font-size: 1.6rem;
+  color: white;
+  background-color: red;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.slider-btn:hover {
+  background-color: red;
+  letter-spacing: 0.1rem;
+  transition: all 0.2s linear;
+}
+
 .btn {
   display: inline-block;
   font-size: 1.6rem;
@@ -2135,7 +2152,8 @@ a {
 	color: var(--primary);
 	transition: color var(--trans-dur);
 }
-.btn {
+
+.btn1 {
 	background-color: var(--fg);
 	border-radius: 0.25em;
 	color: var(--bg);
@@ -2146,7 +2164,7 @@ a {
 		color var(--trans-dur);
 	-webkit-tap-highlight-color: transparent;
 }
-.btn:hover {
+.btn1:hover {
 	background-color: hsl(var(--hue),10%,50%);
 }
 .btn-group {
