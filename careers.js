@@ -94,4 +94,47 @@ function openModal() {
       closeModal();
     }
   }
+=======
+document.addEventListener("DOMContentLoaded", function() {
+    const learnMoreButtons = document.querySelectorAll('.learn-more');
+    const modal = document.getElementById("modal");
+    const closeModal = document.getElementsByClassName("close")[0];
+    const modalText = document.getElementById("modal-text");
+  
+    learnMoreButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const jobId = this.getAttribute('data-job');
+        const jobDetails = getJobDetails(jobId);
+        modalText.innerHTML = jobDetails;
+        modal.style.display = "block";
+      });
+    });
+  
+    closeModal.addEventListener('click', function() {
+      modal.style.display = "none";
+    });
+  
+    window.addEventListener('click', function(event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  
+    function getJobDetails(jobId) {
+      // You can expand this function to get more details dynamically based on the jobId
+      if (jobId === "1") {
+        return `
+          <strong>Responsibilities:</strong>
+          <ul>
+            <li>Oversee daily operations of the restaurant</li>
+            <li>Manage staff, including hiring and training</li>
+            <li>Monitor inventory and order supplies</li>
+            <li>Ensure compliance with health and safety regulations</li>
+            <li>Develop and implement strategies to increase profitability</li>
+          </ul>`;
+      }
+      return "Details not found.";
+    }
+  });
+>>>>>>> 8198aceb6b3f3e9ec996c8f497b6c13b56369dd5
   
