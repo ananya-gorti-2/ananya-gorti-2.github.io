@@ -73,64 +73,26 @@ if(jobs.length == 1){
 
 
 
-function openModal() {
-    document.getElementById("modal").style.display = "block";
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
     document.body.classList.add("modal-active");
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to the top smoothly
   }
   
-  function closeModal() {
-    document.getElementById("modal").style.display = "none";
+  function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
     document.body.classList.remove("modal-active");
   }
   
   // Close modal when clicking outside of the modal content
   window.onclick = function(event) {
-    const modal = document.getElementById("modal");
-    if (event.target === modal) {
-      closeModal();
-    }
-  }
-
-document.addEventListener("DOMContentLoaded", function() {
-    const learnMoreButtons = document.querySelectorAll('.learn-more');
-    const modal = document.getElementById("modal");
-    const closeModal = document.getElementsByClassName("close")[0];
-    const modalText = document.getElementById("modal-text");
-  
-    learnMoreButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const jobId = this.getAttribute('data-job');
-        const jobDetails = getJobDetails(jobId);
-        modalText.innerHTML = jobDetails;
-        modal.style.display = "block";
-      });
-    });
-  
-    closeModal.addEventListener('click', function() {
-      modal.style.display = "none";
-    });
-  
-    window.addEventListener('click', function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
       if (event.target === modal) {
-        modal.style.display = "none";
+        closeModal(modal.id);
       }
     });
+  }
   
-    function getJobDetails(jobId) {
-      // You can expand this function to get more details dynamically based on the jobId
-      if (jobId === "1") {
-        return `
-          <strong>Responsibilities:</strong>
-          <ul>
-            <li>Oversee daily operations of the restaurant</li>
-            <li>Manage staff, including hiring and training</li>
-            <li>Monitor inventory and order supplies</li>
-            <li>Ensure compliance with health and safety regulations</li>
-            <li>Develop and implement strategies to increase profitability</li>
-          </ul>`;
-      }
-      return "Details not found.";
-    }
-  });
 
   

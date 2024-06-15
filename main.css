@@ -406,6 +406,12 @@ main #btnScrollToTop:hover {
   text-align: center;
 }
 
+.center {
+  margin: auto;
+  width: 90%;
+  padding: 10px;
+}
+
 .dishes .box-container .food-card .food-content {
   position: relative;
   height: 30rem;
@@ -1225,7 +1231,7 @@ p {
   transform: scale(1.03);
 }*/
 
-.jobs-list-container .open-positions {
+.open-positions {
   position: absolute;
   top: 40px;
   right: 24px;
