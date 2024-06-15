@@ -92,7 +92,8 @@
     <label for="skillsCertifications">Skills and Certifications:</label>
     <textarea id="skillsCertificationsText" name="skillsCertificationsText" required></textarea>
 
-    <label for="experience">Provide examples of your leadership style and how you motivate and develop your team members.</label>
+    <label for="experience">Provide examples of your leadership style and how you motivate and develop your team
+      members.</label>
     <textarea id="experience" name="experience" required></textarea>
 
     <label for="whyWorkHere">Why do you want to work here?</label>
@@ -107,6 +108,10 @@
     <label for="motivationsAtWork">What motivations inspire you at work?</label>
     <textarea id="motivationsAtWork" name="motivationsAtWork" required></textarea>
 
+    <!-- Resume Upload Field -->
+    <label for="resume">Upload Your Resume:</label>
+    <input type="file" id="resume" name="resume" required accept=".pdf,.doc,.docx" />
+
     <!-- JavaScript subscript to prevent textarea resizing -->
     <script>
       document.querySelectorAll("textarea").forEach(function (textarea) {
@@ -114,7 +119,7 @@
       });
     </script>
     <!-- Submit Button -->
-    <button id="submit" type="submit" value="submit">Submit Application</button>
+    <button onclick="uploadImage()" id="submit" type="submit" value="submit">Submit Application</button>
   </form>
 
 
@@ -122,6 +127,7 @@
 
   <!--JS to connect to database-->
   <script type="module">
+
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
     import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
 
@@ -146,6 +152,8 @@
           // Initialize Firebase
           const app = initializeApp(firebaseConfig);
           const db = getDatabase(app);
+
+
 
           // Data submission to Firebase
           set(ref(db, "fullName/" + document.getElementById("fullName").value), {
@@ -210,32 +218,32 @@
   <script>
     // Prevent right-click
     window.addEventListener('contextmenu', function (e) {
-        e.preventDefault();
+      e.preventDefault();
     }, false);
 
     // Prevent Ctrl+U
-    document.addEventListener("keydown", function(e) {
-        if (e.ctrlKey && e.key === "u") {
-            e.preventDefault();
-        }
+    document.addEventListener("keydown", function (e) {
+      if (e.ctrlKey && e.key === "u") {
+        e.preventDefault();
+      }
     });
 
     // Prevent Ctrl+Shift+I, Ctrl+Shift+J, and Ctrl+Shift+C
-    document.addEventListener("keydown", function(e) {
-        if ((e.ctrlKey && e.shiftKey && (e.key === "i" || e.key === "I")) || 
-            (e.ctrlKey && e.shiftKey && (e.key === "j" || e.key === "J")) ||
-            (e.ctrlKey && e.shiftKey && (e.key === "c" || e.key === "C"))) {
-            e.preventDefault();
-        }
+    document.addEventListener("keydown", function (e) {
+      if ((e.ctrlKey && e.shiftKey && (e.key === "i" || e.key === "I")) ||
+        (e.ctrlKey && e.shiftKey && (e.key === "j" || e.key === "J")) ||
+        (e.ctrlKey && e.shiftKey && (e.key === "c" || e.key === "C"))) {
+        e.preventDefault();
+      }
     });
 
     // Prevent F12
-    document.addEventListener("keydown", function(e) {
-        if (e.key === "F12") {
-            e.preventDefault();
-        }
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "F12") {
+        e.preventDefault();
+      }
     });
-</script>
+  </script>
 
   <!--link to common javascript-->
   <script src="main.js"></script>
