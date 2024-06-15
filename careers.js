@@ -57,10 +57,6 @@ const jobs = [
 
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 8198aceb6b3f3e9ec996c8f497b6c13b56369dd5
 // Displaying the number of jobs
 const jobsHeading = document.querySelector(".jobs-list-container h2");
 
@@ -74,7 +70,7 @@ if(jobs.length == 1){
 }
 
 
-<<<<<<< HEAD
+
 
 
 function openModal() {
@@ -94,7 +90,7 @@ function openModal() {
       closeModal();
     }
   }
-=======
+
 document.addEventListener("DOMContentLoaded", function() {
     const learnMoreButtons = document.querySelectorAll('.learn-more');
     const modal = document.getElementById("modal");
@@ -136,5 +132,5 @@ document.addEventListener("DOMContentLoaded", function() {
       return "Details not found.";
     }
   });
->>>>>>> 8198aceb6b3f3e9ec996c8f497b6c13b56369dd5
+
   
