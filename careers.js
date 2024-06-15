@@ -57,9 +57,10 @@ const jobs = [
 
 
 
-
 // Displaying the number of jobs
 const jobsHeading = document.querySelector(".jobs-list-container h2");
+
+
 
 // Checking the number of jobs and updating the heading accordingly
 if(jobs.length == 1){
@@ -68,6 +69,27 @@ if(jobs.length == 1){
     jobsHeading.innerHTML = `${jobs.length} Jobs`;
 }
 
+
+
+
+
+function openModal() {
+    document.getElementById("modal").style.display = "block";
+    document.body.classList.add("modal-active");
+  }
+  
+  function closeModal() {
+    document.getElementById("modal").style.display = "none";
+    document.body.classList.remove("modal-active");
+  }
+  
+  // Close modal when clicking outside of the modal content
+  window.onclick = function(event) {
+    const modal = document.getElementById("modal");
+    if (event.target === modal) {
+      closeModal();
+    }
+  }
 
 document.addEventListener("DOMContentLoaded", function() {
     const learnMoreButtons = document.querySelectorAll('.learn-more');
@@ -110,4 +132,5 @@ document.addEventListener("DOMContentLoaded", function() {
       return "Details not found.";
     }
   });
+
   
