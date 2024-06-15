@@ -133,4 +133,25 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
+  function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+    document.body.classList.add("modal-active");
+  }
+  
+  function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+    document.body.classList.remove("modal-active");
+  }
+  
+  // Close modal when clicking outside of the modal content
+  window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        closeModal(modal.id);
+      }
+    });
+  }
+  
+
   
