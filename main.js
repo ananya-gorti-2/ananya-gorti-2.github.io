@@ -165,4 +165,61 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
     window.onload = fadeOut();
+
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAO9zhttsR2jhYQPBpsNiAzBPPMD8ZJtno",
+      authDomain: "fbla-restaurant-db.firebaseapp.com",
+      databaseURL: "https://fbla-restaurant-db-default-rtdb.firebaseio.com",
+      projectId: "fbla-restaurant-db",
+      storageBucket: "fbla-restaurant-db.appspot.com",
+      messagingSenderId: "1032671063739",
+      appId: "1:1032671063739:web:93e3567aade232b2db839e"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+
+    var fileText = document.querySelector(".fileText");
+    var fileItem;
+    var fileName;
+    function getFile(e){
+      fileItem = e.target.files[0];
+      fileName = fileItem.name;
+      fileText.innerHTML = fileName;
+    }
+
+    function uploadImage() {
+    let storageRef = firebase.storage().ref("resumes/" + fileName);
+    let uploadTask = storageRef.put(fileItem);
+
+    uploadTask.on("state_changed", (snapshot) => {
+        // Track the upload progress if needed
+        console.log(snapshot);
+    }, (error) => {
+        // Handle any errors
+        console.log("error is ", error);
+    }, () => {
+        // Upload completed successfully, get the download URL
+        uploadTask.snapshot.ref.getDownloadURL().then((url) => {
+            console.log("URL", url);
+            // You can save this URL in your database if needed
+        });
+    });
+  }
+
+  import { getStorage, ref, uploadBytes } from "firebase/storage";
+
+const storage = getStorage();
+const storageRef = ref(storage, 'files/' + file.name);
+
+function uploadFile() {
+  const fileInput = document.getElementById('fileInput');
+  const file = fileInput.files[0];
+
+  uploadBytes(storageRef, file).then((snapshot) => {
+    console.log('File uploaded successfully');
+  }).catch((error) => {
+    console.error('Error uploading file:', error);
+  });
+}
     
