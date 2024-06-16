@@ -467,20 +467,20 @@ main #btnScrollToTop:hover {
 }
 
 
-.dishes .box-container .food-content .stars {
+.stars {
   padding: 1rem 0;
 }
 
-.dishes .box-container .food-content .stars i {
+.stars i {
   font-size: 1.7rem;
   color: red;
 }
 
-.dishes .box-container .box .stars {
+.stars {
   padding: 1rem 0;
 }
 
-.dishes .box-container .box .stars i {
+.stars i {
   font-size: 1.7rem;
   color: red;
 }
@@ -496,7 +496,6 @@ main #btnScrollToTop:hover {
 .food-sub {
   padding-top: -2rem;
   padding-bottom: 2rem;
-  font-size: 30px; 
 }
 
 
@@ -509,7 +508,7 @@ main #btnScrollToTop:hover {
 }
 
 .dishes .box-container .box p {
-  font-size: 5rem;
+  font-size: 2rem;
   text-align: center;
   padding-bottom: 2.5rem;
   margin-left: 20px;
@@ -2558,32 +2557,6 @@ margin-bottom: 25px;*/
   grid-area: main2;
 }
 
-.items {
-  display: flex;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-  padding: 10px;
-  gap: 10px;
-}
-
-/* Custom scrollbar styling */
-.items::-webkit-scrollbar {
-  height: 20px;
-}
-
-.items::-webkit-scrollbar-track {
-  background: #f4f4f4;
-}
-
-.items::-webkit-scrollbar-thumb {
-  background-color: red;
-  border-radius: 10px;
-  border: 2px solid #f4f4f4;
-}
-
-.items::-webkit-scrollbar-thumb:hover {
-  background-color: #C10000;
-}
 
 .item {
   border-radius: 5px;
@@ -2797,7 +2770,6 @@ margin: auto;
 
 .about-content2 h2 {
   font-size: 30px;
-  color: #100e58;
   margin-bottom: 20px;
 }
 
@@ -2807,18 +2779,6 @@ margin: auto;
   line-height: 1.6;
 }
 
-.adoptionbutton {
-  margin-top: 20px;
-}
-
-.adoptionbutton a {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #100e58;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-}
 
 .adoption-col img {
   min-width:30vw;
@@ -2832,6 +2792,56 @@ margin: auto;
     max-width: 50vw;
     display: flex;
     margin-left: -9vw; 
+}
+
+.silly-slider-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.silly-slider {
+  position: relative;
+  width: 80%;
+  overflow: hidden;
+}
+
+.silly-slider-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.goofy-card {
+  margin: 0 10px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  text-align: center;
+  flex-shrink: 0;
+  height: auto; 
+}
+
+.silly-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 1;
+}
+
+.silly-left {
+  left: 10px;
+}
+
+.silly-right {
+  right: 10px;
 }
 
 /* Custom scrollbar styling */

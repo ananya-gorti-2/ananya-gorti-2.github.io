@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="https://pro.font-awesome.com/releases/v5.10.0/css/all.css">
   <link rel="stylesheet" href="main.css">
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
   <script src="main.js"></script>
 </head>
 
@@ -48,11 +51,11 @@
     <!--benefits container-->
     <!-- Second benefits section -->
 
-    <div class="heading3">
+    <div data-aos="fade-right" class="heading3">
       <h1>Competitive Compensation</h1>
     </div>
 <br>
-    <section class="adoption">
+    <section data-aos="zoom-in" class="adoption">
       <div class="mega">
         <div class="sideways items">
           <div class="adoptcover">
@@ -60,7 +63,7 @@
               <div class="adoption-col">
                   <img class="benefits-img"src="images/chefs_cooking.png" alt="Benefits Image">
               <div class="petball">
-                <h1>Adopt, Don't Shop!</h1>
+                <h1>Apply today!</h1>
                 <h2 class="wide">Scroll right to learn how we compensate our employees</h2>
               </div>
             </div>
@@ -88,19 +91,19 @@
 
 
 
-    <div class="heading3">
+    <div data-aos="fade-right" class="heading3">
       <h1>Opportunities for Career Growth</h1>
     </div>
 <br>
-    <section class="adoption">
+    <section data-aos="zoom-in" class="adoption">
       <div class="mega">
-        <div class="sideways">
+        <div class="sideways items">
           <div class="adoptcover">
             <div  class="adoptcovertwo">
               <div class="adoption-col">
                   <img id="cooking-img" src="images/cooking-camp-abstract-illustration (1).png" alt="Benefits Image">
               <div class="petball">
-                <h1>Adopt, Don't Shop!</h1>
+                <h1>Apply today!</h1>
                 <h2 class="wide">Scroll right to learn about our career growth opportunities</h2>
               </div>
 
@@ -122,19 +125,19 @@
 
 
 
-    <div class="heading3">
+    <div data-aos="fade-up"class="heading3">
       <h1>Positive Work Culture and Environment</h1>
     </div>
 <br>
-    <section class="adoption">
+    <section data-aos="zoom-in" class="adoption">
       <div class="mega">
-        <div class="sideways">
+        <div class="sideways items">
           <div class="adoptcover">
             <div  class="adoptcovertwo">
               <div class="adoption-col">
                   <img src="images/kids-with-pan.png" alt="Benefits Image">
               <div class="petball">
-                <h1>Adopt, Don't Shop!</h1>
+                <h1>Apply today!</h1>
                 <h2 class="wide">Scroll right to learn about our positive work environment</h2>
               </div>
 
@@ -158,32 +161,21 @@
     </div>
 
     <div class="container4">
-      <div class="heading3">
+      <div data-aos="fade-right" class="heading3">
         <h1>Our Employees</h1>
       </div>
 
-      <section style="margin:auto; width: 50%; "class=" dishes center">
 
+
+      
+
+      <section class=" dishes center">
+
+        
         <div class="box-container">
-          <div id="fish-tacos" class="food-card non-touch">
-            <div class="food-content">
-              <h1> <big><big><big>Fish Tacos</big></big></big></h1>
-              <div class="stars"> <big> <big>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                  </big></big> <br> <br> <br>
-              </div>
-              <p class="food-sub"> <big><big><big>Tantalize your taste buds with our Fish Tacos, a fusion of
-                      crispy fried fish, fresh veggies, and
-                      zesty sauces, bringing
-                      a taste of the coast to your plate.</big></big></big></p>
-              <a href="#" class="btn" onclick="event.preventDefault();"><span>$7.99</span></a>
-            </div>
-          </div>
-          <div id="fish-tacos" class="food-card non-touch">
+          
+
+          <div style="background-image:url('images/review-pics/man-2.png'); " class="food-card non-touch">
             <div class="food-content">
               <h1> <big><big><big>Fish Tacos</big></big></big></h1>
               <div class="stars"> <big> <big>
@@ -202,7 +194,7 @@
             </div>
           </div>
 
-          <div id="fish-tacos" class="food-card non-touch">
+          <div style="background-image:url('images/review-pics/man-3.png'); " class="food-card non-touch">
             <div class="food-content">
               <h1> <big><big><big>Fish Tacos</big></big></big></h1>
               <div class="stars"> <big> <big>
@@ -221,7 +213,7 @@
             </div>
           </div>
 
-          <div id="fish-tacos" class="food-card non-touch">
+          <div style="background-image:url('images/review-pics/girl-1.png'); " class="food-card non-touch">
             <div class="food-content">
               <h1> <big><big><big>Fish Tacos</big></big></big></h1>
               <div class="stars"> <big> <big>
@@ -462,6 +454,16 @@
       </div>
     </section>
   </footer>
+  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          AOS.init({
+              duration: 750, // Increase the duration
+              easing: 'ease-in-out', // Adjust the easing
+              once: true // Ensure the animation occurs only once
+          });
+      });
+  </script>
   <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxc9dvg30h3yohbcjxw0zzrz"></script>
 </body>
 
