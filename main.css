@@ -445,6 +445,7 @@ main #btnScrollToTop:hover {
   }
 }
 
+
 @media (pointer: coarse) {
   .touch {
     display: block;
@@ -495,6 +496,7 @@ main #btnScrollToTop:hover {
 .food-sub {
   padding-top: -2rem;
   padding-bottom: 2rem;
+  font-size: 30px; 
 }
 
 
@@ -2074,7 +2076,7 @@ body.modal-active {
   flex: 1;
 }
 
-.about-content4 .read-more3 {
+.read-more3 {
   display: inline-block;
   padding: 10px 20px;
   color: white;
@@ -2087,7 +2089,7 @@ body.modal-active {
   font-weight: normal;
 }
 
-.about-content4 .read-more3:hover {
+.read-more3:hover {
   transform: scale(1.1);
 }
 
@@ -2661,6 +2663,14 @@ margin-bottom: 25px;*/
   max-height: 60vh;
   position: relative;
 }
+
+@media (max-width: 450px) {
+  .adoption {
+    max-height: 50vh; 
+    min-height: 50vh;
+    padding-bottom: 1vw; 
+  }
+}
 /*
 
 @media (max-width: 1000px) {
@@ -2750,9 +2760,8 @@ margin-bottom: 25px;*/
 }
 
 .adoptcovertwo h2 {
-  padding-bottom: 30px;
+  padding-bottom: 1vw;
   font-size: 40px;
-  color: #100e58;
 }
 
 
@@ -2823,4 +2832,25 @@ margin: auto;
     max-width: 50vw;
     display: flex;
     margin-left: -9vw; 
+}
+
+/* Custom scrollbar styling */
+.items::-webkit-scrollbar {
+  height: 12px;
+}
+
+.items::-webkit-scrollbar-track {
+  background: lightgray;
+}
+
+.items::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 10px;
+  border: 2px solid red;
+}
+
+.items::-webkit-scrollbar-thumb:hover {
+  background-color: darkred;
+  border-radius:10px; 
+  border: 2px solid darkred;
 }
