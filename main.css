@@ -499,6 +499,12 @@ main #btnScrollToTop:hover {
   padding-bottom: 2rem;
 }
 
+@media (max-width: 900px) {
+  .tiny-food-sub {
+    font-size: 20px !important;  
+  }
+}
+
 
 .dishes .box-container .box img {
   height: 16rem;
@@ -2621,6 +2627,12 @@ margin-bottom: 25px;*/
   position: relative;
 }
 
+@media (min-width: 1200px) {
+  .mega {
+    width: 80vw !important; 
+  }
+}
+
 /*
 @media (max-width: 900px) {
   .mega {
@@ -2658,6 +2670,14 @@ margin-bottom: 25px;*/
     max-height: 50vh;
     min-height: 50vh;
     padding-bottom: 1vw;
+  }
+
+  .adoptiontext h1 {
+    font-size: 13px !important; 
+  }
+
+  #second-adoptiontext {
+    margin-right: 0px !important; 
   }
 }
 
@@ -2772,6 +2792,11 @@ margin-bottom: 25px;*/
   .adoptiontext {
     margin-top: -45px !important;
   }
+
+  #cooking-img {
+    min-width: 79vw !important; 
+    max-width: 79vw !important; 
+  }
 }
 
 @media (max-width: 430px) {
@@ -2875,10 +2900,10 @@ margin-bottom: 25px;*/
 .adoption-col {
   min-width: 100vw;
   max-width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
   padding: 20px;
   box-sizing: border-box;
 }
