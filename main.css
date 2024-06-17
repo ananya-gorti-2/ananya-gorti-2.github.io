@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Raleway:wght@200;300;400;600;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
@@ -2597,7 +2598,7 @@ margin-bottom: 25px;*/
 @media (max-width: 1000px) {
   .adoption {
     margin-top: -100px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
   }
 }
 
@@ -2723,46 +2724,31 @@ margin-bottom: 25px;*/
 
 @media (max-height: 2500px) {
   #cooking-img {
-<<<<<<< HEAD
-    margin-top: -55px; 
-    max-width: 25vw !important;
-    min-width: 25vw !important;
-  }
-
-  .adoption-col img {
-    margin-right: 250px; 
-    max-width: 35vw !important; 
-    min-width: 35vw !important; 
-  }
-  .adoption-col h2 {
-    width: 90% !important; 
-    font-size: 35px !important; 
-    margin-right: 300px !important;
-  }
-  .adoptiontext h3 {
-    font-size: 17px; 
-=======
     margin-top: -75px;
     max-width: 25vw;
     min-width: 25vw;
->>>>>>> 47fc4e6d9c56e8a317c36657348711945a51aa18
   }
 
 }
 
 
-<<<<<<< HEAD
-
-@media (max-width: 1100px) {/*
-=======
 @media (max-width: 1100px) {
-
->>>>>>> 47fc4e6d9c56e8a317c36657348711945a51aa18
-  .adoptcovertwo h2 {
-    font-size: 35px;
+   .adoptcovertwo h2 {
+     font-size: 35px;
+   }
+  
+  
   }
+  
+  
+  @media (max-width: 1360px) {
+   .adoptcovertwo h2 {
+     font-size: 30px;
+   }
+  }
+  
 
-}
+
 
 @media (max-width: 1360px) {
   .adoptcovertwo h2 {
@@ -2795,6 +2781,10 @@ margin-bottom: 25px;*/
     height: auto !important;
   }
 
+  .wide {
+    margin-left: 35px !important; 
+  }
+
   .adoptcovertwo {
     margin-top: -35px !important;
   }
@@ -2802,13 +2792,57 @@ margin-bottom: 25px;*/
   .adoptiontext {
     margin-top: -45px !important;
   }
+
+  #cooking-img {
+    margin-top: 0px !important; 
+    min-width: 70vw !important; 
+    max-width: 70vw !important; 
+    margin-right: 40px !important; 
+  }
+
+  #second-text {
+    margin-right: 40px !important; 
+  }
+
+  #second-adoptiontext {
+    margin-right: 60px !important; 
+  }
 }
+
+@media (max-width: 1040px) and (min-width: 430px) {
+  .adoption-col img {
+    min-width: 90vw !important;
+    max-width: 90vw !important;
+    height: auto !important;
+ 
+ 
+  }
+ 
+ 
+  .adoptcovertwo {
+    margin-top: -35px !important;
+    padding-right: 20px !important;
+  }
+ 
+ 
+  .adoptiontext {
+    margin-top: -45px !important;
+  }
+
+  .adoptiontext h1 {
+    font-size: 25px !important; 
+  }
+ }
+ 
 
 .adoptcovertwo h2 {
   padding-bottom: 1vw;
-  font-size: 40px;
+  font-size: 20px;
 }
 
+.adoptiontext h1 {
+  font-size: 20px; 
+}
 
 
 .adoption-col {
@@ -2849,101 +2883,12 @@ margin-bottom: 25px;*/
   }
 }
 
-<<<<<<< HEAD
-@media (max-width: 440px) {
-  .adoption-col img {
-    max-width: 70vw !important; 
-    min-width: 70vw !important; 
-    height: auto; 
-    margin-right: 100px !important; 
-  }
-
-  .adoption-col h2 {
-    font-size: 20px !important; 
-    margin-right: 40px !important; 
-  }
-  .adoptiontext h3{
-    font-size: 12px !important; 
-  }
-  .adoptiontext {
-    margin-top: -10px !important; 
-  }
-  #cooking-img {
-    margin-top: -55px !important; 
-    margin-left: 70px !important; 
-  }
-
-}
-
-@media (min-width: 530px) and (max-width: 550px) {
-
-  .adoption-col img {
-    max-width: 90vw !important; 
-    min-width: 90vw !important; 
-    height: auto; 
-
-    padding-right: 80px !important; 
-  }
-
-  .adoption-col h2 {
-    font-size: 25px; 
-  }
-
-  .adoptiontext h3 {
-    font-size: 13px; 
-  }
-  
-}
-
-@media (max-width: 1030px) and (min-width: 560px) {
-
-  .adoptcovertwo {
-    margin-right: 140px !important; 
-  }
-
-  .adoption-col img {
-    max-width: 90vw !important; 
-    min-width: 90vw !important; 
-    height: auto; 
-
-    padding-right: 80px !important; 
-  }
-
-  #cooking-img { 
-    max-width: 70vw !important; 
-    min-width: 70vw !important; 
-  }
-
-
-  .adoptiontext {
-    padding-left: 40px; 
-  }
-
-  .adoptiontext h3 {
-    font-size: 20px; 
-  }
-
-  #cooking-text {
-    margin-top: -50px !important; 
-  }
-
-  .adoption-col h2 {
-    font-size: 45px !important; 
-    width: 90% !important; 
-  }
-
-  .adoptiontext h3 {
-    font-size: 25px !important; 
-  }
-
-=======
 @media (max-width: 500px) {
   .adoption-col img {
     min-width: 60vw;
     max-width: 60vw;
     height: auto;
   }
->>>>>>> 47fc4e6d9c56e8a317c36657348711945a51aa18
 }
 
 
@@ -2975,15 +2920,9 @@ margin-bottom: 25px;*/
 }
 
 
-<<<<<<< HEAD
-/* Custom scrollbar styling */
-.items::-webkit-scrollbar {
-  height: 12px;
-=======
 
 .arrow-icon {
   color: red;
->>>>>>> 47fc4e6d9c56e8a317c36657348711945a51aa18
 }
 
 .benefits-text {
@@ -3064,4 +3003,8 @@ margin-bottom: 25px;*/
     flex: 100%;
     max-width: 100%;
   }
+}
+
+.adoptiontext .about-content2 {
+  padding-left: 0px; 
 }
