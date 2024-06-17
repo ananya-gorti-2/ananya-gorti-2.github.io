@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Raleway:wght@200;300;400;600;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
@@ -495,7 +494,7 @@ main #btnScrollToTop:hover {
 
 @media (max-width: 900px) {
   .tiny-food-sub {
-    font-size: 20px !important;  
+    font-size: 20px !important;
   }
 }
 
@@ -2102,6 +2101,22 @@ body.modal-active {
   transform: scale(1.1);
 }
 
+.test-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  background-color: red;
+  font-size: 19px;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: 0.3s ease;
+  font-weight: normal;
+}
+
+.test-btn:hover {
+  transform: scale(1.08);
+}
+
 
 .about-content4 p {
   font-size: 18px;
@@ -2623,7 +2638,7 @@ margin-bottom: 25px;*/
 
 @media (min-width: 1200px) {
   .mega {
-    width: 80vw !important; 
+    width: 80vw !important;
   }
 }
 
@@ -2667,11 +2682,11 @@ margin-bottom: 25px;*/
   }
 
   .adoptiontext h1 {
-    font-size: 13px !important; 
+    font-size: 13px !important;
   }
 
   #second-adoptiontext {
-    margin-right: 0px !important; 
+    margin-right: 0px !important;
   }
 }
 
@@ -2747,20 +2762,20 @@ margin-bottom: 25px;*/
 
 
 @media (max-width: 1100px) {
-   .adoptcovertwo h2 {
-     font-size: 35px;
-   }
-  
-  
+  .adoptcovertwo h2 {
+    font-size: 35px;
   }
-  
-  
-  @media (max-width: 1360px) {
-   .adoptcovertwo h2 {
-     font-size: 30px;
-   }
+
+
+}
+
+
+@media (max-width: 1360px) {
+  .adoptcovertwo h2 {
+    font-size: 30px;
   }
-  
+}
+
 
 
 
@@ -2770,7 +2785,7 @@ margin-bottom: 25px;*/
   }
 }
 
-@media (max-width: 1040px) and (min-width: 430px) {
+@media (max-width: 1040px) and (min-width: 435px) {
   .adoption-col img {
     min-width: 90vw !important;
     max-width: 90vw !important;
@@ -2788,12 +2803,12 @@ margin-bottom: 25px;*/
   }
 
   #cooking-img {
-    min-width: 79vw !important; 
-    max-width: 79vw !important; 
+    min-width: 79vw !important;
+    max-width: 79vw !important;
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 425px) {
   .adoption-col img {
     min-width: 90vw !important;
     max-width: 90vw !important;
@@ -2801,7 +2816,7 @@ margin-bottom: 25px;*/
   }
 
   .wide {
-    margin-left: 35px !important; 
+    margin-left: 35px !important;
   }
 
   .adoptcovertwo {
@@ -2813,18 +2828,18 @@ margin-bottom: 25px;*/
   }
 
   #cooking-img {
-    margin-top: 0px !important; 
-    min-width: 70vw !important; 
-    max-width: 70vw !important; 
-    margin-right: 40px !important; 
+    margin-top: 0px !important;
+    min-width: 70vw !important;
+    max-width: 70vw !important;
+    margin-right: 40px !important;
   }
 
   #second-text {
-    margin-right: 40px !important; 
+    margin-right: 40px !important;
   }
 
   #second-adoptiontext {
-    margin-right: 60px !important; 
+    margin-right: 60px !important;
   }
 }
 
@@ -2833,26 +2848,40 @@ margin-bottom: 25px;*/
     min-width: 90vw !important;
     max-width: 90vw !important;
     height: auto !important;
- 
- 
+
+
   }
- 
- 
+
+
   .adoptcovertwo {
     margin-top: -35px !important;
     padding-right: 20px !important;
   }
- 
- 
+
+
   .adoptiontext {
     margin-top: -45px !important;
   }
 
   .adoptiontext h1 {
-    font-size: 25px !important; 
+    font-size: 25px !important;
   }
- }
- 
+}
+
+@media (max-width: 435px) and (min-width: 425px) {
+  .adoptiontext h1 {
+    font-size: 15px !important;
+  }
+
+  #cooking-img {
+    margin-top: -10px !important;
+  }
+
+  #second-adoptiontext {
+    width: 85% !important;
+  }
+}
+
 
 .adoptcovertwo h2 {
   padding-bottom: 1vw;
@@ -2860,7 +2889,7 @@ margin-bottom: 25px;*/
 }
 
 .adoptiontext h1 {
-  font-size: 20px; 
+  font-size: 20px;
 }
 
 /* width */
@@ -2876,7 +2905,7 @@ margin-bottom: 25px;*/
 }
 
 #second-benefit::-webkit-scrollbar-track {
- background: gray; 
+  background: gray;
 }
 
 /* Handle */
@@ -3052,5 +3081,5 @@ margin-bottom: 25px;*/
 }
 
 .adoptiontext .about-content2 {
-  padding-left: 0px; 
+  padding-left: 0px;
 }

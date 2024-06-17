@@ -133,8 +133,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
   
   // loading screen in the home page
-  function loader(){
-    document.querySelector(".loader-container").classList.add("fade-out");
+  function loader() {
+    let loaderContainer = document.querySelector(".loader-container");
+    if (loaderContainer) {
+      loaderContainer.classList.add("fade-out");
+    }
   }
   
   function fadeOut(){
