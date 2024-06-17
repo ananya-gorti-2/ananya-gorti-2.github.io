@@ -450,6 +450,16 @@ main #btnScrollToTop:hover {
   }
 }
 
+@media (min-width: 1050px) {
+  .touch {
+    display: none;
+  }
+
+  .non-touch {
+    display: block;
+  }
+}
+
 .dishes .box-container .food-card:hover .food-content {
   transform: translateY(50%);
   /* Adjust the value as needed */
