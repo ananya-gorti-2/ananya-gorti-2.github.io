@@ -2844,6 +2844,33 @@ margin-bottom: 25px;*/
   font-size: 20px; 
 }
 
+/* width */
+.items::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+
+/* Track */
+.items::-webkit-scrollbar-track {
+  background: lightgray;
+  border-radius: 10px;
+}
+
+#second-benefit::-webkit-scrollbar-track {
+ background: gray; 
+}
+
+/* Handle */
+.items::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.items::-webkit-scrollbar-thumb:hover {
+  background: darkred;
+}
+
 
 .adoption-col {
   min-width: 100vw;
