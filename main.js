@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
   // Swiper Sliders
 document.addEventListener('DOMContentLoaded', function () {
-  new Swiper(".homw-slider", {
+  new Swiper(".home-slider", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
