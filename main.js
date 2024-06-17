@@ -1,24 +1,30 @@
-// Menu and Navbar Toggle
 document.addEventListener("DOMContentLoaded", function () {
-  let menu = document.querySelector("#bar");
-  let nav = document.querySelector(".navbar");
-  let currentPage = window.location.pathname.split("/").pop();
+  // Selecting the menu icon and the navigation bar
+    let menu = document.querySelector("#bar");
+    let nav = document.querySelector(".navbar");
 
-  menu.onclick = () => {
-    menu.classList.toggle("fa-times");
-    nav.classList.toggle("active");
-  };
-
-  let navLinks = document.querySelectorAll(".navbar a");
-  navLinks.forEach((link) => {
-    let linkPage = link.getAttribute("href").split("/").pop();
-    if (linkPage === currentPage && linkPage !== "index.html") {
-      link.classList.add("active");
-    }
+    // gettign the file by pathname
+    let currentPage = window.location.pathname.split("/").pop();
+  
+    // Toggle the menu icon and navigation bar active class on click
+    menu.onclick = () => {
+      menu.classList.toggle("fa-times");
+      nav.classList.toggle("active");
+    };
+  
+    // navigation bar
+    // for highlighting the button when its clicked
+    let navLinks = document.querySelectorAll(".navbar a");
+    navLinks.forEach((link) => {
+      let linkPage = link.getAttribute("href").split("/").pop();
+      if (linkPage === currentPage && linkPage !== "index.html") {
+        link.classList.add("active");
+      }
+    });
   });
-});
-
-// Job Application Form Validation
+  
+  // Checks for application
+  // Job Application Form Validation
 document.addEventListener('DOMContentLoaded', function () {
   var form = document.getElementById('jobApplicationForm');
   if (form) {
@@ -62,8 +68,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 });
-
-// Swiper Sliders
+  
+  
+  
+  // Swiper Sliders
 document.addEventListener('DOMContentLoaded', function () {
   new Swiper(".homw-slider", {
     spaceBetween: 30,
@@ -96,8 +104,9 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 });
+  
 
-// Scroll to Top
+  // Scroll to Top
 document.addEventListener("DOMContentLoaded", function () {
   let btnScrollToTop = document.getElementById("btnScrollToTop");
   let btnScrollToTop2 = document.getElementById("up-icon");
@@ -122,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
+  
 // Loader
 document.addEventListener('DOMContentLoaded', function () {
   function loader() {
@@ -138,4 +147,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.onload = fadeOut();
 });
-
