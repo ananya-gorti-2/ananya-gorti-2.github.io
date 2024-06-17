@@ -132,18 +132,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
   
-// Loader
-document.addEventListener('DOMContentLoaded', function () {
-  function loader() {
-    let loaderContainer = document.querySelector(".loader-container");
-    if (loaderContainer) {
-      loaderContainer.classList.add("fade-out");
-    }
+  // loading screen in the home page
+  function loader(){
+    document.querySelector(".loader-container").classList.add("fade-out");
   }
-
-  function fadeOut() {
+  
+  function fadeOut(){
     setInterval(loader, 3000);
+  
   }
-
+  
   window.onload = fadeOut();
-});
+  //test2
