@@ -271,13 +271,7 @@ header .apply_btn .btn:hover {
   font-size: 1.9rem;
 }
 
-form {
-  max-width: 600px;
-  margin: auto;
-  background-color: #fff;
-  padding: 2em;
-  border-radius: 8px;
-}
+
 
 label {
   display: block;
@@ -291,7 +285,7 @@ textarea {
   width: 100%;
   padding: 0.5em;
   margin-bottom: 1em;
-  border: 1px solid #fff;
+  border: 1px solid #c6c5c5;
   border-radius: 4px;
 }
 

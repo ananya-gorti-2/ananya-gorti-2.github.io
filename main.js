@@ -1,24 +1,30 @@
-// Menu and Navbar Toggle
 document.addEventListener("DOMContentLoaded", function () {
-  let menu = document.querySelector("#bar");
-  let nav = document.querySelector(".navbar");
-  let currentPage = window.location.pathname.split("/").pop();
+  // Selecting the menu icon and the navigation bar
+    let menu = document.querySelector("#bar");
+    let nav = document.querySelector(".navbar");
 
-  menu.onclick = () => {
-    menu.classList.toggle("fa-times");
-    nav.classList.toggle("active");
-  };
-
-  let navLinks = document.querySelectorAll(".navbar a");
-  navLinks.forEach((link) => {
-    let linkPage = link.getAttribute("href").split("/").pop();
-    if (linkPage === currentPage && linkPage !== "index.html") {
-      link.classList.add("active");
-    }
+    // gettign the file by pathname
+    let currentPage = window.location.pathname.split("/").pop();
+  
+    // Toggle the menu icon and navigation bar active class on click
+    menu.onclick = () => {
+      menu.classList.toggle("fa-times");
+      nav.classList.toggle("active");
+    };
+  
+    // navigation bar
+    // for highlighting the button when its clicked
+    let navLinks = document.querySelectorAll(".navbar a");
+    navLinks.forEach((link) => {
+      let linkPage = link.getAttribute("href").split("/").pop();
+      if (linkPage === currentPage && linkPage !== "index.html") {
+        link.classList.add("active");
+      }
+    });
   });
-});
-
-// Job Application Form Validation
+  
+  // Checks for application
+  // Job Application Form Validation
 document.addEventListener('DOMContentLoaded', function () {
   var form = document.getElementById('jobApplicationForm');
   if (form) {
@@ -62,10 +68,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 });
-
-// Swiper Sliders
+  
+  
+  
+  // Swiper Sliders
 document.addEventListener('DOMContentLoaded', function () {
-  new Swiper(".home-slider", {
+  new Swiper(".homw-slider", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
@@ -96,8 +104,9 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 });
+  
 
-// Scroll to Top
+  // Scroll to Top
 document.addEventListener("DOMContentLoaded", function () {
   let btnScrollToTop = document.getElementById("btnScrollToTop");
   let btnScrollToTop2 = document.getElementById("up-icon");
@@ -122,76 +131,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
-// Loader
-document.addEventListener('DOMContentLoaded', function () {
-  function loader() {
+  
+  // loading screen in the home page
+  function loader(){
     document.querySelector(".loader-container").classList.add("fade-out");
   }
-
-  function fadeOut() {
+  
+  function fadeOut(){
     setInterval(loader, 3000);
+  
   }
-
+  
   window.onload = fadeOut();
-});
-
-// Card Slider
-document.addEventListener('DOMContentLoaded', function () {
-  const sillySliderSection = document.querySelector('.silly-slider-section');
-
-  if (sillySliderSection) {
-    const sillyCoaster = sillySliderSection.querySelector('.silly-slider-container');
-    const leftGoof = sillySliderSection.querySelector('.silly-nav.silly-left');
-    const rightGoof = sillySliderSection.querySelector('.silly-nav.silly-right');
-    const goofyStack = sillySliderSection.querySelectorAll('.goofy-card');
-    const goofySize = goofyStack[0].offsetWidth + 20; // card width + margin
-    let currentSilliness = 0;
-    const totalGoofs = goofyStack.length;
-
-    // Clone first and last few cards for wrapping effect
-    const firstGoofs = [];
-    const lastGoofs = [];
-    for (let i = 0; i < totalGoofs; i++) {
-      firstGoofs.push(goofyStack[i].cloneNode(true));
-      lastGoofs.push(goofyStack[totalGoofs - 1 - i].cloneNode(true));
-    }
-
-    firstGoofs.forEach(clone => sillyCoaster.appendChild(clone));
-    lastGoofs.reverse().forEach(clone => sillyCoaster.insertBefore(clone, sillyCoaster.firstChild));
-
-    // Adjust the initial position
-    currentSilliness = totalGoofs;
-    sillyCoaster.style.transform = `translateX(${-currentSilliness * goofySize}px)`;
-
-    const moveSilliness = () => {
-      sillyCoaster.style.transition = 'transform 0.5s ease';
-      sillyCoaster.style.transform = `translateX(${-currentSilliness * goofySize}px)`;
-    };
-
-    const resetSilliness = () => {
-      sillyCoaster.style.transition = 'none';
-      if (currentSilliness >= totalGoofs * 2) {
-        currentSilliness = totalGoofs;
-        sillyCoaster.style.transform = `translateX(${-currentSilliness * goofySize}px)`;
-      } else if (currentSilliness < totalGoofs) {
-        currentSilliness = totalGoofs * 2 - 1;
-        sillyCoaster.style.transform = `translateX(${-currentSilliness * goofySize}px)`;
-      }
-    };
-
-    leftGoof.addEventListener('click', () => {
-      currentSilliness--;
-      moveSilliness();
-    });
-
-    rightGoof.addEventListener('click', () => {
-      currentSilliness++;
-      moveSilliness();
-    });
-
-    sillyCoaster.addEventListener('transitionend', resetSilliness);
-  } else {
-    console.error('silly-slider-section not found!');
-  }
-});
+  //test2
