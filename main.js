@@ -126,7 +126,10 @@ document.addEventListener("DOMContentLoaded", function () {
 // Loader
 document.addEventListener('DOMContentLoaded', function () {
   function loader() {
-    document.querySelector(".loader-container").classList.add("fade-out");
+    let loaderContainer = document.querySelector(".loader-container");
+    if (loaderContainer) {
+      loaderContainer.classList.add("fade-out");
+    }
   }
 
   function fadeOut() {
