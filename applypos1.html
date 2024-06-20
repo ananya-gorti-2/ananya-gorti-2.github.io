@@ -117,6 +117,16 @@
       document.querySelectorAll("textarea").forEach(function (textarea) {
         textarea.style.resize = 'none';
       });
+
+      function validateRecaptcha(event) {
+        event.preventDefault();
+        var response = grecaptcha.getResponse();
+        if(response.length === 0) {
+          alert("Please complete the reCAPTCHA.");
+          return false;
+        }
+        document.getElementById('GeneralManagerApplicationForm').submit();
+      }
     </script>
     <!-- Submit Button -->
     <button id="submit" type="submit" value="submit">Submit Application</button>
