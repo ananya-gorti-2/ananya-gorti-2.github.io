@@ -210,6 +210,7 @@ form {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin-bottom: 30px;
 }
 
 #GeneralManagerApplicationForm input,
@@ -235,6 +236,8 @@ form {
 label {
   display: block;
   margin-bottom: 5px;
+  font-size: 12px;
+  font-weight: bold
 }
 
 input[type="text"],
@@ -250,12 +253,14 @@ textarea {
 }
 
 button[type="submit"] {
+  margin-top: 20px;
   background-color: red;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 button[type="submit"]:hover {
@@ -3016,82 +3021,144 @@ margin-bottom: 25px;*/
   font-size: 20px;
 }
 
-.employees {
-  margin: 0;
-  padding: 0;
-}
-
-.testimonials {
-  padding: 40px 0;
-  background: #f1f1f1;
-  color: #424242;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.inner {
-  max-width: 1200px;
-  margin: auto;
-  overflow: hidden;
-  padding: 0 20px;
-}
-
-.border {
-  width: 160px;
-  height: 5px;
-  background: green;
-  margin: 26px auto;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.col {
-  flex: 0 0 33.33%;
-  max-width: 33.33%;
-  box-sizing: border-box;
-  padding: 15px;
-}
-
-.testimonial {
-  background: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-}
-
-.testimonial img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-.name {
-  font-size: 20px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-@media screen and (max-width: 960px) {
-  .col {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .col {
-    flex: 100%;
-    max-width: 100%;
-  }
+.quote_icon {
+  color: red;
 }
 
 .adoptiontext .about-content2 {
   padding-left: 0px;
+}
+
+
+/* Testimonials section styling */
+.testimonials {
+  margin: 0;
+  padding: 50px 0;
+  /* Reduce padding to remove extra space */
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  /* Light gray background */
+}
+
+/* Container styling */
+.emp-container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+/* Header styling */
+.emp-header {
+  text-align: center;
+  margin-bottom: 30px;
+  /* Adjusted margin to fit the design */
+  padding-top: 0;
+  /* Ensure there's no additional padding */
+}
+
+
+/* Title styling */
+.emp-header .emp-title {
+  white-space: nowrap;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px auto 0;
+  font-size: 50px;
+  color: #000;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+  /* Adjusted margin to remove bottom margin and keep top margin */
+}
+
+.emp-header .emp-title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -2px;
+  /* Position the line below the emp-title */
+  background-color: red;
+}
+
+/* Testimonials item styling */
+.testimonials-item {
+  background-color: #fff;
+  /* White background */
+  padding: 30px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  /* Light gray border */
+}
+
+/* Info section styling */
+.testimonials-item .info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Image styling */
+.testimonials-item img {
+  max-width: 80px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.testimonials-item .name {
+  font-size: 24px;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #000;
+  /* Black text */
+  line-height: 1.2;
+}
+
+.testimonials-item .job {
+  text-transform: capitalize;
+  color: #6b6a6a;
+  /* Gray text */
+  font-size: 16px;
+}
+
+.testimonials-item p {
+  margin-top: 20px;
+  color: #555;
+  /* Dark gray text */
+  font-size: 18px;
+}
+
+.testimonials-item .rating {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ff0000;
+  /* Red stars */
+}
+
+.testimonials .swiper-pagination {
+  position: relative;
+  margin-top: 40px;
+  bottom: auto;
+}
+
+.testimonials .swiper-pagination-bullet {
+  height: 12px;
+  width: 12px;
+  background-color: #ff0000;
+  /* Red bullets */
+}
+
+.testimonials testimonials-item {
+  margin-top: 50rem;
+  padding-top: 50rem;
+}
+
+.highlight {
+  color: red;
 }

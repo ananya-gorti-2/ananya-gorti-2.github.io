@@ -92,7 +92,8 @@
     <label for="skillsCertifications">Skills and Certifications:</label>
     <textarea id="skillsCertificationsText" name="skillsCertificationsText" required></textarea>
 
-    <label for="experience">Provide examples of your leadership style and how you motivate and develop your team members.</label>
+    <label for="experience">Provide examples of your leadership style and how you motivate and develop your team
+      members.</label>
     <textarea id="experience" name="experience" required></textarea>
 
     <label for="whyWorkHere">Why do you want to work here?</label>
@@ -106,6 +107,9 @@
 
     <label for="motivationsAtWork">What motivations inspire you at work?</label>
     <textarea id="motivationsAtWork" name="motivationsAtWork" required></textarea>
+
+    <label for="resume">Upload Resume:</label>
+    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required />
 
     <!-- JavaScript subscript to prevent textarea resizing -->
     <script>
@@ -124,6 +128,13 @@
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
     import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+    import {
+      getStorage,
+      ref as refStorage,
+      uploadBytesResumable,
+      getDownloadURL,
+    } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-storage.js";
+
 
     document.addEventListener('DOMContentLoaded', function () {
       var form = document.getElementById('GeneralManagerApplicationForm');
@@ -147,6 +158,20 @@
           const app = initializeApp(firebaseConfig);
           const db = getDatabase(app);
 
+          const storage = getStorage(app);
+
+          const resumeFile = document.getElementById('resume').files[0];
+          const resumeFileName = resumeFile.name;
+
+          // Reference in Firebase Storage
+          const resumeStorageRef = refStorage(storage, 'resumes/' + resumeFileName);
+
+          // Upload resume file
+          const uploadTask = uploadBytesResumable(resumeStorageRef, resumeFile);
+
+          // Get download URL of uploaded file
+          const downloadURL = getDownloadURL(uploadTask.snapshot.ref);
+
           // Data submission to Firebase
           set(ref(db, "fullName/" + document.getElementById("fullName").value), {
             applicationForm: "General Manager Application Form",
@@ -164,7 +189,8 @@
             whyworkhere: document.getElementById("whyWorkHere").value,
             expectedsalary: document.getElementById("expectedSalary").value,
             bestcandidateskills: document.getElementById("bestCandidateSkills").value,
-            motivationsatwork: document.getElementById("motivationsAtWork").value
+            motivationsatwork: document.getElementById("motivationsAtWork").value,
+            resume: downloadURL
           }).then(() => {
             alert("Application Received! Be on the lookout for an email from us. Make sure to check your spam folder!");
             window.location.href = 'thankyou.html'; // Redirect to thankyou.html upon successful submission
@@ -210,32 +236,32 @@
   <script>
     // Prevent right-click
     window.addEventListener('contextmenu', function (e) {
-        e.preventDefault();
+      e.preventDefault();
     }, false);
 
     // Prevent Ctrl+U
-    document.addEventListener("keydown", function(e) {
-        if (e.ctrlKey && e.key === "u") {
-            e.preventDefault();
-        }
+    document.addEventListener("keydown", function (e) {
+      if (e.ctrlKey && e.key === "u") {
+        e.preventDefault();
+      }
     });
 
     // Prevent Ctrl+Shift+I, Ctrl+Shift+J, and Ctrl+Shift+C
-    document.addEventListener("keydown", function(e) {
-        if ((e.ctrlKey && e.shiftKey && (e.key === "i" || e.key === "I")) || 
-            (e.ctrlKey && e.shiftKey && (e.key === "j" || e.key === "J")) ||
-            (e.ctrlKey && e.shiftKey && (e.key === "c" || e.key === "C"))) {
-            e.preventDefault();
-        }
+    document.addEventListener("keydown", function (e) {
+      if ((e.ctrlKey && e.shiftKey && (e.key === "i" || e.key === "I")) ||
+        (e.ctrlKey && e.shiftKey && (e.key === "j" || e.key === "J")) ||
+        (e.ctrlKey && e.shiftKey && (e.key === "c" || e.key === "C"))) {
+        e.preventDefault();
+      }
     });
 
     // Prevent F12
-    document.addEventListener("keydown", function(e) {
-        if (e.key === "F12") {
-            e.preventDefault();
-        }
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "F12") {
+        e.preventDefault();
+      }
     });
-</script>
+  </script>
 
   <!--link to common javascript-->
   <script src="main.js"></script>
