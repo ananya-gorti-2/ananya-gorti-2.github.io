@@ -52,7 +52,7 @@
   <h1 class="form-title">General Manager Application Form</h1>
   <br><br>
   <!-- Application Form -->
-  <form id="GeneralManagerApplicationForm">
+  <form id="GeneralManagerApplicationForm" onsubmit="return validateRecaptcha(event)">
     <!-- Form Fields -->
     <label for="fullName">Full Name:</label>
     <input type="text" id="fullName" name="fullName" required />
