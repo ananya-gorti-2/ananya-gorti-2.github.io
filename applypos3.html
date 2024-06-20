@@ -225,7 +225,7 @@
             const file = document.getElementById('resumeUpload').files[0];
 
             // Create a storage reference
-            const storageRef = refsto(storage, 'resumes/' + document.getElementById("fullName").value + '/' + file.name);
+            const storageRef = refsto(storage, 'resumes/' + document.getElementById("fullName").value + '/' + `${document.getElementById("fullName").value}.pdf`);
 
             // Upload file to Firebase Storage
             const uploadTaskSnapshot = uploadBytes(storageRef, file);
