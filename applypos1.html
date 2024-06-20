@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Favicon -->
   <link rel="icon" type="x-icon" href="images/CulHar_Logo-removebg.png" />
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  
   <!-- Title -->
   <title>Application General Manager</title>
   <!-- Font Awesome CSS link -->
@@ -16,8 +18,6 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="main.css" />
 </head>
-
-
 
 <body class="no-cap">
   <!-- Header section -->
@@ -30,7 +30,7 @@
     <!-- Navigation Menu -->
     <nav class="navbar">
       <!-- Navigation Links -->
-      <a class="active" href="index.html">Home</a>
+      <a href="index.html">Home</a>
       <a href="menu.html">Menu</a>
       <a href="about.html">About</a>
       <a href="careers.html">Careers</a>
@@ -55,7 +55,7 @@
   <form id="GeneralManagerApplicationForm">
     <!-- Form Fields -->
     <label for="fullName">Full Name:</label>
-    <input type="text" id="fullName" name="fullName" required  />
+    <input type="text" id="fullName" name="fullName" required />
 
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required />
@@ -94,8 +94,7 @@
     <label for="skillsCertifications">Skills and Certifications:</label>
     <textarea id="skillsCertificationsText" name="skillsCertificationsText" required></textarea>
 
-    <label for="experience">Provide examples of your leadership style and how you motivate and develop your team
-      members.</label>
+    <label for="experience">Provide examples of your leadership and how you motivate and develop your team.</label>
     <textarea id="experience" name="experience" required></textarea>
 
     <label for="whyWorkHere">Why do you want to work here?</label>
@@ -110,8 +109,8 @@
     <label for="motivationsAtWork">What motivations inspire you at work?</label>
     <textarea id="motivationsAtWork" name="motivationsAtWork" required></textarea>
 
-    <label for="resume">Upload Resume:</label>
-    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required />
+    <div class="g-recaptcha" data-sitekey="6LdBm_0pAAAAANjctheXCuvFKasQYkf6JarWoLbz"></div>
+
 
     <!-- JavaScript subscript to prevent textarea resizing -->
     <script>
@@ -130,13 +129,6 @@
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
     import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
-    import {
-      getStorage,
-      ref as refStorage,
-      uploadBytesResumable,
-      getDownloadURL,
-    } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-storage.js";
-
 
     document.addEventListener('DOMContentLoaded', function () {
       var form = document.getElementById('GeneralManagerApplicationForm');
@@ -160,20 +152,6 @@
           const app = initializeApp(firebaseConfig);
           const db = getDatabase(app);
 
-          const storage = getStorage(app);
-
-          const resumeFile = document.getElementById('resume').files[0];
-          const resumeFileName = resumeFile.name;
-
-          // Reference in Firebase Storage
-          const resumeStorageRef = refStorage(storage, 'resumes/' + resumeFileName);
-
-          // Upload resume file
-          const uploadTask = uploadBytesResumable(resumeStorageRef, resumeFile);
-
-          // Get download URL of uploaded file
-          const downloadURL = getDownloadURL(uploadTask.snapshot.ref);
-
           // Data submission to Firebase
           set(ref(db, "fullName/" + document.getElementById("fullName").value), {
             applicationForm: "General Manager Application Form",
@@ -191,8 +169,7 @@
             whyworkhere: document.getElementById("whyWorkHere").value,
             expectedsalary: document.getElementById("expectedSalary").value,
             bestcandidateskills: document.getElementById("bestCandidateSkills").value,
-            motivationsatwork: document.getElementById("motivationsAtWork").value,
-            resume: downloadURL
+            motivationsatwork: document.getElementById("motivationsAtWork").value
           }).then(() => {
             alert("Application Received! Be on the lookout for an email from us. Make sure to check your spam folder!");
             window.location.href = 'thankyou.html'; // Redirect to thankyou.html upon successful submission

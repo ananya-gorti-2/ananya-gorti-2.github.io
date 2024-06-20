@@ -211,44 +211,40 @@ form {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-bottom: 30px;
 }
 
-.form-group {
-  position: relative;
-  margin-bottom: 15px;
+#GeneralManagerApplicationForm input,
+#GeneralManagerApplicationForm textarea {
+  text-transform: none;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding-left: 40px; /* Increased padding for better alignment */
+.cashier_app input,
+.cashier_app textarea {
+  text-transform: none;
 }
 
-.form-group .fa {
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-  font-size: 18px;
-  color: #888;
+.waiter-app input,
+.waiter-app textarea {
+  text-transform: none;
 }
 
-.form-group textarea {
-  resize: none;
+.chef-app input,
+.chef-app textarea {
+  text-transform: none;
 }
 
-.form-group label {
+label {
   display: block;
   margin-bottom: 5px;
-  font-size: 12px;
   font-weight: bold;
+  font-size: 13px;
+  
 }
 
 input[type="text"],
 input[type="email"],
 input[type="date"],
+input[type="number"],
 select,
 textarea {
   width: 100%;
@@ -259,19 +255,19 @@ textarea {
 }
 
 button[type="submit"] {
-  margin-top: 20px;
   background-color: red;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-weight: bold;
 }
 
 button[type="submit"]:hover {
-  background-color: darkred;
+  background-color: red;
 }
+
+
 
 header #bar:hover {
   color: red;
@@ -682,7 +678,7 @@ main #btnScrollToTop:hover {
 }
 
 .h-text {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .center {
@@ -830,7 +826,7 @@ body {
 }
 
 .review .slide p {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   line-height: 1.8;
   color: black;
 
@@ -1252,7 +1248,7 @@ footer {
 
 .jobs-list-container .details {
   margin-top: 6px;
-  font-size: 14px;
+  font-size: 1.6rem;
   color: #333;
   line-height: 1.8;
   flex: 1;
@@ -1266,12 +1262,14 @@ footer {
   padding: 8px 16px;
   border-radius: 8px;
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .jobs-list-container .details-btn:hover {
   background-color: red;
   color: #fff;
+  letter-spacing: 0.1rem !important;
+  transition: all 0.2s linear  !important;
 }
 
 .jobs-list-container h2 {
@@ -1334,13 +1332,14 @@ footer {
   padding: 8px 16px;
   border-radius: 8px;
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 14px;
   cursor: pointer;
+  background-color: red;
 }
 
 .learn-more-btn:hover {
-  background-color: red;
-
+  letter-spacing: 0.1rem;
+  transition: all 0.2s linear;
 }
 
 /* Adjust hover effect to not apply when modal is active */
@@ -1906,9 +1905,9 @@ body.modal-active {
 
 
 .about-content3 p {
-  font-size: 18px;
-  line-height: 1.5;
-  color: #666;
+  font-size: 1.9rem;
+  line-height: 1.6;
+  color: #333;
 }
 
 .about-content3 {
@@ -2092,9 +2091,9 @@ body.modal-active {
 
 
 .about-content4 p {
-  font-size: 18px;
-  line-height: 1.5;
-  color: #666;
+  font-size: 1.9rem;
+  line-height: 1.6;
+  color: #333;
   font-weight: normal;
 }
 
@@ -2168,7 +2167,7 @@ body.modal-active {
 
 .about-text p {
   color: black;
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   line-height: 30px;
   margin-bottom: 3rem;
 }
@@ -2422,6 +2421,9 @@ margin-bottom: 25px;*/
 .list p {
   height: auto;
   margin: 0;
+  font-size: 1.9rem;
+  color: #333;
+  line-height: 1.6;
 }
 
 .question1 {
@@ -2947,7 +2949,7 @@ margin-bottom: 25px;*/
 }
 
 .about-content2 p {
-  font-size: 18px;
+  font-size: 1.9rem;
   color: #333;
   line-height: 1.6;
 }
@@ -3119,8 +3121,7 @@ margin-bottom: 25px;*/
   color: red;
 }
 
-.dishes h1{
+.dishes h1 {
   font-size: 17px;
   line-height: 3rem;
 }
-
