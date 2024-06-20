@@ -15,6 +15,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="main.css">
 
+  <!-- Animation on Scroll-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <script src="main.js"></script>
 </head>
 
@@ -50,12 +53,12 @@
     <!--benefits container-->
     <!-- Second benefits section -->
     <br><br>
-    <div class="heading3">
+    <div data-aos="fade-up" class="heading3">
       <h1>Competitive Compensation</h1>
     </div>
     <br>
     <section class="adoption">
-      <div class="mega">
+      <div data-aos="zoom-in" class="mega">
         <div class="sideways items">
           <div class="adoptcover">
             <div class="adoptcovertwo">
@@ -94,11 +97,11 @@
     <br><br>
 
     <div class="sect">
-      <div class="heading3">
+      <div data-aos="fade-up" class="heading3">
         <h1>Opportunities for Career Growth</h1>
       </div>
       <br>
-      <section class="adoption">
+      <section data-aos="zoom-in" class="adoption">
         <div class="mega">
           <div id="second-benefit" class="sideways items">
             <div class="adoptcover">
@@ -153,10 +156,10 @@ style="background-color: #E8E8E8"
                   key to our success.
     -->
     <div class="heading3">
-      <h1>Positive Work Culture and Environment</h1>
+      <h1 data-aos="fade-up">Positive Work Culture and Environment</h1>
     </div>
     <br>
-    <section class="adoption">
+    <section data-aos="zoom-in" class="adoption">
       <div class="mega">
         <div class="sideways items">
           <div class="adoptcover">
@@ -192,10 +195,10 @@ style="background-color: #E8E8E8"
     <section class="testimonials">
       <div class="emp-container">
         <div class="testimonials-content">
-          <div class="emp-header">
+          <div data-aos="fade-up" class="emp-header">
             <h2 class="emp-title">Here's what our Employees say</h2>
           </div>
-          <div class="swiper testimonials-slider js-testimonials-slider">
+          <div data-aos="fade-up" class="swiper testimonials-slider js-testimonials-slider">
             <div class="swiper-wrapper">
               <div class="swiper-slide testimonials-item">
                 <div class="info">
@@ -355,6 +358,7 @@ style="background-color: #E8E8E8"
       </div>
     </section>
   </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxc9dvg30h3yohbcjxw0zzrz"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
@@ -371,6 +375,16 @@ style="background-color: #E8E8E8"
         }
       }
     });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      AOS.init({
+        duration: 500, // Increase the duration
+        easing: 'ease-in-out', // Adjust the easing
+        once: true // Ensure the animation occurs only once
+      });
+    });
+
   </script>
 </body>
 

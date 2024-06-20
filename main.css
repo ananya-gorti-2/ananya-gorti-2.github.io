@@ -9,7 +9,6 @@
   text-decoration: none;
   outline: none;
   border: none;
-  /* text-transform: capitalize; */
   transition: all 0.2s linear;
   box-sizing: border-box;
 }
@@ -213,6 +212,13 @@ form {
   border-radius: 5px;
 }
 
+.recaptcha-space {
+  margin-bottom: 20px;
+  /* Adjust the value as needed */
+  margin-top: 20px;
+
+}
+
 #GeneralManagerApplicationForm input,
 #GeneralManagerApplicationForm textarea {
   text-transform: none;
@@ -235,16 +241,17 @@ form {
 
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   font-weight: bold;
   font-size: 13px;
-  
+
 }
 
 input[type="text"],
 input[type="email"],
 input[type="date"],
 input[type="number"],
+input[type="file"],
 select,
 textarea {
   width: 100%;
@@ -284,11 +291,10 @@ header #bar {
   margin-top: 2rem;
 }
 
-main #btnScrollToTop {
+#btnScrollToTop {
   position: fixed;
-  font-size: 1.5rem;
   right: 10px;
-  bottom: 10px;
+  bottom: 17px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -299,22 +305,27 @@ main #btnScrollToTop {
   outline: none;
   cursor: pointer;
   transition: font-size 0.1s ease, width 0.3s ease, height 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #btnScrollToTop a {
   color: white;
+  font-size: 1.5rem;
+  /* Adjust icon size */
+  position: relative;
+  top: 0px;
+  /* left: 10px; */
+  /* Adjust vertical position */
+}
+
+#btnScrollToTop a i {
   font-size: 2rem;
 }
 
-.up-icon {
-  margin-top: 1000px;
-  color: red;
-}
-
-main #btnScrollToTop:hover {
+#btnScrollToTop:hover {
   font-size: 1.6rem;
-  width: 55px;
-  height: 55px;
 }
 
 .submit_btn {
@@ -1083,6 +1094,7 @@ p {
 
 .section_faq h1 {
   font-size: 3rem;
+  color: red;
 }
 
 .section_faq ul {
@@ -1107,7 +1119,7 @@ p {
   font-size: 24px;
   font-weight: 400;
   cursor: pointer;
-  text-transform: none;
+  transition: background-color 0.01s ease, color 0.01s ease;
 }
 
 .section_faq .icon {
@@ -1124,35 +1136,31 @@ p {
   overflow: hidden;
   font-size: 20px;
   transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
-  text-transform: none;
-
-
 }
-
 
 .section_faq .answer span {
   display: inline-block;
   padding: 1.2rem;
-  text-transform: none;
 }
 
 .section_faq .question:hover {
   color: white;
   background-color: red;
-  transition: background-color 0.2s ease;
-  text-transform: none;
+  transition-duration: 0.1;
+}
+
+.section_faq .question.open {
+  color: white;
+  background-color: red;
 }
 
 .section_faq .question.open+.answer {
   max-height: 1200px;
-  text-transform: none;
 }
 
 .section_faq .question.open>.icon {
-  transform: rotate(45 deg);
-  text-transform: none;
+  transform: rotate(45deg);
 }
-
 
 
 .jobs-list-container {
@@ -1232,6 +1240,8 @@ p {
   margin-right: 10px;
 }
 
+
+
 body {
   display: flex;
   flex-direction: column;
@@ -1269,7 +1279,7 @@ footer {
   background-color: red;
   color: #fff;
   letter-spacing: 0.1rem !important;
-  transition: all 0.2s linear  !important;
+  transition: all 0.2s linear !important;
 }
 
 .jobs-list-container h2 {
@@ -1278,6 +1288,36 @@ footer {
 
 
 /* Modal styles */
+/* Adjust hover effect to not apply when modal is active */
+body:not(.modal-active) .jobs-list-container .job:hover {
+  transform: scale(1.03);
+}
+
+/* Make modal-active class when modal is open */
+body.modal-active {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Change the background color to the desired color */
+}
+
+
+/* Additional style for the entire page when modal is active */
+body.modal-active .jobs-list-container {
+  background-color: rgba(246, 246, 246, 0.994);
+  /* Change the background color to the desired color */
+}
+
+body.modal-active .job_num {
+  background-color: #7f7f7f;
+  /* Change the background color to the desired color */
+}
+
+body.modal-active .job_num h2 {
+  color: darkred;
+  /* Change the background color to the desired color */
+}
+
+/* Other styles remain unchanged */
 .modal {
   display: none;
   /* Hidden by default */
@@ -1307,6 +1347,10 @@ footer {
   border-radius: 10px;
   position: relative;
   box-shadow: 0 4px 24px -8px rgba(0, 0, 0, 0.2);
+}
+
+.modal li {
+  margin-left: 2rem;
 }
 
 .close-btn {
@@ -1340,16 +1384,6 @@ footer {
 .learn-more-btn:hover {
   letter-spacing: 0.1rem;
   transition: all 0.2s linear;
-}
-
-/* Adjust hover effect to not apply when modal is active */
-body:not(.modal-active) .jobs-list-container .job:hover {
-  transform: scale(1.03);
-}
-
-/* Make modal-active class when modal is open */
-body.modal-active {
-  overflow: hidden;
 }
 
 
@@ -2120,6 +2154,10 @@ body.modal-active {
     font-size: 36px;
   }
 
+  .emp-title {
+    font-size: 36px;
+  }
+
   .petball h2 {
     font-size: 60px;
   }
@@ -2229,6 +2267,7 @@ a {
 }
 
 .timeline__arrow {
+  color: transparent;
   background-color: transparent;
   border-radius: 0.25em;
   cursor: default;
@@ -3014,10 +3053,10 @@ margin-bottom: 25px;*/
   /* Ensure there's no additional padding */
 }
 
-
-/* Title styling */
+/* Regular styles for .emp-title */
 .emp-header .emp-title {
-  white-space: nowrap;
+  white-space: normal;
+  /* Allow text to wrap */
   width: 90%;
   display: flex;
   justify-content: center;
@@ -3031,6 +3070,8 @@ margin-bottom: 25px;*/
   margin-bottom: 3rem;
   position: relative;
   /* Adjusted margin to remove bottom margin and keep top margin */
+  overflow-wrap: break-word;
+  /* Ensure text wraps instead of going off-screen */
 }
 
 .emp-header .emp-title::after {
@@ -3041,6 +3082,22 @@ margin-bottom: 25px;*/
   bottom: -2px;
   /* Position the line below the emp-title */
   background-color: red;
+}
+
+/* Media query for tablets */
+@media only screen and (max-width: 768px) {
+  .emp-header .emp-title {
+    font-size: 40px;
+    /* Decrease font size for tablets */
+  }
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 480px) {
+  .emp-header .emp-title {
+    font-size: 36px;
+    /* Decrease font size for mobile devices */
+  }
 }
 
 /* Testimonials item styling */
