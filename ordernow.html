@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="main.css">
   <!-- Custom JavaScript -->
   <script src="main.js"></script>
+  <script src="ordernow.js"></script>
 </head>
 
 <body>
@@ -44,6 +45,8 @@
 
     <!-- Apply Now Button -->
     <div class="apply_btn">
+
+      <div id="cart-icon-root"></div>
       <button class="btn"><a href="apply.html">Apply Now</a></button>
       <i class="fa-solid fa-bars" id="bar"></i>
     </div>
@@ -60,104 +63,32 @@
 
     <div class="food-ordering modal-content">
 
-      <div id="order-details">
+      <div style="font-size: 20px; "id="order-details">
         <h2 class="cuisine"> Order Details</h2>
+        
       </div>
+<br>
+      <h3 style="font-size: 20px; ">Total: $<span id="total-price">0.00</span></h3>
       <h2 class="cuisine"> Checkout</h2>
-      <h3>Total: $<span id="total-price">0.00</span></h3>
+      <div>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+    </div>
+    <div>
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required>
+  </div>
+  <div>
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+</div>
       <button id="checkout-button">Checkout</button>
 
     </div>
 </main>
 
 <!-- Include the generated React bundle -->
-<script src="react-section/build/static/js/main.93ad4f55.js"></script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
-        const itemsArray = [
-        { id: '1', name: 'Fish Tacos', price: 7.99 },
-        { id: '2', name: 'Deep Dish Pizza', price: 12.99 },
-        { id: '3', name: 'Fried Catfish', price: 10.99 },
-        { id: '4', name: 'Fried Green Tomatoes', price: 7.99 },
-        { id: '5', name: 'Lobster Mac & Cheese', price: 9.99 },
-        { id: '6', name: 'Bobotie', price: 11.99 },
-        { id: '7', name: 'Couscous', price: 10.99 },
-        { id: '8', name: 'Fufu and Soup', price: 11.99 },
-        { id: '9', name: 'Jollof Rice', price: 10.99 },
-        { id: '10', name: 'Maatoke', price: 9.99 },
-        { id: '11', name: 'Chicken Fried Rice', price: 11.99 },
-        { id: '12', name: 'Noodles with Meatballs', price: 9.99 },
-        { id: '13', name: 'Spicy Citrus Noodles', price: 9.99 },
-        { id: '14', name: 'Stir Fry Noodles', price: 9.99 },
-        { id: '15', name: 'Vegetable Dim Sum Soup', price: 9.99 },
-        { id: '16', name: 'Bisque', price: 9.99 },
-        { id: '17', name: 'Bouillabaisse', price: 12.99 },
-        { id: '18', name: 'Croque Monsieur', price: 10.99 },
-        { id: '19', name: 'French Onion Soup', price: 9.99 },
-        { id: '20', name: 'Ratatouille', price: 10.99 },
-        { id: '21', name: 'Butter Chicken with Naan', price: 12.99 },
-        { id: '22', name: 'Dosa with Sambar', price: 12.99 },
-        { id: '23', name: 'Hyderabadi Chicken Biryani', price: 12.99 },
-        { id: '24', name: 'Samosas with Chutney', price: 9.99 },
-        { id: '25', name: 'Tandoori Roti', price: 7.99 },
-        { id: '26', name: 'Onigiri', price: 9.99 },
-        { id: '27', name: 'Sushi and Sashimi', price: 11.99 },
-        { id: '28', name: 'Takoyaki', price: 9.99 },
-        { id: '29', name: 'Tempura', price: 9.99 },
-        { id: '30', name: 'Yakitori', price: 10.99 },
-        { id: '31', name: 'Green Curry', price: 10.99 },
-        { id: '32', name: 'Pad Thai', price: 10.99 },
-        { id: '33', name: 'Panang curry', price: 10.99 },
-        { id: '34', name: 'Spicy Green Papaya Salad', price: 9.99 }
-            // Add more items as needed
-        ];
-
-
-        /*
-        */
-        const orderDetailsDiv = document.getElementById('order-details');
-        const totalPriceSpan = document.getElementById('total-price');
-
-        let totalPrice = 0;
-
-        cart.forEach((cartItem, index) => {
-            // Find the corresponding item in itemsArray
-            const itemInfo = itemsArray.find(item => item.id === cartItem.id);
-
-            if (itemInfo) {
-                const itemDiv = document.createElement('div');
-                itemDiv.className = 'cart-item';
-                itemDiv.innerHTML = `
-                    <p>${itemInfo.name} - $${itemInfo.price.toFixed(2)} x ${cartItem.quantity}</p>
-                    <button data-index="${index}" data-id="${cartItem.id}" class="remove-button">Remove</button>
-                `;
-                orderDetailsDiv.appendChild(itemDiv);
-
-                totalPrice += itemInfo.price * cartItem.quantity;
-            }
-        });
-
-        totalPriceSpan.textContent = totalPrice.toFixed(2);
-
-        orderDetailsDiv.addEventListener('click', (event) =>
-
-{
-            if (event.target.classList.contains('remove-button')) {
-                const index = event.target.getAttribute('data-index');
-                const id = event.target.getAttribute('data-id');
-                const updatedCart = cart.filter((cartItem, i) => i != index || cartItem.id !== id);
-                localStorage.setItem('cart', JSON.stringify(updatedCart));
-                window.location.reload(); // Refresh the page to update the cart
-            }
-        });
-
-        document.getElementById('checkout-button').addEventListener('click', () => {
-            // Implement checkout functionality here
-            alert('Proceeding to checkout...');
-        });
-    });
-</script>
+<script src="my-new-app 2/build/static/js/main.aab444c0.js"></script>
+<script src="Google Sheet.js"></script>
 </body>
 </html>
