@@ -35,7 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 31, name: 'Green Curry', price: 10.99 },
         { id: 32, name: 'Pad Thai', price: 10.99 },
         { id: 33, name: 'Panang curry', price: 10.99 },
-        { id: 34, name: 'Spicy Green Papaya Salad', price: 9.99 }
+        { id: 34, name: 'Spicy Green Papaya Salad', price: 9.99 },
+        { id: 35, name: 'Tom Yum', price: 11.99}
         ];
   
     const orderDetailsDiv = document.getElementById('order-details');
