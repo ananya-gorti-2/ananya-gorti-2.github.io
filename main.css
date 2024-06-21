@@ -472,10 +472,68 @@ header #bar {
   font-size: 12px;
 }
 
+
+
 @media (max-width: 900px) {
   .tiny-food-sub {
-    font-size: 20px !important;
+    font-size: 1.9rem !important;
+        margin-bottom: 1.7rem !important;
   }
+
+  .dishes h3 {
+    font-size: 2.7rem !important;
+  }
+
+  .btn span {
+    padding: 17px 10px !important;
+    /* Increase padding for larger button */
+    font-size: 2rem !important;
+
+    /* Increase font size */
+  }
+
+  .dishes .stars i {
+    font-size: 1.7rem !important;
+    /* Increased font size for mobile */
+  }
+
+  .about-text p {
+    font-size: 1.8rem !important;
+    line-height: 25px !important;
+  }
+
+  .about-text a {
+    font-size: 1.9rem !important;
+  }
+
+  .services .box p {
+    font-size: 1.8rem;
+  }
+
+  .gallery .box p {
+    font-size: 1.8rem !important;
+  }
+
+  .review .slide p {
+    font-size: 1.8rem !important;
+  }
+
+  .footer h3 {
+    font-size: 2.6rem !important;
+  }
+
+  .footer h4 {
+    font-size: 2rem !important;
+  }
+
+  .footer a {
+    font-size: 1.8rem !important;
+  }
+
+  .section_faq span{
+    font-size: 1.9rem !important;
+  }
+
 }
 
 
@@ -1437,6 +1495,8 @@ body.modal-active .job_num h2 {
     margin: 0 auto;
   }
 }
+
+
 
 @media (max-width: 991px) {
   html {
