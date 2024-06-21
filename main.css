@@ -9,7 +9,6 @@
   text-decoration: none;
   outline: none;
   border: none;
-  /* text-transform: capitalize; */
   transition: all 0.2s linear;
   box-sizing: border-box;
 }
@@ -204,12 +203,20 @@ h1 {
   text-align: center;
 }
 
+
 form {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+.recaptcha-space {
+  margin-bottom: 20px;
+  /* Adjust the value as needed */
+  margin-top: 20px;
+
 }
 
 #GeneralManagerApplicationForm input,
@@ -234,12 +241,17 @@ form {
 
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
+  font-weight: bold;
+  font-size: 13px;
+
 }
 
 input[type="text"],
 input[type="email"],
 input[type="date"],
+input[type="number"],
+input[type="file"],
 select,
 textarea {
   width: 100%;
@@ -263,55 +275,6 @@ button[type="submit"]:hover {
 }
 
 
-header button a {
-  color: white;
-}
-
-header .apply_btn .btn:hover {
-  letter-spacing: 0.1rem;
-  font-size: 1.9rem;
-}
-
-
-
-label {
-  display: block;
-  margin-bottom: 0.5em;
-  color: #333;
-}
-
-input,
-select,
-textarea {
-  width: 100%;
-  padding: 0.5em;
-  margin-bottom: 1em;
-  border: 1px solid #c6c5c5;
-  border-radius: 4px;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 0.5em;
-  margin-bottom: 1em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
-  background-color: red;
-  color: #fff;
-  padding: 0.7em 1em;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: red;
-  letter-spacing: 0.1rem;
-}
 
 header #bar:hover {
   color: red;
@@ -328,11 +291,10 @@ header #bar {
   margin-top: 2rem;
 }
 
-main #btnScrollToTop {
+#btnScrollToTop {
   position: fixed;
-  font-size: 1.5rem;
   right: 10px;
-  bottom: 10px;
+  bottom: 17px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -343,22 +305,27 @@ main #btnScrollToTop {
   outline: none;
   cursor: pointer;
   transition: font-size 0.1s ease, width 0.3s ease, height 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #btnScrollToTop a {
   color: white;
+  font-size: 1.5rem;
+  /* Adjust icon size */
+  position: relative;
+  top: 0px;
+  /* left: 10px; */
+  /* Adjust vertical position */
+}
+
+#btnScrollToTop a i {
   font-size: 2rem;
 }
 
-.up-icon {
-  margin-top: 1000px;
-  color: red;
-}
-
-main #btnScrollToTop:hover {
+#btnScrollToTop:hover {
   font-size: 1.6rem;
-  width: 55px;
-  height: 55px;
 }
 
 .submit_btn {
@@ -502,12 +469,87 @@ main #btnScrollToTop:hover {
 .food-sub {
   padding-top: -2rem;
   padding-bottom: 2rem;
+  font-size: 12px;
 }
+
+
 
 @media (max-width: 900px) {
   .tiny-food-sub {
-    font-size: 20px !important;
+    font-size: 1.9rem !important;
+        margin-bottom: 1.7rem !important;
   }
+
+  .dishes h3 {
+    font-size: 2.7rem !important;
+  }
+
+  .btn span {
+    padding: 17px 10px !important;
+    /* Increase padding for larger button */
+    font-size: 2rem !important;
+
+    /* Increase font size */
+  }
+
+  .dishes .stars i {
+    font-size: 1.7rem !important;
+    /* Increased font size for mobile */
+  }
+
+  .about-text p {
+    font-size: 1.8rem !important;
+    line-height: 25px !important;
+  }
+
+  .about-text a {
+    font-size: 1.9rem !important;
+  }
+
+  .services .box p {
+    font-size: 1.8rem;
+  }
+
+  .gallery .box p {
+    font-size: 1.8rem !important;
+  }
+
+  .review .slide p {
+    font-size: 1.8rem !important;
+  }
+
+  .footer h3 {
+    font-size: 2.6rem !important;
+  }
+
+  .footer h4 {
+    font-size: 2rem !important;
+  }
+
+  .footer a {
+    font-size: 1.8rem !important;
+  }
+
+  .section_faq span{
+    font-size: 1.9rem !important;
+  }
+
+  .about-content2 p{
+    font-size: 1.8rem !important;
+  }
+
+  .about-content3 p{
+    font-size: 1.8rem !important;
+  }
+
+  .about-content4 p{
+    font-size: 1.8rem !important;
+  }
+
+  .timeline p{
+    font-size: 1.8rem !important;
+  }
+
 }
 
 
@@ -721,7 +763,7 @@ main #btnScrollToTop:hover {
 }
 
 .h-text {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .center {
@@ -869,7 +911,7 @@ body {
 }
 
 .review .slide p {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   line-height: 1.8;
   color: black;
 
@@ -931,6 +973,14 @@ p {
 .about-title2 {
   font-size: 20px;
 }
+
+
+
+
+
+
+
+
 
 .slider-btn {
   display: inline-block;
@@ -1126,6 +1176,7 @@ p {
 
 .section_faq h1 {
   font-size: 3rem;
+  color: red;
 }
 
 .section_faq ul {
@@ -1150,7 +1201,7 @@ p {
   font-size: 24px;
   font-weight: 400;
   cursor: pointer;
-  text-transform: none;
+  transition: background-color 0.01s ease, color 0.01s ease;
 }
 
 .section_faq .icon {
@@ -1167,35 +1218,31 @@ p {
   overflow: hidden;
   font-size: 20px;
   transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
-  text-transform: none;
-
-
 }
-
 
 .section_faq .answer span {
   display: inline-block;
   padding: 1.2rem;
-  text-transform: none;
 }
 
 .section_faq .question:hover {
   color: white;
   background-color: red;
-  transition: background-color 0.2s ease;
-  text-transform: none;
+  transition-duration: 0.1;
+}
+
+.section_faq .question.open {
+  color: white;
+  background-color: red;
 }
 
 .section_faq .question.open+.answer {
   max-height: 1200px;
-  text-transform: none;
 }
 
 .section_faq .question.open>.icon {
-  transform: rotate(45 deg);
-  text-transform: none;
+  transform: rotate(45deg);
 }
-
 
 
 .jobs-list-container {
@@ -1275,6 +1322,8 @@ p {
   margin-right: 10px;
 }
 
+
+
 body {
   display: flex;
   flex-direction: column;
@@ -1291,7 +1340,7 @@ footer {
 
 .jobs-list-container .details {
   margin-top: 6px;
-  font-size: 14px;
+  font-size: 1.6rem;
   color: #333;
   line-height: 1.8;
   flex: 1;
@@ -1305,12 +1354,14 @@ footer {
   padding: 8px 16px;
   border-radius: 8px;
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .jobs-list-container .details-btn:hover {
   background-color: red;
   color: #fff;
+  letter-spacing: 0.1rem !important;
+  transition: all 0.2s linear !important;
 }
 
 .jobs-list-container h2 {
@@ -1319,6 +1370,36 @@ footer {
 
 
 /* Modal styles */
+/* Adjust hover effect to not apply when modal is active */
+body:not(.modal-active) .jobs-list-container .job:hover {
+  transform: scale(1.03);
+}
+
+/* Make modal-active class when modal is open */
+body.modal-active {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Change the background color to the desired color */
+}
+
+
+/* Additional style for the entire page when modal is active */
+body.modal-active .jobs-list-container {
+  background-color: rgba(246, 246, 246, 0.994);
+  /* Change the background color to the desired color */
+}
+
+body.modal-active .job_num {
+  background-color: #7f7f7f;
+  /* Change the background color to the desired color */
+}
+
+body.modal-active .job_num h2 {
+  color: darkred;
+  /* Change the background color to the desired color */
+}
+
+/* Other styles remain unchanged */
 .modal {
   display: none;
   /* Hidden by default */
@@ -1350,6 +1431,10 @@ footer {
   box-shadow: 0 4px 24px -8px rgba(0, 0, 0, 0.2);
 }
 
+.modal li {
+  margin-left: 2rem;
+}
+
 .close-btn {
   position: absolute;
   top: 10px;
@@ -1373,23 +1458,14 @@ footer {
   padding: 8px 16px;
   border-radius: 8px;
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 14px;
   cursor: pointer;
+  background-color: red;
 }
 
 .learn-more-btn:hover {
-  background-color: red;
-
-}
-
-/* Adjust hover effect to not apply when modal is active */
-body:not(.modal-active) .jobs-list-container .job:hover {
-  transform: scale(1.03);
-}
-
-/* Make modal-active class when modal is open */
-body.modal-active {
-  overflow: hidden;
+  letter-spacing: 0.1rem;
+  transition: all 0.2s linear;
 }
 
 
@@ -1435,6 +1511,8 @@ body.modal-active {
     margin: 0 auto;
   }
 }
+
+
 
 @media (max-width: 991px) {
   html {
@@ -1945,9 +2023,9 @@ body.modal-active {
 
 
 .about-content3 p {
-  font-size: 18px;
-  line-height: 1.5;
-  color: #666;
+  font-size: 1.9rem;
+  line-height: 1.6;
+  color: #333;
 }
 
 .about-content3 {
@@ -2131,9 +2209,9 @@ body.modal-active {
 
 
 .about-content4 p {
-  font-size: 18px;
-  line-height: 1.5;
-  color: #666;
+  font-size: 1.9rem;
+  line-height: 1.6;
+  color: #333;
   font-weight: normal;
 }
 
@@ -2157,6 +2235,10 @@ body.modal-active {
   }
 
   .heading3 h1 {
+    font-size: 36px;
+  }
+
+  .emp-title {
     font-size: 36px;
   }
 
@@ -2207,7 +2289,7 @@ body.modal-active {
 
 .about-text p {
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   line-height: 30px;
   margin-bottom: 3rem;
 }
@@ -2269,6 +2351,7 @@ a {
 }
 
 .timeline__arrow {
+  color: transparent;
   background-color: transparent;
   border-radius: 0.25em;
   cursor: default;
@@ -2461,6 +2544,9 @@ margin-bottom: 25px;*/
 .list p {
   height: auto;
   margin: 0;
+  font-size: 1.9rem;
+  color: #333;
+  line-height: 1.6;
 }
 
 .question1 {
@@ -2986,7 +3072,7 @@ margin-bottom: 25px;*/
 }
 
 .about-content2 p {
-  font-size: 18px;
+  font-size: 1.9rem;
   color: #333;
   line-height: 1.6;
 }
@@ -3016,82 +3102,167 @@ margin-bottom: 25px;*/
   font-size: 20px;
 }
 
-.employees {
-  margin: 0;
-  padding: 0;
-}
-
-.testimonials {
-  padding: 40px 0;
-  background: #f1f1f1;
-  color: #424242;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.inner {
-  max-width: 1200px;
-  margin: auto;
-  overflow: hidden;
-  padding: 0 20px;
-}
-
-.border {
-  width: 160px;
-  height: 5px;
-  background: green;
-  margin: 26px auto;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.col {
-  flex: 0 0 33.33%;
-  max-width: 33.33%;
-  box-sizing: border-box;
-  padding: 15px;
-}
-
-.testimonial {
-  background: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-}
-
-.testimonial img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-.name {
-  font-size: 20px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-@media screen and (max-width: 960px) {
-  .col {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .col {
-    flex: 100%;
-    max-width: 100%;
-  }
+.quote_icon {
+  color: red;
 }
 
 .adoptiontext .about-content2 {
   padding-left: 0px;
+}
+
+
+/* Testimonials section styling */
+.testimonials {
+  margin: 0;
+  padding: 50px 0;
+  /* Reduce padding to remove extra space */
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  /* Light gray background */
+}
+
+/* Container styling */
+.emp-container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+/* Header styling */
+.emp-header {
+  text-align: center;
+  margin-bottom: 30px;
+  /* Adjusted margin to fit the design */
+  padding-top: 0;
+  /* Ensure there's no additional padding */
+}
+
+/* Regular styles for .emp-title */
+.emp-header .emp-title {
+  white-space: normal;
+  /* Allow text to wrap */
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px auto 0;
+  font-size: 50px;
+  color: #000;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+  /* Adjusted margin to remove bottom margin and keep top margin */
+  overflow-wrap: break-word;
+  /* Ensure text wraps instead of going off-screen */
+}
+
+.emp-header .emp-title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -2px;
+  /* Position the line below the emp-title */
+  background-color: red;
+}
+
+/* Media query for tablets */
+@media only screen and (max-width: 768px) {
+  .emp-header .emp-title {
+    font-size: 40px;
+    /* Decrease font size for tablets */
+  }
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 480px) {
+  .emp-header .emp-title {
+    font-size: 36px;
+    /* Decrease font size for mobile devices */
+  }
+}
+
+/* Testimonials item styling */
+.testimonials-item {
+  background-color: #fff;
+  /* White background */
+  padding: 30px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  /* Light gray border */
+}
+
+/* Info section styling */
+.testimonials-item .info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Image styling */
+.testimonials-item img {
+  max-width: 80px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.testimonials-item .name {
+  font-size: 24px;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #000;
+  /* Black text */
+  line-height: 1.2;
+}
+
+.testimonials-item .job {
+  text-transform: capitalize;
+  color: #6b6a6a;
+  /* Gray text */
+  font-size: 16px;
+}
+
+.testimonials-item p {
+  margin-top: 20px;
+  color: #555;
+  /* Dark gray text */
+  font-size: 18px;
+}
+
+.testimonials-item .rating {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ff0000;
+  /* Red stars */
+}
+
+.testimonials .swiper-pagination {
+  position: relative;
+  margin-top: 40px;
+  bottom: auto;
+}
+
+.testimonials .swiper-pagination-bullet {
+  height: 12px;
+  width: 12px;
+  background-color: #ff0000;
+  /* Red bullets */
+}
+
+.testimonials testimonials-item {
+  margin-top: 50rem;
+  padding-top: 50rem;
+}
+
+.highlight {
+  color: red;
+}
+
+.dishes h1 {
+  font-size: 17px;
+  line-height: 3rem;
 }

@@ -1258,7 +1258,7 @@ footer {
 
 .jobs-list-container .details-btn {
     text-decoration: none;
-    border: 1px solid red;
+    border: 2px solid red;
     color: #000;
     padding: 8px 16px;
     border-radius: 8px;
@@ -1269,6 +1269,8 @@ footer {
 .jobs-list-container .details-btn:hover {
     background-color: red;
     color: #fff;
+    letter-spacing: 0.1rem !important;
+    transition: all 0.2s linear !important;
 }
 
 .jobs-list-container h2 {

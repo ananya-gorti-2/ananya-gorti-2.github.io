@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Favicon -->
   <link rel="icon" type="x-icon" href="images/CulHar_Logo-removebg.png" />
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
   <!-- Title -->
   <title>Application General Manager</title>
   <!-- Font Awesome CSS link -->
@@ -16,6 +18,20 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="main.css" />
 </head>
+
+<style>
+  .icon-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .icon-container i {
+    margin-right: 8px;
+    margin-top: 10px;
+    margin-bottom: 11px;
+    color: red;
+  }
+</style>
 
 <body class="no-cap">
   <!-- Header section -->
@@ -28,7 +44,7 @@
     <!-- Navigation Menu -->
     <nav class="navbar">
       <!-- Navigation Links -->
-      <a class="active" href="index.html">Home</a>
+      <a href="index.html">Home</a>
       <a href="menu.html">Menu</a>
       <a href="about.html">About</a>
       <a href="careers.html">Careers</a>
@@ -52,27 +68,42 @@
   <!-- Application Form -->
   <form id="GeneralManagerApplicationForm">
     <!-- Form Fields -->
-    <label for="fullName">Full Name:</label>
+    <label for="fullName" class="icon-container">
+      <i class="fas fa-user"></i>
+      Full Name:
+    </label>
     <input type="text" id="fullName" name="fullName" required />
 
-    <label for="email">Email:</label>
+    <label for="email" class="icon-container">
+      <i class="fas fa-envelope"></i>
+      Email:
+    </label>
     <input type="email" id="email" name="email" required />
 
-    <label for="dob">Date of Birth:</label>
+    <label for="dob" class="icon-container">
+      <i class="fas fa-calendar-alt"></i>
+      Date of Birth:
+    </label>
     <input type="date" id="dob" name="dob" required />
 
-    <label for="address">Address</label>
-    <input type="text" id="address" name="address" required placeholder="Street Address" />
+
 
     <!-- Address Details -->
-    <div class="address-fields">
-      <input type="text" id="city" name="city" required placeholder="City" />
-      <input type="text" id="state" name="state" required placeholder="State" />
-      <input type="text" id="zip" name="zip" required placeholder="ZIP Code" />
-    </div>
+    <label for="address" class="icon-container">
+      <i class="fas fa-map-marker-alt"></i>
+      Address:
+    </label>
+    <input type="text" id="address" name="address" required placeholder="Street Address" />
+    <input type="text" id="city" name="city" required placeholder="City" />
+    <input type="text" id="state" name="state" required placeholder="State" />
+    <input type="text" id="zip" name="zip" required placeholder="ZIP Code" />
+
 
     <!-- Education Level -->
-    <label for="education">Highest Level of Education:</label>
+    <label for="education" class="icon-container">
+      <i class="fas fa-graduation-cap"></i>
+      Highest Level of Education:
+    </label>
     <select id="education" name="education" required>
       <option value="">Select</option>
       <option value="High School">High School</option>
@@ -83,35 +114,73 @@
     </select>
 
     <!-- Other Form Fields -->
-    <label for="coverLetter">Cover Letter:</label>
+    <label for="coverLetter" class="icon-container">
+      <i class="fas fa-file-alt"></i>
+      Cover Letter:
+    </label>
     <textarea id="coverLetter" name="coverLetter" required></textarea>
 
-    <label for="employmentHistory">Employment History:</label>
+    <label for="employmentHistory" class="icon-container">
+      <i class="fas fa-briefcase"></i>
+      Employment History:
+    </label>
     <textarea id="employmentHistory" name="employmentHistory" required></textarea>
 
-    <label for="skillsCertifications">Skills and Certifications:</label>
+    <label for="skillsCertifications" class="icon-container">
+      <i class="fas fa-certificate"></i>
+      Skills and Certifications:
+    </label>
     <textarea id="skillsCertificationsText" name="skillsCertificationsText" required></textarea>
 
-    <label for="experience">Provide examples of your leadership style and how you motivate and develop your team members.</label>
+    <label for="experience" class="icon-container">
+      <i class="fas fa-users"></i>
+      Examples showcasing your leadership and how you ensure that everyone is ontask.
+    </label>
     <textarea id="experience" name="experience" required></textarea>
 
-    <label for="whyWorkHere">Why do you want to work here?</label>
+    <label for="whyWorkHere" class="icon-container">
+      <i class="fas fa-question-circle"></i>
+      Why do you want to work here?
+    </label>
     <textarea id="whyWorkHere" name="whyWorkHere" required></textarea>
 
-    <label for="expectedSalary">Expected Salary:</label>
+    <label for="expectedSalary" class="icon-container">
+      <i class="fas fa-dollar-sign"></i>
+      Expected Salary:
+    </label>
     <input type="number" id="expectedSalary" name="expectedSalary" required />
 
-    <label for="bestCandidateSkills">What skills make you the best candidate for this position?</label>
+    <label for="bestCandidateSkills" class="icon-container">
+      <i class="fas fa-star"></i>
+      What skills make you the best candidate for this position?
+    </label>
     <textarea id="bestCandidateSkills" name="bestCandidateSkills" required></textarea>
 
-    <label for="motivationsAtWork">What motivations inspire you at work?</label>
+    <label for="motivationsAtWork" class="icon-container">
+      <i class="fas fa-lightbulb"></i>
+      What motivations inspire you at work?
+    </label>
     <textarea id="motivationsAtWork" name="motivationsAtWork" required></textarea>
+
+
+    <label for="resumeUpload" class="icon-container">
+      <i class="fas fa-file-upload"></i>
+      Upload Your Resume:
+    </label>
+    <input type="file" id="resumeUpload" name="resumeUpload" accept=".pdf,.doc,.docx" required />
+
+
+
+    <div class="g-recaptcha recaptcha-space" data-sitekey="6LfOnv0pAAAAAHZvc8kOEojkS9E1NCORTlTP9rjN"></div>
+
+
 
     <!-- JavaScript subscript to prevent textarea resizing -->
     <script>
       document.querySelectorAll("textarea").forEach(function (textarea) {
         textarea.style.resize = 'none';
       });
+
     </script>
     <!-- Submit Button -->
     <button id="submit" type="submit" value="submit">Submit Application</button>
@@ -124,6 +193,7 @@
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
     import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+    import { getStorage, ref as refsto, getDownloadURL, uploadBytes } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js";
 
     document.addEventListener('DOMContentLoaded', function () {
       var form = document.getElementById('GeneralManagerApplicationForm');
@@ -131,7 +201,16 @@
       form.addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent form submission
 
-        if (validateForm()) {
+        function validateRecaptcha() {
+          var response = grecaptcha.getResponse();
+          if (response.length === 0) {
+            alert("Please complete the reCAPTCHA.");
+            return false;
+          }
+          return true;
+        }
+
+        if (validateForm() && validateRecaptcha()) {
           // Firebase configuration
           const firebaseConfig = {
             apiKey: "AIzaSyAO9zhttsR2jhYQPBpsNiAzBPPMD8ZJtno",
@@ -143,9 +222,25 @@
             appId: "1:1032671063739:web:93e3567aade232b2db839e"
           };
 
-          // Initialize Firebase
           const app = initializeApp(firebaseConfig);
           const db = getDatabase(app);
+
+          const storage = getStorage();
+
+          const file = document.getElementById('resumeUpload').files[0];
+
+          // Create a storage reference
+          const storageRef = refsto(storage, 'resumes/' + document.getElementById("fullName").value + '/' + `${document.getElementById("fullName").value}.pdf`);
+
+          // Upload file to Firebase Storage
+          const uploadTaskSnapshot = uploadBytes(storageRef, file);
+          console.log('File uploaded successfully:', uploadTaskSnapshot);
+
+          // Get download URL
+          const downloadURL = getDownloadURL(storageRef);
+          console.log('File available at:', downloadURL);
+
+
 
           // Data submission to Firebase
           set(ref(db, "fullName/" + document.getElementById("fullName").value), {
@@ -164,7 +259,8 @@
             whyworkhere: document.getElementById("whyWorkHere").value,
             expectedsalary: document.getElementById("expectedSalary").value,
             bestcandidateskills: document.getElementById("bestCandidateSkills").value,
-            motivationsatwork: document.getElementById("motivationsAtWork").value
+            motivationsatwork: document.getElementById("motivationsAtWork").value,
+            resume: downloadURL
           }).then(() => {
             alert("Application Received! Be on the lookout for an email from us. Make sure to check your spam folder!");
             window.location.href = 'thankyou.html'; // Redirect to thankyou.html upon successful submission
@@ -210,32 +306,32 @@
   <script>
     // Prevent right-click
     window.addEventListener('contextmenu', function (e) {
-        e.preventDefault();
+      e.preventDefault();
     }, false);
 
     // Prevent Ctrl+U
-    document.addEventListener("keydown", function(e) {
-        if (e.ctrlKey && e.key === "u") {
-            e.preventDefault();
-        }
+    document.addEventListener("keydown", function (e) {
+      if (e.ctrlKey && e.key === "u") {
+        e.preventDefault();
+      }
     });
 
     // Prevent Ctrl+Shift+I, Ctrl+Shift+J, and Ctrl+Shift+C
-    document.addEventListener("keydown", function(e) {
-        if ((e.ctrlKey && e.shiftKey && (e.key === "i" || e.key === "I")) || 
-            (e.ctrlKey && e.shiftKey && (e.key === "j" || e.key === "J")) ||
-            (e.ctrlKey && e.shiftKey && (e.key === "c" || e.key === "C"))) {
-            e.preventDefault();
-        }
+    document.addEventListener("keydown", function (e) {
+      if ((e.ctrlKey && e.shiftKey && (e.key === "i" || e.key === "I")) ||
+        (e.ctrlKey && e.shiftKey && (e.key === "j" || e.key === "J")) ||
+        (e.ctrlKey && e.shiftKey && (e.key === "c" || e.key === "C"))) {
+        e.preventDefault();
+      }
     });
 
     // Prevent F12
-    document.addEventListener("keydown", function(e) {
-        if (e.key === "F12") {
-            e.preventDefault();
-        }
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "F12") {
+        e.preventDefault();
+      }
     });
-</script>
+  </script>
 
   <!--link to common javascript-->
   <script src="main.js"></script>
