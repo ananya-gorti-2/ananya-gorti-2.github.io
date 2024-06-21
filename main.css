@@ -1297,6 +1297,7 @@ body:not(.modal-active) .jobs-list-container .job:hover {
 body.modal-active {
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.5);
+  scrollbar-color: rgba(88, 88, 88, 0.5);
   /* Change the background color to the desired color */
 }
 
