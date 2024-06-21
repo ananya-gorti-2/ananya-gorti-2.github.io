@@ -35,13 +35,13 @@
             <a href="careers.html">Careers</a>
             <a href="why_us.html">Benefits</a>
             <a href="faq.html">FAQ</a>
-            <a hred="order-now.html">Order Now</a>
-            <div id="cart-icon-root"></div>
+            <a href="ordernow.html">Order Now</a>
             
         </nav>
 
         <!--Apply Button-->
         <div class="apply_btn">
+            <div id="cart-icon-root"></div>
             <button class="btn menu-btn"><a href="apply.html">Apply Now</a></button>
             <i class="fa-solid fa-bars" id="bar"></i>
         </div>
@@ -56,7 +56,8 @@
             <h2 data-aos="fade-left" class="cuisine">American Cuisine</h2>
 
             <div data-aos="fade-up" class="box-container">
-                <div id="fish-tacos" class="food-card non-touch">
+                <div data-item-id='1' data-item-name='Fish Tacos' data-item-price='7.99' style="background-image: url('images/menu images/American Cuisine/fish tacos, $7.99.jpg')" 
+                class="food-card non-touch">
                     <div class="food-content">
                         <h1> <big><big><big>Fish Tacos</big></big></big></h1>
                         <div class="stars"> <big> <big>
@@ -71,7 +72,7 @@
                                         bringing
                                         a taste of the coast</big></big></big></p>
                         <a href="#" class="btn" onclick="event.preventDefault();"><span>$7.99</span></a>
-                        <div id="add-to-cart-1"></div>
+                        <div id="add-to-cart-1" class="add-to-cart-root"></div>
                     </div>
                 </div>
 
@@ -116,6 +117,7 @@
                                         of cheese, and robust
                                         tomato sauce</big></big></big></p>
                         <a href="#" class="btn" onclick="event.preventDefault();"><span>$12.99</span></a>
+                        <div id="add-to-cart-2" class="add-to-cart-root"></div>
                     </div>
                 </div>
 
@@ -157,8 +159,10 @@
                         </div>
                         <p class="food-sub"> <big><big><big>Perfectly seasoned and fried to a golden
                                         crisp, served with classic
-                                        sides</big></big></big></p>
+                                        sides</big></big></big>
+                                    <br> 10.99</p>
                         <a href="#" class="btn" onclick="event.preventDefault();"><span>$10.99</span></a>
+                        <div id="add-to-cart-3" class="add-to-cart-root"></div>
                     </div>
                 </div>
 
@@ -1648,6 +1652,7 @@
     </footer>
     <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxc9dvg30h3yohbcjxw0zzrz"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="react-section/build/static/js/main.93ad4f55.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             AOS.init({
