@@ -534,6 +534,22 @@ header #bar {
     font-size: 1.9rem !important;
   }
 
+  .about-content2 p{
+    font-size: 1.8rem !important;
+  }
+
+  .about-content3 p{
+    font-size: 1.8rem !important;
+  }
+
+  .about-content4 p{
+    font-size: 1.8rem !important;
+  }
+
+  .timeline p{
+    font-size: 1.8rem !important;
+  }
+
 }
 
 
