@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
   
       // Replace the following URL with your Apps Script Web App URL
-      const scriptUrl = 'https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec';
+      const scriptUrl = 'https://script.google.com/macros/s/AKfycbzMHFgAKO7hyBj8JeKDQgDONRl0bCSidkUEIqowPObqyiVHqKuCQuYdrBii1zVE_Z3c/exec';
   
       fetch(scriptUrl, {
         method: 'POST',
