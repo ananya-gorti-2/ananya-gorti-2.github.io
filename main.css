@@ -13,6 +13,21 @@
   box-sizing: border-box;
 }
 
+.remove-button{
+  background-color: red;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 8px;
+}
+
+.checkout-button{
+  background-color: red;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 8px;
+}
+
+
 
 
 images {
@@ -203,6 +218,21 @@ h1 {
   text-align: center;
 }
 
+
+
+.add-to-cart-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px; /* Rounded corners */
+  transition: transform 0.3s ease, border-radius 0.3s ease; /* Smooth transitions */
+}
+
+.add-to-cart-button:hover {
+  transform: scale(1.1); /* Increase size by 10% */
+}
 
 form {
   max-width: 600px;
@@ -1421,7 +1451,8 @@ body.modal-active .job_num h2 {
 
 .modal-content {
   background-color: #fff;
-  margin: 15% auto;
+  margin-left: 410px;
+  margin-top: 40px;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
@@ -1796,7 +1827,7 @@ body.modal-active .job_num h2 {
 .heading1 h1 {
   font-size: 50px;
   color: #000;
-  margin-bottom: 10px;
+  margin-bottom: px;
   position: relative;
 }
 
