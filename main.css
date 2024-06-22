@@ -1241,7 +1241,7 @@ p {
 }
 
 .section_faq .question.open>.icon {
-  transform: rotate(45deg);
+  transform: rotate(180deg);
 }
 
 
@@ -1254,10 +1254,13 @@ p {
 
 .jobs-list-container h2 {
   font-size: 30px;
-  border-left: 4px solid #023047;
+  border-left: 4px solid #025985;
   color: red;
-  padding-left: 20px;
+  padding-left: 15px;
+  margin-left: .25rem;
 }
+
+/*  */
 
 .jobs-list-container .jobs {
   display: grid;
@@ -1364,9 +1367,9 @@ footer {
   transition: all 0.2s linear !important;
 }
 
-.jobs-list-container h2 {
+/* .jobs-list-container h2 {
   margin-bottom: 12px;
-}
+} */
 
 
 /* Modal styles */
@@ -1382,6 +1385,10 @@ body.modal-active {
   /* Change the background color to the desired color */
 }
 
+body.modal-active .jobs-list-container h2 {
+  border-left: 4px solid #00293e;
+}
+
 
 /* Additional style for the entire page when modal is active */
 body.modal-active .jobs-list-container {
@@ -1395,8 +1402,26 @@ body.modal-active .job_num {
 }
 
 body.modal-active .job_num h2 {
-  color: darkred;
+  color: rgb(85, 1, 1);
   /* Change the background color to the desired color */
+}
+
+body.modal-active .job button{
+  background-color: darkred !important;
+  border: 1px solid darkred;
+}
+
+body.modal-active .jobs-list-container .details-btn {
+  border: 1px solid darkred;
+}
+
+body.modal-active .modal .open-positions{
+  margin-top: 1rem !important;
+  font-size: 11.7px;
+}
+
+.open-positions{
+  font-size: 11px;
 }
 
 /* Other styles remain unchanged */
@@ -1507,7 +1532,7 @@ body.modal-active .job_num h2 {
 @media (max-width: 640px) {
   .jobs-list-container .jobs {
     grid-template-columns: 1fr;
-    max-width: 400px;
+    /* max-width: 400px; */
     margin: 0 auto;
   }
 }
@@ -1635,6 +1660,11 @@ body.modal-active .job_num h2 {
   .dishes .box-container .box .btn span {
     font-size: 1.2rem;
   }
+
+    .jobs-list-container h2 {
+      padding-left: 15px;
+      margin-left: 1rem;
+    }
 }
 
 
