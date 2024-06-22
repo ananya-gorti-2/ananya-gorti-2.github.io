@@ -15,11 +15,59 @@
 
   <!-- External CSS files -->
   <link rel="stylesheet" href="main.css" />
-  <link rel="stylesheet" href="thankyou.css" />
-
   <!-- External JavaScript file -->
   <script src="main.js"></script>
 </head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: px;
+        background-color: #f8f9fa;
+    }
+
+    .cart-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 30px 200px;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .cart-header, .cart-item, .cart-total {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+
+    .cart-header {
+        font-weight: bold;
+        border-bottom: 2px solid #ddd;
+        margin-bottom: 20px;
+        font-size: 1.2em;
+    }
+
+    .cart-item {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        font-size: 1.1em;
+    }
+
+    .cart-total {
+        font-weight: bold;
+        border-top: 2px solid #ddd;
+        padding-top: 10px;
+        margin-top: 20px;
+        font-size: 1.3em;
+    }
+
+    .cart-total div:last-child {
+        font-size: 1.3em;
+        color: #007BFF;
+    }
+</style>
 
 <body>
   <!-- Header section -->
@@ -49,20 +97,59 @@
   </div>
 
 </header>
+<br><br><br><br><br><br><br><br><br>
 
-  <!-- Thank you section -->
-  <section id="thankyou">
-    <div class="container">
-      <section id="thankyou" class="thankyou-message">
-        <h2>Thank You for Applying!</h2>
-        <div class="thankyou-divider"></div>
-        <p>We have received your application and will get back to you soon. Thank you for your interest!</p>
-      </section>
+<div class="cart-container">
+    <div class="cart-header">
+        <div>Item</div>
+        <hr>
+        <div>Price</div>
+        <hr>
+        <div>Quantity</div>
+        <hr>
+        <div>Subtotal</div>
     </div>
-  </section>
+    <div id="cart-items"></div>
+    <div class="cart-total">
+        <div>Total:</div>
+        <div id="total-price">$0.00</div>
+    </div>
+</div>
 
-  <!-- Adding some line breaks for spacing -->
-  <br><br><br><br><br><br><br><br><br><br>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const cartItemsContainer = document.getElementById('cart-items');
+        const totalPriceElement = document.getElementById('total-price');
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        let totalPrice = 0;
+
+        cart.forEach(item => {
+            const itemSubtotal = item.price * item.quantity;
+            totalPrice += itemSubtotal;
+
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+
+            cartItem.innerHTML = `
+                <div>${item.name}</div>
+                <div>$${item.price.toFixed(2)}</div>
+                <div>${item.quantity}</div>
+                <div>$${itemSubtotal.toFixed(2)}</div>
+            `;
+
+            cartItemsContainer.appendChild(cartItem);
+        });
+
+        totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
+    });
+</script>
+
+  
+
+  <br><br><br>
 
 <footer>
   <!-- Footer section -->
