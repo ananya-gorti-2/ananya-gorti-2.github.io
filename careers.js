@@ -74,14 +74,17 @@ if(jobs.length == 1){
 
 
 function openModal(modalId) {
+    var modal = document.getElementById(modalId);
     document.getElementById(modalId).style.display = "block";
     document.body.classList.add("modal-active");
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to the top smoothly
+    window.scrollTo({ top: 130, behavior: 'smooth' }); // Scroll to the top smoothly
+    modal.scrollTo({ top: 100, behavior: 'smooth' }); 
   }
   
   function closeModal(modalId) {
     document.getElementById(modalId).style.display = "none";
     document.body.classList.remove("modal-active");
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   
   // Close modal when clicking outside of the modal content
