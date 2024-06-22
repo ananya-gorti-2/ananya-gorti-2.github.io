@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" type="x-icon" href="images/CulHar_Logo-removebg.png" />
+  <!-- Title -->
+  <title>Apply</title>
+  <!--Animation on Scroll library-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Font Awesome CSS link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="main.css">
+  <!-- Custom JavaScript -->
+  <script src="main.js"></script>
+  <script src="ordernow.js"></script>
+</head>
+
+<body>
+  <!-- Header section -->
+  <header>
+    <!-- Logo -->
+    <a href="#" class="logo">
+      <img src="images/CulHar_Logo-removebg.png" width="30px" />
+      <div class="log_text">Culinary Harbor</div>
+    </a>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="careers.html">Careers</a>
+      <a href="why_us.html">Benefits</a>
+      <a href="faq.html">FAQ</a>
+      <a href="ordernow.html">Order Now</a>
+      
+    </nav>
+
+    <!-- Apply Now Button -->
+    <div class="apply_btn">
+
+      <div id="cart-icon-root"></div>
+      <button class="btn"><a href="apply.html">Apply Now</a></button>
+      <i class="fa-solid fa-bars" id="bar"></i>
+    </div>
+  </header>
+
+  <main>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="heading1">
+      <h1>Order Now</h1>
+    </div>
+
+    <div class="food-ordering modal-content">
+
+      <div style="font-size: 20px; "id="order-details">
+        <h2 class="cuisine"> Order Details</h2>
+        
+      </div>
+<br>
+      <h3 style="font-size: 20px; ">Total: $<span id="total-price">0.00</span></h3>
+      <h2 class="cuisine"> Checkout</h2>
+      <div>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+    </div>
+    <div>
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required>
+  </div>
+  <div>
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+</div>
+      <button id="checkout-button">Checkout</button>
+
+    </div>
+</main>
+
+<!-- Include the generated React bundle -->
+<script src="my-new-app 2/build/static/js/main.aab444c0.js"></script>
+<script src="Google Sheet.js"></script>
+</body>
+</html>

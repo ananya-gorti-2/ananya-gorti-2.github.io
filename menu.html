@@ -34,11 +34,13 @@
             <a href="careers.html">Careers</a>
             <a href="why_us.html">Benefits</a>
             <a href="faq.html">FAQ</a>
-
+            <a href="ordernow.html">Order Now</a>
+            
         </nav>
 
         <!--Apply Button-->
         <div class="apply_btn">
+            <div id="cart-icon-root"></div>
             <button class="btn menu-btn"><a href="apply.html">Apply Now</a></button>
             <i class="fa-solid fa-bars" id="bar"></i>
         </div>
@@ -52,8 +54,10 @@
             <!-- American cusisine box-container-->
             <h2 data-aos="fade-left" class="cuisine">American Cuisine</h2>
 
+
             <div data-aos="fade-up" class="box-container">
-                <div id="fish-tacos" class="food-card non-touch">
+                <div data-item-id='1' data-item-name='Fish Tacos' data-item-price='7.99' style="background-image: url('images/menu images/American Cuisine/fish tacos, $7.99.jpg')" 
+                class="food-card non-touch">
                     <div class="food-content">
                         <h1> <big><big><big>Fish Tacos</big></big></big></h1>
                         <div class="stars"> <big> <big>
@@ -67,7 +71,7 @@
                         <p class="food-sub"> <big><big><big>A fusion of crispy fried fish and saucy fresh veggies
                                         bringing
                                         a taste of the coast</big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$7.99</span></a>
+                        <div id="menu-item-1" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -111,7 +115,7 @@
                         <p class="food-sub"> <big><big><big>Featuring a thick crust, layers
                                         of cheese, and robust
                                         tomato sauce</big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$12.99</span></a>
+                        <div id="menu-item-2" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -135,12 +139,14 @@
                         of cheese, and robust
                         tomato sauce</p>
                     <a href="#" class="btn" onclick="event.preventDefault();"><span>$12.99</span></a>
+                    
                 </div>
 
 
 
                 <div style="background-image: url('images/menu images/American Cuisine/Fried Catfish, $10.99.jpg')"
-                    class="food-card non-touch">
+                data-item-id='3' data-item-name='Fried Catfish' data-item-price='10.99'
+                class="food-card non-touch">
                     <div class="food-content">
                         <h1> <big><big><big>Fried Catfish</big></big></big></h1>
                         <div class="stars"> <big> <big>
@@ -153,8 +159,10 @@
                         </div>
                         <p class="food-sub"> <big><big><big>Perfectly seasoned and fried to a golden
                                         crisp, served with classic
-                                        sides</big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$10.99</span></a>
+                                        sides</big></big></big>
+                                        <br>
+                                        <br>
+                        <div id="menu-item-3" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -196,7 +204,7 @@
                         <p class="food-sub"> <big><big><big>Enjoy the great featuring tangy slices coated in a crispy
                                         cornmeal crust
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$7.99</span></a>
+                        <div id="menu-item-4" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -235,10 +243,13 @@
                                     <i class="fas fa-star-half-alt"></i>
                                 </big></big> <br> <br> <br>
                         </div>
+
                         <p class="food-sub"> <big><big><big>Try luxury with a blend of creamy cheese sauce and
-                                        succulent lobster meat</big></big></big>
-                        </p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$9.99</span></a>
+                            succulent lobster meat</big></big></big>
+                                    </p>
+                        <div id="menu-item-5" class="menu-item"></div>
+                        
+
                     </div>
                 </div>
 
@@ -260,7 +271,7 @@
                     <!--Description-->
                     <p class="tiny-food-sub">Try luxury with a blend of creamy cheese sauce and
                         succulent lobster meat</p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$15.99</span></a>
+                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$9.99</span></a>
                 </div>
             </div>
 
@@ -285,7 +296,7 @@
                                         spiced minced meat topped
                                         with a golden custard layer
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$11.99</span></a>
+                        <div id="menu-item-6" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -328,7 +339,7 @@
                                         accompanied by a medley of
                                         colorful vegetables
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$10.99</span></a>
+                        <div id="menu-item-7" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -370,7 +381,7 @@
                                         of pounded yams served
                                         with a flavorful and hearty soup
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$11.99</span></a>
+                        <div id="menu-item-8" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -413,7 +424,7 @@
                                         tomatoes, and spices,
                                         delivering goodness in every bite
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$10.99</span></a>
+                        <div id="menu-item-9" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -455,7 +466,7 @@
                                         and served with a
                                         delightful blend of spices
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$9.99</span></a>
+                        <div id="menu-item-10" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -507,7 +518,7 @@
                                         and drizzled with savory
                                         oyster sauce
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$11.99</span></a>
+                        <div id="menu-item-11" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -550,7 +561,7 @@
                         <p class="food-sub"> <big><big><big>Dive into our dish featuring tender meatballs with top a bed
                                         of flavorful noodles
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$11.99</span></a>
+                        <div id="menu-item-12" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -591,7 +602,7 @@
                                         creating a symphony of
                                         flavors
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$9.99</span></a>
+                        <div id="menu-item-13" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -635,7 +646,7 @@
                                         and perfectly cooked
                                         noodles
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$9.99</span></a>
+                        <div id="menu-item-14" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -676,7 +687,7 @@
                         <p class="food-sub"> <big><big><big>A comforting bowl of steamed
                                         dumplings in a savory broth
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$9.99</span></a>
+                        <div id="menu-item-15" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -722,7 +733,7 @@
                                         a taste of
                                         French elegance
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$9.99</span></a>
+                                    <div id="menu-item-16" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -764,7 +775,7 @@
                                         brimming with the
                                         essence of Provence
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$12.99</span></a>
+                                    <div id="menu-item-17" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -805,7 +816,7 @@
                                         sandwich elevated to
                                         gourmet heights
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$10.99</span></a>
+                                    <div id="menu-item-18" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -846,7 +857,7 @@
                         <p class="food-sub"> <big><big><big>A classic blend of caramelized onions, rich broth, and
                                         melted cheese
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$9.99</span></a>
+                                    <div id="menu-item-19" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -887,7 +898,7 @@
                                         perfection in a savory
                                         tomato sauce
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$10.99</span></a>
+                                    <div id="menu-item-20" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -934,7 +945,7 @@
                                         an authentic Indian
                                         experience
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$12.99</span></a>
+                                    <div id="menu-item-21" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -977,7 +988,7 @@
                                         flavorful Sambar and
                                         Coconut Sauce
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$12.99</span></a>
+                                    <div id="menu-item-22" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -1018,7 +1029,7 @@
                                         dish that captures the
                                         essence of Indian cuisine
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$12.99</span></a>
+                                    <div id="menu-item-23" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -1060,7 +1071,7 @@
                                         blend of potatoes and peas,
                                         served with a zesty green sauce
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$9.99</span></a>
+                                    <div id="menu-item-24" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -1105,7 +1116,7 @@
                                         flavors of your
                                         favorite Indian dishes
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$7.99</span></a>
+                                    <div id="menu-item-25" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -1156,7 +1167,7 @@
                         <p class="food-sub"> <big><big><big>Delightful rice triangles filled with various
                                         flavorful fillings including seaweed
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$9.99</span></a>
+                                    <div id="menu-item-26" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -1196,7 +1207,7 @@
                                         selection of fresh, expertly
                                         crafted bites
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$11.99</span></a>
+                                    <div id="menu-item-27" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -1238,7 +1249,7 @@
                                         balls that are both
                                         flavorful and fun topped with spices
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$11.99</span></a>
+                                    <div id="menu-item-28" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -1281,7 +1292,7 @@
                                         featuring delicately battered and fried
                                         seafood.
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$9.99</span></a>
+                                    <div id="menu-item-29" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -1321,7 +1332,7 @@
                         <p class="food-sub"> <big><big><big>Skewers of succulent meat, glazed to perfection
                                         with a savory sauce
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$10.99</span></a>
+                                    <div id="menu-item-30" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -1369,7 +1380,7 @@
                                         milk, herbs, and
                                         spices
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$10.99</span></a>
+                                    <div id="menu-item-31" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -1412,7 +1423,7 @@
                                         the perfect balance of
                                         sweet, salty, and sour
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$10.99</span></a>
+                                    <div id="menu-item-32" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -1453,7 +1464,7 @@
                         <p class="food-sub"> <big><big><big>A luscious and aromatic curry that captivates
                                         the senses of anything
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$10.99</span></a>
+                                    <div id="menu-item-33" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -1493,7 +1504,7 @@
                                         papaya,
                                         chili, and lime
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$9.99</span></a>
+                                    <div id="menu-item-34" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -1534,7 +1545,7 @@
                                         harmonious blend of herbs
                                         and spices
                                     </big></big></big></p>
-                        <a href="#" class="btn" onclick="event.preventDefault();"><span>$11.99</span></a>
+                                    <div id="menu-item-35" class="menu-item"></div>
                     </div>
                 </div>
 
@@ -1644,6 +1655,7 @@
     </footer>
     <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxc9dvg30h3yohbcjxw0zzrz"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="my-new-app 2/build/static/js/main.aab444c0.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             AOS.init({
