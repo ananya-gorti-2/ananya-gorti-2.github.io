@@ -279,3 +279,66 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Other general site-wide JavaScript code can go here...
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  class CartContext {
+      constructor() {
+          this.cart = JSON.parse(localStorage.getItem('cart')) || [];
+          this.listeners = [];
+      }
+
+      get cartCount() {
+          return this.cart.reduce((count, item) => count + item.quantity, 0);
+      }
+
+      setCart(newCart) {
+          this.cart = newCart;
+          localStorage.setItem('cart', JSON.stringify(this.cart));
+          this.notifyListeners();
+      }
+
+      subscribe(listener) {
+          this.listeners.push(listener);
+      }
+
+      unsubscribe(listener) {
+          this.listeners = this.listeners.filter(l => l !== listener);
+      }
+
+      notifyListeners() {
+          this.listeners.forEach(listener => listener());
+      }
+  }
+
+  const cartContext = new CartContext();
+
+  class CartIcon {
+      constructor(rootElement, context) {
+          this.rootElement = rootElement;
+          this.context = context;
+          this.context.subscribe(() => this.render());
+          this.render();
+      }
+
+      render() {
+          this.rootElement.innerHTML = `<div class="cart-icon"><i class="fas fa-shopping-cart"></i> (${this.context.cartCount})</div>`;
+      }
+  }
+
+  const cartIconRoot = document.getElementById('cart-icon-root');
+
+  if (cartIconRoot) {
+      new CartIcon(cartIconRoot, cartContext);
+  }
+
+  // Example usage: update cart and see the icon update
+  setTimeout(() => {
+      cartContext.setCart([{ id: 1, name: 'Product 1', quantity: 2 }, { id: 2, name: 'Product 2', quantity: 3 }]);
+  }, 2000);
+});
