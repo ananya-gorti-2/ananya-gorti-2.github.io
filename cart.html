@@ -19,55 +19,8 @@
   <script src="main.js"></script>
 </head>
 
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        padding: px;
-        background-color: #f8f9fa;
-    }
 
-    .cart-container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 30px 200px;
-        border-radius: 5px;
-        background-color: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
 
-    .cart-header, .cart-item, .cart-total {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px 0;
-    }
-
-    .cart-header {
-        font-weight: bold;
-        border-bottom: 2px solid #ddd;
-        margin-bottom: 20px;
-        font-size: 1.2em;
-    }
-
-    .cart-item {
-        border-bottom: 1px solid #ddd;
-        padding-bottom: 10px;
-        margin-bottom: 10px;
-        font-size: 1.1em;
-    }
-
-    .cart-total {
-        font-weight: bold;
-        border-top: 2px solid #ddd;
-        padding-top: 10px;
-        margin-top: 20px;
-        font-size: 1.3em;
-    }
-
-    .cart-total div:last-child {
-        font-size: 1.3em;
-        color: #007BFF;
-    }
-</style>
 
 <body>
   <!-- Header section -->
@@ -97,59 +50,134 @@
   </div>
 
 </header>
-<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
 
-<div class="cart-container">
-    <div class="cart-header">
-        <div>Item</div>
-        <hr>
-        <div>Price</div>
-        <hr>
-        <div>Quantity</div>
-        <hr>
-        <div>Subtotal</div>
-    </div>
-    <div id="cart-items"></div>
-    <div class="cart-total">
-        <div>Total:</div>
-        <div id="total-price">$0.00</div>
-    </div>
+<style>
+  .table-container {
+      max-width: 800px; /* Adjust as needed */
+      margin: 0 auto; /* Center the table horizontally */
+      border: 1px solid #ccc; /* Border for the container */
+      border-radius: 8px; /* Rounded corners for aesthetic */
+      overflow: hidden; /* Ensure contents do not overflow */
+  }
+  .table {
+      width: 100%;
+      border-collapse: collapse; /* Ensure cells do not have spacing */
+  }
+  .table th {
+      background-color: rgb(212, 209, 209);
+      font-size: 24px;
+      padding: 12px;
+      text-align: left;
+  }
+  .table td {
+      font-size: 36px;
+      padding: 12px;
+      text-align: left;
+      border-top: 1px solid #ccc; /* Border between rows */
+      position: relative; /* Position for the icon */
+  }
+  .remove-icon {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: red;
+      font-size: 24px;
+  }
+</style>
+
+<div class="table-container">
+  <table class="table">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Quantity</th>
+              <th>Subtotal</th>
+          </tr>
+      </thead>
+      <tbody id="tbody1"></tbody>
+  </table>
 </div>
 
 
+
+
+
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const cartItemsContainer = document.getElementById('cart-items');
-        const totalPriceElement = document.getElementById('total-price');
+  document.addEventListener('DOMContentLoaded', () => {
+      const cartItemsContainer = document.getElementById('tbody1');
+      const totalPriceElement = document.getElementById('total-price');
 
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      // Retrieve cart items from localStorage
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-        let totalPrice = 0;
+      // Function to update the cart and table rows
+      function updateCartAndTable() {
+          // Clear existing table rows
+          cartItemsContainer.innerHTML = '';
 
-        cart.forEach(item => {
-            const itemSubtotal = item.price * item.quantity;
-            totalPrice += itemSubtotal;
+          // Reset total price
+          let totalPrice = 0;
 
-            const cartItem = document.createElement('div');
-            cartItem.classList.add('cart-item');
+          // Filter out items with quantity 0
+          cart = cart.filter(item => item.quantity > 0);
 
-            cartItem.innerHTML = `
-                <div>${item.name}</div>
-                <div>$${item.price.toFixed(2)}</div>
-                <div>${item.quantity}</div>
-                <div>$${itemSubtotal.toFixed(2)}</div>
-            `;
+          // Re-populate the table
+          cart.forEach((item, index) => {
+              const itemSubtotal = item.price * item.quantity;
+              totalPrice += itemSubtotal;
 
-            cartItemsContainer.appendChild(cartItem);
-        });
+              const cartItem = document.createElement('tr');
+              cartItem.innerHTML = `
+                  <td>${item.name}</td>
+                  <td>${item.quantity}</td>
+                  <td>$${itemSubtotal.toFixed(2)}</td>
+                  <td><span class="remove-icon" data-index="${index}">&times;</span></td>
+              `;
 
-        totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
-    });
+              cartItemsContainer.appendChild(cartItem);
+
+              // Add event listener to remove icon
+              const removeIcon = cartItem.querySelector('.remove-icon');
+              removeIcon.addEventListener('click', () => {
+                  if (item.quantity > 0) {
+                      item.quantity--;
+                      updateLocalStorage();
+                      updateCartAndTable();
+                      totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
+                  }
+              });
+          });
+
+          function updateCartCountOnLoad() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
+            document.getElementById('cart-count').textContent = totalCount;
+        }
+    
+        // Call the function on page load
+        updateCartCountOnLoad();
+
+          // Update total price display
+          totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
+      }
+
+      // Function to update localStorage
+      function updateLocalStorage() {
+          localStorage.setItem('cart', JSON.stringify(cart));
+      }
+
+      // Initial update of cart and table
+      updateCartAndTable();
+
+      
+  });
 </script>
-
   
 
-  <br><br><br>
+<br><br><br><br><br><br><br><br><br>
 
 <footer>
   <!-- Footer section -->
