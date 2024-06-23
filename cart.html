@@ -296,9 +296,14 @@
       }
 
       // Send email using Email.send()
-      emailjs.send("service_tkhe4xh","template_198tkel",parms).then(alert("Submitted"))
+      emailjs.send("service_tkhe4xh", "template_198tkel", parms).then(function(response) {
+        alert("Order Sent");
+        localStorage.removeItem('cart');
+        location.reload();
+      }, function(error) {
+        alert("Failed to send email: " + JSON.stringify(error));
+      });
       document.getElementById("contactForm").reset();
-
     });
 
   </script>
