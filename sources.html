@@ -1,31 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sources</title>
-    <link rel="stylesheet" href="styles.css">
+  <!-- Meta tags for character encoding, viewport, and page title -->
+  <meta charset="UTF-8" />
+  <link rel="icon" type="x-icon" href="images/CulHar_Logo-removebg.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Jaisharan Ashok Kumar, Yaswanth Kandra, Ananya Gorti, and Vishesh Jain">
+  <meta name="description" content="An aesthetically professionaly website for the company Culinary Harbor.">
+  <title>Culinary Harbor</title>
+
+  <!-- Swiper CSS library -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Font Awesome CSS library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="main.css" />
+
+  <!-- Swiper JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Animation on Scroll-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom JavaScript -->
 </head>
+
 <body>
-    <mainc class="main_sources">
-        <section class="sources">
-            <h1>Sources</h1>
-            <article class="source">
-                <h2>Source Title 1</h2>
-                <p>Description or details about the source. <a href="https://example.com" target="_blank">Visit source</a></p>
-            </article>
-            <article class="source">
-                <h2>Source Title 2</h2>
-                <p>Description or details about the source. <a href="https://example.com" target="_blank">Visit source</a></p>
-            </article>
-            <article class="source">
-                <h2>Source Title 3</h2>
-                <p>Description or details about the source. <a href="https://example.com" target="_blank">Visit source</a></p>
-            </article>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Culinary Harbor</p>
-    </footer>
-</body>
-</html>
+  <!-- Header section -->
+  <header>
+    <!-- Culinary Harbor logo and text -->
+    <a href="#" class="logo">
+      <img src="images/CulHar_Logo-removebg.png" width="35px" loading="eager" />
+      <div class="log_text">Culinary Harbor</div>
+    </a>
+
+    <!-- Navigation menu -->
+    <nav class="navbar">
+      <a class="active" href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="careers.html">Careers</a>
+      <a href="why_us.html">Benefits</a>
+      <a href="faq.html">FAQ</a>
+
+    </nav>
+
+    <!-- Apply button and toggle icon for mobile menu -->
+    <div class="apply_btn">
+      <button class="btn menu-btn">
+        <a href="cart.html">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count">0</span>
+        </a>
+      </button>
+      <script>
+        function updateCartCountOnLoad() {
+          let cart = JSON.parse(localStorage.getItem('cart')) || [];
+          let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
+          document.getElementById('cart-count').textContent = totalCount;
+      }
+      
+      // Call the function on page load
+        updateCartCountOnLoad();
+      </script>
+      <button class="btn"><a href="apply.html">Apply Now</a></button>
+      <i class="fa-solid fa-bars" id="bar"></i>
+      
+
+    </div>
+  </header>
+
+  <main>
+    <br><br><br><br>
+    <div class="heading3"> 
+        <h1>Sources</h1>
+    </div>
+
+    <div class="services">
+
+        <!--Service 1-->
+        <div class="box">
+          <!--Image of serivce-->
+          <h2 class="h-secondary center"><span>Animation on Scroll</span></h2>
+          <!-- Description -->
+          <p class="center h-text">
+            Under the MIT License, Animation on Scroll source code can be utilized without restriction as long as the MIT copyright notice
+                 is included. 
+                 <br>
+                 <a href="https://github.com/michalsnik/aos/blob/next/LICENSE">MIT License</a>
+                 <br>
+                 <a href="https://opensource.org/license/mit/">General MIT License</a>
+          </p>
+        </div>
+
+        <!--Service 2-->
+        <div class="box">
+          <!--Image of serivce-->
+          <h2 class="h-secondary center"><span>Font Awesome Icons</span></h2>
+          <!-- Description -->
+          <p class="center h-text">
+            Elevate your events with our exquisite food catering services. From intimate
+            gatherings to grand celebrations, let us
+            bring culinary excellence to your special occasions. Food is always fresh!
+          </p>
+        </div>
+
+        <!--Service 3-->
+        <div class="box">
+          <!--Image of serivce-->
+          <img src="images/services imgs/food_delivery.webp" alt="pic of cartton depicting food delivery"
+            loading="eager">
+          <h2 class="h-secondary center">Food Delivery</h2>
+          <!-- Description -->
+          <p class="center h-text">Indulge in gourmet dining at home with Culinary Harbor’s food delivery. Savor
+            flavors from the comfort of your
+            home. Our quality remains unmatched, delivering restaurant experience to you.
+        </div>
+      </div>
+
+    <section class="sources-container">
+            <h2 class="h-primary left sources-header">Animation on Scroll</h2>
+            <div class="about-text">
+            <p>
+              Under the MIT License, Animation on Scroll source code can be utilized without restriction as long as the MIT copyright notice
+                   is included. 
+                   <br>
+                   <a href="https://github.com/michalsnik/aos/blob/next/LICENSE">MIT License</a>, Michalsnik, 2018
+                   <br>
+                   <a href="https://opensource.org/license/mit/">General MIT License</a>
+            </p>
+        </div>
+        <br>
+        <h2 class="h-primary left sources-header">Font Awesome Icons</h2>
+        <div class="about-text">
+          <p>
+            Font Awesome is available for nearly all projects and platforms, including commercial use. 
+                 <br>
+                 <a href="https://fontawesome.com/license/free">Font Awesome Free License</a>, Font Awesome, 2024
+          </p>
+      </div>
+      <br>
+      <h2 class="h-primary left sources-header">Google Fonts</h2>
+      <div class="about-text">
+        <p>
+          Under the Open Font License, Google Fonts are available for recreational and commercial use. 
+               <br>
+               <a href="https://openfontlicense.org/">Open Font License</a>, 2024
+        </p>
+    </div>
+    <br>
+    <h2 class="h-primary left sources-header">Visual Studio Code</h2>
+    <div class="about-text">
+      <p>
+        Visual Studio Code, VS Code, is a code editor that can be used to create web files.  
+             <br>
+             <a href="https://code.visualstudio.com/license">Visual Studio Code License</a>, 2024
+      </p>
+  </div>
+  <br>
+  <h2 class="h-primary left sources-header">Unsplash</h2>
+  <div class="about-text">
+    <p>
+      Unsplash is a online image platform that allows for image usage without attributing the photographer or Unsplash.  
+           <br>
+           <a href="https://unsplash.com/license">Unsplash License</a>, 2024
+    </p>
+</div>
+
+      </section>
+
+  </main>
+
+  
+  <!-- Footer section -->
+  <footer>
+    <!-- Footer section -->
+    <section class="footer">
+      <!-- Box container for footer content -->
+      <div class="box-container">
+        <!-- Box for displaying operating hours -->
+        <div class="box">
+          <h3>Hours</h3>
+          <!-- Operating hours for each day -->
+          <a href="#" onclick="event.preventDefault();">Monday: 10:00AM - 11:00PM</a>
+          <a href="#" onclick="event.preventDefault();">Tuesday: 10:00AM - 11:00PM</a>
+          <a href="#" onclick="event.preventDefault();">Wednesday: 10:00AM - 11:00PM </a>
+          <a href="#" onclick="event.preventDefault();">Thursday: 10:00AM - 11:00PM </a>
+          <a href="#" onclick="event.preventDefault();">Friday: 10:00AM - 11:00PM </a>
+          <a href="#" onclick="event.preventDefault();">Saturday: 8:00AM - 11:00PM </a>
+          <a href="#" onclick="event.preventDefault();">Sunday: 8:00AM - 11:00PM </a>
+        </div>
+        <!-- Box for displaying locations -->
+        <div class="box">
+          <h3>Locations</h3>
+          <!-- Location links -->
+          <a href="#" onclick="event.preventDefault();">United States</a>
+          <a href="#" onclick="event.preventDefault();">Japan</a>
+          <a href="#" onclick="event.preventDefault();">India</a>
+          <a href="#" onclick="event.preventDefault();">China</a>
+          <a href="#" onclick="event.preventDefault();">Russia</a>
+          <a href="#" onclick="event.preventDefault();">France</a>
+          <a href="#" onclick="event.preventDefault();">Iran</a>
+        </div>
+
+        <div class="box">
+          <h3>Quick Links</h3>
+          <!-- Quick links to various pages -->
+          <a href="#">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About</a>
+          <a href="careers.html">Careers</a>
+          <a href="why_us.html">Benefits</a>
+          <a href="faq.html">FAQ</a>
+          <a href="apply.html">Apply</a>
+          <a href="https://yaswanth0618.github.io/Webdevadmin/index.html">Admin</a>
+        </div>
+
+        <div class="box">
+          <h3>Contact</h3>
+          <!--SHow conatct info-->
+          <h4>Phone Numbers</h4>
+          <a href="tel:+1234567890">+123-456-7892</a>
+          <a href="tel:+1234567890">+111-222-3333</a>
+          <h4 class="email-footer">Email</h4>
+          <a href="mailto:culinaryharbor30@gmail.com" class="email-link">culinaryharbor30@gmail.com</a>
+        </div>
+
+        <!--Social Links-->
+        <div class="box">
+          <h3>Follow Us</h3>
+          <a href="https://www.instagram.com/culinaryharbor30/" target="_blank">Instagram</a>
+          <a href="https://twitter.com/culinaryh30" target="_blank">Twitter</a>
+          <a href="https://www.youtube.com/channel/UCaL5GaP2e81gd7W2CmJVW-g" target="_blank">Youtube</a>
+        </div>
+      </div>
+
+      <!-- Horizontal line -->
+      <hr>
+
+      <!-- Copyright information -->
+      <div class="credit">
+        &copy; 2024 <span>Culinary Harbor.</span> All rights reserved.
+      </div>
+    </section>
+  </footer>
+  </body>
+  </html>

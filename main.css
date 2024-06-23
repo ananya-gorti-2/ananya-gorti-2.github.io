@@ -207,6 +207,7 @@ h1 {
 form {
   max-width: 600px;
   margin: 0 auto;
+  margin-bottom: 30px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -1244,6 +1245,19 @@ p {
   transform: rotate(180deg);
 }
 
+.jobs-list-container .job-search{
+  width: 100%;
+  padding: 12px 24px;
+  margin-top: 1%;
+  font-size: 18px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin-bottom:20px;
+}
+
+.job-search{
+  padding-top: 1%;
+}
 
 .jobs-list-container {
   max-width: 900px;
@@ -1367,6 +1381,10 @@ footer {
   transition: all 0.2s linear !important;
 }
 
+.job.hidden {
+  display: none;
+}
+
 /* .jobs-list-container h2 {
   margin-bottom: 12px;
 } */
@@ -1376,6 +1394,10 @@ footer {
 /* Adjust hover effect to not apply when modal is active */
 body:not(.modal-active) .jobs-list-container .job:hover {
   transform: scale(1.03);
+}
+
+body.modal-active .job-search{
+  display: none;
 }
 
 /* Make modal-active class when modal is open */
@@ -3300,44 +3322,22 @@ margin-bottom: 25px;*/
   line-height: 3rem;
 }
 
-
-
-.main_sources {
-    padding: 20px;
+.sources-container {
+  background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 1200px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 4px 24px -8px rgba(0, 0, 0, 0.2);
 }
 
-.sources {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.sources-header {
+  padding-bottom: 3rem;
 }
 
-.sources h1 {
-    text-align: center;
-    color: #ff0000; /* Red */
-}
-
-.source {
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
-}
-
-.source h2 {
-    color: #ff0000; /* Red */
-}
-
-.source p {
-    color: #666;
-}
-
-.source a {
-    color: #ff0000; /* Red */
-    text-decoration: none;
-}
-
-.source a:hover {
-    text-decoration: underline;
+.about-text a:link {
+  text-decoration: underline;
 }

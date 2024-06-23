@@ -41,7 +41,7 @@ const jobs = [
         image: "dishwasher.jpg",
         details:
         "Join Culinary Harbor as a Dishwasher, playing a crucial role in kitchen operations by ensuring cleanliness, efficiency, and the smooth flow of culinary production.",
-        openPosition: "4",
+        openPositions: "4",
         linK: "#",
     },
 
@@ -50,7 +50,7 @@ const jobs = [
         image: "Prep_Cook.jpeg",
         details:
         "Embark on a culinary journey as a Prep Cook at Culinary Harbor, where your precision and dedication contribute to the creation of flavorful dishes, setting the stage for an exceptional dining experience.",
-        openPosition: "2",
+        openPositions: "2",
         link: "#",
     }
 ];
@@ -60,13 +60,14 @@ const jobs = [
 // Displaying the number of jobs
 const jobsHeading = document.querySelector(".jobs-list-container h2");
 
-
-
-// Checking the number of jobs and updating the heading accordingly
-if(jobs.length == 1){
-    jobsHeading.innerHTML = `${jobs.length} Job`;
-}else{
-    jobsHeading.innerHTML = `${jobs.length} Jobs`;
+// Calculate the number of visible jobs
+function updateJobCount() {
+    const visibleJobs = document.querySelectorAll('.job:not([style*="display: none"])').length;
+    if (visibleJobs === 1) {
+        jobsHeading.textContent = `${visibleJobs} Job Available`;
+    } else {
+        jobsHeading.textContent = `${visibleJobs} Jobs Available`;
+    }
 }
 
 
@@ -97,5 +98,66 @@ function openModal(modalId) {
     });
   }
   
+
+document.addEventListener('DOMContentLoaded', function () {
+    const jobs = document.querySelectorAll('.job');
+
+    function filterJobs(searchTerm) {
+        jobs.forEach(job => {
+            const title = job.querySelector('.job-title').textContent.toLowerCase();
+            if (title.includes(searchTerm.toLowerCase())) {
+                job.style.display = 'flex';
+            } else {
+                job.style.display = 'none';
+            }
+        });
+    }
+
+    document.querySelector('.job-search').addEventListener('input', function () {
+        const searchTerm = this.value.trim();
+        filterJobs(searchTerm);
+    });
+
+    document.querySelector('.job-search').addEventListener('search', function () {
+        const searchTerm = this.value.trim();
+        filterJobs(searchTerm);
+    });
+
+    document.querySelector('.job-search').addEventListener('keyup', function (event) {
+        if (event.key === 'Enter') {
+            const searchTerm = this.value.trim();
+            filterJobs(searchTerm);
+        }
+    });
+
+    document.querySelector('.job-search').addEventListener('change', function () {
+        const searchTerm = this.value.trim();
+        filterJobs(searchTerm);
+    });
+
+    document.querySelector('.job-search').addEventListener('click', function () {
+        const searchTerm = this.value.trim();
+        filterJobs(searchTerm);
+    });
+
+    document.querySelector('.job-search').addEventListener('search', function () {
+        const searchTerm = this.value.trim();
+        filterJobs(searchTerm);
+    });
+
+    document.querySelector('.job-search').addEventListener('search', function () {
+        const searchTerm = this.value.trim();
+        filterJobs(searchTerm);
+    });
+
+    document.querySelector('.job-search').addEventListener('keyup', function (event) {
+        if (event.key === 'Escape') {
+            this.value = '';
+            filterJobs('');
+        }
+    });
+
+});
+
 
   

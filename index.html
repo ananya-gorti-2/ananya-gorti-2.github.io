@@ -52,9 +52,12 @@
 
     <!-- Apply button and toggle icon for mobile menu -->
     <div class="apply_btn">
-      <button class="btn"><a href="apply.html">Apply Now</a></button>
-      <i class="fa-solid fa-bars" id="bar"></i>
-      <button class="btn menu-btn"><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></button>
+      <button class="btn menu-btn">
+        <a href="cart.html">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count">0</span>
+        </a>
+      </button>
       <script>
         function updateCartCountOnLoad() {
           let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -65,6 +68,9 @@
       // Call the function on page load
         updateCartCountOnLoad();
       </script>
+      <button class="btn"><a href="apply.html">Apply Now</a></button>
+      <i class="fa-solid fa-bars" id="bar"></i>
+      
 
     </div>
   </header>
@@ -851,8 +857,9 @@
           <a href="careers.html">Careers</a>
           <a href="why_us.html">Benefits</a>
           <a href="faq.html">FAQ</a>
-          <a href="apply.html">Apply Now</a>
+          <a href="apply.html">Apply</a>
           <a href="https://yaswanth0618.github.io/Webdevadmin/index.html">Admin</a>
+          <a href="sources.html"> Sources</a>
         </div>
 
         <div class="box">
