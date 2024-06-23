@@ -3299,3 +3299,45 @@ margin-bottom: 25px;*/
   font-size: 17px;
   line-height: 3rem;
 }
+
+
+
+.main_sources {
+    padding: 20px;
+}
+
+.sources {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sources h1 {
+    text-align: center;
+    color: #ff0000; /* Red */
+}
+
+.source {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.source h2 {
+    color: #ff0000; /* Red */
+}
+
+.source p {
+    color: #666;
+}
+
+.source a {
+    color: #ff0000; /* Red */
+    text-decoration: none;
+}
+
+.source a:hover {
+    text-decoration: underline;
+}
