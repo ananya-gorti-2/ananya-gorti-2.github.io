@@ -45,6 +45,17 @@
     <div class="apply_btn">
       <button class="btn"><a href="apply.html">Apply Now</a></button>
       <i class="fa-solid fa-bars" id="bar"></i>
+      <button class="btn menu-btn"><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></button>
+      <script>
+        function updateCartCountOnLoad() {
+          let cart = JSON.parse(localStorage.getItem('cart')) || [];
+          let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
+          document.getElementById('cart-count').textContent = totalCount;
+      }
+      
+      // Call the function on page load
+        updateCartCountOnLoad();
+      </script>
     </div>
   </header>
 
