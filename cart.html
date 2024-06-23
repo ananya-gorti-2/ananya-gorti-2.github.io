@@ -54,37 +54,49 @@
 
 <style>
   .table-container {
-      max-width: 800px; /* Adjust as needed */
-      margin: 0 auto; /* Center the table horizontally */
-      border: 1px solid #ccc; /* Border for the container */
-      border-radius: 8px; /* Rounded corners for aesthetic */
-      overflow: hidden; /* Ensure contents do not overflow */
+    max-width: 800px;
+    /* Adjust as needed */
+    margin: 0 auto;
+    /* Center the table horizontally */
+    border: 1px solid #ccc;
+    /* Border for the container */
+    border-radius: 8px;
+    /* Rounded corners for aesthetic */
+    overflow: hidden;
+    /* Ensure contents do not overflow */
   }
+
   .table {
-      width: 100%;
-      border-collapse: collapse; /* Ensure cells do not have spacing */
+    width: 100%;
+    border-collapse: collapse;
+    /* Ensure cells do not have spacing */
   }
+
   .table th {
-      background-color: rgb(212, 209, 209);
-      font-size: 24px;
-      padding: 12px;
-      text-align: left;
+    background-color: rgb(212, 209, 209);
+    font-size: 24px;
+    padding: 12px;
+    text-align: left;
   }
+
   .table td {
-      font-size: 36px;
-      padding: 12px;
-      text-align: left;
-      border-top: 1px solid #ccc; /* Border between rows */
-      position: relative; /* Position for the icon */
+    font-size: 36px;
+    padding: 12px;
+    text-align: left;
+    border-top: 1px solid #ccc;
+    /* Border between rows */
+    position: relative;
+    /* Position for the icon */
   }
+
   .remove-icon {
-      position: absolute;
-      top: 50%;
-      right: 10px;
-      transform: translateY(-50%);
-      cursor: pointer;
-      color: red;
-      font-size: 24px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: red;
+    font-size: 24px;
   }
 </style>
 
@@ -98,6 +110,12 @@
           </tr>
       </thead>
       <tbody id="tbody1"></tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2" style="text-align: right; font-size: 24px;">Total:</td>
+          <td id="total-price" style="font-size: 24px;">$0.00</td>
+        </tr>
+      </tfoot>
   </table>
 </div>
 
@@ -107,72 +125,70 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-      const cartItemsContainer = document.getElementById('tbody1');
-      const totalPriceElement = document.getElementById('total-price');
+    const cartItemsContainer = document.getElementById('tbody1');
+    const totalPriceElement = document.getElementById('total-price');
 
-      // Retrieve cart items from localStorage
-      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    // Retrieve cart items from localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-      // Function to update the cart and table rows
-      function updateCartAndTable() {
-          // Clear existing table rows
-          cartItemsContainer.innerHTML = '';
+    // Function to update the cart and table rows
+    function updateCartAndTable() {
+      // Clear existing table rows
+      cartItemsContainer.innerHTML = '';
 
-          // Reset total price
-          let totalPrice = 0;
+      // Reset total price
+      let totalPrice = 0;
 
-          // Filter out items with quantity 0
-          cart = cart.filter(item => item.quantity > 0);
+      // Filter out items with quantity 0
+      cart = cart.filter(item => item.quantity > 0);
 
-          // Re-populate the table
-          cart.forEach((item, index) => {
-              const itemSubtotal = item.price * item.quantity;
-              totalPrice += itemSubtotal;
+      // Re-populate the table
+      cart.forEach((item, index) => {
+        const itemSubtotal = item.price * item.quantity;
+        totalPrice += itemSubtotal;
 
-              const cartItem = document.createElement('tr');
-              cartItem.innerHTML = `
-                  <td>${item.name}</td>
-                  <td>${item.quantity}</td>
-                  <td>$${itemSubtotal.toFixed(2)}</td>
-                  <td><span class="remove-icon" data-index="${index}">&times;</span></td>
-              `;
+        const cartItem = document.createElement('tr');
+        cartItem.innerHTML = `
+          <td>${item.name}</td>
+          <td>${item.quantity}</td>
+          <td>$${itemSubtotal.toFixed(2)}</td>
+          <td><span class="remove-icon" data-index="${index}">&times;</span></td>
+        `;
 
-              cartItemsContainer.appendChild(cartItem);
+        cartItemsContainer.appendChild(cartItem);
 
-              // Add event listener to remove icon
-              const removeIcon = cartItem.querySelector('.remove-icon');
-              removeIcon.addEventListener('click', () => {
-                  if (item.quantity > 0) {
-                      item.quantity--;
-                      updateLocalStorage();
-                      updateCartAndTable();
-                      totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
-                  }
-              });
-          });
+        // Add event listener to remove icon
+        const removeIcon = cartItem.querySelector('.remove-icon');
+        removeIcon.addEventListener('click', () => {
+          if (item.quantity > 0) {
+            item.quantity--;
+            updateLocalStorage();
+            updateCartAndTable();
+            totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
+          }
+        });
+      });
 
-          function updateCartCountOnLoad() {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
-            document.getElementById('cart-count').textContent = totalCount;
-        }
-    
-        // Call the function on page load
-        updateCartCountOnLoad();
-
-          // Update total price display
-          totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
+      function updateCartCountOnLoad() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
+        document.getElementById('cart-count').textContent = totalCount;
       }
 
-      // Function to update localStorage
-      function updateLocalStorage() {
-          localStorage.setItem('cart', JSON.stringify(cart));
-      }
+      // Call the function on page load
+      updateCartCountOnLoad();
 
-      // Initial update of cart and table
-      updateCartAndTable();
+      // Update total price display
+      totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
+    }
 
-      
+    // Function to update localStorage
+    function updateLocalStorage() {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    // Initial update of cart and table
+    updateCartAndTable();
   });
 </script>
   
