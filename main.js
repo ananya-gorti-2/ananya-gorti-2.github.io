@@ -149,16 +149,16 @@ document.addEventListener("DOMContentLoaded", function () {
   //test2
 
 
-function closeNotification() {
-  var notification = document.getElementById('notification');
-  notification.classList.add('notification-closed'); // Hide the notification
+  // function closeNotification() {
+  //   var notification = document.getElementById('notification');
+  //   notification.classList.add('notification-closed'); // Hide the notification
 
-  // Get the height of the hidden notification
-  var notificationHeight = notification.offsetHeight;
+  //   // Get the height of the hidden notification
+  //   var notificationHeight = notification.offsetHeight;
 
-  // Adjust the top margin of the header and swiper container to fill up the space
-  var header = document.querySelector('header');
-  var swiperContainer = document.querySelector('.swiper-container');
-  header.style.marginTop = '-' + notificationHeight + 'px';
-  swiperContainer.style.marginTop = '-' + notificationHeight + 'px';
-}
+  //   // Adjust the top margin of the header and swiper container to fill up the space
+  //   var header = document.querySelector('header');
+  //   var swiperContainer = document.querySelector('.swiper-container');
+  //   header.style.marginTop = '-' + notificationHeight + 'px';
+  //   swiperContainer.style.marginTop = '-' + notificationHeight + 'px';
+  // }

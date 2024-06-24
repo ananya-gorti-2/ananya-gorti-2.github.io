@@ -24,17 +24,6 @@
   <!-- External JavaScript file -->
   <script src="main.js"></script>
 
-  <!-- Hotjar Tracking Code for Site 5035397 (name missing) -->
-  <script>
-    (function (h, o, t, j, a, r) {
-      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-      h._hjSettings = { hjid: 5035397, hjsv: 6 };
-      a = o.getElementsByTagName('head')[0];
-      r = o.createElement('script'); r.async = 1;
-      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-      a.appendChild(r);
-    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-  </script>
 </head>
 <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxc9dvg30h3yohbcjxw0zzrz"></script>
 
@@ -370,100 +359,7 @@
       </div>
     </section>
   </div>
-
-  <div class="heading2">
-    <h1 data-aos="fade-up">Contact Us</h1>
-  </div>
-  <div data-aos="fade-up" class="containerconc">
-    <div class="contact">
-      <!-- <h1 class="headingconc">Contact Us</h1> -->
-      <form id="contactForm">
-        <span class="inputbox">
-          <span class="inputname">First Name</span>
-          <input type="text" id="firstName" required>
-
-        </span>
-        <span class="inputbox">
-          <span class="inputname">Last Name</span>
-          <input type="text" id="lastName" required>
-
-        </span>
-        <span class="inputbox">
-          <span class="inputname">Email Address</span>
-          <input type="text" id="email" id="email" required>
-
-        </span>
-        <span class="inputbox">
-          <span class="inputname">Contact Number</span>
-          <input type="text" id="contactNumber" required>
-
-        </span>
-        <span class="inputbox">
-          <span class="textname">Write your message here</span></span><br />
-        <textarea name="" id="message" cols="30" rows="3"></textarea>
-
-        <input type="submit" />
-      </form>
-    </div>
-  </div>
-  <script src="https://smtpjs.com/v3/smtp.js">
-  </script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-  </script>
-
-  <script type="text/javascript">
-    (function () {
-      emailjs.init({
-        publicKey: "BUNCtveULbSPE3eGs",
-      });
-    })();
-  </script>
-  <script>
-
-
-    document.getElementById("contactForm").addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      // Get form values
-      var firstName = document.getElementById("firstName").value;
-      var lastName = document.getElementById("lastName").value;
-      var email = document.getElementById("email").value;
-      var contactNumber = document.getElementById("contactNumber").value;
-      var message1 = document.getElementById("message").value;
-
-      console.log(firstName);
-      console.log(lastName);
-      console.log(email);
-      console.log(contactNumber);
-      console.log(message1);
-
-      // Validate if all fields are filled
-      if (firstName.trim() === '' || lastName.trim() === '' || email.trim() === '' || contactNumber.trim() === '' || message1.trim() === '') {
-        alert("Please fill out all fields");
-        return;
-      }
-
-      let parms = {
-        message: message1,
-        from_name: firstName,
-        lastname: lastName,
-        from_email: email,
-        contactnum: contactNumber
-      }
-
-      // Send email using Email.send()
-      emailjs.send("service_tkhe4xh", "template_32l1ts4", parms).then(alert("Submitted"))
-      document.getElementById("contactForm").reset();
-
-    });
-
-  </script>
-
-
-
-
-
-
+  
   <!-- Social media links -->
   <div class="social-links">
     <a href="https://www.instagram.com/culinaryharbor30/" target="_blank"><img
