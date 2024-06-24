@@ -101,6 +101,8 @@
             let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
             document.getElementById('cart-count').textContent = totalCount;
         }
+
+        
     
         // Call the function on page load
         updateCartCountOnLoad();
@@ -154,7 +156,7 @@
                         a taste of the coast
                     </p>
                     <!-- Price Tag-->
-                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $7.99</span></a>
+                    <a href="#" class="btn add-to-cart" ontouchstart="addToCart(event, this)"><span>Add to Cart - $7.99</span></a>
 
                 </div>
 
