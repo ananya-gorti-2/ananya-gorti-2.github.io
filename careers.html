@@ -21,7 +21,6 @@
   <!-- Main CSS -->
   <link rel="stylesheet" href="main.css">
   <!-- Careers JavaScript -->
-  <script src="careers.js"></script>
   <!-- Main JavaScript -->
   <script src="main.js"></script>
 </head>
@@ -42,13 +41,29 @@
       <a class="active" href="careers.html">Careers</a>
       <a href="why_us.html">Benefits</a>
       <a href="faq.html">FAQ</a>
-      <a href="ordernow.html">Order Now</a>
+      <a href="support.html">Support</a>
     </nav>
     <!-- Apply button -->
     <div class="apply_btn">
-      <div id="cart-icon-root"></div>
+      <button class="btn menu-btn">
+        <a href="cart.html">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count">0</span>
+        </a>
+      </button>
+      <script>
+        function updateCartCountOnLoad() {
+          let cart = JSON.parse(localStorage.getItem('cart')) || [];
+          let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
+          document.getElementById('cart-count').textContent = totalCount;
+        }
+
+        // Call the function on page load
+        updateCartCountOnLoad();
+      </script>
       <button class="btn"><a href="apply.html">Apply Now</a></button>
       <i class="fa-solid fa-bars" id="bar"></i>
+
     </div>
   </header>
 
@@ -59,8 +74,11 @@
     <br>
     <div class="jobs-list-container">
       <div class="job_num">
-      <h2 data-aos="fade-left">4 Jobs Available</h2>
+        <h2 data-aos="fade-left">8 Jobs Available</h2>
       </div>
+
+      <input data-aos="fade-left" class="job-search" type="search" placeholder="Search here...">
+
       <!-- Jobs -->
       <div data-aos="fade-up" class="jobs">
 
@@ -108,7 +126,7 @@
                   <li>Business acumen and budget management skills</li>
                 </ul>
                 <br>
-                <strong>Salary: $62,900/year</strong>
+                <strong>Salary: $80,900/year</strong>
               </div>
               <br>
               <a href="applypos1.html" class="details-btn">Apply</a>
@@ -117,7 +135,7 @@
           </div>
         </div>
 
-        <!-- Job 1 -->
+        <!-- Job 2 -->
         <div class="job">
           <img class="cashier" src="images/careers imgs/Cashier.jpg">
           <h3 class="job-title">Cashier</h3>
@@ -130,10 +148,10 @@
 
             <a href="applypos2.html" class="details-btn">Apply</a>
           </div>
-          <span class="open-positions"> <big><big>2 open positions</big></big></span>
+          <span class="open-positions"> <big><big>3 open positions</big></big></span>
         </div>
 
-        <!-- Modal 1 -->
+        <!-- Modal 2 -->
         <div id="modal4" class="modal">
           <div class="modal-content">
             <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
@@ -165,17 +183,17 @@
                   <li>Ability to work in a fast-paced environment</li>
                 </ul>
                 <br>
-                <strong>Salary: $25,000/year</strong>
+                <strong>Salary: $40,000/year</strong>
 
               </div>
               <br>
               <a href="applypos2.html" class="details-btn">Apply</a>
-              <span class="open-positions"><big><big>2 open positions</big></big></span>
+              <span class="open-positions"><big><big>3 open positions</big></big></span>
             </div>
           </div>
         </div>
 
-        <!-- Job 1 -->
+        <!-- Job 3 -->
         <div class="job">
           <img class="waiter" src="images/careers imgs/waiter.jpg">
           <h3 class="job-title">Waiter/Waitress</h3>
@@ -212,8 +230,6 @@
                   <li>Serve food and drinks promptly and efficiently</li>
                   <li>Provide menu recommendations and answer customer questions</li>
                   <li>Ensure tables are clean and properly set before seating guests</li>
-                  <li>Process payments and handle cash or credit transactions</li>
-                  <li>Assist with restaurant cleaning and maintenance as needed</li>
                 </ul>
                 <br><br>
                 <strong>Requirements/Skills:</strong>
@@ -221,12 +237,11 @@
                   <li>Previous experience as a waiter or in a customer service role</li>
                   <li>Strong communication and interpersonal skills</li>
                   <li>Ability to multitask and work in a fast-paced environment</li>
-                  <li>Basic math skills for handling payments</li>
                   <li>Attention to detail and high standards of cleanliness</li>
                   <li>Flexible schedule, including availability on weekends and holidays</li>
                 </ul>
                 <br>
-                <strong>Salary: $30,000/year plus tips</strong>
+                <strong>Salary: $35,000/year plus tips</strong>
 
               </div>
               <br>
@@ -238,9 +253,9 @@
 
 
 
-        <!-- Job 1 -->
+        <!-- Job 4 -->
         <div class="job">
-          <img class="sous-chef" src="images/careers imgs/sous_chef.png">
+          <img class="sous-chef" src="images/careers imgs/sous_chef.jpg">
           <h3 class="job-title">Sous Chef</h3>
           <div class="details">
             Join us as a Sous Chef at Culinary Harbor, where your culinary skills, leadership, and passion for food
@@ -249,7 +264,7 @@
             <button class="learn-more-btn" onclick="openModal('modal1')">Learn More</button>
             <a href="applypos4.html" class="details-btn">Apply</a>
           </div>
-          <span class="open-positions"><big><big>2 open positions</big></big></span>
+          <span class="open-positions"><big><big>3 open positions</big></big></span>
         </div>
 
         <!-- Modal 1 -->
@@ -257,7 +272,7 @@
           <div class="modal-content">
             <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
             <div class="modal-job">
-              <img class="sous-chef" src="images/careers imgs/sous_chef.png">
+              <img class="sous-chef" src="images/careers imgs/sous_chef.jpg">
               <h3 class="job-title">Sous Chef</h3>
               <div class="details">
                 Join us as a Sous Chef at Culinary Harbor, where your culinary skills, leadership, and passion for food
@@ -285,10 +300,228 @@
               </div>
               <br>
               <a href="applypos4.html" class="details-btn">Apply</a>
+              <span class="open-positions"><big><big>3 open positions</big></big></span>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Job 5 -->
+        <div class="job">
+          <img class="sous-chef" src="images/careers imgs/shift_supervisor.jpg">
+          <h3 class="job-title">Shift Supervisor</h3>
+          <div class="details">
+            As a Shift Supervisor, you will oversee the operations during their shift, ensuring efficient workflow, and team management.
+            <br><br>
+            <button class="learn-more-btn" onclick="openModal('modal6')">Learn More</button>
+            <a href="applypos5.html" class="details-btn">Apply</a>
+          </div>
+          <span class="open-positions"><big><big>1 open positions</big></big></span>
+        </div>
+
+        <!-- Modal 1 -->
+        <div id="modal6" class="modal">
+          <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal6')">&times;</span>
+            <div class="modal-job">
+              <img class="sous-chef" src="images/careers imgs/shift_supervisor.jpg">
+              <h3 class="job-title">Shift Supervisor</h3>
+              <div class="details">
+                A Shift Supervisor oversees the operations during their shift, ensuring efficient workflow, high
+                customer service standards, and team management.
+                <br><br>
+                <strong>Responsibilities:</strong>
+                <ul>
+                  <li>Manage and oversee daily restaurant operations during assigned shifts.</li>
+                  <li>Ensure high levels of customer satisfaction through excellent service.</li>
+                  <li>Train, mentor, and support staff to enhance performance and resolve conflicts.</li>
+                  <li>EHandle cash management, including opening/closing registers and balancing cash drawers.</li>
+                </ul>
+                <br><br>
+                <strong>Requirements/Skills:</strong>
+                <ul>
+                  <li>Proven experience in a supervisory role in the restaurant or hospitality industry.</li>
+                  <li>Strong leadership and team management skills.</li>
+                  <li>Excellent communication and interpersonal abilities.</li>
+                  <li>Knowledge of food safety standards and regulations</li>
+                  <li>Ability to handle stressful situations and resolve conflicts effectively.</li>
+                </ul>
+                <br>
+                <strong>Salary: $55,900/year</strong>
+              </div>
+              <br>
+              <a href="applypos5.html" class="details-btn">Apply</a>
+              <span class="open-positions"><big><big>1 open positions</big></big></span>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Job 6 -->
+        <div class="job">
+          <img class="sous-chef" src="images/careers imgs/dish_cleaner.jpg">
+          <h3 class="job-title">Dish Cleaner</h3>
+          <div class="details">
+            As a Dish Cleaner, you have to maintains cleanliness and sanitation standards in the kitchen by washing dishes, utensils,
+            and kitchen equipment.
+            <br><br>
+            <button class="learn-more-btn" onclick="openModal('modal7')">Learn More</button>
+            <a href="applypos6.html" class="details-btn">Apply</a>
+          </div>
+          <span class="open-positions"><big><big>4 open positions</big></big></span>
+        </div>
+
+        <!-- Modal 1 -->
+        <div id="modal7" class="modal">
+          <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal7')">&times;</span>
+            <div class="modal-job">
+              <img class="sous-chef" src="images/careers imgs/dish_cleaner.jpg">
+              <h3 class="job-title">Dish Cleaner</h3>
+              <div class="details">
+                A Dish Cleaner maintains cleanliness and sanitation standards in the kitchen by washing dishes,
+                utensils, and kitchen equipment.
+                <br><br>
+                <strong>Responsibilities:</strong>
+                <ul>
+                  <li>Wash and sanitize dishes, utensils, and kitchen equipment.</li>
+                  <li>Maintain cleanliness of dishwashing area, including floors and counters.</li>
+                  <li>Dispose of trash and waste materials appropriately.</li>
+                  <li>Assist in kitchen cleaning and maintenance tasks as needed.</li>
+                </ul>
+                <br><br>
+                <strong>Requirements/Skills:</strong>
+                <ul>
+                  <li>Ability to work in a fast-paced environment.
+                  </li>
+                  <li>Basic understanding of sanitation and safety practices.
+                  </li>
+                  <li>Physical stamina to stand for long periods and perform repetitive tasks.
+                  </li>
+                  <li>Attention to detail and ability to follow instructions.
+                  </li>
+                </ul>
+                <br>
+                <strong>Salary: $30,900/year</strong>
+              </div>
+              <br>
+              <a href="applypos6.html" class="details-btn">Apply</a>
+              <span class="open-positions"><big><big>4 open positions</big></big></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job 7 -->
+        <div class="job">
+          <img class="sous-chef" src="images/careers imgs/maintenance_worker.jpg">
+          <h3 class="job-title">Maintenance Worker</h3>
+          <div class="details">
+            As a Maintenance Worker, you have to ensure that the restaurant's facilities and equipment are in optimal working
+            condition. They perform routine maintenance.
+            <br><br>
+            <button class="learn-more-btn" onclick="openModal('modal8')">Learn More</button>
+            <a href="applypos7.html" class="details-btn">Apply</a>
+          </div>
+          <span class="open-positions"><big><big>2 open positions</big></big></span>
+        </div>
+
+        <!-- Modal 1 -->
+        <div id="modal8" class="modal">
+          <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal8')">&times;</span>
+            <div class="modal-job">
+              <img class="sous-chef" src="images/careers imgs/maintenance_worker.jpg">
+              <h3 class="job-title">Maintenance Worker</h3>
+              <div class="details">
+                A Maintenance Worker ensures that the restaurant's facilities and equipment are in optimal working
+                condition. They perform routine maintenance.
+                <br><br>
+                <strong>Responsibilities:</strong>
+                <ul>
+                  <li>Conduct regular inspections and maintenance of equipment, plumbing, and electrical systems.
+                  </li>
+                  <li>Perform minor repairs and troubleshooting on kitchen appliances and facilities.
+                  </li>
+                  <li>Monitor inventory and order supplies</li>
+                  <li>Ensure compliance with health and safety regulations</li>
+                </ul>
+                <br><br>
+                <strong>Requirements/Skills:</strong>
+                <ul>
+                  <li>Previous experience in restaurant management</li>
+                  <li>Knowledge of basic plumbing, electrical, and mechanical systems.
+                  </li>
+                  <li>Ability to multitask and problem-solve effectively</li>
+                  <li>Ability to work independently and manage time effectively.
+                  </li>
+                </ul>
+                <br>
+                <strong>Salary: $30,900/year</strong>
+              </div>
+              <br>
+              <a href="applypos7.html" class="details-btn">Apply</a>
               <span class="open-positions"><big><big>2 open positions</big></big></span>
             </div>
           </div>
         </div>
+
+        <!-- Job 8 -->
+        <div class="job">
+          <img class="sous-chef" src="images/careers imgs/training_coordinator.jpg">
+          <h3 class="job-title">Training Coordinator</h3>
+          <div class="details">
+            As a Training Coordinator, you must develop and oversee training programs for restaurant staff. They ensure that
+            employees are trained and knowledgeable.
+            <br><br>
+            <button class="learn-more-btn" onclick="openModal('modal9')">Learn More</button>
+            <a href="applypos8.html" class="details-btn">Apply</a>
+          </div>
+          <span class="open-positions"><big><big>2 open positions</big></big></span>
+        </div>
+
+        <!-- Modal 1 -->
+        <div id="modal9" class="modal">
+          <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal9')">&times;</span>
+            <div class="modal-job">
+              <img class="sous-chef" src="images/careers imgs/training_coordinator.jpg">
+              <h3 class="job-title">Training Coordinator</h3>
+              <div class="details">
+                A Training Coordinator develops, implements, and oversees training programs for restaurant staff. They
+                ensure that employees are adequately trained and knowledgeable.
+                <br><br>
+                <strong>Responsibilities:</strong>
+                <ul>
+                  <li>Maintain training records and ensure compliance with industry regulations.
+                  </li>
+                  <li>Manage staff, including hiring and training</li>
+                  <li>Monitor inventory and order supplies</li>
+                  <li>Conduct training sessions and workshops to improve staff skills and knowledge.
+                  </li>
+                  <li>Develop and implement strategies to increase profitability</li>
+                </ul>
+                <br><br>
+                <strong>Requirements/Skills:</strong>
+                <ul>
+                  <li>Previous experience in restaurant management</li>
+                  <li>Strong leadership and communication skills</li>
+                  <li>Ability to assess training needs and develop effective programs.
+
+                  </li>
+                  <li>Experience in training and development, preferably in the hospitality industry.
+                  </li>
+                </ul>
+                <br>
+                <strong>Salary: $55,900/year</strong>
+              </div>
+              <br>
+              <a href="applypos8.html" class="details-btn">Apply</a>
+              <span class="open-positions"><big><big>2 open positions</big></big></span>
+            </div>
+          </div>
+        </div>
+
+
 
 
 
@@ -331,32 +564,39 @@
         <div class="box">
           <h3>Quick Links</h3>
           <!-- Quick links to various pages -->
-          <a href="#">Home</a>
+          <a href="index.html">Home</a>
           <a href="menu.html">Menu</a>
           <a href="about.html">About</a>
           <a href="careers.html">Careers</a>
           <a href="why_us.html">Benefits</a>
           <a href="faq.html">FAQ</a>
-          <a href="apply.html">Apply Now</a>
+          <a href="support.html">Support</a>
+          <a href="apply.html">Apply</a>
           <a href="https://yaswanth0618.github.io/Webdevadmin/index.html">Admin</a>
+          <a href="sources.html"> Sources</a>
         </div>
 
         <div class="box">
           <h3>Contact</h3>
-          <!--SHow conatct info-->
+          <!--Show conatct info-->
           <h4>Phone Numbers</h4>
-          <a href="tel:+1234567890">+123-456-7892</a>
-          <a href="tel:+1234567890">+111-222-3333</a>
+          <a href="tel:+1234567890"><i class="fa-solid fa-phone" style="color: #ff0000;"></i> +123-456-7892</a>
+          <a href="tel:+1234567890"><i class="fa-solid fa-phone" style="color: #ff0000;"></i> +111-222-3333</a>
           <h4 class="email-footer">Email</h4>
-          <a href="mailto:culinaryharbor30@gmail.com" class="email-link">culinaryharbor30@gmail.com</a>
+          <a href="mailto:culinaryharbor30@gmail.com" class="email-link"><i class="fa-solid fa-envelope"
+              style="color: #ff0000;"></i> culinaryharbor30@gmail.com</a>
         </div>
 
         <!--SOcial Links-->
         <div class="box">
           <h3>Follow Us</h3>
-          <a href="https://www.instagram.com/culinaryharbor30/" target="_blank">Instagram</a>
-          <a href="https://twitter.com/culinaryh30" target="_blank">Twitter</a>
-          <a href="https://www.youtube.com/channel/UCaL5GaP2e81gd7W2CmJVW-g" target="_blank">Youtube</a>
+          <a href="https://www.instagram.com/culinaryharbor30/" target="_blank"><i class="fa-brands fa-instagram"
+              style="color: #ff0000;"></i> Instagram</a>
+          <a href="https://twitter.com/culinaryh30" target="_blank"><i class="fa-brands fa-twitter"
+              style="color: #ff0000;"></i>
+            Twitter</a>
+          <a href="https://www.youtube.com/channel/UCaL5GaP2e81gd7W2CmJVW-g" target="_blank"><i
+              class="fa-brands fa-youtube" style="color: #ff0000;"></i> Youtube</a>
         </div>
       </div>
 
@@ -380,6 +620,7 @@
     });
   </script>
   <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxc9dvg30h3yohbcjxw0zzrz"></script>
+  <script src="careers.js"></script>
 </body>
 
 

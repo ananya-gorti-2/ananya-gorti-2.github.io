@@ -13,20 +13,6 @@
   box-sizing: border-box;
 }
 
-.remove-button{
-  background-color: red;
-  color: white;
-  padding: 5px 15px;
-  border-radius: 8px;
-}
-
-.checkout-button{
-  background-color: red;
-  color: white;
-  padding: 5px 15px;
-  border-radius: 8px;
-}
-
 
 
 
@@ -102,20 +88,29 @@ section:nth-child(even) {
   margin-right: 10px;
 }
 
-.btn:hover {
-  background: red;
-  letter-spacing: 0.1rem;
-  transition: all 0.2s linear;
+@media (pointer: fine) {
+
+  .btn:hover {
+    background: red;
+    letter-spacing: 0.1rem;
+    transition: all 0.2s linear;
+  }
 }
 
 
+
+
+
+
+/* HEADER CODE CHANGED ON 6/23/24 */
 header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background: white;
-  padding: 1rem 7%;
+  padding: 1rem 2%;
+  /* Adjusted padding */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -146,14 +141,22 @@ header .logo i {
   color: red;
 }
 
-
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* Align items to the start */
+}
 
 header .navbar a {
   font-size: 1.8rem;
   border-radius: 0.5rem;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
+  /* Reduced padding */
   color: black;
   transition: background-color 0.3s ease;
+  margin-right: 10px;
+  /* Adjust margin as needed */
 }
 
 header .navbar a.active,
@@ -164,6 +167,12 @@ header .navbar a:hover {
   transition: all 0.2s linear;
 }
 
+header .apply_btn {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
 header .apply_btn .btn {
   background: red;
   padding: 0.5rem 1rem;
@@ -172,14 +181,8 @@ header .apply_btn .btn {
   font-size: 1.8rem;
   transition: all 0.1s linear;
   margin-left: 10px;
+  /* Adjust margin as needed */
 }
-
-header .apply_btn {
-  display: flex;
-  align-items: center;
-  margin-top: 5px;
-}
-
 
 .button-row {
   margin-bottom: 10px;
@@ -200,11 +203,25 @@ header .apply_btn {
   color: white;
 }
 
-
 .button-row a {
   text-decoration: none;
   color: inherit;
 }
+
+/*header changed */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 body {
   font-family: Arial, sans-serif;
@@ -219,24 +236,10 @@ h1 {
 }
 
 
-
-.add-to-cart-button {
-  background-color: red;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 8px; /* Rounded corners */
-  transition: transform 0.3s ease, border-radius 0.3s ease; /* Smooth transitions */
-}
-
-.add-to-cart-button:hover {
-  transform: scale(1.1); /* Increase size by 10% */
-}
-
 form {
   max-width: 600px;
   margin: 0 auto;
+  margin-bottom: 30px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -323,12 +326,12 @@ header #bar {
 
 #btnScrollToTop {
   position: fixed;
-  right: 10px;
-  bottom: 17px;
+  right: 24px;
+  bottom: 90px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: red;
+  background: rgba(255, 0, 0);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   color: #fff;
   border: none;
@@ -507,7 +510,7 @@ header #bar {
 @media (max-width: 900px) {
   .tiny-food-sub {
     font-size: 1.9rem !important;
-        margin-bottom: 1.7rem !important;
+    margin-bottom: 1.7rem !important;
   }
 
   .dishes h3 {
@@ -560,23 +563,23 @@ header #bar {
     font-size: 1.8rem !important;
   }
 
-  .section_faq span{
+  .section_faq span {
     font-size: 1.9rem !important;
   }
 
-  .about-content2 p{
+  .about-content2 p {
     font-size: 1.8rem !important;
   }
 
-  .about-content3 p{
+  .about-content3 p {
     font-size: 1.8rem !important;
   }
 
-  .about-content4 p{
+  .about-content4 p {
     font-size: 1.8rem !important;
   }
 
-  .timeline p{
+  .timeline p {
     font-size: 1.8rem !important;
   }
 
@@ -638,6 +641,7 @@ header #bar {
   flex: 1 1 45rem;
   height: 100%;
 }
+
 
 .home .home-slider .slide .image img {
   width: 100%;
@@ -1271,9 +1275,22 @@ p {
 }
 
 .section_faq .question.open>.icon {
-  transform: rotate(45deg);
+  transform: rotate(180deg);
 }
 
+.jobs-list-container .job-search {
+  width: 100%;
+  padding: 12px 24px;
+  margin-top: 1%;
+  font-size: 18px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.job-search {
+  padding-top: 1%;
+}
 
 .jobs-list-container {
   max-width: 900px;
@@ -1284,10 +1301,13 @@ p {
 
 .jobs-list-container h2 {
   font-size: 30px;
-  border-left: 4px solid #023047;
+  border-left: 4px solid #025985;
   color: red;
-  padding-left: 20px;
+  padding-left: 15px;
+  margin-left: .25rem;
 }
+
+/*  */
 
 .jobs-list-container .jobs {
   display: grid;
@@ -1394,9 +1414,13 @@ footer {
   transition: all 0.2s linear !important;
 }
 
-.jobs-list-container h2 {
-  margin-bottom: 12px;
+.job.hidden {
+  display: none;
 }
+
+/* .jobs-list-container h2 {
+  margin-bottom: 12px;
+} */
 
 
 /* Modal styles */
@@ -1405,11 +1429,19 @@ body:not(.modal-active) .jobs-list-container .job:hover {
   transform: scale(1.03);
 }
 
+body.modal-active .job-search {
+  display: none;
+}
+
 /* Make modal-active class when modal is open */
 body.modal-active {
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.5);
   /* Change the background color to the desired color */
+}
+
+body.modal-active .jobs-list-container h2 {
+  border-left: 4px solid #00293e;
 }
 
 
@@ -1425,8 +1457,26 @@ body.modal-active .job_num {
 }
 
 body.modal-active .job_num h2 {
-  color: darkred;
+  color: rgb(85, 1, 1);
   /* Change the background color to the desired color */
+}
+
+body.modal-active .job button {
+  background-color: darkred !important;
+  border: 1px solid darkred;
+}
+
+body.modal-active .jobs-list-container .details-btn {
+  border: 1px solid darkred;
+}
+
+body.modal-active .modal .open-positions {
+  margin-top: 1rem !important;
+  font-size: 11.7px;
+}
+
+.open-positions {
+  font-size: 11px;
 }
 
 /* Other styles remain unchanged */
@@ -1449,10 +1499,10 @@ body.modal-active .job_num h2 {
   /* Black w/ opacity */
 }
 
+
 .modal-content {
   background-color: #fff;
-  margin-left: 410px;
-  margin-top: 40px;
+  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
@@ -1538,7 +1588,7 @@ body.modal-active .job_num h2 {
 @media (max-width: 640px) {
   .jobs-list-container .jobs {
     grid-template-columns: 1fr;
-    max-width: 400px;
+    /* max-width: 400px; */
     margin: 0 auto;
   }
 }
@@ -1559,25 +1609,29 @@ body.modal-active .job_num h2 {
   }
 }
 
+
+
+
+
+
+
+/*HEADER CHANGED */
 @media screen and (max-width: 768px) {
+  header {
+    /* flex-direction: column; */
+    align-items: flex-start;
 
-  header #bar {
-    display: inline-block;
   }
 
-  .home .home-slider .slide .image img {
-    height: auto;
-    object-fit: contain;
-    width: 100%;
+  header .logo,
+  header .apply_btn {
+    margin-top: 0;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+
+    /* Remove top margin to keep them aligned */
   }
-
-
-
-  #about p {
-    font-size: 1.4rem;
-    line-height: 2rem;
-  }
-
 
   header .navbar {
     position: absolute;
@@ -1589,10 +1643,16 @@ body.modal-active .job_num h2 {
     border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
     padding: 1rem;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    flex-direction: column;
+    /* Stack items vertically */
+    display: none;
+    /* Hide by default */
   }
 
   header .navbar.active {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    display: flex;
+    /* Show when active */
   }
 
   header .navbar a {
@@ -1602,11 +1662,28 @@ body.modal-active .job_num h2 {
     font-size: 2rem;
     background: white;
     color: black;
+    width: 100%;
+    /* Full width for links */
   }
 
   header .navbar a.active {
     background: red;
     color: white;
+  }
+
+  header #bar {
+    display: inline-block;
+  }
+
+  .home .home-slider .slide .image img {
+    height: auto;
+    object-fit: contain;
+    width: 100%;
+  }
+
+  #about p {
+    font-size: 1.4rem;
+    line-height: 2rem;
   }
 
   .home .home-slider .slide .content h3 {
@@ -1627,7 +1704,25 @@ body.modal-active .job_num h2 {
     font-size: 38px;
     margin-bottom: 50px;
   }
+
+  header .apply_btn {
+    order: 2;
+    /* Set the order to move it below the logo */
+  }
 }
+
+/*HEADER CHANGED */
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 991px) {
   html {
@@ -1665,6 +1760,11 @@ body.modal-active .job_num h2 {
 
   .dishes .box-container .box .btn span {
     font-size: 1.2rem;
+  }
+
+  .jobs-list-container h2 {
+    padding-left: 15px;
+    margin-left: 1rem;
   }
 }
 
@@ -1813,6 +1913,8 @@ body.modal-active .job_num h2 {
 }
 
 
+
+
 /* about 2 */
 .heading1 {
   width: 90%;
@@ -1827,7 +1929,7 @@ body.modal-active .job_num h2 {
 .heading1 h1 {
   font-size: 50px;
   color: #000;
-  margin-bottom: px;
+  margin-bottom: 10px;
   position: relative;
 }
 
@@ -2232,6 +2334,7 @@ body.modal-active .job_num h2 {
   border-radius: 25px;
   transition: 0.3s ease;
   font-weight: normal;
+  text-decoration: none;
 }
 
 .test-btn:hover {
@@ -3296,4 +3399,60 @@ margin-bottom: 25px;*/
 .dishes h1 {
   font-size: 17px;
   line-height: 3rem;
+}
+
+.sources-container {
+  background-color: white !important;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 1200px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 4px 24px -8px rgba(0, 0, 0, 0.2);
+}
+
+.sources-header {
+  padding-bottom: 3rem;
+}
+
+.sources-container .about-text a:link {
+  text-decoration: underline;
+}
+
+.contact {
+  font-size: 20px;
+}
+
+
+
+.notification {
+  background-color: #f8d7da;
+  /* Red background color for notification */
+  color: #721c24;
+  /* Dark text color for notification */
+  padding: 20px;
+  /* Increased padding for the notification content */
+  position: relative;
+  /* Change position to relative */
+}
+
+.notification-text {
+  flex-grow: 1;
+  /* Allow the text to grow to fill available space */
+}
+
+.close-btn {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+
+.notification-closed {
+  display: none;
+  /* Hide the notification when it's closed */
 }

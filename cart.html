@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart</title>
+  <link rel="icon" type="x-icon" href="images/CulHar_Logo-removebg.png" />
+
+  <!-- Font Awesome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- External CSS files -->
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="cart.css" />
+  <!-- External JavaScript file -->
+  <script src="main.js"></script>
+</head>
+
+
+
+
+<body>
+  <!-- Header section -->
+<header>
+  <!-- Culinary Harbor logo and text -->
+  <a href="#" class="logo">
+    <img src="images/CulHar_Logo-removebg.png" width="35px" loading="eager" />
+    <div class="log_text">Culinary Harbor</div>
+  </a>
+
+  <!-- Navigation menu -->
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="careers.html">Careers</a>
+    <a href="why_us.html">Benefits</a>
+    <a href="faq.html">FAQ</a>
+    <a href="support.html">Support</a>
+  </nav>
+
+  <!-- Apply button and toggle icon for mobile menu -->
+   
+  <div class="apply_btn">
+    <button class="btn menu-btn">
+      <a href="cart.html">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="cart-count">0</span>
+      </a>
+    </button>
+
+    <button class="btn"><a href="apply.html">Apply Now</a></button>
+    
+    <script>
+      function updateCartCountOnLoad() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
+        document.getElementById('cart-count').textContent = totalCount;
+    }
+    
+    // Call the function on page load
+      updateCartCountOnLoad();
+    </script>
+    
+
+    <i class="fa-solid fa-bars" id="bar"></i>
+  </div>
+
+</header>
+<br><br><br><br><br>
+
+
+<br>
+
+<div class="table-container">
+  <table class="table">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Quantity</th>
+              <th>Subtotal</th>
+              <th></th>
+          </tr>
+      </thead>
+      <tbody id="tbody1" class="tbody1"></tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2" style="text-align: right; font-size: 24px;">Total:</td>
+          <td id="total-price" style="font-size: 24px;">$0.00</td>
+        </tr>
+      </tfoot>
+  </table>
+</div>
+<div class="heading2">
+  <h1 data-aos="fade-up">Checkout</h1>
+</div>
+<div class="containerconc">
+  <div class="contact">
+    <!-- <h1 class="headingconc">Contact Us</h1> -->
+    <form id="contactForm">
+      <span class="inputbox">
+        <span class="inputname">First Name</span>
+        <input type="text" id="firstName" required>
+
+      </span>
+      <span class="inputbox">
+        <span class="inputname">Last Name</span>
+        <input type="text" id="lastName" required>
+
+      </span>
+      <span class="inputbox">
+        <span class="inputname">Email Address</span>
+        <input type="text" id="email" id="email" required>
+
+      </span>
+      <span class="inputbox">
+        <span class="inputname">Contact Number</span>
+        <input type="text" id="contactNumber" required>
+
+      </span>
+      <span class="inputbox">
+        <span class="textname">Additional Info</span></span><br />
+      <textarea name="" id="message" cols="30" rows="3"></textarea>
+
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+</div>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script type="text/javascript">
+    (function(){
+        emailjs.init({
+          publicKey: "BUNCtveULbSPE3eGs",
+        });
+    })();
+  </script>
+
+  <script>
+
+
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      // Get form values
+      var firstName = document.getElementById("firstName").value;
+      var lastName = document.getElementById("lastName").value;
+      var email = document.getElementById("email").value;
+      var contactNumber = document.getElementById("contactNumber").value;
+      var message1 = document.getElementById("message").value;
+
+      console.log(firstName);
+      console.log(lastName);
+      console.log(email);
+      console.log(contactNumber);
+      console.log(message1);
+
+      // Validate if all fields are filled
+      if (firstName.trim() === '' || lastName.trim() === '' || email.trim() === '' || contactNumber.trim() === '' || message1.trim() === '') {
+        alert("Please fill out all fields");
+        return;
+      }
+
+      var items = [];
+    var rows = document.querySelectorAll("#tbody1 tr");
+    rows.forEach(function(row) {
+      var name = row.cells[0].innerText;
+      var quantity = row.cells[1].innerText;
+      var subtotal = row.cells[2].innerText;
+      items.push(`${name} (Quantity: ${quantity}, Subtotal: ${subtotal})`);
+    });
+    var itemsString = items.join("\n");
+
+
+    var totalCost = document.getElementById("total-price").innerText;
+
+      let parms = {
+        message : message1,
+        from_name : firstName,
+        lastname : lastName,
+        from_email : email,
+        contactnum : contactNumber,
+        order_items: itemsString,
+        totalcost: totalCost
+      }
+
+      // Send email using Email.send()
+      emailjs.send("service_tkhe4xh", "template_198tkel", parms).then(function(response) {
+        alert("Order Sent");
+        localStorage.removeItem('cart');
+        location.reload();
+      }, function(error) {
+        alert("Failed to send email: " + JSON.stringify(error));
+      });
+      document.getElementById("contactForm").reset();
+    });
+
+  </script>
+
+
+
+
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cartItemsContainer = document.getElementById('tbody1');
+    const totalPriceElement = document.getElementById('total-price');
+
+    // Retrieve cart items from localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Function to update the cart and table rows
+    function updateCartAndTable() {
+      // Clear existing table rows
+      cartItemsContainer.innerHTML = '';
+
+      // Reset total price
+      let totalPrice = 0;
+
+      // Filter out items with quantity 0
+      cart = cart.filter(item => item.quantity > 0);
+
+      // Re-populate the table
+      cart.forEach((item, index) => {
+        const itemSubtotal = item.price * item.quantity;
+        totalPrice += itemSubtotal;
+
+        const cartItem = document.createElement('tr');
+        cartItem.innerHTML = `
+          <td>${item.name}</td>
+          <td>${item.quantity}</td>
+          <td>$${itemSubtotal.toFixed(2)}</td>
+          <td><span class="remove-icon" data-index="${index}">&times;</span></td>
+        `;
+
+        cartItemsContainer.appendChild(cartItem);
+
+        // Add event listener to remove icon
+        const removeIcon = cartItem.querySelector('.remove-icon');
+        removeIcon.addEventListener('click', () => {
+          location.reload();
+          if (item.quantity > 0) {
+            item.quantity--;
+            updateLocalStorage();
+            updateCartAndTable();
+            totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
+          }
+        });
+      });
+
+      function updateCartCountOnLoad() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
+        document.getElementById('cart-count').textContent = totalCount;
+      }
+
+      // Call the function on page load
+      updateCartCountOnLoad();
+
+      // Update total price display
+      totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
+    }
+
+    // Function to update localStorage
+    function updateLocalStorage() {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    // Initial update of cart and table
+    updateCartAndTable();
+  });
+</script>
+  
+
+<br><br><br><br><br>
+
+<footer>
+  <!-- Footer section -->
+  <section class="footer">
+    <!-- Box container for footer content -->
+    <div class="box-container">
+      <!-- Box for displaying operating hours -->
+      <div class="box">
+        <h3>Hours</h3>
+        <!-- Operating hours for each day -->
+        <a href="#" onclick="event.preventDefault();">Monday: 10:00AM - 11:00PM</a>
+        <a href="#" onclick="event.preventDefault();">Tuesday: 10:00AM - 11:00PM</a>
+        <a href="#" onclick="event.preventDefault();">Wednesday: 10:00AM - 11:00PM </a>
+        <a href="#" onclick="event.preventDefault();">Thursday: 10:00AM - 11:00PM </a>
+        <a href="#" onclick="event.preventDefault();">Friday: 10:00AM - 11:00PM </a>
+        <a href="#" onclick="event.preventDefault();">Saturday: 8:00AM - 11:00PM </a>
+        <a href="#" onclick="event.preventDefault();">Sunday: 8:00AM - 11:00PM </a>
+      </div>
+      <!-- Box for displaying locations -->
+      <div class="box">
+        <h3>Locations</h3>
+        <!-- Location links -->
+        <a href="#" onclick="event.preventDefault();">United States</a>
+        <a href="#" onclick="event.preventDefault();">Japan</a>
+        <a href="#" onclick="event.preventDefault();">India</a>
+        <a href="#" onclick="event.preventDefault();">China</a>
+        <a href="#" onclick="event.preventDefault();">Russia</a>
+        <a href="#" onclick="event.preventDefault();">France</a>
+        <a href="#" onclick="event.preventDefault();">Iran</a>
+      </div>
+
+      <div class="box">
+        <h3>Quick Links</h3>
+        <!-- Quick links to various pages -->
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="why_us.html">Benefits</a>
+        <a href="faq.html">FAQ</a>
+        <a href="support.html">Support</a>
+        <a href="apply.html">Apply</a>
+        <a href="https://yaswanth0618.github.io/Webdevadmin/index.html">Admin</a>
+        <a href="sources.html"> Sources</a>
+      </div>
+
+        <div class="box">
+          <h3>Contact</h3>
+          <!--Show conatct info-->
+          <h4>Phone Numbers</h4>
+          <a href="tel:+1234567890"><i class="fa-solid fa-phone" style="color: #ff0000;"></i> +123-456-7892</a>
+          <a href="tel:+1234567890"><i class="fa-solid fa-phone" style="color: #ff0000;"></i> +111-222-3333</a>
+          <h4 class="email-footer">Email</h4>
+          <a href="mailto:culinaryharbor30@gmail.com" class="email-link"><i class="fa-solid fa-envelope"
+              style="color: #ff0000;"></i> culinaryharbor30@gmail.com</a>
+        </div>
+
+      <!--Social Links-->
+      <div class="box">
+        <h3>Follow Us</h3>
+        <a href="https://www.instagram.com/culinaryharbor30/" target="_blank"><i class="fa-brands fa-instagram"
+            style="color: #ff0000;"></i> Instagram</a>
+        <a href="https://twitter.com/culinaryh30" target="_blank"><i class="fa-brands fa-twitter" style="color: #ff0000;"></i>
+          Twitter</a>
+        <a href="https://www.youtube.com/channel/UCaL5GaP2e81gd7W2CmJVW-g" target="_blank"><i class="fa-brands fa-youtube"
+            style="color: #ff0000;"></i> Youtube</a>
+      </div>
+    </div>
+
+    <!-- Horizontal line -->
+    <hr>
+
+    <!-- Copyright information -->
+    <div class="credit">
+      &copy; 2024 <span>Culinary Harbor.</span> All rights reserved.
+    </div>
+  </section>
+</footer>
+    <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxc9dvg30h3yohbcjxw0zzrz"></script>
+</body>
+
+</html>
