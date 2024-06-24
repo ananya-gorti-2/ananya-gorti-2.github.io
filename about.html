@@ -23,6 +23,18 @@
   <link rel="stylesheet" href="about.css" />
   <!-- External JavaScript file -->
   <script src="main.js"></script>
+
+  <!-- Hotjar Tracking Code for Site 5035397 (name missing) -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+      h._hjSettings = { hjid: 5035397, hjsv: 6 };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script'); r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
 </head>
 <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxc9dvg30h3yohbcjxw0zzrz"></script>
 
@@ -58,13 +70,13 @@
           let cart = JSON.parse(localStorage.getItem('cart')) || [];
           let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
           document.getElementById('cart-count').textContent = totalCount;
-      }
-      
-      // Call the function on page load
+        }
+
+        // Call the function on page load
         updateCartCountOnLoad();
       </script>
       <button class="btn"><a href="apply.html">Apply Now</a></button>
-      
+
 
 
       <!-- Menu toggle icon -->
@@ -396,17 +408,16 @@
   </div>
   <script src="https://smtpjs.com/v3/smtp.js">
   </script>
-  <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
 
-    <script type="text/javascript">
-      (function(){
-          emailjs.init({
-            publicKey: "BUNCtveULbSPE3eGs",
-          });
-      })();
-    </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "BUNCtveULbSPE3eGs",
+      });
+    })();
+  </script>
   <script>
 
 
@@ -433,15 +444,15 @@
       }
 
       let parms = {
-        message : message1,
-        from_name : firstName,
-        lastname : lastName,
-        from_email : email,
-        contactnum : contactNumber
+        message: message1,
+        from_name: firstName,
+        lastname: lastName,
+        from_email: email,
+        contactnum: contactNumber
       }
 
       // Send email using Email.send()
-      emailjs.send("service_tkhe4xh","template_32l1ts4",parms).then(alert("Submitted"))
+      emailjs.send("service_tkhe4xh", "template_32l1ts4", parms).then(alert("Submitted"))
       document.getElementById("contactForm").reset();
 
     });
@@ -525,10 +536,11 @@
           <h3>Follow Us</h3>
           <a href="https://www.instagram.com/culinaryharbor30/" target="_blank"><i class="fa-brands fa-instagram"
               style="color: #ff0000;"></i> Instagram</a>
-          <a href="https://twitter.com/culinaryh30" target="_blank"><i class="fa-brands fa-twitter" style="color: #ff0000;"></i>
+          <a href="https://twitter.com/culinaryh30" target="_blank"><i class="fa-brands fa-twitter"
+              style="color: #ff0000;"></i>
             Twitter</a>
-          <a href="https://www.youtube.com/channel/UCaL5GaP2e81gd7W2CmJVW-g" target="_blank"><i class="fa-brands fa-youtube"
-              style="color: #ff0000;"></i> Youtube</a>
+          <a href="https://www.youtube.com/channel/UCaL5GaP2e81gd7W2CmJVW-g" target="_blank"><i
+              class="fa-brands fa-youtube" style="color: #ff0000;"></i> Youtube</a>
         </div>
       </div>
 
@@ -552,6 +564,8 @@
     });
 
   </script>
+  <!--Accesibility widget-->
+  <script src="https://cdn.userway.org/widget.js" data-account="ertbJPpxpJ"></script>
 
 </body>
 

@@ -3442,6 +3442,8 @@ margin-bottom: 25px;*/
   /* Increased padding for the notification content */
   position: relative;
   /* Change position to relative */
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 
 .notification-text {

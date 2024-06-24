@@ -17,6 +17,17 @@
 
     <link rel="stylesheet" href="main.css">
     <script src="main.js"></script>
+    <!-- Hotjar Tracking Code for Site 5035397 (name missing) -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 5035397, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
 </head>
 <!--hello-->
 
@@ -42,20 +53,20 @@
         <div class="apply_btn">
             <button class="btn menu-btn">
                 <a href="cart.html">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <span id="cart-count">0</span>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span>
                 </a>
-              </button>
-              <script>
+            </button>
+            <script>
                 function updateCartCountOnLoad() {
-                  let cart = JSON.parse(localStorage.getItem('cart')) || [];
-                  let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
-                  document.getElementById('cart-count').textContent = totalCount;
-              }
-              
-              // Call the function on page load
+                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
+                    document.getElementById('cart-count').textContent = totalCount;
+                }
+
+                // Call the function on page load
                 updateCartCountOnLoad();
-              </script>
+            </script>
             <button class="btn menu-btn"><a href="apply.html">Apply Now</a></button>
 
             <i class="fa-solid fa-bars" id="bar"></i>
@@ -68,92 +79,92 @@
         }
         function addToCart(event, button) {
             event.preventDefault();
-        
+
             const card = button.closest('.food-card');
             const itemName = card.getAttribute('data-name');
             const itemPrice = parseFloat(card.getAttribute('data-price'));
-        
+
             const item = {
                 name: itemName,
                 price: itemPrice,
                 quantity: 1
             };
-        
+
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        
+
             const existingItemIndex = cart.findIndex(cartItem => cartItem.name === item.name);
             if (existingItemIndex !== -1) {
                 cart[existingItemIndex].quantity += 1;
             } else {
                 cart.push(item);
             }
-        
+
             localStorage.setItem('cart', JSON.stringify(cart));
-        
+
             // Update cart count in the UI
             updateCartCountOnLoad();
-        
+
             alert(itemName + " added to cart!");
         }
-        
+
         function updateCartCountOnLoad() {
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
             let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
             document.getElementById('cart-count').textContent = totalCount;
         }
 
-        
-    
+
+
         // Call the function on page load
         updateCartCountOnLoad();
 
-        
-        
+
+
         if (!localStorage.getItem('cart')) {
-        localStorage.setItem('cart', JSON.stringify([]));
-    }
-
-    function addToCart(event, button) {
-        event.preventDefault();
-
-        const card = button.closest('.box, .food-card');
-        const itemName = card.getAttribute('data-name');
-        const itemPrice = parseFloat(card.getAttribute('data-price'));
-
-        const item = {
-            name: itemName,
-            price: itemPrice,
-            quantity: 1
-        };
-
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-        const existingItemIndex = cart.findIndex(cartItem => cartItem.name === item.name);
-        if (existingItemIndex !== -1) {
-            cart[existingItemIndex].quantity += 1;
-        } else {
-            cart.push(item);
+            localStorage.setItem('cart', JSON.stringify([]));
         }
 
-        localStorage.setItem('cart', JSON.stringify(cart));
+        function addToCart(event, button) {
+            event.preventDefault();
 
-        // Update cart count in the UI
+            const card = button.closest('.box, .food-card');
+            const itemName = card.getAttribute('data-name');
+            const itemPrice = parseFloat(card.getAttribute('data-price'));
+
+            const item = {
+                name: itemName,
+                price: itemPrice,
+                quantity: 1
+            };
+
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            const existingItemIndex = cart.findIndex(cartItem => cartItem.name === item.name);
+            if (existingItemIndex !== -1) {
+                cart[existingItemIndex].quantity += 1;
+            } else {
+                cart.push(item);
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Update cart count in the UI
+            updateCartCountOnLoad();
+
+            alert(itemName + " added to cart!");
+        }
+
+        function updateCartCountOnLoad() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
+            document.getElementById('cart-count').textContent = totalCount;
+        }
+
+        // Call the function on page load
         updateCartCountOnLoad();
 
-        alert(itemName + " added to cart!");
-    }
-
-    function updateCartCountOnLoad() {
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
-        document.getElementById('cart-count').textContent = totalCount;
-    }
-
-    // Call the function on page load
-    updateCartCountOnLoad();
-        
     </script>
-    
+
 
     <main>
         <!--Heading for menu-->
@@ -202,7 +213,8 @@
                         a taste of the coast
                     </p>
                     <!-- Price Tag-->
-                    <a href="#" class="btn add-to-cart"  onclick="addToCart(event, this)" ontouchstart="addToCart(event, this)"><span>Add to Cart - $7.99</span></a>
+                    <a href="#" class="btn add-to-cart" onclick="addToCart(event, this)"
+                        ontouchstart="addToCart(event, this)"><span>Add to Cart - $7.99</span></a>
 
                 </div>
 
@@ -243,8 +255,9 @@
                     <p class="tiny-food-sub">Featuring a thick crust, layers
                         of cheese, and robust
                         tomato sauce</p>
-                        <a href="#" class="btn add-to-cart"  onclick="addToCart(event, this)" ontouchstart="addToCart(event, this)"><span>Add to Cart - $7.99</span></a>
-                    </div>
+                    <a href="#" class="btn add-to-cart" onclick="addToCart(event, this)"
+                        ontouchstart="addToCart(event, this)"><span>Add to Cart - $7.99</span></a>
+                </div>
 
 
 
@@ -286,7 +299,8 @@
                     <p class="tiny-food-sub">Perfectly seasoned and fried to a golden
                         crisp, served with classic
                         sides</p>
-                        <a href="#" class="btn add-to-cart"  onclick="addToCart(event, this)" ontouchstart="addToCart(event, this)"><span>Add to Cart - $7.99</span></a>
+                    <a href="#" class="btn add-to-cart" onclick="addToCart(event, this)"
+                        ontouchstart="addToCart(event, this)"><span>Add to Cart - $7.99</span></a>
                 </div>
 
 
@@ -369,7 +383,7 @@
                     <!--Description-->
                     <p class="tiny-food-sub">Try luxury with a blend of creamy cheese sauce and
                         succulent lobster meat</p>
-                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
                 </div>
             </div>
 
@@ -417,7 +431,7 @@
                     <p class="tiny-food-sub">A baked dish featuring
                         spiced minced meat topped
                         with a golden custard layer</p>
-                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $11.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $11.99</span></a>
                 </div>
 
 
@@ -545,7 +559,7 @@
                     <p class="tiny-food-sub">A tantalizing blend of rice,
                         tomatoes, and spices,
                         delivering goodness in every bite</p>
-                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $10.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $10.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/African Cuisine/Maatoke 9.99.jpg'); content : ' Alt text for image ' ;"
@@ -587,7 +601,7 @@
                     <p class="tiny-food-sub">Green bananas cooked to perfection
                         and served with a
                         delightful blend of spices</p>
-                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
                 </div>
             </div>
 
@@ -681,7 +695,7 @@
                     <!--Food Description-->
                     <p class="tiny-food-sub">Dive into our dish featuring tender meatballs with top a bed
                         of flavorful noodles</p>
-                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $11.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $11.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/Chinese Cuisine/Spicy Citrus Noodles, $9.99.jpg'); content : ' Alt text for image ' ;"
@@ -806,7 +820,7 @@
                     <!--Food Description-->
                     <p class="tiny-food-sub">A comforting bowl of steamed
                         dumplings in a savory broth</p>
-                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
                 </div>
             </div>
 
@@ -895,7 +909,7 @@
                     <p class="tiny-food-sub">A hearty fish stew
                         brimming with the
                         essence of Provence</p>
-                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $12.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $12.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/French Cuisine/Croque Monsieur, $10.99.jpg'); content : ' Alt text for image ' ;"
@@ -1018,7 +1032,7 @@
                     <p class="tiny-food-sub">A medley of vibrant vegetables cooked to
                         perfection in a savory
                         tomato sauce</p>
-                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $10.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $10.99</span></a>
                 </div>
             </div>
 
@@ -1108,7 +1122,7 @@
                     <p class="tiny-food-sub">A thin and crispy crepe served with
                         flavorful Sambar and
                         Coconut Sauce</p>
-                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $12.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $12.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/Indian Cuisine/Hyderabadi chicken Biryani, $12.99.jpg'); content : ' Alt text for image ' ;"
@@ -1149,7 +1163,7 @@
                     <p class="tiny-food-sub">A fragrant and flavorful rice
                         dish that captures the
                         essence of Indian cuisine</p>
-                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $12.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $12.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/Indian Cuisine/Samosas with Spicy Green Sauce, $9.99.jpg'); content : ' Alt text for image ' ;"
@@ -1193,7 +1207,7 @@
                     <p class="tiny-food-sub">Filled with a delicious
                         blend of potatoes and peas,
                         served with a zesty green sauce</p>
-                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/Indian Cuisine/Tandoori Roti, $7.99.jpg'); content : ' Alt text for image ' ;"
@@ -1239,7 +1253,7 @@
                     <p class="tiny-food-sub">Freshly baked and perfect for scooping up the
                         flavors of your
                         favorite Indian dishes</p>
-                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $7.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $7.99</span></a>
                 </div>
             </div>
 
@@ -1286,7 +1300,7 @@
                     <!--Food Description-->
                     <p class="tiny-food-sub">Delightful rice triangles filled with various
                         flavorful fillings including seaweed</p>
-                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/Japanese Cuisine/Sushi and Sashimi, $11.99.jpg'); content : ' Alt text for image ' ;"
@@ -1412,7 +1426,7 @@
                     <p class="tiny-food-sub">Savor the light and crispy perfection,
                         featuring delicately battered and fried
                         seafood.</p>
-                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/Japanese Cuisine/Yakitori, 10.99.jpg'); content : ' Alt text for image ' ;"
@@ -1452,7 +1466,7 @@
                     <!--Food Description-->
                     <p class="tiny-food-sub">Skewers of succulent meat, glazed to perfection
                         with a savory sauce</p>
-                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $10.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $10.99</span></a>
                 </div>
             </div>
 
@@ -1500,7 +1514,7 @@
                     <p class="tiny-food-sub">A tantalizing blend of coconut
                         milk, herbs, and
                         spices
-                    </p>                        
+                    </p>
                     <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $10.99</span></a>
 
                 </div>
@@ -1583,7 +1597,7 @@
                     <!--Food Description-->
                     <p class="tiny-food-sub">A luscious and aromatic curry that captivates
                         the senses of anything</p>
-                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $10.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $10.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/Thai Cuisine/Spicy Green Papaya Salad, $9.99.jpg'); content : ' Alt text for image ' ;"
@@ -1623,7 +1637,7 @@
                     <!--Food Description-->
                     <p class="tiny-food-sub">Refresh yourself with a zesty and crunchy mix of green papaya,
                         chili, and lime</p>
-                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/Thai Cuisine/Tom Yum, $11.99.jpg'); content : ' Alt text for image ' ;"
@@ -1666,7 +1680,7 @@
                     <p class="tiny-food-sub">A Thai classic featuring a
                         harmonious blend of herbs
                         and spices</p>
-                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $11.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $11.99</span></a>
                 </div>
             </div>
             <br><br><br><br><br>
@@ -1724,26 +1738,28 @@
                     <a href="sources.html"> Sources</a>
                 </div>
 
-        <div class="box">
-            <h3>Contact</h3>
-            <!--Show conatct info-->
-            <h4>Phone Numbers</h4>
-            <a href="tel:+1234567890"><i class="fa-solid fa-phone" style="color: #ff0000;"></i> +123-456-7892</a>
-            <a href="tel:+1234567890"><i class="fa-solid fa-phone" style="color: #ff0000;"></i> +111-222-3333</a>
-            <h4 class="email-footer">Email</h4>
-            <a href="mailto:culinaryharbor30@gmail.com" class="email-link"><i class="fa-solid fa-envelope"
-                    style="color: #ff0000;"></i> culinaryharbor30@gmail.com</a>
-        </div>
+                <div class="box">
+                    <h3>Contact</h3>
+                    <!--Show conatct info-->
+                    <h4>Phone Numbers</h4>
+                    <a href="tel:+1234567890"><i class="fa-solid fa-phone" style="color: #ff0000;"></i>
+                        +123-456-7892</a>
+                    <a href="tel:+1234567890"><i class="fa-solid fa-phone" style="color: #ff0000;"></i>
+                        +111-222-3333</a>
+                    <h4 class="email-footer">Email</h4>
+                    <a href="mailto:culinaryharbor30@gmail.com" class="email-link"><i class="fa-solid fa-envelope"
+                            style="color: #ff0000;"></i> culinaryharbor30@gmail.com</a>
+                </div>
 
                 <!--Social Links-->
                 <div class="box">
                     <h3>Follow Us</h3>
-                    <a href="https://www.instagram.com/culinaryharbor30/" target="_blank"><i class="fa-brands fa-instagram"
-                            style="color: #ff0000;"></i> Instagram</a>
+                    <a href="https://www.instagram.com/culinaryharbor30/" target="_blank"><i
+                            class="fa-brands fa-instagram" style="color: #ff0000;"></i> Instagram</a>
                     <a href="https://twitter.com/culinaryh30" target="_blank"><i class="fa-brands fa-twitter"
                             style="color: #ff0000;"></i> Twitter</a>
-                    <a href="https://www.youtube.com/channel/UCaL5GaP2e81gd7W2CmJVW-g" target="_blank"><i class="fa-brands fa-youtube"
-                            style="color: #ff0000;"></i> Youtube</a>
+                    <a href="https://www.youtube.com/channel/UCaL5GaP2e81gd7W2CmJVW-g" target="_blank"><i
+                            class="fa-brands fa-youtube" style="color: #ff0000;"></i> Youtube</a>
                 </div>
             </div>
 
@@ -1759,10 +1775,7 @@
     </footer>
     <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxc9dvg30h3yohbcjxw0zzrz"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<<<<<<< HEAD
     <script src="my-new-app/build/static/js/main.aab444c0.js"></script>
-=======
->>>>>>> d4a0836efc369cb0777133a6059f9d2ba16b40f6
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             AOS.init({
@@ -1772,5 +1785,7 @@
             });
         });
     </script>
+    <!--Accesibility widget-->
+    <script src="https://cdn.userway.org/widget.js" data-account="ertbJPpxpJ"></script>
 
 </html>
