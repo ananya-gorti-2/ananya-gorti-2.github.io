@@ -184,6 +184,12 @@ header .apply_btn .btn {
   /* Adjust margin as needed */
 }
 
+@media (pointer: coarse) {
+  .add-to-cart:hover {
+  letter-spacing: 0rem !important;
+  }
+}
+
 .button-row {
   margin-bottom: 10px;
 }

@@ -101,9 +101,57 @@
             let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
             document.getElementById('cart-count').textContent = totalCount;
         }
+
+        
     
         // Call the function on page load
         updateCartCountOnLoad();
+
+        
+        
+        if (!localStorage.getItem('cart')) {
+        localStorage.setItem('cart', JSON.stringify([]));
+    }
+
+    function addToCart(event, button) {
+        event.preventDefault();
+
+        const card = button.closest('.box, .food-card');
+        const itemName = card.getAttribute('data-name');
+        const itemPrice = parseFloat(card.getAttribute('data-price'));
+
+        const item = {
+            name: itemName,
+            price: itemPrice,
+            quantity: 1
+        };
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const existingItemIndex = cart.findIndex(cartItem => cartItem.name === item.name);
+        if (existingItemIndex !== -1) {
+            cart[existingItemIndex].quantity += 1;
+        } else {
+            cart.push(item);
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Update cart count in the UI
+        updateCartCountOnLoad();
+
+        alert(itemName + " added to cart!");
+    }
+
+    function updateCartCountOnLoad() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
+        document.getElementById('cart-count').textContent = totalCount;
+    }
+
+    // Call the function on page load
+    updateCartCountOnLoad();
+        
     </script>
     
 
@@ -135,7 +183,7 @@
                 </div>
 
 
-                <div class="box touch" >
+                <div class="box touch" data-name="Fish Tacos" data-price="7.99">
                     <!--Image of Food-->
                     <img src="images/menu images/American Cuisine/fish tacos, $7.99.jpg" alt="picture of fish tacos"
                         width="200rem" loading="eager">
@@ -154,7 +202,7 @@
                         a taste of the coast
                     </p>
                     <!-- Price Tag-->
-                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $7.99</span></a>
+                    <a href="#" class="btn add-to-cart"  onclick="addToCart(event, this)" ontouchstart="addToCart(event, this)"><span>Add to Cart - $7.99</span></a>
 
                 </div>
 
@@ -177,7 +225,7 @@
                 </div>
 
 
-                <div class="box touch">
+                <div class="box touch" data-name="Deep Dish Pizza" data-price="12.99">
                     <!--Image of Food-->
                     <img src="images/menu images/American Cuisine/Deep Dish Pizza $12.99.jpg"
                         alt="picture of Deep dish pizza" width="200rem" loading="eager">
@@ -195,8 +243,8 @@
                     <p class="tiny-food-sub">Featuring a thick crust, layers
                         of cheese, and robust
                         tomato sauce</p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$12.99</span></a>
-                </div>
+                        <a href="#" class="btn add-to-cart"  onclick="addToCart(event, this)" ontouchstart="addToCart(event, this)"><span>Add to Cart - $7.99</span></a>
+                    </div>
 
 
 
@@ -220,7 +268,7 @@
                 </div>
 
 
-                <div class="box touch">
+                <div class="box touch" data-name="Fried Catfish" data-price="10.99">
                     <!--Image of Food-->
                     <img src="images/menu images/American Cuisine/Fried Catfish, $10.99.jpg"
                         alt="picture of fried catfish" width="200rem" loading="eager">
@@ -238,7 +286,7 @@
                     <p class="tiny-food-sub">Perfectly seasoned and fried to a golden
                         crisp, served with classic
                         sides</p>
-                    <a href="#" class="btn price" onclick="event.preventDefault();"><span>$10.99</span></a>
+                        <a href="#" class="btn add-to-cart"  onclick="addToCart(event, this)" ontouchstart="addToCart(event, this)"><span>Add to Cart - $7.99</span></a>
                 </div>
 
 
@@ -262,7 +310,7 @@
                 </div>
 
 
-                <div class="box touch">
+                <div class="box touch" data-name="Fried Green Tomatoes" data-price="7.99">
                     <!--Image of Food-->
                     <img src="images/menu images/American Cuisine/Fried Green Tomatoes, $7.99.jpg"
                         alt="picture of fried green tomates" width="200rem" loading="eager">
@@ -280,7 +328,7 @@
                     <p class="tiny-food-sub">Enjoy the great featuring tangy slices coated in a crispy
                         cornmeal crust
                     </p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$7.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $7.99</span></a>
                 </div>
 
 
@@ -304,7 +352,7 @@
                 </div>
 
 
-                <div class="box touch">
+                <div class="box touch" data-name="Lobster Mac & Cheese" data-price="9.99">
                     <!--Image of Food-->
                     <img src="images/menu images/American Cuisine/Lobster Mac and Cheese, $9.99.jpg"
                         alt="picture of Lobster Mac and Cheese" width="200rem" loading="eager">
@@ -321,7 +369,7 @@
                     <!--Description-->
                     <p class="tiny-food-sub">Try luxury with a blend of creamy cheese sauce and
                         succulent lobster meat</p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>Add to Cart - $15.99</span></a>
+                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
                 </div>
             </div>
 
@@ -351,7 +399,7 @@
                 </div>
 
 
-                <div class="box touch">
+                <div class="box touch" data-name="Bobotie" data-price="11.99">
                     <!--Image of Food-->
                     <img src="images/menu images/African Cuisine/Bobotie, $11.99.jpg" alt="picture of Bobotie"
                         width="200rem" loading="eager">
@@ -369,7 +417,7 @@
                     <p class="tiny-food-sub">A baked dish featuring
                         spiced minced meat topped
                         with a golden custard layer</p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$11.99</span></a>
+                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $11.99</span></a>
                 </div>
 
 
@@ -393,7 +441,7 @@
                     </div>
                 </div>
 
-                <div class="box touch">
+                <div class="box touch" data-name="Couscous" data-price="10.99">
                     <!--Image of food-->
                     <img src="images/menu images/African Cuisine/Couscous, $10.99.jpg" alt="picture of Couscous"
                         width="200rem" loading="eager">
@@ -412,7 +460,7 @@
                         accompanied by a medley of
                         colorful vegetables
                     </p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$10.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $10.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/African Cuisine/Fufu and Soup, $11.99.jpg'); content : ' Alt text for image ' ;"
@@ -436,7 +484,7 @@
                 </div>
 
 
-                <div class="box touch">
+                <div class="box touch" data-name="Fufu and Soup" data-price="11.99">
                     <!--Image of food-->
                     <img src="images/menu images/African Cuisine/Fufu and Soup, $11.99.jpg"
                         alt="picture of Fufu and Soup" width="200rem" loading="eager">
@@ -455,7 +503,7 @@
                         of pounded yams served
                         with a flavorful and hearty soup
                     </p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$11.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $11.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/African Cuisine/Jollof Rice, 10.99.jpg'); content : ' Alt text for image ' ;"
@@ -479,7 +527,7 @@
                 </div>
 
 
-                <div class="box touch">
+                <div class="box touch" data-name="Jollof Rice" data-price="10.99">
                     <!--Image of Food-->
                     <img src="images/menu images/African Cuisine/Jollof Rice, 10.99.jpg" alt="picture of Jollof Rice"
                         width="200rem" loading="eager">
@@ -497,7 +545,7 @@
                     <p class="tiny-food-sub">A tantalizing blend of rice,
                         tomatoes, and spices,
                         delivering goodness in every bite</p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$10.99</span></a>
+                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $10.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/African Cuisine/Maatoke 9.99.jpg'); content : ' Alt text for image ' ;"
@@ -521,7 +569,7 @@
                 </div>
 
 
-                <div class="box touch">
+                <div class="box touch" data-name="Maatoke" data-price="9.99">
                     <!--Image of food-->
                     <img src="images/menu images/African Cuisine/Maatoke 9.99.jpg" alt="picture of Maatoke"
                         width="200rem" loading="eager">
@@ -539,7 +587,7 @@
                     <p class="tiny-food-sub">Green bananas cooked to perfection
                         and served with a
                         delightful blend of spices</p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$9.99</span></a>
+                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
                 </div>
             </div>
 
@@ -573,7 +621,7 @@
                 </div>
 
 
-                <div class="box touch">
+                <div class="box touch" data-name="Chicken Fried Rice" data-price="11.99">
                     <!--Image of food-->
                     <img src="images/menu images/Chinese Cuisine/Chicken Fried Rice with Oyster Sauce, $11.99.jpg"
                         alt="picture of chicken fried rice" width="170rem" loading="eager">
@@ -592,7 +640,7 @@
                         and drizzled with savory
                         oyster sauce
                     </p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$11.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $11.99</span></a>
                 </div>
 
 
@@ -616,7 +664,7 @@
                 </div>
 
 
-                <div class="box touch">
+                <div class="box touch" data-name="Noodles with Meatballs" data-price="11.99">
                     <!--Image of food-->
                     <img src="images/menu images/Chinese Cuisine/Noodles with Meatballs, $9.99.jpg"
                         alt="picture of noodles with meatballs" width="150rem" loading="eager">
@@ -633,7 +681,7 @@
                     <!--Food Description-->
                     <p class="tiny-food-sub">Dive into our dish featuring tender meatballs with top a bed
                         of flavorful noodles</p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$9.99</span></a>
+                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $11.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/Chinese Cuisine/Spicy Citrus Noodles, $9.99.jpg'); content : ' Alt text for image ' ;"
@@ -657,7 +705,7 @@
                 </div>
 
 
-                <div class="box touch">
+                <div class="box touch" data-name="Spicy Citrus Noodles" data-price="9.99">
                     <!--Image of food-->
                     <img src="images/menu images/Chinese Cuisine/Spicy Citrus Noodles, $9.99.jpg"
                         alt="picture of Spicy Citrus noodles" width="170rem" loading="eager">
@@ -676,7 +724,7 @@
                         creating a symphony of
                         flavors
                     </p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$9.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
                 </div>
 
 
@@ -700,7 +748,7 @@
                     </div>
                 </div>
 
-                <div class="box touch">
+                <div class="box touch" data-name="Stir Fry Noodles" data-price="9.99">
                     <!--Image of food-->
                     <img src="images/menu images/Chinese Cuisine/Stirfry Noodles, $9.99.jpg"
                         alt="picture of Stir Fry noodles" width="200rem" loading="eager">
@@ -719,7 +767,7 @@
                         and perfectly cooked
                         noodles
                     </p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$9.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/Chinese Cuisine/Vegetable Dimsum Soup, $9.99.jpg'); content : ' Alt text for image ' ;"
@@ -741,7 +789,7 @@
                     </div>
                 </div>
 
-                <div class="box touch">
+                <div class="box touch" data-name="Vegetable Dim Sum Soup" data-price="9.99">
                     <!--Image of food-->
                     <img src="images/menu images/Chinese Cuisine/Vegetable Dimsum Soup, $9.99.jpg"
                         alt="picture of Vegetable Dimsum Soup" width="150rem" loading="eager">
@@ -758,7 +806,7 @@
                     <!--Food Description-->
                     <p class="tiny-food-sub">A comforting bowl of steamed
                         dumplings in a savory broth</p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$10.99</span></a>
+                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
                 </div>
             </div>
 
@@ -787,7 +835,7 @@
                     </div>
                 </div>
 
-                <div class="box touch">
+                <div class="box touch" data-name="Bisque" data-price="9.99">
                     <!--Image of Food-->
                     <img src="images/menu images/French Cuisine/Bisque, $9.99.jpg" alt="picture of Bisque"
                         width="200rem" loading="eager">
@@ -806,7 +854,7 @@
                         a taste of
                         French elegance
                     </p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$9.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/French Cuisine/Bouillabaisse, $12.99.jpg'); content : ' Alt text for image ' ;"
@@ -829,7 +877,7 @@
                     </div>
                 </div>
 
-                <div class="box touch">
+                <div class="box touch" data-name="Bouillabaisse" data-price="12.99">
                     <!--Image of Food-->
                     <img src="images/menu images/French Cuisine/Bouillabaisse, $12.99.jpg"
                         alt="picture of Bouillabaisse" width="200rem" loading="eager">
@@ -847,7 +895,7 @@
                     <p class="tiny-food-sub">A hearty fish stew
                         brimming with the
                         essence of Provence</p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$12.99</span></a>
+                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $12.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/French Cuisine/Croque Monsieur, $10.99.jpg'); content : ' Alt text for image ' ;"
@@ -870,7 +918,7 @@
                     </div>
                 </div>
 
-                <div class="box touch">
+                <div class="box touch" data-name="Croque Monsieur" data-price="10.99">
                     <!--Image of Food-->
                     <img src="images/menu images/French Cuisine/Croque Monsieur, $10.99.jpg"
                         alt="picture of Croque Monsieur" width="200rem" loading="eager">
@@ -889,7 +937,7 @@
                         sandwich elevated to
                         gourmet heights
                     </p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$10.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $10.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/French Cuisine/French Onion Soup, $9.99.jpg'); content : ' Alt text for image ' ;"
@@ -911,7 +959,7 @@
                     </div>
                 </div>
 
-                <div class="box touch">
+                <div class="box touch" data-name="French Onion Soup" data-price="9.99">
                     <!--Image of Food-->
                     <img src="images/menu images/French Cuisine/French Onion Soup, $9.99.jpg"
                         alt="picture of French Onion Soup" width="200rem" loading="eager">
@@ -929,7 +977,7 @@
                     <p class="tiny-food-sub">A classic blend of caramelized onions, rich broth, and
                         melted cheese
                     </p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$9.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/French Cuisine/Ratatouille, $10.99.jpg'); content : ' Alt text for image ' ;"
@@ -952,7 +1000,7 @@
                     </div>
                 </div>
 
-                <div class="box touch">
+                <div class="box touch" data-name="Ratatouille" data-price="10.99">
                     <!--Image of Food-->
                     <img src="images/menu images/French Cuisine/Ratatouille, $10.99.jpg" alt="picture of fried rice"
                         width="200rem" loading="eager">
@@ -970,7 +1018,7 @@
                     <p class="tiny-food-sub">A medley of vibrant vegetables cooked to
                         perfection in a savory
                         tomato sauce</p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$10.99</span></a>
+                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $10.99</span></a>
                 </div>
             </div>
 
@@ -999,7 +1047,7 @@
                     </div>
                 </div>
 
-                <div class="box touch">
+                <div class="box touch" data-name="Butter Chicken with Naan" data-price="12.99">
                     <!--Image of food-->
                     <img src="images/menu images/Indian Cuisine/Butter Chicken with Garlic Naan, $12.99.jpg"
                         alt="picture of Butter Chicken with Garlic Naan" width="200rem" loading="eager">
@@ -1018,7 +1066,7 @@
                         an authentic Indian
                         experience
                     </p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$12.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $12.99</span></a>
                 </div>
 
 
@@ -1042,7 +1090,7 @@
                     </div>
                 </div>
 
-                <div class="box touch">
+                <div class="box touch" data-name="Dosa with Sambar" data-price="12.99">
                     <!--Image of food-->
                     <img src="images/menu images/Indian Cuisine/Dosa with Sambar and Green Coconut Sauce, $12.99.jpg"
                         alt="picture of Dosa with Sambar and Green Coconut Sauce" width="200rem" loading="eager">
@@ -1060,7 +1108,7 @@
                     <p class="tiny-food-sub">A thin and crispy crepe served with
                         flavorful Sambar and
                         Coconut Sauce</p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$12.99</span></a>
+                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $12.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/Indian Cuisine/Hyderabadi chicken Biryani, $12.99.jpg'); content : ' Alt text for image ' ;"
@@ -1083,7 +1131,7 @@
                     </div>
                 </div>
 
-                <div class="box touch">
+                <div class="box touch" data-name="Hyderabadi Chicken Biryani" data-price="12.99">
                     <!--Image of food-->
                     <img src="images/menu images/Indian Cuisine/Hyderabadi chicken Biryani, $12.99.jpg"
                         alt="picture of Hyderabadi chicken Biryani" width="200rem" loading="eager">
@@ -1101,7 +1149,7 @@
                     <p class="tiny-food-sub">A fragrant and flavorful rice
                         dish that captures the
                         essence of Indian cuisine</p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$14.99</span></a>
+                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $12.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/Indian Cuisine/Samosas with Spicy Green Sauce, $9.99.jpg'); content : ' Alt text for image ' ;"
@@ -1125,7 +1173,7 @@
                     </div>
                 </div>
 
-                <div class="box touch">
+                <div class="box touch" data-name="Samosas with Chutney" data-price="9.99">
                     <!--Image of food-->
                     <img src="images/menu images/Indian Cuisine/Samosas with Spicy Green Sauce, $9.99.jpg"
                         alt="picture of Samosas with Spicy Green Sauce" width="200rem" loading="eager">
@@ -1145,7 +1193,7 @@
                     <p class="tiny-food-sub">Filled with a delicious
                         blend of potatoes and peas,
                         served with a zesty green sauce</p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$9.99</span></a>
+                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/Indian Cuisine/Tandoori Roti, $7.99.jpg'); content : ' Alt text for image ' ;"
@@ -1171,7 +1219,7 @@
                 </div>
 
 
-                <div class="box touch">
+                <div class="box touch" data-name="Tandoori Roti" data-price="7.99">
                     <!--Image of food-->
                     <img src="images/menu images/Indian Cuisine/Tandoori Roti, $7.99.jpg" alt="picture of Tandoori Roti"
                         width="200rem" loading="eager">
@@ -1191,7 +1239,7 @@
                     <p class="tiny-food-sub">Freshly baked and perfect for scooping up the
                         flavors of your
                         favorite Indian dishes</p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$7.99</span></a>
+                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $7.99</span></a>
                 </div>
             </div>
 
@@ -1221,7 +1269,7 @@
                     </div>
                 </div>
 
-                <div class="box touch">
+                <div class="box touch" data-name="Onigiri" data-price="9.99">
                     <!--Image of food-->
                     <img src="images/menu images/Japanese Cuisine/Onigiri, $9.99.jpg" alt="picture of Onigiri"
                         width="200rem" loading="eager">
@@ -1238,7 +1286,7 @@
                     <!--Food Description-->
                     <p class="tiny-food-sub">Delightful rice triangles filled with various
                         flavorful fillings including seaweed</p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$9.99</span></a>
+                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/Japanese Cuisine/Sushi and Sashimi, $11.99.jpg'); content : ' Alt text for image ' ;"
@@ -1261,7 +1309,7 @@
                     </div>
                 </div>
 
-                <div class="box touch">
+                <div class="box touch" data-name="Sushu and Sashimi" data-price="11.99">
                     <!--Image of food-->
                     <img src="images/menu images/Japanese Cuisine/Sushi and Sashimi, $11.99.jpg"
                         alt="picture of Sushi and Sashimi" width="200rem" loading="eager">
@@ -1280,7 +1328,7 @@
                         selection of fresh, expertly
                         crafted bites
                     </p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$11.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $11.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/Japanese Cuisine/Takoyaki, $9.99.jpg'); content : ' Alt text for image ' ;"
@@ -1304,7 +1352,7 @@
                 </div>
 
 
-                <div class="box touch">
+                <div class="box touch" data-name="Takoyaki" data-price="11.99">
                     <!--Image of food-->
                     <img src="images/menu images/Japanese Cuisine/Takoyaki, $9.99.jpg" alt="picture of Takoyaki"
                         width="200rem" loading="eager">
@@ -1323,7 +1371,7 @@
                         balls that are both
                         flavorful and fun topped with spices
                     </p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$9.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $11.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/Japanese Cuisine/Tempura, $9.99.jpg'); content : ' Alt text for image ' ;"
@@ -1346,7 +1394,7 @@
                     </div>
                 </div>
 
-                <div class="box touch">
+                <div class="box touch" data-name="Tempura" data-price="9.99">
                     <!--Image of food-->
                     <img src="images/menu images/Japanese Cuisine/Tempura, $9.99.jpg" alt="picture of Tempura"
                         width="200rem" loading="eager">
@@ -1364,7 +1412,7 @@
                     <p class="tiny-food-sub">Savor the light and crispy perfection,
                         featuring delicately battered and fried
                         seafood.</p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$9.99</span></a>
+                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/Japanese Cuisine/Yakitori, 10.99.jpg'); content : ' Alt text for image ' ;"
@@ -1387,7 +1435,7 @@
                 </div>
 
 
-                <div class="box touch">
+                <div class="box touch" data-name="Yakitori" data-price="10.99">
                     <!--Image of food-->
                     <img src="images/menu images/Japanese Cuisine/Yakitori, 10.99.jpg" alt="picture of Yakitori"
                         width="200rem" loading="eager">
@@ -1404,7 +1452,7 @@
                     <!--Food Description-->
                     <p class="tiny-food-sub">Skewers of succulent meat, glazed to perfection
                         with a savory sauce</p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$10.99</span></a>
+                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $10.99</span></a>
                 </div>
             </div>
 
@@ -1434,7 +1482,7 @@
                     </div>
                 </div>
 
-                <div class="box touch">
+                <div class="box touch" data-name="Green Curry" data-price="10.99">
                     <!--Image of food-->
                     <img src="images/menu images/Thai Cuisine/Green Curry, $10.99.jpg" alt="picture of Green Curry"
                         width="200rem" loading="eager">
@@ -1452,9 +1500,9 @@
                     <p class="tiny-food-sub">A tantalizing blend of coconut
                         milk, herbs, and
                         spices
-                    </p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"
-                        onclick="event.preventDefault();"><span>$10.99</span></a>
+                    </p>                        
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $10.99</span></a>
+
                 </div>
 
                 <div style="background-image: url('images/menu images/Thai Cuisine/Pad Thai, $10.99.jpg'); content : ' Alt text for image ' ;"
@@ -1477,7 +1525,7 @@
                     </div>
                 </div>
 
-                <div class="box touch">
+                <div class="box touch" data-name="Pad Thai" data-price="10.99">
                     <!--Image of food-->
                     <img src="images/menu images/Thai Cuisine/Pad Thai, $10.99.jpg" alt="picture of Pad Thai"
                         width="200rem" loading="eager">
@@ -1496,7 +1544,7 @@
                         the perfect balance of
                         sweet, salty, and sour
                     </p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$10.99</span></a>
+                    <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $10.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/Thai Cuisine/Panang curry, $10.99.jpg'); content : ' Alt text for image ' ;"
@@ -1518,7 +1566,7 @@
                     </div>
                 </div>
 
-                <div class="box touch">
+                <div class="box touch" data-name="Panang Curry" data-price="10.99">
                     <!--Image of food-->
                     <img src="images/menu images/Thai Cuisine/Panang curry, $10.99.jpg" alt="picture of Panang curry"
                         width="200rem" loading="eager">
@@ -1535,7 +1583,7 @@
                     <!--Food Description-->
                     <p class="tiny-food-sub">A luscious and aromatic curry that captivates
                         the senses of anything</p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$10.99</span></a>
+                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $10.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/Thai Cuisine/Spicy Green Papaya Salad, $9.99.jpg'); content : ' Alt text for image ' ;"
@@ -1558,7 +1606,7 @@
                     </div>
                 </div>
 
-                <div class="box touch">
+                <div class="box touch" data-name="Spicy Green Papaya Salad" data-price="9.99">
                     <!--Image of food-->
                     <img src="images/menu images/Thai Cuisine/Spicy Green Papaya Salad, $9.99.jpg"
                         alt="picture of Spicy Green Papaya Salad" width="200rem" loading="eager">
@@ -1575,7 +1623,7 @@
                     <!--Food Description-->
                     <p class="tiny-food-sub">Refresh yourself with a zesty and crunchy mix of green papaya,
                         chili, and lime</p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$9.99</span></a>
+                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $9.99</span></a>
                 </div>
 
                 <div style="background-image: url('images/menu images/Thai Cuisine/Tom Yum, $11.99.jpg'); content : ' Alt text for image ' ;"
@@ -1599,7 +1647,7 @@
                     </div>
                 </div>
 
-                <div class="box touch">
+                <div class="box touch" data-name="Tom Yum" data-price="11.99">
                     <!--Image of food-->
                     <img src="images/menu images/Thai Cuisine/Tom Yum, $11.99.jpg" alt="picture of Tom Yum"
                         width="200rem" loading="eager">
@@ -1618,7 +1666,7 @@
                     <p class="tiny-food-sub">A Thai classic featuring a
                         harmonious blend of herbs
                         and spices</p>
-                    <a href="#" class="btn" onclick="event.preventDefault();"><span>$11.99</span></a>
+                        <a href="#" class="btn" onclick="addToCart(event, this)"><span>Add to Cart - $11.99</span></a>
                 </div>
             </div>
             <br><br><br><br><br>
@@ -1711,6 +1759,10 @@
     </footer>
     <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxc9dvg30h3yohbcjxw0zzrz"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<<<<<<< HEAD
+    <script src="my-new-app/build/static/js/main.aab444c0.js"></script>
+=======
+>>>>>>> d4a0836efc369cb0777133a6059f9d2ba16b40f6
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             AOS.init({
