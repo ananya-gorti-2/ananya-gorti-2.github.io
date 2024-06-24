@@ -1,0 +1,88 @@
+/* Basic styling for the form */
+.containerconc {
+    max-width: 800px;
+    /* Increased max-width */
+    margin: 20px auto;
+    background-color: #eeeeee;
+    padding: 20px;
+    border-radius: 80px;
+    margin-bottom: 35px;
+  }
+  
+  .contact {
+    font-family: Arial, sans-serif;
+  }
+  
+  .headingconc {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    border: white;
+  }
+  
+  .inputbox {
+    width: 50%;
+    /* Adjusted width for better spacing */
+    margin-bottom: 15px;
+  }
+  
+  .inputname,
+  .textname {
+    display: block;
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 0px;
+  }
+  
+  input[type="text"],
+  textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ff0000;
+    border-radius: 4px;
+  }
+  
+  textarea {
+    resize: vertical;
+    /* Allow vertical resizing */
+  }
+  
+  
+  
+  input[type="submit"] {
+    margin-top: 10px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    letter-spacing: 0.1rem !important;
+    transition: all 0.2s linear !important;
+  }
+  
+  @media (max-width: 768px) {
+    .inputbox {
+      width: 100%;
+      /* Full width on smaller screens */
+    }
+  
+    .containerconc {
+      width: 80%;
+    }
+  }
+  
+  

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Metadata -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
+  <link rel="icon" type="x-icon" href="images/CulHar_Logo-removebg.png" />
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <!-- Title -->
+  <title>Application Dish Cleaner</title>
+  <!-- Font Awesome CSS link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="main.css" />
+</head>
+<style>
+  .icon-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .icon-container i {
+    margin-right: 8px;
+    margin-top: 10px;
+    margin-bottom: 11px;
+    color: red;
+  }
+</style>
+
+<body class="no-cap">
+  <!-- Header section -->
+  <header>
+    <!-- Logo and Text -->
+    <a href="#" class="logo">
+      <img src="images/CulHar_Logo-removebg.png" width="30px" />
+      <div class="log_text">Culinary Harbor</div>
+    </a>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+      <!-- Navigation Links -->
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="careers.html">Careers</a>
+      <a href="why_us.html">Benefits</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <!-- Apply Now Button -->
+    <div class="apply_btn">
+      <button class="btn menu-btn">
+        <a href="cart.html">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count">0</span>
+        </a>
+      </button>
+      <script>
+        function updateCartCountOnLoad() {
+          let cart = JSON.parse(localStorage.getItem('cart')) || [];
+          let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
+          document.getElementById('cart-count').textContent = totalCount;
+      }
+      
+      // Call the function on page load
+        updateCartCountOnLoad();
+      </script>
+      <button class="btn"><a href="apply.html">Apply Now</a></button>
+      <i class="fa-solid fa-bars" id="bar"></i>
+    </div>
+  </header>
+
+  <!-- Spacing lines -->
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <!-- Cashier Application Form -->
+  <h1>Dish Cleaner Application Form</h1>
+  <br>
+  <!-- Form -->
+  <form id="Dish Cleaner Application Form" class="cashier_app">
+    <!-- Form Fields -->
+    <label for="fullName" class="icon-container">
+      <i class="fas fa-user"></i>
+      Full Name:
+    </label>
+    <input type="text" id="fullName" name="fullName" required />
+
+    <label for="email" class="icon-container">
+      <i class="fas fa-envelope"></i>
+      Email:
+    </label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="dob" class="icon-container">
+      <i class="fas fa-calendar-alt"></i>
+      Date of Birth:
+    </label>
+    <input type="date" id="dob" name="dob" required />
+
+
+
+    <!-- Address Details -->
+    <label for="address" class="icon-container">
+      <i class="fas fa-map-marker-alt"></i>
+      Address:
+    </label>
+    <input type="text" id="address" name="address" required placeholder="Street Address" />
+    <input type="text" id="city" name="city" required placeholder="City" />
+    <input type="text" id="state" name="state" required placeholder="State" />
+    <input type="text" id="zip" name="zip" required placeholder="ZIP Code" />
+
+
+    <!-- Education Level -->
+    <label for="education" class="icon-container">
+      <i class="fas fa-graduation-cap"></i>
+      Highest Level of Education:
+    </label>
+    <select id="education" name="education" required>
+      <option value="">Select</option>
+      <option value="High School">High School</option>
+      <option value="Associate's Degree">Associate's Degree</option>
+      <option value="Bachelor's Degree">Bachelor's Degree</option>
+      <option value="Master's Degree">Master's Degree</option>
+      <option value="Doctorate">Doctorate</option>
+    </select>
+
+    <!-- Other Form Fields -->
+    <label for="coverLetter" class="icon-container">
+      <i class="fas fa-file-alt"></i>
+      Cover Letter:
+    </label>
+    <textarea id="coverLetter" name="coverLetter" required></textarea>
+
+    <label for="employmentHistory" class="icon-container">
+      <i class="fas fa-briefcase"></i>
+      Employment History:
+    </label>
+    <textarea id="employmentHistory" name="employmentHistory" required></textarea>
+
+    <label for="experience" class="icon-container">
+      <i class="fas fa-users"></i>
+      How do you handle multitasking and prioritize tasks during busy periods?
+    </label>
+    <textarea id="multitask" name="multitask" required></textarea>
+
+
+    <label for="whyWorkHere" class="icon-container">
+      <i class="fas fa-question-circle"></i>
+      Why do you want to work here?
+    </label>
+    <textarea id="whyWorkHere" name="whyWorkHere" required></textarea>
+
+    <label for="expectedSalary" class="icon-container">
+      <i class="fas fa-dollar-sign"></i>
+      Expected Salary:
+    </label>
+    <input type="number" id="expectedSalary" name="expectedSalary" required />
+
+    <label for="bestCandidateSkills" class="icon-container">
+      <i class="fas fa-star"></i>
+      What skills make you the best candidate for this position?
+    </label>
+    <textarea id="bestCandidateSkills" name="bestCandidateSkills" required></textarea>
+
+    <label for="motivationsAtWork" class="icon-container">
+      <i class="fas fa-lightbulb"></i>
+      What motivations inspire you at work?
+    </label>
+    <textarea id="motivationsAtWork" name="motivationsAtWork" required></textarea>
+
+
+    <label for="resumeUpload" class="icon-container">
+      <i class="fas fa-file-upload"></i>
+      Upload Your Resume:
+    </label>
+    <input type="file" id="resumeUpload" name="resumeUpload" accept=".pdf,.doc,.docx" required />
+
+    <div class="g-recaptcha recaptcha-space" data-sitekey="6LfOnv0pAAAAAHZvc8kOEojkS9E1NCORTlTP9rjN"></div>
+
+    <script>
+      document.querySelectorAll("textarea").forEach(function (textarea) {
+        textarea.style.resize = 'none';
+      });
+
+    </script>
+
+    <!-- Submit Button -->
+    <a href="thankyou.html" class="application1"><button type="submit" id="submit">Submit Application</button></a>
+  </form>
+
+
+  <!--JS to connect to database-->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+    import { getStorage, ref as refsto, getDownloadURL, uploadBytes } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js";
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var form = document.getElementById('Dish Cleaner Application Form');
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent form submission
+
+        function validateRecaptcha() {
+          var response = grecaptcha.getResponse();
+          if (response.length === 0) {
+            alert("Please complete the reCAPTCHA.");
+            return false;
+          }
+          return true;
+        }
+
+        if (validateForm() && validateRecaptcha()) {
+          // Firebase configuration
+          const firebaseConfig = {
+            apiKey: "AIzaSyAO9zhttsR2jhYQPBpsNiAzBPPMD8ZJtno",
+            authDomain: "fbla-restaurant-db.firebaseapp.com",
+            databaseURL: "https://fbla-restaurant-db-default-rtdb.firebaseio.com",
+            projectId: "fbla-restaurant-db",
+            storageBucket: "fbla-restaurant-db.appspot.com",
+            messagingSenderId: "1032671063739",
+            appId: "1:1032671063739:web:93e3567aade232b2db839e"
+          };
+
+          // Initialize Firebase
+          const app = initializeApp(firebaseConfig);
+          const db = getDatabase(app);
+
+
+          const storage = getStorage();
+
+          const file = document.getElementById('resumeUpload').files[0];
+
+          // Create a storage reference
+          const storageRef = refsto(storage, 'resumes/' + document.getElementById("fullName").value + '/' + `${document.getElementById("fullName").value}.pdf`);
+
+          // Upload file to Firebase Storage
+          const uploadTaskSnapshot = uploadBytes(storageRef, file);
+          console.log('File uploaded successfully:', uploadTaskSnapshot);
+
+          // Get download URL
+          const downloadURL = getDownloadURL(storageRef);
+          console.log('File available at:', downloadURL);
+
+          // Data submission to Firebase
+          set(ref(db, "fullName/" + document.getElementById("fullName").value), {
+            applicationForm: "Dish Cleaner Application Form",
+            fullName: document.getElementById("fullName").value,
+            email: document.getElementById("email").value,
+            dob: document.getElementById("dob").value,
+            address: document.getElementById("address").value,
+            education: document.getElementById("education").value,
+            state: document.getElementById("state").value,
+            zip: document.getElementById("zip").value,
+            coverletter: document.getElementById("coverLetter").value,
+            employmenthistory: document.getElementById("employmentHistory").value,
+            multitask: document.getElementById("multitask").value,
+            whyworkhere: document.getElementById("whyWorkHere").value,
+            expectedsalary: document.getElementById("expectedSalary").value,
+            bestcandidateskills: document.getElementById("bestCandidateSkills").value,
+            motivationsatwork: document.getElementById("motivationsAtWork").value,
+            resume: downloadURL
+          }).then(() => {
+            alert("Application Received! Be on the lookout for an email from us. Make sure to check your spam folder!");
+            window.location.href = 'thankyou.html'; // Redirect to thankyou.html upon successful submission
+          }).catch((error) => {
+            console.error("Error adding document: ", error);
+          });
+        }
+      });
+
+      function validateForm() {
+        var fullName = document.getElementById('fullName').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var dob = document.getElementById('dob').value.trim();
+        var address = document.getElementById('address').value.trim();
+
+        if (fullName === '') {
+          alert('Please enter your full name.');
+          return false;
+        }
+
+        if (email === '' || !isValidEmail(email)) {
+          alert('Please enter a valid email address.');
+          return false;
+        }
+
+        var dobDate = new Date(dob);
+        var eighteenYearsAgo = new Date();
+        eighteenYearsAgo.setFullYear(eighteenYearsAgo.getFullYear() - 18);
+        if (dobDate > eighteenYearsAgo) {
+          alert('You must be at least 18 years old.');
+          return false;
+        }
+
+        return true; // Form is valid
+      }
+
+      function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+    });
+  </script>
+
+  <!--link to common JS-->
+  <script src="main.js"></script>
+  <script>
+    // Prevent right-click
+    window.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    }, false);
+
+    // Prevent Ctrl+U
+    document.addEventListener("keydown", function (e) {
+      if (e.ctrlKey && e.key === "u") {
+        e.preventDefault();
+      }
+    });
+
+    // Prevent Ctrl+Shift+I, Ctrl+Shift+J, and Ctrl+Shift+C
+    document.addEventListener("keydown", function (e) {
+      if ((e.ctrlKey && e.shiftKey && (e.key === "i" || e.key === "I")) ||
+        (e.ctrlKey && e.shiftKey && (e.key === "j" || e.key === "J")) ||
+        (e.ctrlKey && e.shiftKey && (e.key === "c" || e.key === "C"))) {
+        e.preventDefault();
+      }
+    });
+
+    // Prevent F12
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "F12") {
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
+
+</html>

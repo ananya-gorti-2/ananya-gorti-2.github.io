@@ -23,48 +23,49 @@
 
 <body>
   <!-- Header section -->
-<header>
-  <!-- Culinary Harbor logo and text -->
-  <a href="#" class="logo">
-    <img src="images/CulHar_Logo-removebg.png" width="35px" loading="eager" />
-    <div class="log_text">Culinary Harbor</div>
-  </a>
+  <header>
+    <!-- Culinary Harbor logo and text -->
+    <a href="#" class="logo">
+      <img src="images/CulHar_Logo-removebg.png" width="35px" loading="eager" />
+      <div class="log_text">Culinary Harbor</div>
+    </a>
 
-  <!-- Navigation menu -->
-  <nav class="navbar">
-    <a class="active" href="index.html">Home</a>
-    <a href="menu.html">Menu</a>
-    <a href="about.html">About</a>
-    <a href="careers.html">Careers</a>
-    <a href="why_us.html">Benefits</a>
-    <a href="faq.html">FAQ</a>
-  </nav>
+    <!-- Navigation menu -->
+    <nav class="navbar">
+      <a class="active" href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="careers.html">Careers</a>
+      <a href="why_us.html">Benefits</a>
+      <a href="faq.html">FAQ</a>
+      <a href="support.html">Support</a>
+    </nav>
 
-  <!-- Apply button and toggle icon for mobile menu -->
-  <div class="apply_btn">
-    <button class="btn menu-btn">
-      <a href="cart.html">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span id="cart-count">0</span>
-      </a>
-    </button>
-    <script>
-      function updateCartCountOnLoad() {
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
-        document.getElementById('cart-count').textContent = totalCount;
-    }
-    
-    // Call the function on page load
-      updateCartCountOnLoad();
-    </script>
-    <button class="btn"><a href="apply.html">Apply Now</a></button>
-    
+    <!-- Apply button and toggle icon for mobile menu -->
+    <div class="apply_btn">
+      <button class="btn menu-btn">
+        <a href="cart.html">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count">0</span>
+        </a>
+      </button>
+      <script>
+        function updateCartCountOnLoad() {
+          let cart = JSON.parse(localStorage.getItem('cart')) || [];
+          let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
+          document.getElementById('cart-count').textContent = totalCount;
+        }
 
-    <i class="fa-solid fa-bars" id="bar"></i>
-  </div>
+        // Call the function on page load
+        updateCartCountOnLoad();
+      </script>
+      <button class="btn"><a href="apply.html">Apply Now</a></button>
 
-</header>
+
+      <i class="fa-solid fa-bars" id="bar"></i>
+    </div>
+
+  </header>
 
   <!-- Thank you section -->
   <section id="thankyou">
@@ -80,79 +81,84 @@
   <!-- Adding some line breaks for spacing -->
   <br><br><br><br><br><br><br><br><br><br>
 
-<footer>
-  <!-- Footer section -->
-  <section class="footer">
-    <!-- Box container for footer content -->
-    <div class="box-container">
-      <!-- Box for displaying operating hours -->
-      <div class="box">
-        <h3>Hours</h3>
-        <!-- Operating hours for each day -->
-        <a href="#" onclick="event.preventDefault();">Monday: 10:00AM - 11:00PM</a>
-        <a href="#" onclick="event.preventDefault();">Tuesday: 10:00AM - 11:00PM</a>
-        <a href="#" onclick="event.preventDefault();">Wednesday: 10:00AM - 11:00PM </a>
-        <a href="#" onclick="event.preventDefault();">Thursday: 10:00AM - 11:00PM </a>
-        <a href="#" onclick="event.preventDefault();">Friday: 10:00AM - 11:00PM </a>
-        <a href="#" onclick="event.preventDefault();">Saturday: 8:00AM - 11:00PM </a>
-        <a href="#" onclick="event.preventDefault();">Sunday: 8:00AM - 11:00PM </a>
-      </div>
-      <!-- Box for displaying locations -->
-      <div class="box">
-        <h3>Locations</h3>
-        <!-- Location links -->
-        <a href="#" onclick="event.preventDefault();">United States</a>
-        <a href="#" onclick="event.preventDefault();">Japan</a>
-        <a href="#" onclick="event.preventDefault();">India</a>
-        <a href="#" onclick="event.preventDefault();">China</a>
-        <a href="#" onclick="event.preventDefault();">Russia</a>
-        <a href="#" onclick="event.preventDefault();">France</a>
-        <a href="#" onclick="event.preventDefault();">Iran</a>
+  <footer>
+    <!-- Footer section -->
+    <section class="footer">
+      <!-- Box container for footer content -->
+      <div class="box-container">
+        <!-- Box for displaying operating hours -->
+        <div class="box">
+          <h3>Hours</h3>
+          <!-- Operating hours for each day -->
+          <a href="#" onclick="event.preventDefault();">Monday: 10:00AM - 11:00PM</a>
+          <a href="#" onclick="event.preventDefault();">Tuesday: 10:00AM - 11:00PM</a>
+          <a href="#" onclick="event.preventDefault();">Wednesday: 10:00AM - 11:00PM </a>
+          <a href="#" onclick="event.preventDefault();">Thursday: 10:00AM - 11:00PM </a>
+          <a href="#" onclick="event.preventDefault();">Friday: 10:00AM - 11:00PM </a>
+          <a href="#" onclick="event.preventDefault();">Saturday: 8:00AM - 11:00PM </a>
+          <a href="#" onclick="event.preventDefault();">Sunday: 8:00AM - 11:00PM </a>
+        </div>
+        <!-- Box for displaying locations -->
+        <div class="box">
+          <h3>Locations</h3>
+          <!-- Location links -->
+          <a href="#" onclick="event.preventDefault();">United States</a>
+          <a href="#" onclick="event.preventDefault();">Japan</a>
+          <a href="#" onclick="event.preventDefault();">India</a>
+          <a href="#" onclick="event.preventDefault();">China</a>
+          <a href="#" onclick="event.preventDefault();">Russia</a>
+          <a href="#" onclick="event.preventDefault();">France</a>
+          <a href="#" onclick="event.preventDefault();">Iran</a>
+        </div>
+
+        <div class="box">
+          <h3>Quick Links</h3>
+          <!-- Quick links to various pages -->
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About</a>
+          <a href="careers.html">Careers</a>
+          <a href="why_us.html">Benefits</a>
+          <a href="faq.html">FAQ</a>
+          <a href="support.html">Support</a>
+          <a href="apply.html">Apply</a>
+          <a href="https://yaswanth0618.github.io/Webdevadmin/index.html">Admin</a>
+          <a href="sources.html"> Sources</a>
+        </div>
+
+        <div class="box">
+          <h3>Contact</h3>
+          <!--Show conatct info-->
+          <h4>Phone Numbers</h4>
+          <a href="tel:+1234567890"><i class="fa-solid fa-phone" style="color: #ff0000;"></i> +123-456-7892</a>
+          <a href="tel:+1234567890"><i class="fa-solid fa-phone" style="color: #ff0000;"></i> +111-222-3333</a>
+          <h4 class="email-footer">Email</h4>
+          <a href="mailto:culinaryharbor30@gmail.com" class="email-link"><i class="fa-solid fa-envelope" style="color: #ff0000;"></i> culinaryharbor30@gmail.com</a>
+        </div>
+
+        <!--Social Links-->
+        <div class="box">
+          <h3>Follow Us</h3>
+          <a href="https://www.instagram.com/culinaryharbor30/" target="_blank"><i class="fa-brands fa-instagram"
+              style="color: #ff0000;"></i> Instagram</a>
+          <a href="https://twitter.com/culinaryh30" target="_blank"><i class="fa-brands fa-twitter"
+              style="color: #ff0000;"></i>
+            Twitter</a>
+          <a href="https://www.youtube.com/channel/UCaL5GaP2e81gd7W2CmJVW-g" target="_blank"><i
+              class="fa-brands fa-youtube" style="color: #ff0000;"></i> Youtube</a>
+        </div>
       </div>
 
-      <div class="box">
-        <h3>Quick Links</h3>
-        <!-- Quick links to various pages -->
-        <a href="#">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="about.html">About</a>
-        <a href="careers.html">Careers</a>
-        <a href="why_us.html">Benefits</a>
-        <a href="faq.html">FAQ</a>
-        <a href="apply.html">Apply</a>
-        <a href="https://yaswanth0618.github.io/Webdevadmin/index.html">Admin</a>
-        <a href="sources.html"> Sources</a>
+      <!-- Horizontal line -->
+      <hr>
+
+      <!-- Copyright information -->
+      <div class="credit">
+        &copy; 2024 <span>Culinary Harbor.</span> All rights reserved.
       </div>
-
-      <div class="box">
-        <h3>Contact</h3>
-        <!--Show conatct info-->
-        <h4>Phone Numbers</h4>
-        <a href="tel:+1234567890">+123-456-7892</a>
-        <a href="tel:+1234567890">+111-222-3333</a>
-        <h4 class="email-footer">Email</h4>
-        <a href="mailto:culinaryharbor30@gmail.com" class="email-link">culinaryharbor30@gmail.com</a>
-      </div>
-
-      <!--Social Links-->
-      <div class="box">
-        <h3>Follow Us</h3>
-        <a href="https://www.instagram.com/culinaryharbor30/" target="_blank">Instagram</a>
-        <a href="https://twitter.com/culinaryh30" target="_blank">Twitter</a>
-        <a href="https://www.youtube.com/channel/UCaL5GaP2e81gd7W2CmJVW-g" target="_blank">Youtube</a>
-      </div>
-    </div>
-
-    <!-- Horizontal line -->
-    <hr>
-
-    <!-- Copyright information -->
-    <div class="credit">
-      &copy; 2024 <span>Culinary Harbor.</span> All rights reserved.
-    </div>
-  </section>
-</footer>
-    <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxc9dvg30h3yohbcjxw0zzrz"></script>
+    </section>
+  </footer>
+  <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxc9dvg30h3yohbcjxw0zzrz"></script>
 </body>
 
 </html>

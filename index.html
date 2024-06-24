@@ -47,6 +47,7 @@
       <a href="careers.html">Careers</a>
       <a href="why_us.html">Benefits</a>
       <a href="faq.html">FAQ</a>
+      <a href="support.html">Support</a>
 
     </nav>
 
@@ -63,19 +64,28 @@
           let cart = JSON.parse(localStorage.getItem('cart')) || [];
           let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
           document.getElementById('cart-count').textContent = totalCount;
-      }
-      
-      // Call the function on page load
+        }
+
+        // Call the function on page load
         updateCartCountOnLoad();
       </script>
       <button class="btn"><a href="apply.html">Apply Now</a></button>
       <i class="fa-solid fa-bars" id="bar"></i>
-      
+
 
     </div>
   </header>
 
   <main>
+    <div class="notification" id="notification">
+      <span class="notification-text">Your notification message here. This can be long and take up the length of the
+        page
+        but not be thick.</span>
+      <button class="close-btn" onclick="closeNotification()">Close</button>
+    </div>
+
+    <br>
+    <!-- <br> -->
     <!--Swiper JS-->
     <section class="home">
       <!-- Swiper Library containers-->
@@ -251,9 +261,9 @@
       </div>
 
       <!--Segway Text-->
-      <div class="about-text home-menu">
-        <h2 data-aos="fade-left">Global Menu</h2>
-        <p data-aos="fade-up" class="segway_text">Indulge in a world of flavors at Culinary Harbor. Our menu offers a
+      <div data-aos="fade-left" class="about-text home-menu">
+        <h2>Global Menu</h2>
+        <p class="segway_text">Indulge in a world of flavors at Culinary Harbor. Our menu offers a
           passport to global
           cuisine, featuring dishes from South Africa, China,
           France, India, Japan, and Thailand. Our diverse selection ensures there's something for every palate.
@@ -406,9 +416,9 @@
       </div>
 
       <!--Segway text-->
-      <div class="about-text">
-        <h2 data-aos="fade-left">Living well begins <br> with eating well.</h2>
-        <p data-aos="fade-up" class="segway_text">Discover the essence of well-being through our philosophy that 'Living
+      <div data-aos="fade-left" class="about-text">
+        <h2>Living well begins <br> with eating well.</h2>
+        <p class="segway_text">Discover the essence of well-being through our philosophy that 'Living
           well begins with
           eating well.' At
           Culinary Harbor, we believe in the transformative power of food to nourish not just the body, but also the
@@ -857,6 +867,7 @@
           <a href="careers.html">Careers</a>
           <a href="why_us.html">Benefits</a>
           <a href="faq.html">FAQ</a>
+          <a href="support.html">Support</a>
           <a href="apply.html">Apply</a>
           <a href="https://yaswanth0618.github.io/Webdevadmin/index.html">Admin</a>
           <a href="sources.html"> Sources</a>
@@ -864,20 +875,25 @@
 
         <div class="box">
           <h3>Contact</h3>
-          <!--SHow conatct info-->
+          <!--Show conatct info-->
           <h4>Phone Numbers</h4>
-          <a href="tel:+1234567890">+123-456-7892</a>
-          <a href="tel:+1234567890">+111-222-3333</a>
+          <a href="tel:+1234567890"><i class="fa-solid fa-phone" style="color: #ff0000;"></i> +123-456-7892</a>
+          <a href="tel:+1234567890"><i class="fa-solid fa-phone" style="color: #ff0000;"></i> +111-222-3333</a>
           <h4 class="email-footer">Email</h4>
-          <a href="mailto:culinaryharbor30@gmail.com" class="email-link">culinaryharbor30@gmail.com</a>
+          <a href="mailto:culinaryharbor30@gmail.com" class="email-link"><i class="fa-solid fa-envelope"
+              style="color: #ff0000;"></i> culinaryharbor30@gmail.com</a>
         </div>
 
         <!--Social Links-->
         <div class="box">
           <h3>Follow Us</h3>
-          <a href="https://www.instagram.com/culinaryharbor30/" target="_blank">Instagram</a>
-          <a href="https://twitter.com/culinaryh30" target="_blank">Twitter</a>
-          <a href="https://www.youtube.com/channel/UCaL5GaP2e81gd7W2CmJVW-g" target="_blank">Youtube</a>
+          <a href="https://www.instagram.com/culinaryharbor30/" target="_blank"><i class="fa-brands fa-instagram"
+              style="color: #ff0000;"></i> Instagram</a>
+          <a href="https://twitter.com/culinaryh30" target="_blank"><i class="fa-brands fa-twitter"
+              style="color: #ff0000;"></i>
+            Twitter</a>
+          <a href="https://www.youtube.com/channel/UCaL5GaP2e81gd7W2CmJVW-g" target="_blank"><i
+              class="fa-brands fa-youtube" style="color: #ff0000;"></i> Youtube</a>
         </div>
       </div>
 
