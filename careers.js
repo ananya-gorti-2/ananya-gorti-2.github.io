@@ -56,7 +56,6 @@ const jobs = [
 ];
 
 
-
 // Displaying the number of jobs
 const jobsHeading = document.querySelector(".jobs-list-container h2");
 
@@ -71,37 +70,37 @@ function updateJobCount() {
 }
 
 
-
-
-
+// Function to open a modal
 function openModal(modalId) {
     var modal = document.getElementById(modalId);
     document.getElementById(modalId).style.display = "block";
     document.body.classList.add("modal-active");
     window.scrollTo({ top: 130, behavior: 'smooth' }); // Scroll to the top smoothly
     modal.scrollTo({ top: 100, behavior: 'smooth' }); 
-  }
+}
   
-  function closeModal(modalId) {
+// Function to close a modal
+function closeModal(modalId) {
     document.getElementById(modalId).style.display = "none";
     document.body.classList.remove("modal-active");
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+}
   
-  // Close modal when clicking outside of the modal content
-  window.onclick = function(event) {
+// Close modal when clicking outside of the modal content
+window.onclick = function(event) {
     const modals = document.querySelectorAll('.modal');
     modals.forEach(modal => {
       if (event.target === modal) {
         closeModal(modal.id);
       }
     });
-  }
-  
+}
 
+// Event listener for DOMContentLoaded to set up job filtering functionality
 document.addEventListener('DOMContentLoaded', function () {
     const jobs = document.querySelectorAll('.job');
 
+    // Function to filter jobs based on search term
     function filterJobs(searchTerm) {
         jobs.forEach(job => {
             const title = job.querySelector('.job-title').textContent.toLowerCase();
@@ -113,6 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Adding event listeners to the search input for various events
     document.querySelector('.job-search').addEventListener('input', function () {
         const searchTerm = this.value.trim();
         filterJobs(searchTerm);
@@ -156,8 +156,4 @@ document.addEventListener('DOMContentLoaded', function () {
             filterJobs('');
         }
     });
-
 });
-
-
-  

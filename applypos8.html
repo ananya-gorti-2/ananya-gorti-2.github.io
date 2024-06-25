@@ -33,7 +33,7 @@
   <!-- Header Section -->
   <header>
     <!-- Logo and Text -->
-    <a href="#" class="logo">
+    <a href="index.html" class="logo">
       <img src="images/CulHar_Logo-removebg.png" width="30px" />
       <div class="log_text">Culinary Harbor</div>
     </a>
@@ -60,9 +60,9 @@
           let cart = JSON.parse(localStorage.getItem('cart')) || [];
           let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
           document.getElementById('cart-count').textContent = totalCount;
-      }
-      
-      // Call the function on page load
+        }
+
+        // Call the function on page load
         updateCartCountOnLoad();
       </script>
       <button class="btn"><a href="apply.html">Apply Now</a></button>
@@ -78,7 +78,7 @@
   <br><br>
 
   <!-- Sous Chef Application Form -->
-  <form id="TrainingCoordinatorApplicationForm" class="chef-app">
+  <form class="app-back" id="TrainingCoordinatorApplicationForm" class="chef-app">
     <!-- Form Fields -->
     <label for="fullName" class="icon-container">
       <i class="fas fa-user"></i>

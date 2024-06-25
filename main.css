@@ -14,8 +14,6 @@
 }
 
 
-
-
 images {
   width: 2000px;
   height: 2000px;
@@ -67,8 +65,6 @@ section:nth-child(even) {
   text-transform: uppercase;
 }
 
-
-
 .btn {
   display: inline-block;
   font-size: 1.7rem;
@@ -98,10 +94,6 @@ section:nth-child(even) {
 }
 
 
-
-
-
-
 /* HEADER CODE CHANGED ON 6/23/24 */
 header {
   position: fixed;
@@ -110,7 +102,6 @@ header {
   right: 0;
   background: white;
   padding: 1rem 2%;
-  /* Adjusted padding */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -145,18 +136,15 @@ header .navbar {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  /* Align items to the start */
 }
 
 header .navbar a {
   font-size: 1.8rem;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
-  /* Reduced padding */
   color: black;
   transition: background-color 0.3s ease;
   margin-right: 10px;
-  /* Adjust margin as needed */
 }
 
 header .navbar a.active,
@@ -181,12 +169,11 @@ header .apply_btn .btn {
   font-size: 1.8rem;
   transition: all 0.1s linear;
   margin-left: 10px;
-  /* Adjust margin as needed */
 }
 
 @media (pointer: coarse) {
   .add-to-cart:hover {
-  letter-spacing: 0rem !important;
+    letter-spacing: 0rem !important;
   }
 }
 
@@ -216,19 +203,6 @@ header .apply_btn .btn {
 
 /*header changed */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 body {
   font-family: Arial, sans-serif;
 }
@@ -253,7 +227,6 @@ form {
 
 .recaptcha-space {
   margin-bottom: 20px;
-  /* Adjust the value as needed */
   margin-top: 20px;
 
 }
@@ -352,11 +325,8 @@ header #bar {
 #btnScrollToTop a {
   color: white;
   font-size: 1.5rem;
-  /* Adjust icon size */
   position: relative;
   top: 0px;
-  /* left: 10px; */
-  /* Adjust vertical position */
 }
 
 #btnScrollToTop a i {
@@ -380,11 +350,17 @@ header #bar {
   margin-top: 1000px;
 }
 
+
+
 .dishes .box-container {
   display: grid;
+  place-self: center;
+  margin: auto;
+  justify-content: center !important;
   padding-top: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   gap: 4.5rem;
+
 }
 
 .dishes .box-container .box {
@@ -470,7 +446,6 @@ header #bar {
 
 .dishes .box-container .food-card:hover .food-content {
   transform: translateY(50%);
-  /* Adjust the value as needed */
 }
 
 
@@ -525,15 +500,11 @@ header #bar {
 
   .btn span {
     padding: 17px 10px !important;
-    /* Increase padding for larger button */
     font-size: 2rem !important;
-
-    /* Increase font size */
   }
 
   .dishes .stars i {
     font-size: 1.7rem !important;
-    /* Increased font size for mobile */
   }
 
   .about-text p {
@@ -1292,6 +1263,7 @@ p {
   border: 1px solid #333;
   border-radius: 8px;
   margin-bottom: 20px;
+
 }
 
 .job-search {
@@ -1345,10 +1317,6 @@ p {
   flex-direction: column;
 }
 
-/*
-.jobs-list-container .job:hover {
-  transform: scale(1.03);
-}*/
 
 .open-positions {
   position: absolute;
@@ -1424,13 +1392,9 @@ footer {
   display: none;
 }
 
-/* .jobs-list-container h2 {
-  margin-bottom: 12px;
-} */
 
 
 /* Modal styles */
-/* Adjust hover effect to not apply when modal is active */
 body:not(.modal-active) .jobs-list-container .job:hover {
   transform: scale(1.03);
 }
@@ -1443,7 +1407,6 @@ body.modal-active .job-search {
 body.modal-active {
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.5);
-  /* Change the background color to the desired color */
 }
 
 body.modal-active .jobs-list-container h2 {
@@ -1454,17 +1417,14 @@ body.modal-active .jobs-list-container h2 {
 /* Additional style for the entire page when modal is active */
 body.modal-active .jobs-list-container {
   background-color: rgba(246, 246, 246, 0.994);
-  /* Change the background color to the desired color */
 }
 
 body.modal-active .job_num {
   background-color: #7f7f7f;
-  /* Change the background color to the desired color */
 }
 
 body.modal-active .job_num h2 {
   color: rgb(85, 1, 1);
-  /* Change the background color to the desired color */
 }
 
 body.modal-active .job button {
@@ -1485,24 +1445,16 @@ body.modal-active .modal .open-positions {
   font-size: 11px;
 }
 
-/* Other styles remain unchanged */
 .modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1000;
-  /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: rgba(0, 0, 0, 0.5);
-  /* Black w/ opacity */
 }
 
 
@@ -1584,6 +1536,7 @@ body.modal-active .modal .open-positions {
 }
 
 
+/* Size of each grid space for ipads, and tablets */
 
 @media (max-width: 940px) {
   .jobs-list-container .jobs {
@@ -1591,11 +1544,24 @@ body.modal-active .modal .open-positions {
   }
 }
 
+
+/* Size of each grid space for phones */
 @media (max-width: 640px) {
   .jobs-list-container .jobs {
     grid-template-columns: 1fr;
-    /* max-width: 400px; */
     margin: 0 auto;
+  }
+
+  .jobs-list-container .job-search {
+    width: 95%;
+    margin-left: 1rem;
+    padding: 12px 24px;
+    margin-top: 1%;
+    font-size: 1.8rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    margin-bottom: 20px;
+
   }
 }
 
@@ -1624,7 +1590,6 @@ body.modal-active .modal .open-positions {
 /*HEADER CHANGED */
 @media screen and (max-width: 768px) {
   header {
-    /* flex-direction: column; */
     align-items: flex-start;
 
   }
@@ -1636,7 +1601,6 @@ body.modal-active .modal .open-positions {
     align-items: center;
     align-self: center;
 
-    /* Remove top margin to keep them aligned */
   }
 
   header .navbar {
@@ -1650,15 +1614,12 @@ body.modal-active .modal .open-positions {
     padding: 1rem;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     flex-direction: column;
-    /* Stack items vertically */
     display: none;
-    /* Hide by default */
   }
 
   header .navbar.active {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     display: flex;
-    /* Show when active */
   }
 
   header .navbar a {
@@ -1669,7 +1630,6 @@ body.modal-active .modal .open-positions {
     background: white;
     color: black;
     width: 100%;
-    /* Full width for links */
   }
 
   header .navbar a.active {
@@ -1713,7 +1673,6 @@ body.modal-active .modal .open-positions {
 
   header .apply_btn {
     order: 2;
-    /* Set the order to move it below the logo */
   }
 }
 
@@ -1980,10 +1939,6 @@ body.modal-active .modal .open-positions {
 
 }
 
-/*
-.about-image2:hover img {
-  transform: scale(1.2);
-}*/
 
 .about-content2 {
   flex: 1;
@@ -2048,7 +2003,6 @@ body.modal-active .modal .open-positions {
   .about-image2 {
     margin-right: 0px;
     margin-bottom: 20px;
-    /* Adjust this value to move the element up */
   }
 
   .about-content2 {
@@ -2725,44 +2679,32 @@ margin-bottom: 25px;*/
 
 .slider {
   height: 150px;
-  /* Increased height to better accommodate logos */
   margin: auto;
   overflow: hidden;
-  /* Hides the overflow content */
   position: relative;
   width: 100%;
-  /* Makes the slider responsive */
 }
 
 .slider .slide-track {
   display: flex;
   width: calc((300px + 60px) * 16);
-  /* 16 frames with added larger margin for more spacing */
   animation: scroll 40s linear infinite;
-  /* Smooth scrolling animation */
 }
 
 .slider .frame {
   height: 150px;
-  /* Increased height to better accommodate logos */
   width: 300px;
-  /* Fixed width for each frame to ensure consistent spacing */
   flex-shrink: 0;
-  /* Prevents shrinking */
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  /* Includes padding in the element's total width and height */
   margin-right: 60px;
-  /* Increased margin for more spacing */
 }
 
 .logo-container {
   height: 100%;
-  /* Full height of the frame */
   width: 100%;
-  /* Full width of the frame */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2770,20 +2712,15 @@ margin-bottom: 25px;*/
 
 .logo-container img {
   max-height: 100px;
-  /* Ensures images fit within their frames while maintaining aspect ratio */
   max-width: 100%;
-  /* Ensures images fit within their frames while maintaining aspect ratio */
   object-fit: contain;
-  /* Ensures images fit within their frames without distortion */
 }
 
 .about2,
 .about3,
 .about4 {
   background-color: transparent !important;
-  /* Remove the gray background */
   padding: 20px;
-  /* Add padding as needed */
 }
 
 
@@ -2834,11 +2771,9 @@ margin-bottom: 25px;*/
 
 .grouping {
   position: relative;
-  /* If you want text inside of it */
 }
 
 
-/* If you want text inside of the container */
 .some-text {
   position: absolute;
   top: 0;
@@ -2880,26 +2815,6 @@ margin-bottom: 25px;*/
   }
 }
 
-/*
-@media (max-width: 900px) {
-  .mega {
-    height: 100vh;
-  }
-}
-
-@media (max-width: 1000px) {
-  .mega {
-    margin-top: 100px;
-  }
-}
-
-@media (max-width: 900px) {
-  .sideways {
-    min-height: 100vh;
-    max-height: 100vh;
-  }
-}
-*/
 
 .sideways {
   display: flex;
@@ -2927,27 +2842,6 @@ margin-bottom: 25px;*/
     margin-right: 0px !important;
   }
 }
-
-/*
-
-@media (max-width: 1000px) {
-  .adoptcover {
-    justify-content: center;*/
-/*
-    background-image: url('images/chefs_cooking.png');*/
-/*
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .adoption-col img {
-  min-width:50vw;
-  max-width: 58vw;
-  height: auto;
-}
-  
-}*/
-
 
 
 
@@ -3255,10 +3149,8 @@ margin-bottom: 25px;*/
 .testimonials {
   margin: 0;
   padding: 50px 0;
-  /* Reduce padding to remove extra space */
   box-sizing: border-box;
   background-color: #f5f5f5;
-  /* Light gray background */
 }
 
 /* Container styling */
@@ -3272,15 +3164,12 @@ margin-bottom: 25px;*/
 .emp-header {
   text-align: center;
   margin-bottom: 30px;
-  /* Adjusted margin to fit the design */
   padding-top: 0;
-  /* Ensure there's no additional padding */
 }
 
 /* Regular styles for .emp-title */
 .emp-header .emp-title {
   white-space: normal;
-  /* Allow text to wrap */
   width: 90%;
   display: flex;
   justify-content: center;
@@ -3293,9 +3182,7 @@ margin-bottom: 25px;*/
   margin-top: 2rem;
   margin-bottom: 3rem;
   position: relative;
-  /* Adjusted margin to remove bottom margin and keep top margin */
   overflow-wrap: break-word;
-  /* Ensure text wraps instead of going off-screen */
 }
 
 .emp-header .emp-title::after {
@@ -3304,7 +3191,6 @@ margin-bottom: 25px;*/
   width: 100%;
   height: 4px;
   bottom: -2px;
-  /* Position the line below the emp-title */
   background-color: red;
 }
 
@@ -3320,29 +3206,24 @@ margin-bottom: 25px;*/
 @media only screen and (max-width: 480px) {
   .emp-header .emp-title {
     font-size: 36px;
-    /* Decrease font size for mobile devices */
   }
 }
 
 /* Testimonials item styling */
 .testimonials-item {
   background-color: #fff;
-  /* White background */
   padding: 30px;
   border-radius: 30px;
   margin-bottom: 20px;
   border: 1px solid #ddd;
-  /* Light gray border */
 }
 
-/* Info section styling */
 .testimonials-item .info {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
 }
 
-/* Image styling */
 .testimonials-item img {
   max-width: 80px;
   border-radius: 50%;
@@ -3355,21 +3236,18 @@ margin-bottom: 25px;*/
   text-transform: capitalize;
   font-weight: 600;
   color: #000;
-  /* Black text */
   line-height: 1.2;
 }
 
 .testimonials-item .job {
   text-transform: capitalize;
   color: #6b6a6a;
-  /* Gray text */
   font-size: 16px;
 }
 
 .testimonials-item p {
   margin-top: 20px;
   color: #555;
-  /* Dark gray text */
   font-size: 18px;
 }
 
@@ -3377,7 +3255,6 @@ margin-bottom: 25px;*/
   margin-top: 15px;
   font-size: 14px;
   color: #ff0000;
-  /* Red stars */
 }
 
 .testimonials .swiper-pagination {
@@ -3390,7 +3267,6 @@ margin-bottom: 25px;*/
   height: 12px;
   width: 12px;
   background-color: #ff0000;
-  /* Red bullets */
 }
 
 .testimonials testimonials-item {
@@ -3431,3 +3307,16 @@ margin-bottom: 25px;*/
   font-size: 20px;
 }
 
+#GeneralManagerApplicationForm {
+  box-shadow: 0 4px 24px -8px rgba(2, 48, 71, 0.2);
+  background-color: white;
+}
+
+.app-back {
+  box-shadow: 0 4px 24px -8px rgba(2, 48, 71, 0.2);
+  background-color: white;
+}
+
+.no-cap {
+  background: linear-gradient(to bottom, white, lightgray) !important;
+}

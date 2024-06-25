@@ -26,7 +26,7 @@
   <!-- Header section -->
   <header>
     <!-- Logo -->
-    <a href="#" class="logo">
+    <a href="index.html" class="logo">
       <img src="images/CulHar_Logo-removebg.png" width="30px" />
       <div class="log_text">Culinary Harbor</div>
     </a>
@@ -40,7 +40,7 @@
       <a href="why_us.html">Benefits</a>
       <a href="faq.html">FAQ</a>
       <a href="support.html">Support</a>
-      
+
     </nav>
 
     <!-- Apply Now Button -->
@@ -56,14 +56,14 @@
           let cart = JSON.parse(localStorage.getItem('cart')) || [];
           let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
           document.getElementById('cart-count').textContent = totalCount;
-      }
-      
-      // Call the function on page load
+        }
+
+        // Call the function on page load
         updateCartCountOnLoad();
       </script>
       <button class="btn"> <a href="apply.html">Apply Now</a></button>
       <i class="fa-solid fa-bars" id="bar"></i>
-      
+
     </div>
   </header>
 
@@ -74,7 +74,7 @@
       <!-- Jobs list container -->
       <div class="jobs-list-container">
         <!-- Number of available jobs -->
-        <h2 data-aos="fade-left">22 Job Positions Available</h2>
+        <h2 data-aos="fade-left">8 Job Positions Available</h2>
         <!-- Jobs -->
         <div class="jobs">
           <!-- Job 1: General Manager -->
@@ -243,10 +243,11 @@
           <h3>Follow Us</h3>
           <a href="https://www.instagram.com/culinaryharbor30/" target="_blank"><i class="fa-brands fa-instagram"
               style="color: #ff0000;"></i> Instagram</a>
-          <a href="https://twitter.com/culinaryh30" target="_blank"><i class="fa-brands fa-twitter" style="color: #ff0000;"></i>
+          <a href="https://twitter.com/culinaryh30" target="_blank"><i class="fa-brands fa-twitter"
+              style="color: #ff0000;"></i>
             Twitter</a>
-          <a href="https://www.youtube.com/channel/UCaL5GaP2e81gd7W2CmJVW-g" target="_blank"><i class="fa-brands fa-youtube"
-              style="color: #ff0000;"></i> Youtube</a>
+          <a href="https://www.youtube.com/channel/UCaL5GaP2e81gd7W2CmJVW-g" target="_blank"><i
+              class="fa-brands fa-youtube" style="color: #ff0000;"></i> Youtube</a>
         </div>
       </div>
 
@@ -263,18 +264,18 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
 
-        AOS.init({
-            duration: 300, // Increase the duration
-            easing: 'ease-in-out', // Adjust the easing
-            once: true, // Ensure the animation occurs only once
-            offset: 75
-        });
+      AOS.init({
+        duration: 400, // Increase the duration
+        easing: 'ease-in-out', // Adjust the easing
+        once: true, // Ensure the animation occurs only once
+        offset: 75
+      });
     });
-</script>
+  </script>
 </body>
 
 <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxc9dvg30h3yohbcjxw0zzrz"></script>
-    <!--Accesibility widget-->
-    <script src="https://cdn.userway.org/widget.js" data-account="ertbJPpxpJ"></script>
+<!--Accesibility widget-->
+<script src="https://cdn.userway.org/widget.js" data-account="ertbJPpxpJ"></script>
 
 </html>
