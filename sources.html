@@ -30,6 +30,87 @@
   <!-- Custom JavaScript -->
 </head>
 
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  import { getDatabase, ref, set, update, increment, onValue } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyA8KxkL46u0BsqFWc0T3lq6RCaGLs7wpLA",
+    authDomain: "ch-analytics-f7d03.firebaseapp.com",
+    databaseURL: "https://ch-analytics-f7d03-default-rtdb.firebaseio.com",
+    projectId: "ch-analytics-f7d03",
+    storageBucket: "ch-analytics-f7d03.appspot.com",
+    messagingSenderId: "462976003815",
+    appId: "1:462976003815:web:6eb5ed5952144dedcbfc42",
+    measurementId: "G-5JS69NW9GV"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+
+  console.log("hi1")
+
+
+  function recordPageView() {
+    const analyticsRef = ref(db, 'analytics');
+    update(analyticsRef, {
+      totalPageViews: increment(1),
+    });
+  }
+
+  console.log("hi1")
+
+  // Function to record session duration
+  function recordSessionDuration(duration) {
+    const analyticsRef = ref(db, 'analytics');
+    update(analyticsRef, {
+      totalSessionDuration: increment(duration)
+    });
+  }
+
+  // Function to calculate average session duration
+  function calculateAverageSessionDuration() {
+    const analyticsRef = ref(db, 'analytics');
+    onValue(analyticsRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data && data.totalSessionDuration && data.totalPageViews) {
+        const averageSessionDuration = data.totalSessionDuration / data.totalPageViews;
+        console.log(data.totalSessionDuration)
+        console.log(data.totalPageViews)
+        update(analyticsRef, {
+          AverageSessionDuration: averageSessionDuration
+        });
+      }
+    }, {
+      onlyOnce: true // Ensure this function only runs once
+    });
+  }
+
+
+  console.log("hi1")
+
+  // Example of using the functions
+  window.addEventListener('load', () => {
+    const startTime = Date.now();
+
+    // Record a page view when the page loads
+    recordPageView();
+
+    window.addEventListener('beforeunload', () => {
+      const endTime = Date.now();
+      const sessionDuration = (endTime - startTime) / 1000; // duration in seconds
+      recordSessionDuration(sessionDuration);
+      calculateAverageSessionDuration();
+    });
+  });
+</script>
+
 <body>
   <!-- Header section -->
   <header>
@@ -79,11 +160,41 @@
   <main>
     <br><br><br><br>
     <div class="heading3">
-      <h1>Sources</h1>
+      <h1 data-aos="fade-up">MLA Sources</h1>
     </div>
 
+    <section data-aos="fade-up" class="sources-container">
+      <h2 class="h-primary left sources-header"><span>HTML</span></h2>
+      <div class="about-text">
+        <p>
+          MDN Web Docs. “HTML: HyperText Markup Language.” MDN Web Docs, 10 Dec. 2018,
+          developer.mozilla.org/en-US/docs/Web/HTML.
+          <br>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML Documentation</a>
+        </p>
+      </div>
 
-    <section class="sources-container">
+      <br>
+      <h2 class="h-primary left sources-header"><span>CSS</span></h2>
+      <div class="about-text">
+        <p>
+          MDN Web Docs. “HTML: HyperText Markup Language.” MDN Web Docs, 10 Dec. 2018,
+          developer.mozilla.org/en-US/docs/Web/HTML.
+          <br>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS Docs</a>
+        </p>
+      </div>
+      <br>
+      <h2 class="h-primary left sources-header"><span>Javascript</span></h2>
+      <div class="about-text">
+        <p>
+          MDN Contributors. “JavaScript.” MDN Web Docs, 25 Sept. 2023, developer.mozilla.org/en-US/docs/Web/javascript.
+          <br>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Javascript Docs</a>
+        </p>
+      </div>
+
+      <br>
       <h2 class="h-primary left sources-header"><span>Animation on Scroll</span></h2>
       <div class="about-text">
         <p>
@@ -98,15 +209,7 @@
       </div>
 
       <br>
-      <h2 class="h-primary left sources-header"><span>CSS</span></h2>
-      <div class="about-text">
-        <p>
-          CSS is a programming language used for website development.
-          <br>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS Documentation</a>
-        </p>
-      </div>
-      <br>
+
       <h2 class="h-primary left sources-header"><span>Font Awesome Icons</span></h2>
       <div class="about-text">
         <p>
@@ -134,26 +237,8 @@
         </p>
       </div>
       <br>
-      <h2 class="h-primary left sources-header"><span>HTML</span></h2>
-      <div class="about-text">
-        <p>
-          HTML is a mark-up language used for website development.
-          <br>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML Documentation</a>
-        </p>
-      </div>
 
-      <br>
-      <h2 class="h-primary left sources-header"><span>Javascript</span></h2>
-      <div class="about-text">
-        <p>
-          Javascript is a programming language often used for website development.
-          <br>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Javascript Documentation</a>
-        </p>
-      </div>
 
-      <br>
       <h2 class="h-primary left sources-header"><span>Unsplash</span></h2>
       <div class="about-text">
         <p>
@@ -258,6 +343,19 @@
       </div>
     </section>
   </footer>
+
+  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      AOS.init({
+        duration: 400, // Increase the duration
+        easing: 'ease-in-out', // Adjust the easing
+        once: true, // Ensure the animation occurs only once
+        offset: 75,
+      });
+    });
+  </script>
 </body>
 
 </html>

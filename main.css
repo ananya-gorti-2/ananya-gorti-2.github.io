@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Raleway:wght@200;300;400;600;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+/* @import url('https://unpkg.com/jolty-ui/dist/jolty-ui.min.css'); */
 
 * {
   font-family: "Nunito", sans-serif;
@@ -569,6 +570,7 @@ header #bar {
   margin-top: 27px;
   border-radius: 10px;
   overflow: hidden;
+  align-self: center;
 }
 
 .dishes .box-container .box p {
@@ -597,7 +599,7 @@ header #bar {
 }
 
 .home .home-slider {
-  height: 650px;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -2635,6 +2637,16 @@ margin-bottom: 25px;*/
   transform: scale(1.2);
 }
 
+
+
+
+
+
+
+
+
+
+
 .list p {
   height: auto;
   margin: 0;
@@ -3295,6 +3307,11 @@ margin-bottom: 25px;*/
   box-shadow: 0 4px 24px -8px rgba(0, 0, 0, 0.2);
 }
 
+.sources-container h2{
+  margin: 0;
+  padding: 0;
+}
+
 .sources-header {
   padding-bottom: 3rem;
 }
@@ -3319,4 +3336,26 @@ margin-bottom: 25px;*/
 
 .no-cap {
   background: linear-gradient(to bottom, white, lightgray) !important;
+}
+
+.ui-alert.ui-alert--primary {
+  background-color: red;
+  color: white;
+  /* Ensures text is readable on a red background */
+  position: fixed;
+  /* Makes the alert fixed on the screen */
+  top: 10px;
+  /* Adjust this value to move the alert further up or down */
+  left: 50%;
+  /* Centers the alert horizontally */
+  transform: translateX(-50%);
+  /* Centers the alert horizontally */
+  z-index: 1000;
+  /* Ensures the alert appears above other content */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.ui-alert.fade-out {
+  transform: translateX(-50%) translateY(-50px);
+  opacity: 0;
 }
