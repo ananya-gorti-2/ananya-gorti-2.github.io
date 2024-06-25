@@ -90,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
   new Swiper(".review-slider", {
     spaceBetween: 20,
     centeredSlides: true,
+    clickable: true,
     autoplay: {
       delay: 0,
       disableOnInteraction: false,
@@ -141,11 +142,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   
   function fadeOut(){
-    setInterval(loader, 3000);
+    setTimeout(loader, 3000);
   
   }
   
   window.onload = fadeOut();
-  //test2
+
+
+
+
 
 
