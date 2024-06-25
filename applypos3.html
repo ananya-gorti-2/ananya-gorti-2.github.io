@@ -21,8 +21,8 @@
 
   <script type="module">
     // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-    import { getDatabase, ref, set, update, increment, onValue } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getDatabase, ref, set, update, increment, onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -66,28 +66,28 @@
     function recordApplicationSubmission() {
       const analyticsRef = ref(db1, 'analytics');
       update(analyticsRef, {
-        totalApplications: increment(1)
+          totalApplications: increment(1)
       });
-    }
+  }
 
     // Function to calculate average session duration
     function calculateAverageSessionDuration() {
       const analyticsRef = ref(db1, 'analytics');
       onValue(analyticsRef, (snapshot) => {
-        const data = snapshot.val();
-        if (data && data.totalSessionDuration && data.totalPageViews) {
-          const averageSessionDuration = data.totalSessionDuration / data.totalPageViews;
-          console.log(data.totalSessionDuration)
-          console.log(data.totalPageViews)
-          update(analyticsRef, {
-            AverageSessionDuration: averageSessionDuration
-          });
-        }
+          const data = snapshot.val();
+          if (data && data.totalSessionDuration && data.totalPageViews) {
+              const averageSessionDuration = data.totalSessionDuration / data.totalPageViews;
+              console.log(data.totalSessionDuration)
+              console.log(data.totalPageViews)
+              update(analyticsRef, {
+                  AverageSessionDuration: averageSessionDuration
+              });
+          }
       }, {
-        onlyOnce: true // Ensure this function only runs once
+          onlyOnce: true // Ensure this function only runs once
       });
-    }
-
+  }
+  
 
     console.log("hi1")
 
@@ -99,19 +99,61 @@
       recordPageView();
 
       window.addEventListener('beforeunload', () => {
-        const endTime = Date.now();
-        const sessionDuration = (endTime - startTime) / 1000; // duration in seconds
-        recordSessionDuration(sessionDuration);
-        calculateAverageSessionDuration();
+          const endTime = Date.now();
+          const sessionDuration = (endTime - startTime) / 1000; // duration in seconds
+          recordSessionDuration(sessionDuration);
+          calculateAverageSessionDuration();
       });
 
       const form = document.getElementById('Waiter/Waitress Application Form');
-      form.addEventListener('submit', (event) => {
-        event.preventDefault(); // Prevent default form submission
-        recordApplicationSubmission();
-        form.submit(); // Submit the form
-      });
-    });
+            form.addEventListener('submit', (event) => {
+                event.preventDefault(); // Prevent default form submission
+                if (validateForm() && validateRecaptcha()){
+                  recordApplicationSubmission();
+                }
+                
+            });
+  });
+
+  function validateForm() {
+    var fullName = document.getElementById('fullName').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var dob = document.getElementById('dob').value.trim();
+    var address = document.getElementById('address').value.trim();
+
+    if (fullName === '') {
+      alert('Please enter your full name.');
+      return false;
+    }
+
+    if (email === '' || !isValidEmail(email)) {
+      alert('Please enter a valid email address.');
+      return false;
+    }
+
+    var dobDate = new Date(dob);
+    var eighteenYearsAgo = new Date();
+    eighteenYearsAgo.setFullYear(eighteenYearsAgo.getFullYear() - 18);
+    if (dobDate > eighteenYearsAgo) {
+      alert('You must be at least 18 years old.');
+      return false;
+    }
+
+    return true; // Form is valid
+  }
+
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function validateRecaptcha() {
+    var response = grecaptcha.getResponse();
+    if (response.length === 0) {
+      alert("Please complete the reCAPTCHA.");
+      return false;
+    }
+    return true;
+  }
   </script>
 </head>
 
