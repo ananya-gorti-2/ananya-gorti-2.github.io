@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Favicon -->
   <link rel="icon" type="x-icon" href="images/CulHar_Logo-removebg.png" />
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
   <!-- Title -->
   <title>Application General Manager</title>
@@ -109,7 +108,7 @@
       const form = document.getElementById('GeneralManagerApplicationForm');
       form.addEventListener('submit', (event) => {
         event.preventDefault(); // Prevent default form submission
-        if (validateForm() && validateRecaptcha()) {
+        if (validateForm()) {
           recordApplicationSubmission();
         }
 
@@ -146,14 +145,8 @@
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 
-    function validateRecaptcha() {
-      var response = grecaptcha.getResponse();
-      if (response.length === 0) {
-        alert("Please complete the reCAPTCHA.");
-        return false;
-      }
-      return true;
-    }
+    
+
   </script>
 
 </head>
@@ -327,8 +320,6 @@
 
 
 
-    <div class="g-recaptcha recaptcha-space" data-sitekey="6LfOnv0pAAAAAHZvc8kOEojkS9E1NCORTlTP9rjN"></div>
-
 
 
     <!-- JavaScript subscript to prevent textarea resizing -->
@@ -357,16 +348,9 @@
       form.addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent form submission
 
-        function validateRecaptcha() {
-          var response = grecaptcha.getResponse();
-          if (response.length === 0) {
-            alert("Please complete the reCAPTCHA.");
-            return false;
-          }
-          return true;
-        }
+        
 
-        if (validateForm() && validateRecaptcha()) {
+        if (validateForm() ) {
           // Firebase configuration
           const firebaseConfig2 = {
             apiKey: "AIzaSyAO9zhttsR2jhYQPBpsNiAzBPPMD8ZJtno",
