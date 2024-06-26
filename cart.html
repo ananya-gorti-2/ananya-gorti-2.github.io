@@ -208,13 +208,19 @@
         </span>
 
         <span class="inputbox">
-
-          <input type="checkbox" id="subscribe" name="subscribe">
-          <label for="cater">Catering Order</label>
-          <input type="checkbox" id="subscribe" name="subscribe">
-          <label for="deliver">Food Delivery Order</label>
-
+          <span class="inputname">Pickup or Delivery</span>
+          <label><input type="radio" name="orderType" value="pickup" required> Pickup</label>
+          <label><input type="radio" name="orderType" value="delivery" required> Delivery</label>
         </span>
+
+      </span>
+      <span class="inputbox">
+        <span class="inputname">Address</span>
+        <input type="text" id="address" required>
+
+      </span>
+
+      
         <span class="inputbox">
           <span class="textname">Additional Info</span></span><br />
         <textarea name="" id="message" cols="30" rows="3"></textarea>
@@ -249,6 +255,8 @@
       var email = document.getElementById("email").value;
       var contactNumber = document.getElementById("contactNumber").value;
       var message1 = document.getElementById("message").value;
+      var address1 = document.getElementById("address").value;
+      var orderType = document.querySelector('input[name="orderType"]:checked').value;
 
       console.log(firstName);
       console.log(lastName);
@@ -282,7 +290,9 @@
         from_email: email,
         contactnum: contactNumber,
         order_items: itemsString,
-        totalcost: totalCost
+        totalcost: totalCost,
+        addressuser: address1,
+        pickupordelivery: orderType
       }
 
       // Send email using Email.send()
@@ -455,7 +465,7 @@
       </div>
     </section>
   </footer>
-  <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxc9dvg30h3yohbcjxw0zzrz"></script>
+  <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxf3ic3d00rnu1bbuzgs4aai"></script>
   <!--Accesibility widget-->
   <script src="https://cdn.userway.org/widget.js" data-account="ertbJPpxpJ"></script>
 

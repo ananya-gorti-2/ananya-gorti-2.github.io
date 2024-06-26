@@ -72,20 +72,20 @@
     function calculateAverageSessionDuration() {
       const analyticsRef = ref(db, 'analytics');
       onValue(analyticsRef, (snapshot) => {
-          const data = snapshot.val();
-          if (data && data.totalSessionDuration && data.totalPageViews) {
-              const averageSessionDuration = data.totalSessionDuration / data.totalPageViews;
-              console.log(data.totalSessionDuration)
-              console.log(data.totalPageViews)
-              update(analyticsRef, {
-                  AverageSessionDuration: averageSessionDuration
-              });
-          }
+        const data = snapshot.val();
+        if (data && data.totalSessionDuration && data.totalPageViews) {
+          const averageSessionDuration = data.totalSessionDuration / data.totalPageViews;
+          console.log(data.totalSessionDuration)
+          console.log(data.totalPageViews)
+          update(analyticsRef, {
+            AverageSessionDuration: averageSessionDuration
+          });
+        }
       }, {
-          onlyOnce: true // Ensure this function only runs once
+        onlyOnce: true // Ensure this function only runs once
       });
-  }
-  
+    }
+
 
     console.log("hi1")
 
@@ -97,16 +97,16 @@
       recordPageView();
 
       window.addEventListener('beforeunload', () => {
-          const endTime = Date.now();
-          const sessionDuration = (endTime - startTime) / 1000; // duration in seconds
-          recordSessionDuration(sessionDuration);
-          calculateAverageSessionDuration();
+        const endTime = Date.now();
+        const sessionDuration = (endTime - startTime) / 1000; // duration in seconds
+        recordSessionDuration(sessionDuration);
+        calculateAverageSessionDuration();
       });
-  });
+    });
   </script>
 
 </head>
-<script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxc9dvg30h3yohbcjxw0zzrz"></script>
+<script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxf3ic3d00rnu1bbuzgs4aai"></script>
 
 
 <body>
