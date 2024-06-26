@@ -457,7 +457,7 @@ header #bar {
 }
 
 /* For the Amazon Fire HD 10 Tablet */
-@media (max-width: 1200px) and (pointer: coarse) {
+@media (max-width: 1300px) {
   .touch {
     display: block;
   }
