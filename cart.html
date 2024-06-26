@@ -209,10 +209,8 @@
 
         <span class="inputbox">
 
-          <input type="checkbox" id="subscribe" name="subscribe">
-          <label for="cater">Catering Order</label>
-          <input type="checkbox" id="subscribe" name="subscribe">
-          <label for="deliver">Food Delivery Order</label>
+          <span class="inputname">Pickup of Delivery</span>
+          <input type="text" id="pod" required>
 
         </span>
         <span class="inputbox">
@@ -249,6 +247,7 @@
       var email = document.getElementById("email").value;
       var contactNumber = document.getElementById("contactNumber").value;
       var message1 = document.getElementById("message").value;
+      var pod = document.getElementById("pod").value;
 
       console.log(firstName);
       console.log(lastName);
@@ -282,7 +281,8 @@
         from_email: email,
         contactnum: contactNumber,
         order_items: itemsString,
-        totalcost: totalCost
+        totalcost: totalCost,
+        pickupordeliver : pod
       }
 
       // Send email using Email.send()
