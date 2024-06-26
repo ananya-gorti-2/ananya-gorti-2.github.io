@@ -435,7 +435,18 @@ header #bar {
   }
 }
 
-@media (min-width: 1150px) {
+/* @media (min-width: 1150px) {
+  .touch {
+    display: none;
+  }
+
+  .non-touch {
+    display: block;
+  }
+} */
+
+/* For the Lenovo Ideapad Flex 5 (14-inch laptop) */
+@media (min-width: 1366px) {
   .touch {
     display: none;
   }
@@ -444,6 +455,19 @@ header #bar {
     display: block;
   }
 }
+
+/* For the Amazon Fire HD 10 Tablet */
+@media (max-width: 1200px) and (pointer: coarse) {
+  .touch {
+    display: block;
+  }
+
+  .non-touch {
+    display: none;
+  }
+}
+
+
 
 .dishes .box-container .food-card:hover .food-content {
   transform: translateY(50%);
