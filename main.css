@@ -497,6 +497,30 @@ header #bar {
       font-weight: bold;
     }
 
+    @media (max-width: 768px) {
+      .notification {
+        height: auto;
+        padding: 20px;
+        font-size: 16px;
+      }
+    
+      .notification .close {
+        font-size: 18px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .notification {
+        height: auto;
+        padding: 15px;
+        font-size: 14px;
+      }
+    
+      .notification .close {
+        font-size: 16px;
+      }
+    }
+
 .dishes .box-container .food-card:hover .food-content {
   transform: translateY(50%);
 }
