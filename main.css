@@ -511,6 +511,7 @@ header #bar {
     position: relative;
     height: auto;
     padding: 20px;
+    padding-right: 60px !important;
 
     /* moving the noti up */
     transform: translateY(-70px);
@@ -518,7 +519,7 @@ header #bar {
   }
 
   .notification .close {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
