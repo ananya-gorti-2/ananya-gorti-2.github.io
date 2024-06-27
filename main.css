@@ -468,6 +468,34 @@ header #bar {
 }
 
 
+    .notification {
+      position: fixed;
+      top: 75px;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background-color: #ff0000;
+      color: #ffffff;
+      padding: 10px;
+      text-align: center;
+      z-index: 1000; /* Ensure it's above other content */
+      font-size: 18px;
+    }
+    
+    .notification .close {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 20px;
+    }
+    
+    .notification a {
+      color: rgb(255, 255, 255); /* Yellow color for links */
+      text-decoration: underline;
+      font-weight: bold;
+    }
 
 .dishes .box-container .food-card:hover .food-content {
   transform: translateY(50%);
