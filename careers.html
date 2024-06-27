@@ -28,8 +28,11 @@
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
     import { getDatabase, ref, set, update, increment, onValue } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
 
-    // web app's Firebase configuration
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const firebaseConfig = {
       apiKey: "AIzaSyA8KxkL46u0BsqFWc0T3lq6RCaGLs7wpLA",
       authDomain: "ch-analytics-f7d03.firebaseapp.com",
@@ -150,281 +153,466 @@
     <br>
     <br>
     <br>
-
-  <!-- Container for the entire job listings -->
-<div class="jobs-list-container">
-  
-  <!-- Section showing the number of available jobs -->
-  <div class="job_num">
-    <h2 data-aos="fade-left">8 Jobs Available</h2>
-  </div>
-
-  <!-- Search input for job listings -->
-  <input data-aos="fade-left" class="job-search" type="search" placeholder="Search here...">
-
-  <!-- Container for individual job listings -->
-  <div data-aos="fade-up" class="jobs">
-
-    <!-- Job 1: General Manager -->
-    <div class="job">
-      <img class="general-manager" src="images/careers imgs/General_Manager.jpg" alt="General Manager">
-      <h3 class="job-title">General Manager</h3>
-      <div class="details">
-        As the General Manager, you will be the key orchestrator of operational
-        excellence also be able to manage the restaurant while also ensuring exceptional guest experiences. <br><br>
-        <button class="learn-more-btn" onclick="openModal('modal2')">Learn More</button>
-        <a href="applypos1.html" class="details-btn">Apply</a>
+    <div class="jobs-list-container">
+      <div class="job_num">
+        <h2 data-aos="fade-left">8 Jobs Available</h2>
       </div>
-      <span class="open-positions"><big><big>1 open position</big></big></span>
-    </div>
 
-    <!-- Modal for Job 1 -->
-    <div id="modal2" class="modal">
-      <div class="modal-content">
-        <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
-        <div class="modal-job">
-          <img class="general-manager" src="images/careers imgs/General_Manager.jpg" alt="General Manager">
+      <input data-aos="fade-left" class="job-search" type="search" placeholder="Search here...">
+
+      <!-- Jobs -->
+      <div data-aos="fade-up" class="jobs">
+
+        <!-- Job 1 -->
+        <div class="job">
+          <img class="general-manager" src="images/careers imgs/General_Manager.jpg">
           <h3 class="job-title">General Manager</h3>
           <div class="details">
-            As the General Manager of Culinary Harbor, you will be the key orchestrator of operational
-            excellence, overseeing day-to-day restaurant management, ensuring exceptional guest experiences,
-            and leading a dynamic team to culinary success. <br><br>
-            <strong>Responsibilities:</strong>
-            <ul>
-              <li>Oversee daily operations of the restaurant</li>
-              <li>Manage staff, including hiring and training</li>
-              <li>Monitor inventory and order supplies</li>
-              <li>Ensure compliance with health and safety regulations</li>
-              <li>Develop and implement strategies to increase profitability</li>
-            </ul>
-            <br><br>
-            <strong>Requirements/Skills:</strong>
-            <ul>
-              <li>Previous experience in restaurant management</li>
-              <li>Strong leadership and communication skills</li>
-              <li>Ability to multitask and problem-solve effectively</li>
-              <li>Knowledge of food safety standards and regulations</li>
-              <li>Business acumen and budget management skills</li>
-            </ul>
-            <br>
-            <strong>Salary: $80,900/year</strong>
+
+            As the General Manager, you will be the key orchestrator of operational
+            excellence also be able to manage the restaurant while also ensuring exceptional guest experiences. <br><br>
+            <button class="learn-more-btn" onclick="openModal('modal2')">Learn More</button>
+
+            <a href="applypos1.html" class="details-btn">Apply</a>
           </div>
-          <br>
-          <a href="applypos1.html" class="details-btn">Apply</a>
           <span class="open-positions"><big><big>1 open position</big></big></span>
         </div>
-      </div>
-    </div>
 
-    <!-- Job 2: Cashier -->
-    <div class="job">
-      <img class="cashier" src="images/careers imgs/Cashier.jpg" alt="Cashier">
-      <h3 class="job-title">Cashier</h3>
-      <div class="details">
-        As a Cashier at Culinary Harbor, you are key to our exceptional customer service. Your
-        friendly attentive and efficient service should help create a welcoming atmosphere.
-        <br><br>
-        <button class="learn-more-btn" onclick="openModal('modal4')">Learn More</button>
-        <a href="applypos2.html" class="details-btn">Apply</a>
-      </div>
-      <span class="open-positions"><big><big>3 open positions</big></big></span>
-    </div>
+        <!-- Modal 1 -->
+        <div id="modal2" class="modal">
+          <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+            <div class="modal-job">
+              <img class="general-manager" src="images/careers imgs/General_Manager.jpg">
+              <h3 class="job-title">General Manager</h3>
+              <div class="details">
+                As the General Manager of Culinary Harbor, you will be the key orchestrator of operational
+                excellence, overseeing day-to-day restaurant management, ensuring exceptional guest experiences,
+                and leading a dynamic team to culinary success. <br><br>
+                <strong>Responsibilities:</strong>
+                <ul>
+                  <li>Oversee daily operations of the restaurant</li>
+                  <li>Manage staff, including hiring and training</li>
+                  <li>Monitor inventory and order supplies</li>
+                  <li>Ensure compliance with health and safety regulations</li>
+                  <li>Develop and implement strategies to increase profitability</li>
+                </ul>
+                <br><br>
+                <strong>Requirements/Skills:</strong>
+                <ul>
+                  <li>Previous experience in restaurant management</li>
+                  <li>Strong leadership and communication skills</li>
+                  <li>Ability to multitask and problem-solve effectively</li>
+                  <li>Knowledge of food safety standards and regulations</li>
+                  <li>Business acumen and budget management skills</li>
+                </ul>
+                <br>
+                <strong>Salary: $80,900/year</strong>
+              </div>
+              <br>
+              <a href="applypos1.html" class="details-btn">Apply</a>
+              <span class="open-positions"><big><big>1 open position</big></big></span>
+            </div>
+          </div>
+        </div>
 
-    <!-- Modal for Job 2 -->
-    <div id="modal4" class="modal">
-      <div class="modal-content">
-        <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
-        <div class="modal-job">
-          <img class="cashier" src="images/careers imgs/Cashier.jpg" alt="Cashier">
+        <!-- Job 2 -->
+        <div class="job">
+          <img class="cashier" src="images/careers imgs/Cashier.jpg">
           <h3 class="job-title">Cashier</h3>
           <div class="details">
-            As a Cashier at Culinary Harbor, you’re key to our exceptional customer service. More than processing
-            transactions, your friendly demeanor and efficient service helps create a welcoming atmosphere, ensuring smooth
-            transactions for every guest.
+
+            As a Cashier at Culinary Harbor, you are key to our exceptional customer service. Your
+            friendly attentive and efficient service should help create a welcoming atmosphere.
             <br><br>
-            <strong>Responsibilities:</strong>
-            <ul>
-              <li>Process customer transactions accurately and efficiently</li>
-              <li>Provide excellent customer service and assist with customer inquiries</li>
-              <li>Maintain a clean and organized checkout area</li>
-              <li>Handle cash, credit, and debit transactions securely</li>
-              <li>Assist with inventory management and restocking as needed</li>
-            </ul>
-            <br><br>
-            <strong>Requirements/Skills:</strong>
-            <ul>
-              <li>Previous experience as a cashier or in customer service</li>
-              <li>Strong communication and interpersonal skills</li>
-              <li>Ability to handle transactions accurately and efficiently</li>
-              <li>Basic math skills and attention to detail</li>
-              <li>Ability to work in a fast-paced environment</li>
-            </ul>
-            <br>
-            <strong>Salary: $40,000/year</strong>
+            <button class="learn-more-btn" onclick="openModal('modal4')">Learn More</button>
+
+            <a href="applypos2.html" class="details-btn">Apply</a>
           </div>
-          <br>
-          <a href="applypos2.html" class="details-btn">Apply</a>
-          <span class="open-positions"><big><big>3 open positions</big></big></span>
+          <span class="open-positions"> <big><big>3 open positions</big></big></span>
         </div>
-      </div>
-    </div>
 
-    <!-- Job 3: Waiter/Waitress -->
-    <div class="job">
-      <img class="waiter" src="images/careers imgs/waiter.jpg" alt="Waiter/Waitress">
-      <h3 class="job-title">Waiter/Waitress</h3>
-      <div class="details">
-        Join us as a Waiter/Waitress at Culinary Harbor, where your attentive service ensures unforgettable dining experiences. Your goal is to exceed guest expectations.<br><br>
-        <button class="learn-more-btn" onclick="openModal('modal5')">Learn More</button>
-        <a href="applypos3.html" class="details-btn">Apply</a>
-      </div>
-      <span class="open-positions"><big><big>6 open positions</big></big></span>
-    </div>
+        <!-- Modal 2 -->
+        <div id="modal4" class="modal">
+          <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
+            <div class="modal-job">
+              <img class="cashier" src="images/careers imgs/Cashier.jpg">
+              <h3 class="job-title">Cashier</h3>
+              <div class="details">
+                As a Cashier at Culinary Harbor, you’re key to our exceptional customer service. More than processing
+                transactions, your
+                friendly demeanor and efficient service helps create a welcoming atmosphere, ensuring smooth
+                transactions for
+                every guest.
+                <br><br>
+                <strong>Responsibilities:</strong>
+                <ul>
+                  <li>Process customer transactions accurately and efficiently</li>
+                  <li>Provide excellent customer service and assist with customer inquiries</li>
+                  <li>Maintain a clean and organized checkout area</li>
+                  <li>Handle cash, credit, and debit transactions securely</li>
+                  <li>Assist with inventory management and restocking as needed</li>
+                </ul>
+                <br><br>
+                <strong>Requirements/Skills:</strong>
+                <ul>
+                  <li>Previous experience as a cashier or in customer service</li>
+                  <li>Strong communication and interpersonal skills</li>
+                  <li>Ability to handle transactions accurately and efficiently</li>
+                  <li>Basic math skills and attention to detail</li>
+                  <li>Ability to work in a fast-paced environment</li>
+                </ul>
+                <br>
+                <strong>Salary: $40,000/year</strong>
 
-    <!-- Modal for Job 3 -->
-    <div id="modal5" class="modal">
-      <div class="modal-content">
-        <span class="close-btn" onclick="closeModal('modal5')">&times;</span>
-        <div class="modal-job">
-          <img class="waiter" src="images/careers imgs/waiter.jpg" alt="Waiter/Waitress">
+              </div>
+              <br>
+              <a href="applypos2.html" class="details-btn">Apply</a>
+              <span class="open-positions"><big><big>3 open positions</big></big></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="job">
+          <img class="waiter" src="images/careers imgs/waiter.jpg">
           <h3 class="job-title">Waiter/Waitress</h3>
           <div class="details">
-            Join us as a Waiter/Waitress at Culinary Harbor, where your warmth, expertise, and attentive service ensures
-            unforgettable dining experiences. Your dedication to consistently exceeding guest expectations upholds our
-            reputation for excellence.
-            <br><br>
-            <strong>Responsibilities:</strong>
-            <ul>
-              <li>Greet and seat customers in a friendly and professional manner</li>
-              <li>Take accurate food and beverage orders from customers</li>
-              <li>Serve food and drinks promptly and efficiently</li>
-              <li>Provide menu recommendations and answer customer questions</li>
-              <li>Ensure tables are clean and properly set before seating guests</li>
-            </ul>
-            <br><br>
-            <strong>Requirements/Skills:</strong>
-            <ul>
-              <li>Previous experience as a waiter or in a customer service role</li>
-              <li>Strong communication and interpersonal skills</li>
-              <li>Ability to multitask and work in a fast-paced environment</li>
-              <li>Attention to detail and high standards of cleanliness</li>
-              <li>Flexible schedule, including availability on weekends and holidays</li>
-            </ul>
-            <br>
-            <strong>Salary: $35,000/year plus tips</strong>
+
+            Join us as a Waiter/Waitress at Culinary Harbor, where your Eattentive service ensure
+            unforgettable dining experiences. Your goal is to exceed guest expectations.<br><br>
+            <button class="learn-more-btn" onclick="openModal('modal5')">Learn More</button>
+
+            <a href="applypos3.html" class="details-btn">Apply</a>
           </div>
-          <br>
-          <a href="applypos3.html" class="details-btn">Apply</a>
-          <span class="open-positions"><big><big>6 open positions</big></big></span>
+          <span class="open-positions"> <big><big>6 open positions</big></big></span>
         </div>
-      </div>
-    </div>
 
-    <!-- Job 4: Sous Chef -->
-    <div class="job">
-      <img class="sous-chef" src="images/careers imgs/sous_chef.jpg" alt="Sous Chef">
-      <h3 class="job-title">Sous Chef</h3>
-      <div class="details">
-        Join us as a Sous Chef at Culinary Harbor, where your culinary skills, leadership, and passion for food create exceptional dining experiences.
-        <br><br>
-        <button class="learn-more-btn" onclick="openModal('modal1')">Learn More</button>
-        <a href="applypos4.html" class="details-btn">Apply</a>
-      </div>
-      <span class="open-positions"><big><big>2 open positions</big></big></span>
-    </div>
+        <!-- Modal 1 -->
+        <div id="modal5" class="modal">
+          <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal5')">&times;</span>
+            <div class="modal-job">
+              <img class="waiter" src="images/careers imgs/waiter.jpg">
+              <h3 class="job-title">Waiter/Waitress</h3>
+              <div class="details">
+                Join us as a Waiter/Waitress at Culinary Harbor, where your warmth, expertise, and attentive service
+                ensure
+                unforgettable dining experiences. Your dedication to consistently exceeding guest expectations upholds
+                our
+                reputation
+                for excellence.
+                <br><br>
+                <strong>Responsibilities:</strong>
+                <ul>
+                  <li>Greet and seat customers in a friendly and professional manner</li>
+                  <li>Take accurate food and beverage orders from customers</li>
+                  <li>Serve food and drinks promptly and efficiently</li>
+                  <li>Provide menu recommendations and answer customer questions</li>
+                  <li>Ensure tables are clean and properly set before seating guests</li>
+                </ul>
+                <br><br>
+                <strong>Requirements/Skills:</strong>
+                <ul>
+                  <li>Previous experience as a waiter or in a customer service role</li>
+                  <li>Strong communication and interpersonal skills</li>
+                  <li>Ability to multitask and work in a fast-paced environment</li>
+                  <li>Attention to detail and high standards of cleanliness</li>
+                  <li>Flexible schedule, including availability on weekends and holidays</li>
+                </ul>
+                <br>
+                <strong>Salary: $35,000/year plus tips</strong>
 
-    <!-- Modal for Job 4 -->
-    <div id="modal1" class="modal">
-      <div class="modal-content">
-        <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
-        <div class="modal-job">
-          <img class="sous-chef" src="images/careers imgs/sous_chef.jpg" alt="Sous Chef">
+              </div>
+              <br>
+              <a href="applypos3.html" class="details-btn">Apply</a>
+              <span class="open-positions"><big><big>6 open positions</big></big></span>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- Job 4 -->
+        <div class="job">
+          <img class="sous-chef" src="images/careers imgs/sous_chef.jpg">
           <h3 class="job-title">Sous Chef</h3>
           <div class="details">
-            Join us as a Sous Chef at Culinary Harbor, where your culinary expertise, leadership, and passion for
-            innovative cuisine will be instrumental in creating exceptional dining experiences. Collaborate with our
-            Executive Chef to drive culinary excellence and inspire our kitchen team.
+            Join us as a Sous Chef at Culinary Harbor, where your culinary skills, leadership, and passion for food
+            create exceptional dining experiences.
             <br><br>
-            <strong>Responsibilities:</strong>
-            <ul>
-              <li>Assist the Executive Chef in menu planning and recipe development</li>
-              <li>Supervise and coordinate kitchen staff activities</li>
-              <li>Ensure food quality, presentation, and portion control standards</li>
-              <li>Manage inventory and order supplies as needed</li>
-              <li>Maintain a clean and organized kitchen environment</li>
-            </ul>
-            <br><br>
-            <strong>Requirements/Skills:</strong>
-            <ul>
-              <li>Proven experience as a Sous Chef or in a similar role</li>
-              <li>Strong leadership and team management skills</li>
-              <li>Excellent knowledge of culinary techniques and food safety standards</li>
-              <li>Creativity and passion for culinary arts</li>
-              <li>Ability to work in a fast-paced, high-pressure environment</li>
-            </ul>
-            <br>
-            <strong>Salary: $50,000/year</strong>
+            <button class="learn-more-btn" onclick="openModal('modal1')">Learn More</button>
+            <a href="applypos4.html" class="details-btn">Apply</a>
           </div>
-          <br>
-          <a href="applypos4.html" class="details-btn">Apply</a>
-          <span class="open-positions"><big><big>2 open positions</big></big></span>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Job 5: Cleaner -->
-    <div class="job">
-      <img class="cleaner" src="images/careers imgs/Cleaner.jpg" alt="Cleaner">
-      <h3 class="job-title">Cleaner</h3>
-      <div class="details">
-        As a Cleaner, you will play a vital role in maintaining the cleanliness and hygiene of our restaurant. You will ensure that all areas are spotless and presentable for our guests and staff.<br><br>
-        <button class="learn-more-btn" onclick="openModal('modal3')">Learn More</button>
-        <a href="applypos5.html" class="details-btn">Apply</a>
-      </div>
-      <span class="open-positions"><big><big>3 open positions</big></big></span>
-    </div>
-
-    <!-- Modal for Job 5 -->
-    <div id="modal3" class="modal">
-      <div class="modal-content">
-        <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
-        <div class="modal-job">
-          <img class="cleaner" src="images/careers imgs/Cleaner.jpg" alt="Cleaner">
-          <h3 class="job-title">Cleaner</h3>
-          <div class="details">
-            As a Cleaner at Culinary Harbor, you will play a vital role in maintaining the cleanliness and hygiene of
-            our restaurant. Your attention to detail ensures that all areas are spotless and presentable for our guests
-            and staff, upholding our high standards of cleanliness.
-            <br><br>
-            <strong>Responsibilities:</strong>
-            <ul>
-              <li>Clean and sanitize all areas of the restaurant</li>
-              <li>Ensure restrooms are clean and stocked with supplies</li>
-              <li>Empty trash bins and dispose of waste properly</li>
-              <li>Perform routine maintenance tasks as needed</li>
-              <li>Assist with kitchen cleaning and dishwashing as needed</li>
-            </ul>
-            <br><br>
-            <strong>Requirements/Skills:</strong>
-            <ul>
-              <li>Previous experience in a cleaning or janitorial role</li>
-              <li>Strong attention to detail and thoroughness</li>
-              <li>Ability to work independently and efficiently</li>
-              <li>Knowledge of cleaning chemicals and supplies</li>
-              <li>Physical stamina and ability to perform manual labor tasks</li>
-            </ul>
-            <br>
-            <strong>Salary: $30,000/year</strong>
-          </div>
-          <br>
-          <a href="applypos5.html" class="details-btn">Apply</a>
           <span class="open-positions"><big><big>3 open positions</big></big></span>
         </div>
+
+        <!-- Modal 1 -->
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+            <div class="modal-job">
+              <img class="sous-chef" src="images/careers imgs/sous_chef.jpg">
+              <h3 class="job-title">Sous Chef</h3>
+              <div class="details">
+                Join us as a Sous Chef at Culinary Harbor, where your culinary skills, leadership, and passion for food
+                creates exceptional dining experiences.
+                <br><br>
+                <strong>Responsibilities:</strong>
+                <ul>
+                  <li>Oversee daily operations of the restaurant</li>
+                  <li>Manage staff, including hiring and training</li>
+                  <li>Monitor inventory and order supplies</li>
+                  <li>Ensure compliance with health and safety regulations</li>
+                  <li>Develop and implement strategies to increase profitability</li>
+                </ul>
+                <br><br>
+                <strong>Requirements/Skills:</strong>
+                <ul>
+                  <li>Previous experience in restaurant management</li>
+                  <li>Strong leadership and communication skills</li>
+                  <li>Ability to multitask and problem-solve effectively</li>
+                  <li>Knowledge of food safety standards and regulations</li>
+                  <li>Business acumen and budget management skills</li>
+                </ul>
+                <br>
+                <strong>Salary: $62,900/year</strong>
+              </div>
+              <br>
+              <a href="applypos4.html" class="details-btn">Apply</a>
+              <span class="open-positions"><big><big>3 open positions</big></big></span>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Job 5 -->
+        <div class="job">
+          <img class="sous-chef" src="images/careers imgs/shift_supervisor.jpg">
+          <h3 class="job-title">Shift Supervisor</h3>
+          <div class="details">
+            As a Shift Supervisor, you will oversee the operations during their shift, ensuring efficient workflow, and
+            team management.
+            <br><br>
+            <button class="learn-more-btn" onclick="openModal('modal6')">Learn More</button>
+            <a href="applypos5.html" class="details-btn">Apply</a>
+          </div>
+          <span class="open-positions"><big><big>1 open positions</big></big></span>
+        </div>
+
+        <!-- Modal 1 -->
+        <div id="modal6" class="modal">
+          <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal6')">&times;</span>
+            <div class="modal-job">
+              <img class="sous-chef" src="images/careers imgs/shift_supervisor.jpg">
+              <h3 class="job-title">Shift Supervisor</h3>
+              <div class="details">
+                A Shift Supervisor oversees the operations during their shift, ensuring efficient workflow, high
+                customer service standards, and team management.
+                <br><br>
+                <strong>Responsibilities:</strong>
+                <ul>
+                  <li>Manage and oversee daily restaurant operations during assigned shifts.</li>
+                  <li>Ensure high levels of customer satisfaction through excellent service.</li>
+                  <li>Train, mentor, and support staff to enhance performance and resolve conflicts.</li>
+                  <li>EHandle cash management, including opening/closing registers and balancing cash drawers.</li>
+                </ul>
+                <br><br>
+                <strong>Requirements/Skills:</strong>
+                <ul>
+                  <li>Proven experience in a supervisory role in the restaurant or hospitality industry.</li>
+                  <li>Strong leadership and team management skills.</li>
+                  <li>Excellent communication and interpersonal abilities.</li>
+                  <li>Knowledge of food safety standards and regulations</li>
+                  <li>Ability to handle stressful situations and resolve conflicts effectively.</li>
+                </ul>
+                <br>
+                <strong>Salary: $55,900/year</strong>
+              </div>
+              <br>
+              <a href="applypos5.html" class="details-btn">Apply</a>
+              <span class="open-positions"><big><big>1 open positions</big></big></span>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Job 6 -->
+        <div class="job">
+          <img class="sous-chef" src="images/careers imgs/dish_cleaner.jpg">
+          <h3 class="job-title">Dish Cleaner</h3>
+          <div class="details">
+            As a Dish Cleaner, you have to maintains cleanliness and sanitation standards in the kitchen by washing
+            dishes, utensils,
+            and kitchen equipment.
+            <br><br>
+            <button class="learn-more-btn" onclick="openModal('modal7')">Learn More</button>
+            <a href="applypos6.html" class="details-btn">Apply</a>
+          </div>
+          <span class="open-positions"><big><big>4 open positions</big></big></span>
+        </div>
+
+        <!-- Modal 1 -->
+        <div id="modal7" class="modal">
+          <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal7')">&times;</span>
+            <div class="modal-job">
+              <img class="sous-chef" src="images/careers imgs/dish_cleaner.jpg">
+              <h3 class="job-title">Dish Cleaner</h3>
+              <div class="details">
+                A Dish Cleaner maintains cleanliness and sanitation standards in the kitchen by washing dishes,
+                utensils, and kitchen equipment.
+                <br><br>
+                <strong>Responsibilities:</strong>
+                <ul>
+                  <li>Wash and sanitize dishes, utensils, and kitchen equipment.</li>
+                  <li>Maintain cleanliness of dishwashing area, including floors and counters.</li>
+                  <li>Dispose of trash and waste materials appropriately.</li>
+                  <li>Assist in kitchen cleaning and maintenance tasks as needed.</li>
+                </ul>
+                <br><br>
+                <strong>Requirements/Skills:</strong>
+                <ul>
+                  <li>Ability to work in a fast-paced environment.
+                  </li>
+                  <li>Basic understanding of sanitation and safety practices.
+                  </li>
+                  <li>Physical stamina to stand for long periods and perform repetitive tasks.
+                  </li>
+                  <li>Attention to detail and ability to follow instructions.
+                  </li>
+                </ul>
+                <br>
+                <strong>Salary: $30,900/year</strong>
+              </div>
+              <br>
+              <a href="applypos6.html" class="details-btn">Apply</a>
+              <span class="open-positions"><big><big>4 open positions</big></big></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job 7 -->
+        <div class="job">
+          <img class="sous-chef" src="images/careers imgs/maintenance_worker.jpg">
+          <h3 class="job-title">Maintenance Worker</h3>
+          <div class="details">
+            As a Maintenance Worker, you have to ensure that the restaurant's facilities and equipment are in optimal
+            working
+            condition. They perform routine maintenance.
+            <br><br>
+            <button class="learn-more-btn" onclick="openModal('modal8')">Learn More</button>
+            <a href="applypos7.html" class="details-btn">Apply</a>
+          </div>
+          <span class="open-positions"><big><big>2 open positions</big></big></span>
+        </div>
+
+        <!-- Modal 1 -->
+        <div id="modal8" class="modal">
+          <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal8')">&times;</span>
+            <div class="modal-job">
+              <img class="sous-chef" src="images/careers imgs/maintenance_worker.jpg">
+              <h3 class="job-title">Maintenance Worker</h3>
+              <div class="details">
+                A Maintenance Worker ensures that the restaurant's facilities and equipment are in optimal working
+                condition. They perform routine maintenance.
+                <br><br>
+                <strong>Responsibilities:</strong>
+                <ul>
+                  <li>Conduct regular inspections and maintenance of equipment, plumbing, and electrical systems.
+                  </li>
+                  <li>Perform minor repairs and troubleshooting on kitchen appliances and facilities.
+                  </li>
+                  <li>Monitor inventory and order supplies</li>
+                  <li>Ensure compliance with health and safety regulations</li>
+                </ul>
+                <br><br>
+                <strong>Requirements/Skills:</strong>
+                <ul>
+                  <li>Previous experience in restaurant management</li>
+                  <li>Knowledge of basic plumbing, electrical, and mechanical systems.
+                  </li>
+                  <li>Ability to multitask and problem-solve effectively</li>
+                  <li>Ability to work independently and manage time effectively.
+                  </li>
+                </ul>
+                <br>
+                <strong>Salary: $30,900/year</strong>
+              </div>
+              <br>
+              <a href="applypos7.html" class="details-btn">Apply</a>
+              <span class="open-positions"><big><big>2 open positions</big></big></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job 8 -->
+        <div class="job">
+          <img class="sous-chef" src="images/careers imgs/training_coordinator.jpg">
+          <h3 class="job-title">Training Coordinator</h3>
+          <div class="details">
+            As a Training Coordinator, you must develop and oversee training programs for restaurant staff. They ensure
+            that
+            employees are trained and knowledgeable.
+            <br><br>
+            <button class="learn-more-btn" onclick="openModal('modal9')">Learn More</button>
+            <a href="applypos8.html" class="details-btn">Apply</a>
+          </div>
+          <span class="open-positions"><big><big>2 open positions</big></big></span>
+        </div>
+
+        <!-- Modal 1 -->
+        <div id="modal9" class="modal">
+          <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal9')">&times;</span>
+            <div class="modal-job">
+              <img class="sous-chef" src="images/careers imgs/training_coordinator.jpg">
+              <h3 class="job-title">Training Coordinator</h3>
+              <div class="details">
+                A Training Coordinator develops, implements, and oversees training programs for restaurant staff. They
+                ensure that employees are adequately trained and knowledgeable.
+                <br><br>
+                <strong>Responsibilities:</strong>
+                <ul>
+                  <li>Maintain training records and ensure compliance with industry regulations.
+                  </li>
+                  <li>Manage staff, including hiring and training</li>
+                  <li>Monitor inventory and order supplies</li>
+                  <li>Conduct training sessions and workshops to improve staff skills and knowledge.
+                  </li>
+                  <li>Develop and implement strategies to increase profitability</li>
+                </ul>
+                <br><br>
+                <strong>Requirements/Skills:</strong>
+                <ul>
+                  <li>Previous experience in restaurant management</li>
+                  <li>Strong leadership and communication skills</li>
+                  <li>Ability to assess training needs and develop effective programs.
+
+                  </li>
+                  <li>Experience in training and development, preferably in the hospitality industry.
+                  </li>
+                </ul>
+                <br>
+                <strong>Salary: $55,900/year</strong>
+              </div>
+              <br>
+              <a href="applypos8.html" class="details-btn">Apply</a>
+              <span class="open-positions"><big><big>2 open positions</big></big></span>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
       </div>
     </div>
-
-  </div>
-</div>
   </main>
 
   <!-- Footer section -->
@@ -506,8 +694,6 @@
       </div>
     </section>
   </footer>
-
-  <!--Animate on scroll library-->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -518,8 +704,6 @@
       });
     });
   </script>
-
-  <!--AI chatbot-->
   <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxf3ic3d00rnu1bbuzgs4aai"></script>
   <!--Accesibility widget-->
   <script src="https://cdn.userway.org/widget.js" data-account="ertbJPpxpJ"></script>
