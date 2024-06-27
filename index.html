@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--test-->
+
 <head>
   <!-- Meta tags for character encoding, viewport, and page title -->
   <meta charset="UTF-8" />
@@ -156,13 +157,13 @@
 
     </div>
   </header>
-  
+
 
   <main>
     <!--Notification seciton-->
-    <div class="notification">
-      <span>Interested in working with us? Explore our <a href="careers.html">careers</a> page.</span>
-      <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+    <div class="notification" id="notification">
+      <span>Want to join our culinary team? Explore our <a href="careers.html">careers</a> page!</span>
+      <span class="close" onclick="closeNotification()">&times;</span>
     </div>
 
     <br>
@@ -1015,7 +1016,7 @@
       });
     });
   </script>
-  
+
   <!--Accesibility widget-->
   <script src="https://cdn.userway.org/widget.js" data-account="ertbJPpxpJ"></script>
 </body>

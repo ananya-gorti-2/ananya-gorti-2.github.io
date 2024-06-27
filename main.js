@@ -143,8 +143,11 @@ document.addEventListener("DOMContentLoaded", function () {
   
   function fadeOut(){
     setTimeout(loader, 3000);
-  
   }
   
   window.onload = fadeOut();
 
+function closeNotification() {
+  var notification = document.getElementById('notification');
+  notification.style.display = 'none';
+}
