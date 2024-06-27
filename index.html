@@ -32,11 +32,8 @@
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
     import { getDatabase, ref, set, update, increment, onValue } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
 
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    // web app's Firebase configuration
     const firebaseConfig = {
       apiKey: "AIzaSyA8KxkL46u0BsqFWc0T3lq6RCaGLs7wpLA",
       authDomain: "ch-analytics-f7d03.firebaseapp.com",
@@ -54,7 +51,7 @@
 
     console.log("hi1")
 
-
+    // Function to record page views
     function recordPageView() {
       const analyticsRef = ref(db, 'analytics');
       update(analyticsRef, {
@@ -988,12 +985,17 @@
     <img src="images/restaurant-loader-2.gif" alt="restaurant website loader">
   </div>
 
+  <!--Swiper js library-->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+  <!--main js-->
   <script src="main.js"></script>
+
+  <!--Ai Chatbot-->
   <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxf3ic3d00rnu1bbuzgs4aai"></script>
 
 
+  <!--Animate on scroll-->
   <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -1006,6 +1008,7 @@
       });
     });
   </script>
+  
   <!--Accesibility widget-->
   <script src="https://cdn.userway.org/widget.js" data-account="ertbJPpxpJ"></script>
 </body>

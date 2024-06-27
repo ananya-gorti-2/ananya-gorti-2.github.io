@@ -22,11 +22,8 @@
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
     import { getDatabase, ref, set, update, increment, onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
 
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    //web app's Firebase configuration
     const firebaseConfig1 = {
       apiKey: "AIzaSyA8KxkL46u0BsqFWc0T3lq6RCaGLs7wpLA",
       authDomain: "ch-analytics-f7d03.firebaseapp.com",
@@ -44,7 +41,7 @@
 
     console.log("hi1")
 
-
+    // Function to record page views
     function recordPageView() {
       const analyticsRef = ref(db1, 'analytics');
       update(analyticsRef, {
@@ -62,6 +59,7 @@
       });
     }
 
+    //Function to record Application Submissions
     function recordApplicationSubmission() {
       const analyticsRef = ref(db1, 'analytics');
       update(analyticsRef, {
@@ -90,7 +88,7 @@
 
     console.log("hi1")
 
-    // Example of using the functions
+    // using the functions
     window.addEventListener('load', () => {
       const startTime = Date.now();
 
@@ -114,6 +112,7 @@
       });
     });
 
+    //Function to validate form and to check email & DOB
     function validateForm() {
       var fullName = document.getElementById('fullName').value.trim();
       var email = document.getElementById('email').value.trim();

@@ -23,11 +23,9 @@
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
     import { getDatabase, ref, set, update, increment, onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
+ 
 
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    // web app's Firebase configuration
     const firebaseConfig1 = {
       apiKey: "AIzaSyA8KxkL46u0BsqFWc0T3lq6RCaGLs7wpLA",
       authDomain: "ch-analytics-f7d03.firebaseapp.com",
@@ -45,7 +43,7 @@
 
     console.log("hi1")
 
-
+    //Function to record page views
     function recordPageView() {
       const analyticsRef = ref(db1, 'analytics');
       update(analyticsRef, {
@@ -63,6 +61,7 @@
       });
     }
 
+    // Function to record application submissions
     function recordApplicationSubmission() {
       const analyticsRef = ref(db1, 'analytics');
       update(analyticsRef, {
@@ -84,14 +83,14 @@
           });
         }
       }, {
-        onlyOnce: true // Ensure this function only runs once
+        onlyOnce: true 
       });
     }
 
 
     console.log("hi1")
 
-    // Example of using the functions
+    // Using the function
     window.addEventListener('load', () => {
       const startTime = Date.now();
 
@@ -100,14 +99,14 @@
 
       window.addEventListener('beforeunload', () => {
         const endTime = Date.now();
-        const sessionDuration = (endTime - startTime) / 1000; // duration in seconds
+        const sessionDuration = (endTime - startTime) / 1000; 
         recordSessionDuration(sessionDuration);
         calculateAverageSessionDuration();
       });
 
       const form = document.getElementById('GeneralManagerApplicationForm');
       form.addEventListener('submit', (event) => {
-        event.preventDefault(); // Prevent default form submission
+        event.preventDefault(); 
         if (validateForm()) {
           recordApplicationSubmission();
         }
@@ -115,6 +114,7 @@
       });
     });
 
+    //function to check form for age and proper email
     function validateForm() {
       var fullName = document.getElementById('fullName').value.trim();
       var email = document.getElementById('email').value.trim();
@@ -198,8 +198,6 @@
           let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
           document.getElementById('cart-count').textContent = totalCount;
         }
-
-        // Call the function on page load
         updateCartCountOnLoad();
       </script>
       <button class="btn"><a href="apply.html">Apply Now</a></button>
@@ -346,7 +344,8 @@
       var form = document.getElementById('GeneralManagerApplicationForm');
 
       form.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent form submission
+        // Prevent form submission
+        event.preventDefault(); 
 
         
 
@@ -477,6 +476,4 @@
   <script src="main.js"></script>
 
 </body>
-
-
 </html>

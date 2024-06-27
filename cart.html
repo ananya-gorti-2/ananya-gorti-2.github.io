@@ -25,11 +25,8 @@
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
     import { getDatabase, ref, set, update, increment, onValue } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
 
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    // web app's Firebase configuration
     const firebaseConfig = {
       apiKey: "AIzaSyA8KxkL46u0BsqFWc0T3lq6RCaGLs7wpLA",
       authDomain: "ch-analytics-f7d03.firebaseapp.com",
@@ -47,7 +44,7 @@
 
     console.log("hi1")
 
-
+    // Function to record page views
     function recordPageView() {
       const analyticsRef = ref(db, 'analytics');
       update(analyticsRef, {
@@ -86,7 +83,7 @@
 
     console.log("hi1")
 
-    // Example of using the functions
+    // using the functions
     window.addEventListener('load', () => {
       const startTime = Date.now();
 
@@ -154,238 +151,229 @@
     </div>
 
   </header>
-  <br><br><br><br><br>
 
+  <!-- Adding extra vertical space for layout purposes -->
+  <br><br><br><br><br> 
 
-  <br>
+<!-- Adding a single line break for layout purposes -->
+<br> 
 
-  <div class="table-container">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Quantity</th>
-          <th>Subtotal</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody id="tbody1" class="tbody1"></tbody>
-      <tfoot>
-        <tr>
-          <td colspan="2" style="text-align: right; font-size: 24px;">Total:</td>
-          <td id="total-price" style="font-size: 24px;">$0.00</td>
-        </tr>
-      </tfoot>
-    </table>
-  </div>
-  <div class="heading2">
-    <h1>Checkout</h1>
-  </div>
-  <div class="containerconc">
-    <div class="contact">
-      <!-- <h1 class="headingconc">Contact Us</h1> -->
-      <form id="contactForm">
+<!-- Container for the table displaying the cart items -->
+<div class="table-container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+        <th></th>
+      </tr>
+    </thead>
+    <!-- Body of the table where cart items will be dynamically added -->
+    <tbody id="tbody1" class="tbody1"></tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2" style="text-align: right; font-size: 24px;">Total:</td>
+        <td id="total-price" style="font-size: 24px;">$0.00</td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
 
-        <span class="inputbox">
-          <span class="inputname">First Name</span>
-          <input type="text" id="firstName" required>
+<!-- Header for the checkout section -->
+<div class="heading2">
+  <h1>Checkout</h1>
+</div>
 
-        </span>
-        <span class="inputbox">
-          <span class="inputname">Last Name</span>
-          <input type="text" id="lastName" required>
-
-        </span>
-        <span class="inputbox">
-          <span class="inputname">Email Address</span>
-          <input type="text" id="email" id="email" required>
-
-        </span>
-        <span class="inputbox">
-          <span class="inputname">Contact Number</span>
-          <input type="text" id="contactNumber" required>
-
-        </span>
-
-        <span class="inputbox">
-          <span class="inputname">Pickup or Delivery</span>
-          <label><input type="radio" name="orderType" value="pickup" required> Pickup</label>
-          <label><input type="radio" name="orderType" value="delivery" required> Delivery</label>
-        </span>
-
+<!-- Container for the contact form and checkout details -->
+<div class="containerconc">
+  <div class="contact">
+    <!-- Commented out the header for the contact form -->
+    <!-- <h1 class="headingconc">Contact Us</h1> -->
+    <form id="contactForm">
+      <!-- Input field for first name -->
+      <span class="inputbox">
+        <span class="inputname">First Name</span>
+        <input type="text" id="firstName" required>
       </span>
+      <!-- Input field for last name -->
+      <span class="inputbox">
+        <span class="inputname">Last Name</span>
+        <input type="text" id="lastName" required>
+      </span>
+      <!-- Input field for email address -->
+      <span class="inputbox">
+        <span class="inputname">Email Address</span>
+        <input type="text" id="email" required>
+      </span>
+      <!-- Input field for contact number -->
+      <span class="inputbox">
+        <span class="inputname">Contact Number</span>
+        <input type="text" id="contactNumber" required>
+      </span>
+      <!-- Radio buttons for order type (pickup or delivery) -->
+      <span class="inputbox">
+        <span class="inputname">Pickup or Delivery</span>
+        <label><input type="radio" name="orderType" value="pickup" required> Pickup</label>
+        <label><input type="radio" name="orderType" value="delivery" required> Delivery</label>
+      </span>
+      <!-- Input field for address -->
       <span class="inputbox">
         <span class="inputname">Address</span>
         <input type="text" id="address" required>
-
       </span>
-
-      
-        <span class="inputbox">
-          <span class="textname">Additional Info</span></span><br />
-        <textarea name="" id="message" cols="30" rows="3"></textarea>
-
-
-        <input type="submit" value="Submit" />
-
-      </form>
-    </div>
+      <!-- Textarea for additional information -->
+      <span class="inputbox">
+        <span class="textname">Additional Info</span></span><br />
+      <textarea name="" id="message" cols="30" rows="3"></textarea>
+      <!-- Submit button for the form -->
+      <input type="submit" value="Submit" />
+    </form>
   </div>
+</div>
 
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<!-- Include EmailJS scripts for sending emails -->
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-  <script type="text/javascript">
-    (function () {
-      emailjs.init({
-        publicKey: "BUNCtveULbSPE3eGs",
-      });
-    })();
-  </script>
+<script type="text/javascript">
+  (function () {
+    emailjs.init({
+      publicKey: "BUNCtveULbSPE3eGs",
+    });
+  })();
+</script>
 
-  <script>
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function (event) {
+    event.preventDefault();
 
+    // Get form values
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
+    var email = document.getElementById("email").value;
+    var contactNumber = document.getElementById("contactNumber").value;
+    var message1 = document.getElementById("message").value;
+    var address1 = document.getElementById("address").value;
+    var orderType = document.querySelector('input[name="orderType"]:checked').value;
 
-    document.getElementById("contactForm").addEventListener("submit", function (event) {
-      event.preventDefault();
+    // Log form values to console for debugging
+    console.log(firstName);
+    console.log(lastName);
+    console.log(email);
+    console.log(contactNumber);
+    console.log(message1);
 
-      // Get form values
-      var firstName = document.getElementById("firstName").value;
-      var lastName = document.getElementById("lastName").value;
-      var email = document.getElementById("email").value;
-      var contactNumber = document.getElementById("contactNumber").value;
-      var message1 = document.getElementById("message").value;
-      var address1 = document.getElementById("address").value;
-      var orderType = document.querySelector('input[name="orderType"]:checked').value;
+    // Validate if all fields are filled
+    if (firstName.trim() === '' || lastName.trim() === '' || email.trim() === '' || contactNumber.trim() === '' || message1.trim() === '') {
+      alert("Please fill out all fields");
+      return;
+    }
 
-      console.log(firstName);
-      console.log(lastName);
-      console.log(email);
-      console.log(contactNumber);
-      console.log(message1);
+    // Gather cart items details
+    var items = [];
+    var rows = document.querySelectorAll("#tbody1 tr");
+    rows.forEach(function (row) {
+      var name = row.cells[0].innerText;
+      var quantity = row.cells[1].innerText;
+      var subtotal = row.cells[2].innerText;
+      items.push(`${name} (Quantity: ${quantity}, Subtotal: ${subtotal})`);
+    });
+    var itemsString = items.join("\n");
 
-      // Validate if all fields are filled
-      if (firstName.trim() === '' || lastName.trim() === '' || email.trim() === '' || contactNumber.trim() === '' || message1.trim() === '') {
-        alert("Please fill out all fields");
-        return;
-      }
+    // Get total cost
+    var totalCost = document.getElementById("total-price").innerText;
 
-      var items = [];
-      var rows = document.querySelectorAll("#tbody1 tr");
-      rows.forEach(function (row) {
-        var name = row.cells[0].innerText;
-        var quantity = row.cells[1].innerText;
-        var subtotal = row.cells[2].innerText;
-        items.push(`${name} (Quantity: ${quantity}, Subtotal: ${subtotal})`);
-      });
-      var itemsString = items.join("\n");
+    // Parameters to send in the email
+    let parms = {
+      message: message1,
+      from_name: firstName,
+      lastname: lastName,
+      from_email: email,
+      contactnum: contactNumber,
+      order_items: itemsString,
+      totalcost: totalCost,
+      addressuser: address1,
+      pickupordelivery: orderType
+    }
 
-
-      var totalCost = document.getElementById("total-price").innerText;
-
-      let parms = {
-        message: message1,
-        from_name: firstName,
-        lastname: lastName,
-        from_email: email,
-        contactnum: contactNumber,
-        order_items: itemsString,
-        totalcost: totalCost,
-        addressuser: address1,
-        pickupordelivery: orderType
-      }
-
-      // Send email using Email.send()
-      emailjs.send("service_tkhe4xh", "template_198tkel", parms).then(function (response) {
-        alert("Order Sent");
-        localStorage.removeItem('cart');
-        location.reload();
-      }, function (error) {
-        alert("Failed to send email: " + JSON.stringify(error));
-      });
-      document.getElementById("contactForm").reset();
+    // Send email using Email.send()
+    emailjs.send("service_tkhe4xh", "template_198tkel", parms).then(function (response) {
+      alert("Order Sent");
+      localStorage.removeItem('cart'); // Clear cart from local storage
+      location.reload(); // Reload the page
+    }, function (error) {
+      alert("Failed to send email: " + JSON.stringify(error));
     });
 
-  </script>
+    // Reset the form after submission
+    document.getElementById("contactForm").reset();
+  });
+</script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cartItemsContainer = document.getElementById('tbody1');
+    const totalPriceElement = document.getElementById('total-price');
 
+    // Retrieve cart items from localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+    // Function to update the cart and table rows
+    function updateCartAndTable() {
+      // Clear existing table rows
+      cartItemsContainer.innerHTML = '';
 
+      // Reset total price
+      let totalPrice = 0;
 
+      // Filter out items with quantity 0
+      cart = cart.filter(item => item.quantity > 0);
 
+      // Re-populate the table
+      cart.forEach((item, index) => {
+        const itemSubtotal = item.price * item.quantity;
+        totalPrice += itemSubtotal;
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const cartItemsContainer = document.getElementById('tbody1');
-      const totalPriceElement = document.getElementById('total-price');
-
-      // Retrieve cart items from localStorage
-      let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-      // Function to update the cart and table rows
-      function updateCartAndTable() {
-        // Clear existing table rows
-        cartItemsContainer.innerHTML = '';
-
-        // Reset total price
-        let totalPrice = 0;
-
-        // Filter out items with quantity 0
-        cart = cart.filter(item => item.quantity > 0);
-
-        // Re-populate the table
-        cart.forEach((item, index) => {
-          const itemSubtotal = item.price * item.quantity;
-          totalPrice += itemSubtotal;
-
-          const cartItem = document.createElement('tr');
-          cartItem.innerHTML = `
+        const cartItem = document.createElement('tr');
+        cartItem.innerHTML = `
           <td>${item.name}</td>
           <td>${item.quantity}</td>
           <td>$${itemSubtotal.toFixed(2)}</td>
           <td><span class="remove-icon" data-index="${index}">&times;</span></td>
         `;
 
-          cartItemsContainer.appendChild(cartItem);
+        cartItemsContainer.appendChild(cartItem);
 
-          // Add event listener to remove icon
-          const removeIcon = cartItem.querySelector('.remove-icon');
-          removeIcon.addEventListener('click', () => {
-            location.reload();
-            if (item.quantity > 0) {
-              item.quantity--;
-              updateLocalStorage();
-              updateCartAndTable();
-              totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
-            }
-          });
+        // Add event listener to remove icon
+        const removeIcon = cartItem.querySelector('.remove-icon');
+        removeIcon.addEventListener('click', () => {
+          location.reload();
+          if (item.quantity > 0) {
+            item.quantity--;
+            updateLocalStorage();
+            updateCartAndTable();
+            totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
+          }
         });
+      });
 
-        function updateCartCountOnLoad() {
-          let cart = JSON.parse(localStorage.getItem('cart')) || [];
-          let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
-          document.getElementById('cart-count').textContent = totalCount;
-        }
+      // Update the total price display
+      totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
+    }
 
-        // Call the function on page load
-        updateCartCountOnLoad();
+    // Function to update localStorage
+    function updateLocalStorage() {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
 
-        // Update total price display
-        totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
-      }
+    // Initial update of cart and table
+    updateCartAndTable();
+  });
+</script>
 
-      // Function to update localStorage
-      function updateLocalStorage() {
-        localStorage.setItem('cart', JSON.stringify(cart));
-      }
-
-      // Initial update of cart and table
-      updateCartAndTable();
-    });
-  </script>
-
-
-  <br><br><br><br><br>
+<!-- Adding extra vertical space for layout purposes -->
+<br><br><br><br><br> 
 
   <footer>
     <!-- Footer section -->
@@ -465,10 +453,13 @@
       </div>
     </section>
   </footer>
+
+  <!--Ai Chatbot-->
   <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxf3ic3d00rnu1bbuzgs4aai"></script>
   <!--Accesibility widget-->
   <script src="https://cdn.userway.org/widget.js" data-account="ertbJPpxpJ"></script>
 
+  <!--Animate on scroll library-->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {

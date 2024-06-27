@@ -28,11 +28,8 @@
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
     import { getDatabase, ref, set, update, increment, onValue } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
 
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    // web app's Firebase configuration
     const firebaseConfig = {
       apiKey: "AIzaSyA8KxkL46u0BsqFWc0T3lq6RCaGLs7wpLA",
       authDomain: "ch-analytics-f7d03.firebaseapp.com",
@@ -89,7 +86,7 @@
 
     console.log("hi1")
 
-    // Example of using the functions
+    // Function in use
     window.addEventListener('load', () => {
       const startTime = Date.now();
 
@@ -98,7 +95,7 @@
 
       window.addEventListener('beforeunload', () => {
         const endTime = Date.now();
-        const sessionDuration = (endTime - startTime) / 1000; // duration in seconds
+        const sessionDuration = (endTime - startTime) / 1000; 
         recordSessionDuration(sessionDuration);
         calculateAverageSessionDuration();
       });
@@ -192,6 +189,7 @@
   </div>
   <br>
 
+  <!--Timeline section-->
   <svg display="none">
     <symbol id="arrow">
       <polyline points="7 10,12 15,17 10" fill="none" stroke="currentcolor" stroke-linecap="round"
@@ -201,190 +199,195 @@
   <div data-aos="fade-up" class="heading">
     <h1>Our Journey</h1>
   </div>
-  <div data-aos="fade-up" id="timeline" class="timeline">
+
+<!-- Timeline Container -->
+<div data-aos="fade-up" id="timeline" class="timeline">
+    
+    <!-- Timeline Item 1 -->
     <div class="timeline__item">
-      <div class="timeline__item-header">
-        <button class="timeline__arrow" type="button">
-          <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
-            <use href="#arrow" />
-          </svg>
-        </button>
-        <span class="timeline__dot"></span>
-        <span id="item1-name" class="timeline__meta">
-          <time class="timeline__date" datetime="1970-01-01">January 1, 1970</time><br>
-          <strong class="timeline__title">Founding and Opening</strong>
-          <div class="time__item-body" id="item1-ctrld" role="region" aria-labelledby="item1" aria-hidden="true">
-
-            <div class="FAQ">
-              <a href="#hide1" class="hide" id="hide1">+</a>
-              <a href="#show1" class="show" id="show1">-</a>
-              <div class="question1"></div>
-              <div class="list">
-                <p class="res">John Smith established the first Culinary Harbor restaurant in Alpharetta, Georgia,
-                  with
-                  a modest $100 and the unwavering support
-                  of his family and friends. The grand opening was a significant milestone, marking the beginning of
-                  John's dream to create a unique culinary
-                  experience. The initial menu featured innovative dishes that combined traditional flavors with a
-                  modern twist, quickly gaining the attention of
-                  local food enthusiasts. The restaurant's warm ambiance and exceptional service set the tone for what
-                  would become a hallmark of the Culinary
-                  Harbor brand.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </span>
-      </div>
-    </div>
-    <div class="timeline__item">
-      <div class="timeline__item-header">
-        <button class="timeline__arrow" type="button">
-          <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
-            <use href="#arrow" />
-          </svg>
-        </button>
-        <span class="timeline__dot"></span>
-        <span id="item1-name" class="timeline__meta">
-          <time class="timeline__date" datetime="1970-01-01">April 24, 1982</time><br>
-          <strong class="timeline__title">Expansion and Opening of New Locations
-          </strong>
-          <div class="time__item-body" id="item2-ctrld" role="region" aria-labelledby="item2" aria-hidden="true">
-
-            <div class="FAQ">
-              <a href="#hide2" class="hide" id="hide2">+</a>
-              <a href="#show2" class="show" id="show2">-</a>
-              <div class="question1"></div>
-              <div class="list">
-                <p class="res">Buoyed by the success of the Alpharetta location, John decided to expand Culinary
-                  Harbor
-                  by opening additional branches in
-                  neighboring cities. The first expansion was met with enthusiastic responses, prompting John to
-                  consider national and eventually international
-                  growth. Each new location maintained the same high standards of quality and service that
-                  characterized
-                  the original restaurant. This strategic
-                  expansion allowed Culinary Harbor to reach a wider audience, solidifying its reputation as a premier
-                  dining destination.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </span>
-      </div>
-    </div>
-    <div class="timeline__item">
-      <div class="timeline__item-header">
-        <button class="timeline__arrow" type="button">
-          <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
-            <use href="#arrow" />
-          </svg>
-        </button>
-        <span class="timeline__dot"></span>
-        <span id="item1-name" class="timeline__meta">
-          <time class="timeline__date" datetime="1970-01-01">July 30, 1989</time><br>
-          <strong class="timeline__title">10th Location</strong>
-          <div class="time__item-body" id="item2-ctrld" role="region" aria-labelledby="item2" aria-hidden="true">
-
-            <div class="FAQ">
-              <a href="#hide3" class="hide" id="hide3">+</a>
-              <a href="#show3" class="show" id="show3">-</a>
-              <div class="question1"></div>
-              <div class="list">
-                <p class="res">Reaching the milestone of the 100th Culinary Harbor location was a momentous occasion
-                  for
-                  John and his team. This achievement was
-                  celebrated with a grand event that included loyal customers, employees, and local dignitaries. The
-                  100th restaurant embodied the brand’s evolution
-                  while staying true to its core values of innovation and exceptional dining experiences. This
-                  milestone
-                  underscored the hard work, dedication,
-                  and vision that propelled Culinary Harbor from a single restaurant to a global chain.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </span>
-      </div>
+        <div class="timeline__item-header">
+            <!-- Expand/Collapse Button -->
+            <button class="timeline__arrow" type="button">
+                <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                    <use href="#arrow" />
+                </svg>
+            </button>
+            <!-- Timeline Dot -->
+            <span class="timeline__dot"></span>
+            <!-- Timeline Metadata -->
+            <span id="item1-name" class="timeline__meta">
+                <!-- Date and Title -->
+                <time class="timeline__date" datetime="1970-01-01">January 1, 1970</time><br>
+                <strong class="timeline__title">Founding and Opening</strong>
+                <!-- Content Body (Initially Hidden) -->
+                <div class="time__item-body" id="item1-ctrld" role="region" aria-labelledby="item1" aria-hidden="true">
+                    <!-- FAQ Section -->
+                    <div class="FAQ">
+                        <!-- Show/Hide Links -->
+                        <a href="#hide1" class="hide" id="hide1">+</a>
+                        <a href="#show1" class="show" id="show1">-</a>
+                        <div class="question1"></div>
+                        <!-- Description List -->
+                        <div class="list">
+                            <p class="res">John Smith established the first Culinary Harbor restaurant in Alpharetta, Georgia,
+                                with a modest $100 and the unwavering support of his family and friends. The grand opening was a significant milestone, marking the beginning of John's dream to create a unique culinary
+                                experience. The initial menu featured innovative dishes that combined traditional flavors with a modern twist, quickly gaining the attention of local food enthusiasts. The restaurant's warm ambiance and exceptional service set the tone for what would become a hallmark of the Culinary
+                                Harbor brand.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </span>
+        </div>
     </div>
 
+    <!-- Timeline Item 2 -->
     <div class="timeline__item">
-      <div class="timeline__item-header">
-        <button class="timeline__arrow" type="button">
-          <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
-            <use href="#arrow" />
-          </svg>
-        </button>
-        <span class="timeline__dot"></span>
-        <span id="item1-name" class="timeline__meta">
-          <time class="timeline__date" datetime="1970-01-01">December 21, 1999</time><br>
-          <strong class="timeline__title">Launch of Franchise Program</strong>
-          <div class="time__item-body" id="item2-ctrld" role="region" aria-labelledby="item2" aria-hidden="true">
-
-            <div class="FAQ">
-              <a href="#hide4" class="hide" id="hide4">+</a>
-              <a href="#show4" class="show" id="show4">-</a>
-              <div class="question1"></div>
-              <div class="list">
-                <p class="res">To accelerate growth, John launched the Culinary Harbor franchise program, allowing
-                  entrepreneurs to open their own branches
-                  under the established brand. This initiative provided comprehensive training and support to ensure
-                  each franchise maintained Culinary Harbor’s
-                  high standards. The franchise model quickly attracted interest, resulting in a significant increase
-                  in
-                  the number of locations. By empowering
-                  others to join the Culinary Harbor family, John expanded the brand’s reach and created new business
-                  opportunities.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </span>
-      </div>
+        <div class="timeline__item-header">
+            <!-- Expand/Collapse Button -->
+            <button class="timeline__arrow" type="button">
+                <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                    <use href="#arrow" />
+                </svg>
+            </button>
+            <!-- Timeline Dot -->
+            <span class="timeline__dot"></span>
+            <!-- Timeline Metadata -->
+            <span id="item1-name" class="timeline__meta">
+                <!-- Date and Title -->
+                <time class="timeline__date" datetime="1970-01-01">April 24, 1982</time><br>
+                <strong class="timeline__title">Expansion and Opening of New Locations</strong>
+                <!-- Content Body (Initially Hidden) -->
+                <div class="time__item-body" id="item2-ctrld" role="region" aria-labelledby="item2" aria-hidden="true">
+                    <!-- FAQ Section -->
+                    <div class="FAQ">
+                        <!-- Show/Hide Links -->
+                        <a href="#hide2" class="hide" id="hide2">+</a>
+                        <a href="#show2" class="show" id="show2">-</a>
+                        <div class="question1"></div>
+                        <!-- Description List -->
+                        <div class="list">
+                            <p class="res">Buoyed by the success of the Alpharetta location, John decided to expand Culinary
+                                Harbor by opening additional branches in neighboring cities. The first expansion was met with enthusiastic responses, prompting John to consider national and eventually international
+                                growth. Each new location maintained the same high standards of quality and service that characterized the original restaurant. This strategic expansion allowed Culinary Harbor to reach a wider audience, solidifying its reputation as a premier dining destination.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </span>
+        </div>
     </div>
 
+    <!-- Timeline Item 3 -->
     <div class="timeline__item">
-      <div class="timeline__item-header">
-        <button class="timeline__arrow" type="button">
-          <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
-            <use href="#arrow" />
-          </svg>
-        </button>
-        <span class="timeline__dot"></span>
-        <span id="item1-name" class="timeline__meta">
-          <time class="timeline__date" datetime="1970-01-01">October 16, 2007</time><br>
-          <strong class="timeline__title">Best Innovative Restaurant Chain</strong>
-          <div class="time__item-body" id="item2-ctrld" role="region" aria-labelledby="item2" aria-hidden="true">
-
-            <div class="FAQ">
-              <a href="#hide5" class="hide" id="hide5">+</a>
-              <a href="#show5" class="show" id="show5">-</a>
-              <div class="question1"></div>
-              <div class="list">
-                <p class="res">Culinary Harbor received a prestigious industry award for Best Innovative Restaurant
-                  Chain, recognizing its unique approach to
-                  dining and consistent excellence. This accolade brought national attention to the brand,
-                  highlighting
-                  John’s visionary leadership and the team’s
-                  dedication. The award ceremony was attended by prominent figures in the culinary world, further
-                  boosting the restaurant's profile. This
-                  recognition validated years of hard work and positioned Culinary Harbor as a leader in the
-                  restaurant
-                  industry.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </span>
-      </div>
+        <div class="timeline__item-header">
+            <!-- Expand/Collapse Button -->
+            <button class="timeline__arrow" type="button">
+                <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                    <use href="#arrow" />
+                </svg>
+            </button>
+            <!-- Timeline Dot -->
+            <span class="timeline__dot"></span>
+            <!-- Timeline Metadata -->
+            <span id="item1-name" class="timeline__meta">
+                <!-- Date and Title -->
+                <time class="timeline__date" datetime="1970-01-01">July 30, 1989</time><br>
+                <strong class="timeline__title">10th Location</strong>
+                <!-- Content Body (Initially Hidden) -->
+                <div class="time__item-body" id="item2-ctrld" role="region" aria-labelledby="item2" aria-hidden="true">
+                    <!-- FAQ Section -->
+                    <div class="FAQ">
+                        <!-- Show/Hide Links -->
+                        <a href="#hide3" class="hide" id="hide3">+</a>
+                        <a href="#show3" class="show" id="show3">-</a>
+                        <div class="question1"></div>
+                        <!-- Description List -->
+                        <div class="list">
+                            <p class="res">Reaching the milestone of the 100th Culinary Harbor location was a momentous occasion
+                                for John and his team. This achievement was celebrated with a grand event that included loyal customers, employees, and local dignitaries. The 100th restaurant embodied the brand’s evolution while staying true to its core values of innovation and exceptional dining experiences. This milestone underscored the hard work, dedication, and vision that propelled Culinary Harbor from a single restaurant to a global chain.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </span>
+        </div>
     </div>
 
-  </div>
+    <!-- Timeline Item 4 -->
+    <div class="timeline__item">
+        <div class="timeline__item-header">
+            <!-- Expand/Collapse Button -->
+            <button class="timeline__arrow" type="button">
+                <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                    <use href="#arrow" />
+                </svg>
+            </button>
+            <!-- Timeline Dot -->
+            <span class="timeline__dot"></span>
+            <!-- Timeline Metadata -->
+            <span id="item1-name" class="timeline__meta">
+                <!-- Date and Title -->
+                <time class="timeline__date" datetime="1970-01-01">December 21, 1999</time><br>
+                <strong class="timeline__title">Launch of Franchise Program</strong>
+                <!-- Content Body (Initially Hidden) -->
+                <div class="time__item-body" id="item2-ctrld" role="region" aria-labelledby="item2" aria-hidden="true">
+                    <!-- FAQ Section -->
+                    <div class="FAQ">
+                        <!-- Show/Hide Links -->
+                        <a href="#hide4" class="hide" id="hide4">+</a>
+                        <a href="#show4" class="show" id="show4">-</a>
+                        <div class="question1"></div>
+                        <!-- Description List -->
+                        <div class="list">
+                            <p class="res">To accelerate growth, John launched the Culinary Harbor franchise program, allowing
+                                entrepreneurs to open their own branches under the established brand. This initiative provided comprehensive training and support to ensure each franchise maintained Culinary Harbor’s high standards. The franchise model quickly attracted interest, resulting in a significant increase in the number of locations. By empowering others to join the Culinary Harbor family, John expanded the brand’s reach and created new business opportunities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </span>
+        </div>
+    </div>
+
+    <!-- Timeline Item 5 -->
+    <div class="timeline__item">
+        <div class="timeline__item-header">
+            <!-- Expand/Collapse Button -->
+            <button class="timeline__arrow" type="button">
+                <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                    <use href="#arrow" />
+                </svg>
+            </button>
+            <!-- Timeline Dot -->
+            <span class="timeline__dot"></span>
+            <!-- Timeline Metadata -->
+            <span id="item1-name" class="timeline__meta">
+                <!-- Date and Title -->
+                <time class="timeline__date" datetime="1970-01-01">October 16, 2007</time><br>
+                <strong class="timeline__title">Best Innovative Restaurant Chain</strong>
+                <!-- Content Body (Initially Hidden) -->
+                <div class="time__item-body" id="item2-ctrld" role="region" aria-labelledby="item2" aria-hidden="true">
+                    <!-- FAQ Section -->
+                    <div class="FAQ">
+                        <!-- Show/Hide Links -->
+                        <a href="#hide5" class="hide" id="hide5">+</a>
+                        <a href="#show5" class="show" id="show5">-</a>
+                        <div class="question1"></div>
+                        <!-- Description List -->
+                        <div class="list">
+                            <p class="res">Culinary Harbor received the prestigious award for Best Innovative Restaurant Chain,
+                                recognizing its commitment to culinary excellence and creative dining concepts. This accolade was a testament to the hard work and innovation of John and his team, who continually pushed the boundaries of traditional dining. The award highlighted Culinary Harbor’s role as a trendsetter in the industry, inspiring other restaurants to innovate and elevate their offerings.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </span>
+        </div>
+    </div>
+
+</div>
+
 
   <!-- Third content section -->
   <div class="heading3">
@@ -530,6 +533,8 @@
       </div>
     </section>
   </footer>
+
+  <!--Animate on Scroll library-->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
