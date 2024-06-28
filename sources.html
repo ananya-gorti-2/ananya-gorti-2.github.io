@@ -30,17 +30,15 @@
   <!-- Custom JavaScript -->
 </head>
 
+<!--AI chatbot-->
 <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxf3ic3d00rnu1bbuzgs4aai"></script>
 
 <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
   import { getDatabase, ref, set, update, increment, onValue } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  // web app's Firebase configuration
   const firebaseConfig = {
     apiKey: "AIzaSyA8KxkL46u0BsqFWc0T3lq6RCaGLs7wpLA",
     authDomain: "ch-analytics-f7d03.firebaseapp.com",
@@ -58,7 +56,7 @@
 
   console.log("hi1")
 
-
+  // Function to record page views
   function recordPageView() {
     const analyticsRef = ref(db, 'analytics');
     update(analyticsRef, {
@@ -97,7 +95,7 @@
 
   console.log("hi1")
 
-  // Example of using the functions
+  // using the functions
   window.addEventListener('load', () => {
     const startTime = Date.now();
 
@@ -161,42 +159,16 @@
 
   <main>
     <br><br><br><br>
+
+    <!-- Main Header-->
     <div class="heading3">
       <h1 data-aos="fade-up">MLA Sources</h1>
     </div>
 
+    <!--Sources container starts-->
     <section data-aos="fade-up" class="sources-container">
-      <h2 class="h-primary left sources-header"><span>HTML</span></h2>
-      <div class="about-text">
-        <p>
-          MDN Web Docs. “HTML: HyperText Markup Language.” MDN Web Docs, 10 Dec. 2018,
-          developer.mozilla.org/en-US/docs/Web/HTML.
-          <br>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML Documentation</a>
-        </p>
-      </div>
 
-      <br>
-      <h2 class="h-primary left sources-header"><span>CSS</span></h2>
-      <div class="about-text">
-        <p>
-          MDN Web Docs. “HTML: HyperText Markup Language.” MDN Web Docs, 10 Dec. 2018,
-          developer.mozilla.org/en-US/docs/Web/HTML.
-          <br>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS Docs</a>
-        </p>
-      </div>
-      <br>
-      <h2 class="h-primary left sources-header"><span>Javascript</span></h2>
-      <div class="about-text">
-        <p>
-          MDN Contributors. “JavaScript.” MDN Web Docs, 25 Sept. 2023, developer.mozilla.org/en-US/docs/Web/javascript.
-          <br>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Javascript Docs</a>
-        </p>
-      </div>
-
-      <br>
+      <!--Source 1-->
       <h2 class="h-primary left sources-header"><span>Animation on Scroll</span></h2>
       <div class="about-text">
         <p>
@@ -209,9 +181,21 @@
           <a href="https://opensource.org/license/mit/">General MIT License</a>
         </p>
       </div>
-
       <br>
 
+      <!--Source 2-->
+      <h2 class="h-primary left sources-header"><span>CSS (MDN)</span></h2>
+      <div class="about-text">
+        <p>
+          MDN Web Docs. “HTML: HyperText Markup Language.” MDN Web Docs, 10 Dec. 2018,
+          developer.mozilla.org/en-US/docs/Web/HTML.
+          <br>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS Docs</a>
+        </p>
+      </div>
+      <br>
+
+      <!--Source 3-->
       <h2 class="h-primary left sources-header"><span>Font Awesome Icons</span></h2>
       <div class="about-text">
         <p>
@@ -221,6 +205,8 @@
         </p>
       </div>
       <br>
+
+      <!--Source 4-->
       <h2 class="h-primary left sources-header"><span>Firebase</span></h2>
       <div class="about-text">
         <p>
@@ -230,6 +216,17 @@
         </p>
       </div>
       <br>
+      
+      <!--Source 5-->
+      <h2 class="h-primary left sources-header"><span>Food and Culture Research</span></h2>
+      <div class="about-text">
+        <p>
+          Visser, Margaret. “Food and Culture: Interconnections.” Social Research, 1999.
+        </p>
+      </div>
+      <br>
+
+      <!--Source 6-->
       <h2 class="h-primary left sources-header"><span>Google Fonts</span></h2>
       <div class="about-text">
         <p>
@@ -240,7 +237,42 @@
       </div>
       <br>
 
+      <!--Source 7-->
+      <h2 class="h-primary left sources-header"><span>HTML (MDN)</span></h2>
+      <div class="about-text">
+        <p>
+          MDN Web Docs. “HTML: HyperText Markup Language.” MDN Web Docs, 10 Dec. 2018,
+          developer.mozilla.org/en-US/docs/Web/HTML.
+          <br>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML Documentation</a>
+        </p>
+      </div>
+      <br>
 
+      <!--Source 8-->
+      <h2 class="h-primary left sources-header"><span>HubSpot</span></h2>
+      <div class="about-text">
+        <p>
+          Juviler, Jamie. “8 Guidelines for Exceptional Web Design, Usability, and User Experience.” Hubspot.com, 27 May
+          2021,
+          blog.hubspot.com/blog/tabid/6307/bid/30557/6-guidelines-for-exceptional-website-design-and-usability.aspx.
+          <br>
+          <a href="https://code.visualstudio.com/license">Linked Resource</a>
+        </p>
+      </div>
+
+      <!--Source 9-->
+      <h2 class="h-primary left sources-header"><span>Javascript (MDN)</span></h2>
+      <div class="about-text">
+        <p>
+          MDN Contributors. “JavaScript.” MDN Web Docs, 25 Sept. 2023, developer.mozilla.org/en-US/docs/Web/javascript.
+          <br>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Javascript Docs</a>
+        </p>
+      </div>
+      <br>
+
+      <!--Source 10-->
       <h2 class="h-primary left sources-header"><span>Unsplash</span></h2>
       <div class="about-text">
         <p>
@@ -251,6 +283,9 @@
         </p>
       </div>
       <br>
+
+
+      <!--Source 11-->
       <h2 class="h-primary left sources-header"><span>Visual Studio Code</span></h2>
       <div class="about-text">
         <p>
@@ -259,12 +294,21 @@
           <a href="https://code.visualstudio.com/license">Visual Studio Code License</a>, Visual Studio Code, 2024
         </p>
       </div>
+      <br>
+
+      <!--Source 12-->
+      <h2 class="h-primary left sources-header"><span>w3schools</span></h2>
+      <div class="about-text">
+        <p>
+          W3Schools. “HTML Responsive Web Design.” W3schools.com, 2023, www.w3schools.com/html/html_responsive.asp.
+          <br>
+          <a href="https://www.w3schools.com/html/html_responsive.asp">Linked Resource</a>
+        </p>
+      </div>
+      <br>
 
     </section>
-
   </main>
-
-
 
 
   <!-- Footer section -->
@@ -346,6 +390,10 @@
     </section>
   </footer>
 
+  <!--Accesibility widget-->
+  <script src="https://cdn.userway.org/widget.js" data-account="ertbJPpxpJ"></script>
+
+  <!--animate on scroll library-->
   <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {

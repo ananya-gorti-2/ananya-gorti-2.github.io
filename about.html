@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="about.css" />
   <!-- External JavaScript file -->
   <script src="main.js"></script>
+  <script src="about.js"></script>
 
   <script type="module">
     // Import the functions you need from the SDKs you need
@@ -132,17 +133,9 @@
           <span id="cart-count">0</span>
         </a>
       </button>
-      <script>
-        function updateCartCountOnLoad() {
-          let cart = JSON.parse(localStorage.getItem('cart')) || [];
-          let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
-          document.getElementById('cart-count').textContent = totalCount;
-        }
-
-        // Call the function on page load
-        updateCartCountOnLoad();
-      </script>
       <button class="btn"><a href="apply.html">Apply Now</a></button>
+
+      <script>updateCartCountOnLoad();</script>
 
 
 
@@ -544,7 +537,6 @@
         once: true // Ensure the animation occurs only once
       });
     });
-
   </script>
   <!--Accesibility widget-->
   <script src="https://cdn.userway.org/widget.js" data-account="ertbJPpxpJ"></script>

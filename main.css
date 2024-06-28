@@ -1629,7 +1629,6 @@ body.modal-active .modal .open-positions {
 
 
 /* Size of each grid space for ipads, and tablets */
-
 @media (max-width: 940px) {
   .jobs-list-container .jobs {
     grid-template-columns: 1fr 1fr;
@@ -1653,7 +1652,6 @@ body.modal-active .modal .open-positions {
     border: 1px solid #333;
     border-radius: 8px;
     margin-bottom: 20px;
-
   }
 }
 
@@ -1677,6 +1675,7 @@ body.modal-active .modal .open-positions {
 
 /*HEADER CHANGED */
 @media screen and (max-width: 768px) {
+
   .home .home-slider .slide {
     padding-top: 2rem;
   }
@@ -3432,4 +3431,52 @@ margin-bottom: 25px;*/
 
 .no-cap {
   background: linear-gradient(to bottom, white, lightgray) !important;
+}
+
+
+@media (max-width: 768px) {
+  .heading1 {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .section_faq{
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .jobs-list-container{
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .sub-header {
+    padding-top: 0 !important;
+    font-size: 10px !important;
+  }
+
+  .heading2{
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .form-title{
+    font-size: 2.8rem !important;
+  }
+
+  .cart-bruh{
+    margin-top: 10rem;
+  }
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.icon-container i {
+  margin-right: 8px;
+  margin-top: 10px;
+  margin-bottom: 11px;
+  color: red;
 }

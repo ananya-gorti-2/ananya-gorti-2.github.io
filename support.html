@@ -34,11 +34,8 @@
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getDatabase, ref, set, update, increment, onValue } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
 
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        // web app's Firebase configuration
         const firebaseConfig = {
             apiKey: "AIzaSyA8KxkL46u0BsqFWc0T3lq6RCaGLs7wpLA",
             authDomain: "ch-analytics-f7d03.firebaseapp.com",
@@ -56,7 +53,7 @@
 
         console.log("hi1")
 
-
+        // Function to record page views
         function recordPageView() {
             const analyticsRef = ref(db, 'analytics');
             update(analyticsRef, {
@@ -95,7 +92,7 @@
 
         console.log("hi1")
 
-        // Example of using the functions
+        // using the functions
         window.addEventListener('load', () => {
             const startTime = Date.now();
 
@@ -168,42 +165,51 @@
 
 
     <main>
+        <!--spacing-->
         <br><br><br><br>
+        <!--page title-->
         <div class="heading2">
             <h1 data-aos="fade-up">Contact Us</h1>
         </div>
+
+        <!--form container-->
         <div data-aos="fade-up" class="containerconc">
             <div class="contact">
-                <!-- <h1 class="headingconc">Contact Us</h1> -->
+                <!--Contact form-->
                 <form id="contactForm">
+                    <!--Question-->
                     <span class="inputbox">
                         <span class="inputname">First Name</span>
                         <input type="text" id="firstName" required>
-
                     </span>
+                    <!--Question-->
                     <span class="inputbox">
                         <span class="inputname">Last Name</span>
                         <input type="text" id="lastName" required>
-
                     </span>
+                    <!--Question-->
                     <span class="inputbox">
                         <span class="inputname">Email Address</span>
                         <input type="text" id="email" id="email" required>
-
                     </span>
+                    <!--Question-->
                     <span class="inputbox">
                         <span class="inputname">Contact Number</span>
                         <input type="text" id="contactNumber" required>
-
                     </span>
+                    <!--Question-->
                     <span class="inputbox">
-                        <span class="textname">Write your message here</span></span><br />
+                        <span class="textname">Write your message here</span>
+                    </span>
+                    <br>
                     <textarea name="" id="message" cols="30" rows="3"></textarea>
 
                     <input class="btn" type="submit" />
                 </form>
             </div>
         </div>
+
+        <!--Script for email functionality-->
         <script src="https://smtpjs.com/v3/smtp.js">
         </script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
@@ -340,10 +346,13 @@
     <!-- Loader container -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <!--link to main js doc-->
     <script src="main.js"></script>
+
+    <!--AI chatbot-->
     <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxf3ic3d00rnu1bbuzgs4aai"></script>
 
-
+    <!--animate on scroll library-->
     <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {

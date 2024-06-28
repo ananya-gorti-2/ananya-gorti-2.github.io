@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <!--meta tags-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="x-icon" href="images/CulHar_Logo-removebg.png" />
@@ -17,17 +18,15 @@
   <!-- Animation on Scroll-->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+  <!--link to main js-->
   <script src="main.js"></script>
 
   <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
     import { getDatabase, ref, set, update, increment, onValue } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
 
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    // web app's Firebase configuration
     const firebaseConfig = {
       apiKey: "AIzaSyA8KxkL46u0BsqFWc0T3lq6RCaGLs7wpLA",
       authDomain: "ch-analytics-f7d03.firebaseapp.com",
@@ -45,7 +44,7 @@
 
     console.log("hi1")
 
-
+    // Functino to record page views
     function recordPageView() {
       const analyticsRef = ref(db, 'analytics');
       update(analyticsRef, {
@@ -84,7 +83,7 @@
 
     console.log("hi1")
 
-    // Example of using the functions
+    // using the functions
     window.addEventListener('load', () => {
       const startTime = Date.now();
 
@@ -147,44 +146,60 @@
     </div>
   </header>
 
+  <!--benefits container-->
   <main class="benefits-page">
     <br><br>
-    <!--benefits container-->
-    <!-- Second benefits section -->
     <br><br>
+
+    <!--First benefit title-->
     <div data-aos="fade-up" class="heading3">
       <h1>Competitive Compensation</h1>
     </div>
     <br>
+
+    <!--First benefit slider-->
     <section class="adoption">
+      <!-- Container for AOS animation and overall content -->
       <div data-aos="zoom-in" class="mega">
+        <!-- Container for items displayed sideways -->
         <div class="sideways items">
+          <!-- Cover container for adoption section -->
           <div class="adoptcover">
+            <!-- Secondary cover for additional styling purposes -->
             <div class="adoptcovertwo">
+              <!-- Column for image and scrolling prompt -->
               <div class="adoption-col">
+                <!-- Image representing benefits -->
                 <img class="benefits-img" src="images/chefs_cooking.png" alt="Benefits Image">
+                <!-- Container for scroll prompt -->
                 <div class="petball">
                   <h2 class="wide">Scroll to learn more
+                    <!-- Right arrow icon -->
                     <span class="arrow-icon"><i class="fa-solid fa-angles-right"></i></span>
                   </h2>
                 </div>
               </div>
             </div>
+            <!-- Column for text content about benefits -->
             <div class="adoption-col">
+              <!-- Container for adoption text content -->
               <div class="adoptiontext">
+                <!-- Left-aligned text with specific styling class -->
                 <div style="text-align: left" class="cuisine">
+                  <!-- Header for the benefits section -->
                   <h2 class="about-content2">We Reward Talent</h2>
                 </div>
+                <!-- Main text content describing benefits -->
                 <h1>Culinary Harbor values our team members' talent and hard work by offering
                   competitive
-                  compensation packages. We rioritize financial stability and fair compensation, attracting
+                  compensation packages. We prioritize financial stability and fair compensation, attracting
                   skilled
-                  professionals and fostering appreciation among our staff. <br>
-                  <br>
+                  professionals and fostering appreciation among our staff. <br><br>
                   By providing competitive salaries, we aim to alleviate financial stress and empower our team
                   members to focus
                   on delivering exceptional culinary experiences to our guests.
                 </h1>
+                <!-- Link to careers page -->
                 <a href="careers.html" class="read-more3">Apply Now</a>
               </div>
             </div>
@@ -193,126 +208,155 @@
       </div>
     </section>
 
+    <!--spacing-->
     <br><br>
 
+    <!--Second benefit title-->
     <div class="sect">
       <div data-aos="fade-up" class="heading3">
         <h1>Opportunities for Career Growth</h1>
       </div>
       <br>
+
+      <!--Second benefit slider-->
       <section data-aos="zoom-in" class="adoption">
+        <!-- Container for the main content -->
         <div class="mega">
+          <!-- Container for sideways displayed items -->
           <div id="second-benefit" class="sideways items">
+            <!-- Cover container for adoption section -->
             <div class="adoptcover">
+              <!-- Secondary cover for additional styling or layout purposes -->
               <div class="adoptcovertwo">
+                <!-- Column for image and scrolling prompt -->
                 <div class="adoption-col">
+                  <!-- Image representing benefits -->
                   <img id="cooking-img" src="images/cooking-camp-abstract-illustration (1).png" alt="Benefits Image">
+                  <!-- Container for scroll prompt -->
                   <div class="petball">
                     <h2 id="second-text" class="wide">Scroll to learn more
+                      <!-- Right arrow icon -->
                       <span class="arrow-icon"><i class="fa-solid fa-angles-right"></i></span>
                     </h2>
                   </div>
-
                 </div>
               </div>
+              <!-- Column for text content about benefits -->
               <div class="adoption-col">
+                <!-- Container for adoption text content -->
                 <div class="adoptiontext">
+                  <!-- Left-aligned text with specific styling class -->
                   <div style="text-align: left" class="cuisine">
+                    <!-- Header for the benefits section with background color styling -->
                     <h2 style="background-color: #E8E8E8" class="about-content2">Empowering Ambition, Unlocking
                       Potential</h2>
                   </div>
+                  <!-- Main text content describing benefits -->
                   <h1 id="second-adoptiontext">Joining Culinary Harbor means stepping into a world of possibilities. Our
                     commitment to your growth is evident in our
                     tailored training programs, mentorship initiatives, and clear advancement paths. We empower you to
-                    take charge of your
+                    take
+                    charge of your
                     career, providing the tools and support you need to succeed. Grow with us, and reach new heights in
-                    your professional
+                    your
+                    professional
                     journey.
                   </h1>
+                  <!-- Link to careers page -->
                   <a href="careers.html" class="read-more3">Apply Now</a>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
       </section>
     </div>
 
-
-
-    <!--
-style="background-color: #E8E8E8"
-
-                  <h1>Culinary Harbor is more than a restaurant; it's a place where culinary talents are nurtured and
-                    career aspirations are realized. We invest in our employees' growth with opportunities for
-                    advancement and continuing education. This commitment to
-                    learning enhances our team's skills and drives culinary
-                    excellence. At Culinary Harbor, nurturing talent sets us apart in the culinary world.
-
-                    At Culinary Harbor, we believe a positive work culture is essential for success. We foster
-                  collaboration, communication, and mutual respect, ensuring every team member plays a vital role
-                  in creating memorable dining experiences. We prioritize team bonding, celebrating achievements, and
-                  fostering a sense of belonging. By cultivating this environment, we attract top talent and
-                  inspire exceptional service and culinary creativity. At Culinary Harbor, a positive work culture is
-                  key to our success.
-    -->
+    <!--Third benefit title-->
     <div class="heading3">
       <h1 data-aos="fade-up">Positive Work Culture and Environment</h1>
     </div>
     <br>
+
+    <!--Third benefit slider-->
     <section data-aos="zoom-in" class="adoption">
+      <!-- Container for the main content -->
       <div class="mega">
+        <!-- Container for sideways displayed items -->
         <div class="sideways items">
+          <!-- Cover container for adoption section -->
           <div class="adoptcover">
+            <!-- Secondary cover for additional styling or layout purposes -->
             <div class="adoptcovertwo">
+              <!-- Column for image and scrolling prompt -->
               <div class="adoption-col">
+                <!-- Image representing benefits -->
                 <img src="images/kids-with-pan.png" alt="Benefits Image">
+                <!-- Container for scroll prompt -->
                 <div class="petball">
                   <h2 class="wide">Scroll to learn more
+                    <!-- Right arrow icon -->
                     <span class="arrow-icon"><i class="fa-solid fa-angles-right"></i></span>
                   </h2>
                 </div>
-
               </div>
             </div>
+            <!-- Column for text content about benefits -->
             <div class="adoption-col">
+              <!-- Container for adoption text content -->
               <div class="adoptiontext">
+                <!-- Left-aligned text with specific styling class -->
                 <div style="text-align: left" class="cuisine">
+                  <!-- Header for the benefits section -->
                   <h2 class="about-content2">Cultivating Excellence, Together.</h2>
                 </div>
+                <!-- Main text content describing benefits -->
                 <h1>At Culinary Harbor, we foster a positive work culture and environment where collaboration, respect,
-                  and innovation
-                  thrive. Our inclusive atmosphere encourages teamwork and creativity, ensuring that every voice is
-                  heard and valued. Join
-                  us and be part of a workplace where you can truly shine.
+                  and innovation thrive. Our inclusive atmosphere encourages teamwork and creativity, ensuring that
+                  every
+                  voice is heard and valued. Join us and be part of a workplace where you can truly shine.
                 </h1>
+                <!-- Link to careers page -->
                 <a href="careers.html" class="read-more3">Apply Now</a>
               </div>
             </div>
           </div>
+        </div>
+      </div>
     </section>
 
     <!--Employee review section starts-->
     <section class="testimonials">
+      <!-- Container for the testimonials content -->
       <div class="emp-container">
+        <!-- Wrapper for all testimonials content -->
         <div class="testimonials-content">
+          <!-- Header for testimonials with AOS animation -->
           <div data-aos="fade-up" class="emp-header">
             <h2 class="emp-title">Here's what our Employees say</h2>
           </div>
+          <!-- Swiper container for testimonials slider with AOS animation -->
           <div data-aos="fade-up" class="swiper testimonials-slider js-testimonials-slider">
+            <!-- Wrapper for swiper slides -->
             <div class="swiper-wrapper">
+              <!-- Individual testimonial slide -->
               <div class="swiper-slide testimonials-item">
+                <!-- Information section for testimonial (image and text) -->
                 <div class="info">
                   <img src="images/testimonial pics/man1.jpg" alt="picture of man">
+                  <!-- Text box with name and job title -->
                   <div class="text-box">
                     <h3 class="name">Ethan Miller</h3>
                     <span class="job">Manager</span>
                   </div>
                 </div>
+                <!-- Testimonial text -->
                 <p>I've been a manager at Culinary Harbor for 2 years, and I love the supportive work environment and
-                  opportunities for
-                  growth. The team is amazing, and management truly cares about employee well-being.
+                  opportunities for growth. The team is amazing, and management truly cares about employee well-being.
                 </p>
               </div>
 
+              <!-- Individual testimonial slide -->
               <div class="swiper-slide testimonials-item">
                 <div class="info">
                   <img src="images/testimonial pics/girl1.jpg" alt="picture of woman">
@@ -322,10 +366,12 @@ style="background-color: #E8E8E8"
                   </div>
                 </div>
                 <p>Being a cashier at Culinary Harbor has been a rewarding experience. The team is supportive, and I
-                  enjoy interacting with
-                  our customers daily. The management is understanding and always open to feedback.</p>
+                  enjoy interacting with our customers daily. The management is understanding and always open to
+                  feedback.
+                </p>
               </div>
 
+              <!-- Individual testimonial slide -->
               <div class="swiper-slide testimonials-item">
                 <div class="info">
                   <img src="images/testimonial pics/man2.jpg" alt="picture of man">
@@ -335,10 +381,12 @@ style="background-color: #E8E8E8"
                   </div>
                 </div>
                 <p>Working as a waiter at Culinary Harbor has been a fantastic experience. The flexible hours and
-                  friendly coworkers make
-                  every shift enjoyable. The tips are great too, thanks to our wonderful customers!</p>
+                  friendly coworkers make every shift enjoyable. The tips are great too, thanks to our wonderful
+                  customers!
+                </p>
               </div>
 
+              <!-- Individual testimonial slide -->
               <div class="swiper-slide testimonials-item">
                 <div class="info">
                   <img src="images/testimonial pics/girl2.jpg" alt="picture of woman">
@@ -348,10 +396,11 @@ style="background-color: #E8E8E8"
                   </div>
                 </div>
                 <p>As a waitress at Culinary Harbor, I appreciate the positive work culture and excellent training. The
-                  staff is like
-                  family, and we always strive to provide the best service. It's a great place to work!</p>
+                  staff is like family, and we always strive to provide the best service. It's a great place to work!
+                </p>
               </div>
 
+              <!-- Individual testimonial slide -->
               <div class="swiper-slide testimonials-item">
                 <div class="info">
                   <img src="images/testimonial pics/man3.jpg" alt="picture of man">
@@ -361,10 +410,12 @@ style="background-color: #E8E8E8"
                   </div>
                 </div>
                 <p>Working as a chef at Culinary Harbor allows me to express my creativity with food. The kitchen is
-                  well-equipped, and the
-                  collaborative atmosphere makes it a joy to come to work every day. Love it here!</p>
+                  well-equipped, and the collaborative atmosphere makes it a joy to come to work every day. Love it
+                  here!
+                </p>
               </div>
 
+              <!-- Individual testimonial slide -->
               <div class="swiper-slide testimonials-item">
                 <div class="info">
                   <img src="images/testimonial pics/girl3.jpg" alt="picture of woman">
@@ -374,15 +425,18 @@ style="background-color: #E8E8E8"
                   </div>
                 </div>
                 <p>Culinary Harbor is a chef's dream! The focus on quality and innovation keeps me inspired. The team is
-                  passionate, and we
-                  always push each other to excel. It's an amazing place to grow and refine my skills.</p>
+                  passionate, and we always push each other to excel. It's an amazing place to grow and refine my
+                  skills.
+                </p>
               </div>
             </div>
           </div>
+          <!-- Swiper pagination controls -->
           <div class="swiper-pagination js-testimonials-pagination"></div>
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer section -->

@@ -1,7 +1,7 @@
 <html lang="en">
 
 <head>
-    <!--Pre-->
+    <!--meta tags-->
     <meta charset="UTF-8">
     <link rel="icon" type="x-icon" href="images/CulHar_Logo-removebg.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,11 +22,8 @@
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getDatabase, ref, set, update, increment, onValue } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
 
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        // web app's Firebase configuration
         const firebaseConfig = {
             apiKey: "AIzaSyA8KxkL46u0BsqFWc0T3lq6RCaGLs7wpLA",
             authDomain: "ch-analytics-f7d03.firebaseapp.com",
@@ -83,7 +80,7 @@
 
         console.log("hi1")
 
-        // Example of using the functions
+        //using the functions
         window.addEventListener('load', () => {
             const startTime = Date.now();
 
@@ -244,6 +241,7 @@
             <!-- American cusisine box-container-->
             <h2 data-aos="fade-left" class="cuisine">American Cuisine</h2>
 
+            <!-- Fish Tacos menu item for non-touch devices-->
             <div data-aos="fade-up" style="margin: auto; justify-content: center;" class="box-container">
                 <div id="fish-tacos" class="food-card non-touch" data-name="Fish Tacos" data-price="7.99">
                     <div class="food-content">
@@ -263,7 +261,7 @@
                     </div>
                 </div>
 
-
+                <!-- Fish Tacos menu item for touch devices-->
                 <div class="box touch" data-name="Fish Tacos" data-price="7.99">
                     <!--Image of Food-->
                     <img src="images/menu images/American Cuisine/fish tacos, $7.99.jpg" alt="picture of fish tacos"
@@ -288,6 +286,7 @@
 
                 </div>
 
+                <!-- Deep Dish Pizza for non-touch devices-->
                 <div style="background-image: url('images/menu images/American Cuisine/Deep Dish Pizza $12.99.jpg'); background-position: center top;"
                     class="food-card non-touch" data-name="Deep Dish Pizza" data-price="12.99">
                     <div class="food-content">
@@ -306,7 +305,7 @@
                     </div>
                 </div>
 
-
+                <!-- Deep Dish Pizza for touch devices-->
                 <div class="box touch" data-name="Deep Dish Pizza" data-price="12.99">
                     <!--Image of Food-->
                     <img src="images/menu images/American Cuisine/Deep Dish Pizza $12.99.jpg"
@@ -330,7 +329,7 @@
                 </div>
 
 
-
+                <!-- Fried Catfish for non-touch devices-->
                 <div style="background-image: url('images/menu images/American Cuisine/Fried Catfish, $10.99.jpg'); background-position: center top;"
                     class="food-card non-touch" data-name="Fried Catfish" data-price="10.99">
                     <div class="food-content">
@@ -350,7 +349,7 @@
                     </div>
                 </div>
 
-
+                <!-- Fried Catfish for touch devices-->
                 <div class="box touch" data-name="Fried Catfish" data-price="10.99">
                     <!--Image of Food-->
                     <img src="images/menu images/American Cuisine/Fried Catfish, $10.99.jpg"
@@ -373,7 +372,7 @@
                         ontouchstart="addToCart(event, this)"><span>Add to Cart - $7.99</span></a>
                 </div>
 
-
+                <!-- Fried Green Tomatoes for touch devices-->
                 <div style="background-image: url('images/menu images/American Cuisine/Fried Green Tomatoes, $7.99.jpg'); background-position: center top;"
                     class="food-card non-touch" data-name="Fried Green Tomatoes" data-price="7.99">
                     <div class="food-content">
@@ -393,7 +392,7 @@
                     </div>
                 </div>
 
-
+                <!-- Fried Green Tomatoes for touch devices-->
                 <div class="box touch" data-name="Fried Green Tomatoes" data-price="7.99">
                     <!--Image of Food-->
                     <img src="images/menu images/American Cuisine/Fried Green Tomatoes, $7.99.jpg"
@@ -1783,8 +1782,8 @@
                 <!-- Box for displaying locations -->
                 <div class="box">
                     <h3>Locations</h3>
-                    <!-- Location links -->
-                    <a href="#" onclick="event.preventDefault();">United States</a>
+                    <!--ocation links
+--> <a href="#" onclick="event.preventDefault();">United States</a>
                     <a href="#" onclick="event.preventDefault();">Japan</a>
                     <a href="#" onclick="event.preventDefault();">India</a>
                     <a href="#" onclick="event.preventDefault();">China</a>
@@ -1843,7 +1842,10 @@
         </section>
 
     </footer>
+    <!--AI chatbot-->
     <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxf3ic3d00rnu1bbuzgs4aai"></script>
+
+    <!--Animate on scroll-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {

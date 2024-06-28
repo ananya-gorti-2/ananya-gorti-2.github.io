@@ -213,10 +213,10 @@
   <!-- Empty lines for spacing -->
   <br><br><br><br><br><br>
   <!-- Form title -->
-  <h1 class="form-title">General Manager Application Form</h1>
+  <h1 data-aos="fade-left" class="form-title">General Manager Application Form</h1>
   <br><br>
   <!-- Application Form -->
-  <form id="GeneralManagerApplicationForm">
+  <form data-aos="fade-up" id="GeneralManagerApplicationForm">
     <!-- Form Fields -->
     <label for="fullName" class="icon-container">
       <i class="fas fa-user"></i>
@@ -337,13 +337,13 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-      document.addEventListener('DOMContentLoaded', function () {
-          AOS.init({
-              duration: 400, // Increase the duration
-              easing: 'ease-in-out', // Adjust the easing
-              once: true // Ensure the animation occurs only once
-          });
+    document.addEventListener('DOMContentLoaded', function () {
+      AOS.init({
+        duration: 400, // Increase the duration
+        easing: 'ease-in-out', // Adjust the easing
+        once: true // Ensure the animation occurs only once
       });
+    });
   </script>
 
   <!--JS to connect to database-->
@@ -483,6 +483,9 @@
       }
     });
   </script>
+
+  <!--Accesibility widget-->
+  <script src="https://cdn.userway.org/widget.js" data-account="ertbJPpxpJ"></script>
 
   <!--link to common javascript-->
   <script src="main.js"></script>
