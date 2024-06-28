@@ -16,6 +16,8 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!--Animation on Scroll library-->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <script src="applypos.js"></script>
   <!-- Custom CSS -->
   <link rel="stylesheet" href="main.css" />
   <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clxf3ic3d00rnu1bbuzgs4aai"></script>
@@ -198,12 +200,6 @@
         </a>
       </button>
       <script>
-        function updateCartCountOnLoad() {
-          let cart = JSON.parse(localStorage.getItem('cart')) || [];
-          let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
-          document.getElementById('cart-count').textContent = totalCount;
-        }
-
         // Call the function on page load
         updateCartCountOnLoad();
       </script>
@@ -452,33 +448,7 @@
   <!--link to common JS-->
   <script src="main.js"></script>
   <script>
-    // Prevent right-click
-    window.addEventListener('contextmenu', function (e) {
-      e.preventDefault();
-    }, false);
-
-    // Prevent Ctrl+U
-    document.addEventListener("keydown", function (e) {
-      if (e.ctrlKey && e.key === "u") {
-        e.preventDefault();
-      }
-    });
-
-    // Prevent Ctrl+Shift+I, Ctrl+Shift+J, and Ctrl+Shift+C
-    document.addEventListener("keydown", function (e) {
-      if ((e.ctrlKey && e.shiftKey && (e.key === "i" || e.key === "I")) ||
-        (e.ctrlKey && e.shiftKey && (e.key === "j" || e.key === "J")) ||
-        (e.ctrlKey && e.shiftKey && (e.key === "c" || e.key === "C"))) {
-        e.preventDefault();
-      }
-    });
-
-    // Prevent F12
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "F12") {
-        e.preventDefault();
-      }
-    });
+    preventInspect();
   </script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>

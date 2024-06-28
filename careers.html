@@ -23,6 +23,7 @@
   <!-- Careers JavaScript -->
   <!-- Main JavaScript -->
   <script src="main.js"></script>
+  <script src="careers.js"></script>
 
   <script type="module">
     // Import the functions you need from the SDKs you need
@@ -133,12 +134,6 @@
         </a>
       </button>
       <script>
-        function updateCartCountOnLoad() {
-          let cart = JSON.parse(localStorage.getItem('cart')) || [];
-          let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
-          document.getElementById('cart-count').textContent = totalCount;
-        }
-
         // Call the function on page load
         updateCartCountOnLoad();
       </script>

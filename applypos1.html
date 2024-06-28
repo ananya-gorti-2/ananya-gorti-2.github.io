@@ -17,6 +17,9 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="main.css" />
 
+  <script src="main.js"></script>
+  <script src="applypos.js"></script>
+
   <!--Animation on Scroll library-->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -147,9 +150,6 @@
     function isValidEmail(email) {
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
-
-
-
   </script>
 
 </head>
@@ -196,11 +196,6 @@
         </a>
       </button>
       <script>
-        function updateCartCountOnLoad() {
-          let cart = JSON.parse(localStorage.getItem('cart')) || [];
-          let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
-          document.getElementById('cart-count').textContent = totalCount;
-        }
         updateCartCountOnLoad();
       </script>
       <button class="btn"><a href="apply.html">Apply Now</a></button>
@@ -455,40 +450,14 @@
     });
   </script>
   <script>
-    // Prevent right-click
-    window.addEventListener('contextmenu', function (e) {
-      e.preventDefault();
-    }, false);
-
-    // Prevent Ctrl+U
-    document.addEventListener("keydown", function (e) {
-      if (e.ctrlKey && e.key === "u") {
-        e.preventDefault();
-      }
-    });
-
-    // Prevent Ctrl+Shift+I, Ctrl+Shift+J, and Ctrl+Shift+C
-    document.addEventListener("keydown", function (e) {
-      if ((e.ctrlKey && e.shiftKey && (e.key === "i" || e.key === "I")) ||
-        (e.ctrlKey && e.shiftKey && (e.key === "j" || e.key === "J")) ||
-        (e.ctrlKey && e.shiftKey && (e.key === "c" || e.key === "C"))) {
-        e.preventDefault();
-      }
-    });
-
-    // Prevent F12
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "F12") {
-        e.preventDefault();
-      }
-    });
+    preventInspect();
   </script>
 
   <!--Accesibility widget-->
   <script src="https://cdn.userway.org/widget.js" data-account="ertbJPpxpJ"></script>
 
   <!--link to common javascript-->
-  <script src="main.js"></script>
+  
 
 </body>
 

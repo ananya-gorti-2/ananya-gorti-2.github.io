@@ -21,6 +21,8 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="main.css" />
 
+  <script src="sources.js"></script>
+
   <!-- Swiper JS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -141,12 +143,6 @@
         </a>
       </button>
       <script>
-        function updateCartCountOnLoad() {
-          let cart = JSON.parse(localStorage.getItem('cart')) || [];
-          let totalCount = cart.reduce((total, cartItem) => total + cartItem.quantity, 0);
-          document.getElementById('cart-count').textContent = totalCount;
-        }
-
         // Call the function on page load
         updateCartCountOnLoad();
       </script>
