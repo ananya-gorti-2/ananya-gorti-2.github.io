@@ -7,3 +7,6 @@ function updateCartCountOnLoad() {
   // Call the function on page load
   
 
+  // web app's Firebase configuration
+  
+

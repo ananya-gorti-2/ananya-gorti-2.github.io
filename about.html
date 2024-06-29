@@ -46,8 +46,6 @@
     const app = initializeApp(firebaseConfig);
     const db = getDatabase(app);
 
-    console.log("hi1")
-
 
     function recordPageView() {
       const analyticsRef = ref(db, 'analytics');
@@ -55,8 +53,6 @@
         totalPageViews: increment(1),
       });
     }
-
-    console.log("hi1")
 
     // Function to record session duration
     function recordSessionDuration(duration) {
@@ -85,7 +81,6 @@
     }
 
 
-    console.log("hi1")
 
     // Function in use
     window.addEventListener('load', () => {
